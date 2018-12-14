@@ -1,0 +1,133 @@
+<view class="photo">
+  <image src="{{datas.goods.photo}}" mode='aspectFit'></image>
+</view>
+<view class="product bdbt">
+  <view class="pro bdbt">
+    <view class="lt">
+      <view class="tit">{{datas.goods.goods_name}}</view>
+      <view class="price">
+        <text class="xj">yen{{goods_price}}</text>
+        <text class="yj">yen{{datas.goods.price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="nums">
+    <view>运费：{{datas.goods.is_mail==1?"包邮": "yen"+datas.goods.mail_price}}</view>
+    <view>销量：{{datas.goods.sales_volume}}</view>
+    <view>库存：{{datas.goods.surplus_num}}</view>
+  </view>
+</view>
+<view class="col bdbt" bindtap='look_service'>
+  <view class="title">服务</view>
+  <view class="item" wx:if="{{index<2}}" wx:for="{{datas.goods.service}}">
+    <text style="color:{{color}}" class="iconfont icon-duihao"></text> {{item.title}}
+  </view>
+  <view class="iconfont icon-right" style='float:right;margin-right:20rpx;'></view>
+
+  <!-- <view wx:for="{{datas.goods.service}}">
+    <view class="item">
+      <text style="color:{{color}}" class="iconfont icon-duihao"></text>
+      {{item.title}}
+    </view>
+  </view> -->
+</view>
+<view class="col bdbt" hidden='{{datas.activity == "" ? true : false}}'>
+  <view class="title">领劵</view>
+  <navigator url="/pages/mall/coupon" >
+  <view class="main">
+    <text class="quan" wx:for="{{datas.activity}}">满{{item.need_money}}减{{item.money}}元</text>
+    <text class="jiantou iconfont icon-right"></text>
+  </view>
+  </navigator>
+</view>
+
+<view class="order">
+  <view class="col2 bdbt">
+    <view class="title">类型</view>
+    <view class="main">
+      <text class="tag {{type_id==item.type_id? 'on': ''}}" bindtap='onTabTypeClick'data-id='{{item.type_id}}' data-price="{{item.price}}" wx:for="{{datas.goods.sku}}">{{item.type_name}}</text>
+    </view>
+  </view>
+  <view class="col2">
+    <view class="title">数量</view>
+    <view class="main">
+      <text class="jian" bindtap='minusGoodsNum'>-</text>
+      <text class="buynum">{{show_num}}</text>
+      <text class="jia" bindtap='plusGoodsNum'>+</text>
+      <text class="info">最高可买5件</text>
+    </view>
+  </view>
+</view>
+<view class="detail">
+  <view class="menu bdbt">
+    <view bindtap="tuwen" style="{{tab==1?'color:'+color:''}}" class="item">图文介绍
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="guige" style="{{tab==2?'color:'+color:''}}" class="item">规格参数
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="baozhuang" style="{{tab==3?'color:'+color:''}}" class="item">包装信息
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="pingjia" style="{{tab==4?'color:'+color:''}}" class="item">商品评价</view>
+  </view>
+  <view hidden="{{tab==1?false:true}}" class="tuwen" wx:for="{{datas.goods.contents}}">
+    <image mode="widthFix" src="{{item.photo}}"></image>
+    <text hidden='{{item.content==""? true: false}}'>{{item.content}}</text>
+  </view>
+  <view hidden="{{tab==2?false:true}}" class="guige">
+    <text>{{datas.goods.spec}}</text>
+  </view>
+  <view hidden="{{tab==3?false:true}}" class="guige">
+    <text>{{datas.goods.ctn}}</text>
+  </view>
+  <view hidden="{{tab==4?false:true}}" class="pingjia">
+    <view class="comment bdbt" wx:for="{{comments}}">
+      <view class="tit bdbt">
+        <view class="lt">
+          <image src="{{item.user_face}}"></image>
+          <text>{{item.user_nick_name}}</text>
+        </view>
+        <view class="rt">
+          购买于{{item.content_time}}
+        </view>
+      </view>
+      <view class="content">{{item.content}}</view>
+      <view class="photo">
+        <image wx:for="{{item.photos}}" src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap="loadMore" hidden="{{tab==4?false:true}}" wx:if="{{comments!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{comments!=''&&more==0}}" hidden="{{tab==4?false:true}}" class="nomore">没有数据了</view>
+  <view wx:if="{{comments==''&&more==0}}" hidden="{{tab==4?false:true}}" class="nomore">暂无评论</view>
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"></view>
+<view class="buttom">
+  <view class="lt">
+    <navigator url="/pages/cart/index">
+      <text class="iconfont icon-gouwuche"></text>
+      <text>购物车</text>
+    </navigator>
+  </view>
+  <view bindtap='addcart' class="ct">
+    <text>加入购物车</text>
+  </view>
+  <view bindtap="buy" class="rt">
+    <text>立刻购买</text>
+  </view>
+</view>
+
+<view class="bg" hidden="{{showbg}}"></view>
+<view class="bottom_view" hidden="{{show_service}}">
+  <view class='item'>
+    <text class='title'>说明</text>
+    <text class="close delete iconfont icon-cha" bindtap='close_service'></text>
+  </view>
+
+  <view class='item' style='text-align:left; padding: 25rpx 25rpx;' wx:for="{{datas.goods.service}}">
+    <text style="color:{{color}};" class="iconfont icon-duihao"></text>{{item.title}}
+    <view>{{item.detail}}</view>
+  </view>
+</view>

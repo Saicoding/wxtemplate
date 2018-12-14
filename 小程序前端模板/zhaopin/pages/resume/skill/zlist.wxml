@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/skill/zs">
+    <view class="add_school">+添加证书</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/skill/zs?certificate_id={{item.certificate_id}}">
+        <view class="title">{{item.certificate_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/skill/zs?certificate_id={{item.certificate_id}}">
+          <view class="lt">{{item.date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="delteCertificate" data-id="{{item.certificate_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

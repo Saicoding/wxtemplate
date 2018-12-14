@@ -1,0 +1,41 @@
+/* pages/album/index.wxss */
+
+.app {
+  width: 94%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 3%;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+
+.citem {
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 10rpx;
+  margin-left: 15rpx;
+  margin-top: 20rpx;
+  background: #bdbdbd;
+  position: relative;
+  display: inline-block;
+}
+
+.citem image {
+  width: 320rpx;
+  height: 325rpx;
+  border-radius: 10rpx;
+  margin: 0 5rpx;
+  margin-top: 5rpx;
+}
+
+.citem .ctitle {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background: #6db7c0;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  font-size: 24rpx;
+}

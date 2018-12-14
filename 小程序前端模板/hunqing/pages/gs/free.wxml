@@ -1,0 +1,55 @@
+<!--pages/gs/free.wxml-->
+<view class="app">
+  <form bindsubmit="fromSubmit">
+    <view class="baojia">
+      <view class="xiangmu">
+        <view class="col">
+          <text>婚纱摄影</text>
+          <switch color="#FF6666" type="switch" name="hssy"/>
+        </view>
+        <view class="col">
+          <text>婚礼策划</text>
+          <switch color="#FF6666" type="switch" name="hsch"/>
+        </view>
+        <view class="col">
+          <text>婚纱礼服</text>
+          <switch color="#FF6666" type="switch" name="hslf"/>
+        </view>
+        <view class="col">
+          <text>婚礼跟拍</text>
+          <switch color="#FF6666" type="switch" name="hlgp"/>
+        </view>
+        <view class="col">
+          <text>新娘跟妆</text>
+          <switch color="#FF6666" type="switch" name="xngz"/>
+        </view>
+        <view class="col">
+          <text>婚宴酒店</text>
+          <switch color="#FF6666" type="switch" name="hyjd"/>
+        </view>
+        <view class="col">
+          <text> 婚车租赁</text>
+          <switch color="#FF6666" type="switch" name="hczp"/>
+        </view>
+        <view class="col">
+          <text>婚礼司仪</text>
+          <switch color="#FF6666" type="switch" name="hlsy"/>
+        </view>
+      </view>
+
+      <view class="type margin_top_20">
+        <input name="name" class="phone" placeholder="请输入您的称呼" />
+      </view>
+
+      <view class="type margin_top_20">
+        <input name="mobile" class="phone" placeholder="请输入您的手机号码" />
+      </view>
+
+      <view class="smInfo margin_top_20">
+        <textarea name="content" class="tinput" placeholder="请输入您的额外需求说明" />
+      </view>
+      <button formType="submit" class="table_btn">确定发布</button>
+    </view>
+
+  </form>
+</view>

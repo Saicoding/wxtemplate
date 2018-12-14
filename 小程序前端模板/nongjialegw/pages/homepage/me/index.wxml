@@ -1,0 +1,37 @@
+<view class="app">
+  <view class="header">
+    <image class="image" src="{{userinfo.face=='' ? '/image/homepage/login_no.png':userinfo.face}}"></image>
+    <view class="nickname">
+      <text class="name">{{userinfo.nick_name}}</text>
+    </view>
+  </view>
+  <view class="action">
+      <view wx:if="{{userinfo.mobile==0}}" class="col">
+      <navigator url="/pages/public/login">
+        <image class="tubiao" src="/image/homepage/mobile.png"></image>
+        <text>绑定手机</text>
+        <image class="jiantou" src="/image/homepage/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view class="col">
+      <navigator url="/pages/homepage/me/coupon/coupon">
+        <image class="tubiao" src="/image/homepage/coupon.png"></image>
+        <text>优惠券</text>
+        <image class="jiantou" src="/image/homepage/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view class="col">
+      <navigator url="/pages/homepage/me/order/index">
+        <image class="tubiao" src="/image/homepage/order_on.png"></image>
+        <text>全部订单</text>
+        <image class="jiantou" src="/image/homepage/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view bindtap="tel" class="col">
+      <image class="tubiao" src="/image/homepage/kefu.png"></image>
+      <text>联系客服</text>
+      <image class="jiantou" src="/image/homepage/jiantou.png"></image>
+    </view>
+  </view>
+  <view class="jishu">技术支持：www.erre7.cn</view>
+</view>

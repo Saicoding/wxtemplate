@@ -1,0 +1,110 @@
+<!-- 主页 -->
+<view class="app">
+
+<view bindtap="tohome" class="search">
+ <navigator open-type="reLaunch" url="/pages/gs/index">
+      <input placeholder="输入搜索商家名称" />
+      <button>搜索</button>
+      </navigator>
+</view>
+<view class="catelist">
+  <view class="item">
+    <navigator open-type="reLaunch" url="/pages/gs/index?cat=1">
+    <image src="/image/cate/1.png"></image>
+    <text>婚纱摄影</text>
+    </navigator>
+  </view>
+  <view class="item">
+   <navigator open-type="reLaunch" url="/pages/gs/index?cat=2">
+    <image src="/image/cate/2.png"></image>
+    <text>婚礼策划</text>
+     </navigator>
+  </view>
+<view class="item">
+ <navigator open-type="reLaunch" url="/pages/gs/index?cat=3">
+    <image src="/image/cate/3.png"></image>
+    <text>婚纱礼服</text>
+  </navigator>  
+  </view>
+<view class="item">
+<navigator open-type="reLaunch" url="/pages/gs/index?cat=4">
+    <image src="/image/cate/4.png"></image>
+    <text>婚礼跟拍</text>
+   </navigator>  
+  </view>
+<view class="item">
+<navigator open-type="reLaunch" url="/pages/gs/index?cat=5">
+    <image src="/image/cate/5.png"></image>
+    <text>新娘跟妆</text>
+    </navigator>
+  </view>
+<view class="item">
+<navigator open-type="reLaunch" url="/pages/gs/index?cat=6">
+    <image src="/image/cate/6.png"></image>
+    <text>婚宴酒店</text>
+     </navigator>
+  </view>
+<view class="item">
+<navigator open-type="reLaunch" url="/pages/gs/index?cat=6">
+    <image src="/image/cate/7.png"></image>
+    <text>婚车租赁</text>
+      </navigator>
+  </view>
+<view class="item">
+<navigator open-type="reLaunch" url="/pages/gs/index?cat=6">
+    <image src="/image/cate/8.png"></image>
+    <text>婚礼司仪</text>
+      </navigator>
+  </view>
+</view>
+<view class="miao30">
+  <navigator url="/pages/gs/free"> <image src="/image/30miao.png"></image></navigator>
+</view>
+  <view wx:for="{{datas}}" class="module">
+    <view class="title">
+      <view class="vline"></view>
+      <text class="tt">{{item.cat_name}}</text>
+      <navigator open-type="reLaunch" url="/pages/gs/index?cat={{item.cat_id}}">
+      <text class="rt">更多</text>
+      </navigator>
+    </view>
+    <view class="list">
+      <view wx:for="{{item.cat_list}}" wx:for-item="val" class="item">
+          <navigator url="/pages/gs/detail?company_id={{val.company_id}}">
+          <image src="{{val.logo}}"></image>
+          <text>{{val.sort_name}}</text>
+          </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="jszc">技术支持：【巅峰互联】www.erre7.cn</view>
+<view class="kongbai"> </view>
+
+<view class="footer">
+  <view class="ft_item on">
+   <navigator open-type="redirect" url="/pages/home/index">
+    <image src="/image/home_on.png"></image>
+    <text>首页</text>
+   </navigator>
+  </view>
+  <view class="ft_item">
+     <navigator  open-type="redirect"  url="/pages/gs/index">
+    <image src="/image/gs_off.png"></image>
+    <text>找服务</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+     <navigator  open-type="redirect"  url="/pages/news/news">
+    <image src="/image/gl_off.png"></image>
+    <text>头条</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator    url="/pages/me/index">
+      <image src="/image/wode_off.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

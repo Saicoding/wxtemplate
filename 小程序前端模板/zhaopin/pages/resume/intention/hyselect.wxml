@@ -1,0 +1,20 @@
+<!-- 一级选择器 -->
+<view class="app">
+
+  <view class="header">
+    <view class="lt">最多5项，已选{{length}}项</view>
+    <view class="rt">
+      <view bindtap='toback' class="btn">确定</view>
+    </view>
+  </view>
+
+  <view style="height:100rpx;"></view>
+  <checkbox-group bindchange="checkboxChange">
+    <view class="citem" wx:for="{{datas}}">
+      <view class="title">{{item.industry_name}}</view>
+      <view class="arrow">
+        <checkbox value="{{item.industry_id}}" checked="{{item.check}}" />
+      </view>
+    </view>
+  </checkbox-group>
+</view>

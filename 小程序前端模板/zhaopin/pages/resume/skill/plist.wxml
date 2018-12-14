@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/skill/px">
+    <view class="add_school">+添加培训经历</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/skill/px?train_id={{item.train_id}}">
+        <view class="title">{{item.train_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/skill/px?train_id={{item.train_id}}">
+          <view class="lt">{{item.bg_date}}至{{item.end_date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="delteTrain" data-id="{{item.train_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

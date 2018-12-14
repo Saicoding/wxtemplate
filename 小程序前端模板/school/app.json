@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/kecheng/index",
+    "pages/news/index",
+    "pages/contact/index",
+    "pages/news/detail",
+    "pages/contact/liuyan",
+    "pages/kecheng/detail",
+    "pages/teacher/index",
+    "pages/huodong/index",
+    "pages/huodong/detail",
+    "pages/huodong/partake",
+    "pages/hd/index",
+    "pages/hd/bargain",
+    "pages/hd/vote",
+    "pages/hd/detail",
+    "pages/contact/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联学校培训",
+    "navigationBarTextStyle": "black"
+  }
+}

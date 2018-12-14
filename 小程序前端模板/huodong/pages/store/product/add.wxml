@@ -1,0 +1,130 @@
+<!--添加新产品-->
+<view class="app">
+   <form bindsubmit="formSubmit">
+    <view class="form">
+      <navigator url="/pages/public/city">
+        <view class="pick">
+          <text class="lf">选择城市</text>
+          <view class="rt">
+            <text>{{cityinfo == '' ? '请选择城市' : cityinfo.city_name }}</text>
+            <image src="/images/around/icon_arrow.png"></image>
+          </view>
+        </view>
+      </navigator>
+      <view class="pick">
+        <text class="lf">请输入地址</text>
+        <view class="rt">
+             <input name="address" placeholder="请输入地址" />
+        </view>
+      </view>
+
+     <picker mode="selector"   value="{{item.name}}" range="{{taocan_type}}" bindchange="taocanType">
+        <view class="pick">
+          <text class="lf">套餐类型</text>
+          <view class="rt">
+              <text>{{taocan_type_name == '' ? '选择套餐的类型' : taocan_type_name }}</text>
+              <image src="/images/around/icon_arrow.png"></image>
+          </view>
+        </view>
+    </picker>
+
+      <view class="pick">
+        <text class="lf">套餐名称</text>
+        <view class="rt">
+          <input name="taocan_name" placeholder="套餐名称" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">联系电话</text>
+        <view class="rt">
+          <input name="taocan_tel" placeholder="请输入联系电话" />
+        </view>
+      </view>
+
+      <view class="textarea">
+        <text class="lf">预定限制</text>
+        <view class="rt">
+          <textarea name="restrict" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+      <view class="textarea">
+        <text class="lf">使用时间</text>
+        <view class="rt">
+          <textarea name="usetime" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+      <view class="textarea">
+        <text class="lf">服务提示</text>
+        <view class="rt">
+          <textarea  name="service" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+    <view class="textarea">
+        <text class="lf">使用方法</text>
+        <view class="rt">
+          <textarea  name="method" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+    <view class="textarea">
+        <text class="lf">加购规则</text>
+        <view class="rt">
+          <textarea  name="plus" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+          <view class="textarea">
+        <text class="lf">其他提示</text>
+        <view class="rt">
+          <textarea  name="other" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+       <view class="photo">
+        <text class="lf">列表缩略图</text>
+        <view class="rt">
+          <view class="sctp">
+            <image bindtap="uploadphoto" src="/images/around/sctp.png"></image>
+            <text>上传的图片会被裁切，建议上传300x300的图片</text>
+          </view>
+          <view class="show">
+            <view class="item">
+              <image wx:if="{{photo_url != ''}}" src="{{photo_url}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="photo">
+        <text class="lf">详情BANNER大图</text>
+        <view class="rt">
+          <view class="sctp">
+            <image  bindtap="uploadbanner"  src="/images/around/sctp.png"></image>
+            <text>上传的图片会被裁切，建议上传640x300的图片</text>
+          </view>
+          <view class="show">
+            <view class="item">
+              <image wx:if="{{banner_url != ''}}" src="{{banner_url}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+           <view class="photo">
+        <text class="lf" style="background:#fff;">相册</text>
+        <view class="rt">
+          <view class="sctp">
+            <image bindtap="photos" src="/images/around/sctp.png"></image>
+            <text>可上传多张图片</text>
+          </view>
+          <view class="show">
+                 <view wx:for="{{photos_url}}" wx:for-index="index"  class="item"> 
+                  <image  bindtap="delele" data-index="{{index}}"  src="{{item}}"></image>
+                  
+                 </view> 
+          </view>
+          <view class="photodelete">*点击图片将删除图片</view>
+        </view>
+      </view>
+      <button formType="submit" class="btn">确定发布</button>
+    </view>
+  </form>
+</view>

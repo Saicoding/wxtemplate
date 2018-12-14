@@ -1,0 +1,354 @@
+/* detail.wxss */
+page{
+  width: 100%;
+  height: auto;
+  background: #f5f5f5;
+}
+
+.photo {
+  height: 400rpx;
+  width: 100%;
+}
+
+.photo image {
+  height: 400rpx;
+  width: 100%;
+}
+.product{
+  background: #fff;
+}
+
+.product .tit{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+
+.product .time{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.product .time .lt{
+  float: left;
+  width: 50%;
+  margin-left: 2%;
+}
+
+.product .yj{
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 96%;
+  margin-left: 2%;
+  color: #666;
+  text-decoration: line-through;
+}
+.product .price{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.product .price .xj{
+  float: left;
+  margin-left: 2%;
+  font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}
+.product .price .by{
+  float: left;
+  background: red;
+  color: #fff;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  line-height: 24rpx;
+  margin-top: 16rpx;
+  margin-left: 20rpx;
+}
+.product .price .cy{
+  float: right;
+  margin-right: 2%;
+}
+
+.product .time .rt{
+  float: right;
+  width: 40%;
+  text-align: center;
+}
+.tit .lt{
+  float: left;
+  width: 16%;
+  margin-left: 2%;
+  font-size: 26rpx;
+}
+.product .tit .rt{
+  float: left;
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.tuanlist{
+  width: 100%;height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.tuanlist .title{
+  width: 96%;
+  margin-left: 2%;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.tuanlist .item{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  overflow: hidden;
+  border-radius: 40rpx;
+  margin-top: 20rpx;
+}
+.tuanlist .item .face{
+  height: 80rpx;
+  width: 80rpx;
+  float: left;
+}
+.tuanlist .item .ct{
+  float: left;
+  width: 200rpx;
+  overflow: hidden;
+  height: 80rpx;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+.tuanlist .item .ct text{
+  display: block;
+}
+.tuanlist .item .haicha{
+  width: 200rpx;
+  float: left;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+}
+.tuanlist .item .cantuan{
+  float: right;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 150rpx;text-align: center;
+  color: #fff;
+}
+.col {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.col .item{
+  float: left;
+  width: 28%;
+  text-align: center;
+}
+.col .title{
+  float: left;
+  width: 16%;
+  text-align: center;
+}
+.col .main{
+  width: 84%;
+  float: left;
+}
+
+.detail{
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.detail .menu{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.detail .menu .item{
+  float: left;
+  width: 25%;
+  text-align: center;
+  font-size: 26rpx;
+  position: relative;
+}
+.detail .tuwen{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+.detail  .tuwen image{
+  width: 100%;
+}
+
+.detail .guige{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+.detail .guige text{
+  line-height: 40rpx;
+}
+.detail .tuwen text{
+  line-height: 40rpx;
+}
+
+.detail .pingjia{
+   width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+
+.detail .pingjia .comment{
+
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+
+}
+
+.detail .pingjia .comment .tit{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.detail .pingjia .comment .tit .lt{
+  width: 60%;
+  float: left;
+}
+
+.detail .pingjia .comment .tit .lt text{
+  width: auto;
+  height: auto;
+  margin-left: 10rpx;
+}
+
+.detail .pingjia .comment .tit image{
+  height: 80rpx;width: 80rpx;
+  float: left;
+  margin-top: 10rpx;
+  border-radius: 6rpx;
+}
+.detail .pingjia .comment .tit .rt{
+  float: right;
+  text-align: right;
+}
+.detail .pingjia .comment .content{
+  width: 96%;
+  margin: 0 auto;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  height: auto;
+  overflow: hidden;
+}
+.detail .pingjia .comment  .photo{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+.detail .pingjia .comment  .photo image{
+    float: left;
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+ 
+}
+
+.buttom{
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+}
+.buttom .lt{
+  width: 40%;
+  height: 80rpx;
+  background: #ff9e40;
+  float: left;
+}
+
+.buttom .rt{
+  width: 60%;
+  height: 80rpx;
+  background: #ff5d5b;
+  float: left;
+}
+
+.buttom .price{
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;  
+}
+
+.bottom_view{
+  position:  fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+  background: #fff;
+  z-index: 999;
+}
+
+.bottom_view .item{
+  width: 92%;
+  height: auto;
+  padding: 20rpx 0;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+  text-align: center;
+  font-size: 28rpx;
+  color: #000;
+  position: relative;
+  overflow: hidden;  
+}
+
+.bottom_view .item .title{
+  text-align: center;
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.bottom_view .item .close{
+  width: 40rpx;
+  height: 40rpx;
+  position: fixed;
+  right: 20rpx;
+}

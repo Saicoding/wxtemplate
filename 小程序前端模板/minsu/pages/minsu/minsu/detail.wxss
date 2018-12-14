@@ -1,0 +1,234 @@
+page {
+    background: #f3f3f3;
+}
+.app{
+  font-size: 28rpx;
+  height: auto; overflow: hidden;
+  width: 100%;
+}
+
+.header{
+  height: 300rpx;
+  width: 100%;
+  position: relative;
+}
+.header image{
+  width: 100%; height: 300rpx;
+}
+.commpany_title{
+  width: 100%;
+  color: #000; 
+  font-size: 32rpx;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1rpx #e2e2e2 solid;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.commpany_title text{
+  width: 50%;
+  margin-left: 2%;text-align: center;
+}
+.like{width:20%;float:right;
+height:60rpx;
+line-height:60rpx;
+background:#ff9e06;
+color:#fff;
+border-radius:10rpx;
+text-align:center;
+}
+.header .num{
+  position:  absolute;
+  background: rgba(0,0, 0, .5); 
+  right: 20rpx;
+  bottom: 20rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 10rpx;
+  z-index: 100;
+}
+.pd30{
+  padding-bottom: 30rpx;
+}
+
+.col{
+  height: 80rpx;
+  padding-top: 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.col .left{
+  float: left; color: #000;
+  width: 20%;
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.col .big{
+  font-size: 40rpx;
+}
+
+.col .center{
+  width: 70%;
+  text-align: left;
+  float: left;
+  margin-top: 10rpx;
+}
+
+.col image{
+  float: right;
+  width: 30rpx; height: 30rpx;
+  margin-right: 5rpx;
+  margin-top: 10rpx;
+}
+
+.product{
+  width: 100%; padding-bottom: 20rpx;
+  margin-top: 20rpx;
+   background: #fff;
+}
+.product .riqi{
+  width: 100%; height: 80rpx;
+  line-height: 80rpx;
+  color: #000;
+  border-bottom: 1rpx solid #e2e2e2;
+
+}
+
+.product .riqi .rz{
+  width: 40%;
+  font-size: 26rpx;
+  text-align: center;
+   float: left;
+}
+.product .riqi .rz text{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.product .riqi .ld{
+  width: 40%;
+  font-size: 26rpx;
+  text-align: center;
+  float: left;
+}
+.product .riqi .ld text{
+  font-size: 32rpx;
+  font-weight: bold;
+  
+}
+
+.product .riqi .gj{
+  width: 20%;
+  font-size: 26rpx;
+  text-align: center;
+   float: left;
+}
+.product .riqi .gj image{
+  width: 30rpx; height: 30rpx;
+}
+
+.fangxing{
+  padding: 10rpx;
+}
+
+.fangjian{
+  height: 200rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.fangjian .lt{
+  float: left; width:200rpx;
+}
+.fangjian .lt image{
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 25rpx;
+  margin-left: 25rpx;
+}
+
+.fangjian .ct{
+  width: 280rpx;
+  float: left;
+}
+.fangjian .ct .title{
+  font-size: 30rpx; font-weight: bold;
+  margin-top: 30rpx;
+}
+
+.fangjian .ct .info{
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+.fangjian .price{
+  color:  red;
+  float: left;
+  width: auth;
+  line-height: 40rpx;
+  margin-top: -68rpx;
+  margin-bottom: 10rpx;
+}
+
+.fangjian .price text{
+  font-size: 35rpx;
+}
+
+.fangjian .yuding{
+  float: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  width: auth;
+  background:  #ff9e06;
+  margin-top: 90rpx;
+  color: #fff;
+  padding: 10rpx; border-radius: 10rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+.nodata{
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image{
+  height: 200rpx;
+  width:  200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.nodata text{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color:  #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}
+.shuoming{
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+
+.photoshow{
+  height: 100%;
+  width: 100%;  
+  overflow: hidden;
+  position: fixed; z-index: 1000;
+  top: 0; left: 0;
+}
+.photoshow .bg{
+  width: 100%;height: 100%;position: absolute; left: 0; top: 0;
+  background: #000; opacity: 0.8;
+}
+.photoshow .sw{position: absolute;width:100%;height:500rpx;left:0; top:300rpx; z-index: 1002;}
+.photoshow .sw_item{display: block;height: 500rpx;}
+.photoshow .sw_item image{width: 100%;height: 500rpx;}
+

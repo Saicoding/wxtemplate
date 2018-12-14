@@ -1,0 +1,61 @@
+<!--pages/yuyue/index.wxml-->
+<view class='app'>
+  <view class='header'>
+    <image src='/img/pics/004.jpg'></image>
+    <view class='hinfo'>
+      <image class="face" src='/img/pics/002.jpg'></image>
+      <view class='name' style='color:{{color}};'>请叫我码农哥</view>
+      <view class='detail'>"没有最好，只有更好"</view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <view class="chinese" style='color:{{color}};'>在线预约</view>
+    <view class='english'>Online booking</view>
+  </view>
+
+  <form bindsubmit='bindUserYuyue'>
+    <view class='iteminput'>
+      <view class='hint'>姓名
+        <text class='warn'>*</text>
+      </view>
+      <input name="name" value='{{name}}' placeholder='请输入姓名'></input>
+    </view>
+
+    <view class='iteminput'>
+      <view class='hint'>电话
+        <text class='warn'>*</text>
+      </view>
+      <input name="phone" value='{{mobile}}' placeholder='请输入电话'></input>
+    </view>
+
+    <view class='iteminput'>
+      <view class='hint'>预约日期</view>
+      <picker class="date" mode="date" bindchange="bindStartDateChange">
+        <text>{{bgdate? bgdate : '请选择预约日期'}} </text>
+      </picker>
+    </view>
+
+    <view class='iteminput'>
+      <view class='hint'>拍摄系类
+        <text class='warn'>*</text>
+      </view>
+
+      <radio-group bindchange="radioChange" wx:for="{{datas}}">
+        <radio value='{{item.category_id}}' class='select' checked='{{item.category_id == category_id? true: false}}'>{{item.name}}</radio>
+      </radio-group>
+
+    </view>
+
+    <view class='iteminput'>
+      <view class='hint'>其他要求</view>
+      <textarea name="remarks" value='{{remarks}}' placeholder='请输入其他要求'></textarea>
+    </view>
+
+    <button class='yuyue' form-type='submit' style='background:{{color}}'>立即预约</button>
+  </form>
+
+  <view class="jszc" style='background:#f5f5f5;'>技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+</view>

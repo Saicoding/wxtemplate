@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/publish01",
+    "pages/index/publish02",
+    "pages/index/me",
+    "pages/index/screen"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "巅峰互联拼车",
+    "navigationBarTextStyle": "white"
+  }
+}

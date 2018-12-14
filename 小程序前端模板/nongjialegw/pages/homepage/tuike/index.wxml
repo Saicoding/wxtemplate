@@ -1,0 +1,41 @@
+<!--pages/homepage/tuike/index.wxml-->
+<view class="app">
+
+  <view class="user_qrcode" hidden="false">
+    <image class="face" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502536395743&di=03dca121edd9cd802568f3aaa84f31b5&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D683b89a9b899a9013b60533228a5264d%2F0ff41bd5ad6eddc426d1e14639dbb6fd5266335c.jpg"></image>
+    <view class="nickname">小科比-码农哥</view>
+    <view class="daiyan">我是码农哥，我为你代言</view>
+    <view class="wxb_qrcode">
+      <image src="/image/homepage/icon_wxb_qrcode2.png"></image>
+    </view>
+  </view>
+
+
+  <canvas  canvas-id="user_mp" style="width:730rpx; height:700rpx;"/>
+
+  <view class="tuike_info" hidden="false">
+    <view class="user_face">
+      <image src="/image/homepage/login_no.png"></image>
+      <text>请叫我码农哥</text>
+    </view>
+
+    <view class="col">
+      <text>手机号</text>
+      <input placeholder="请输入11位手机号" />
+    </view>
+    <view class="col">
+      <text>真实姓名</text>
+      <input placeholder="请输入您的真实姓名" />
+    </view>
+  </view>
+
+  <view class="look_ranking" bindtap="save_mp">
+    保存图片
+  </view>
+
+  <view class="look_ranking" bindtap="save_mp">
+    查看排行榜
+  </view>
+
+
+</view>

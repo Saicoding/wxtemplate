@@ -1,0 +1,40 @@
+<!-- 个人技能 -->
+<view class="app">
+  <navigator url="/pages/resume/skill/plist">
+    <view class="info_item">
+      <view class="title">培训经历</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/skill/ylist">
+    <view class="info_item">
+      <view class="title">语言能力</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/skill/zlist">
+    <view class="info_item">
+      <view class="title">证书</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <view class="info_item" hidden="true">
+    <view class="title">IT技能</view>
+    <!-- <view class="state">不完整</view> -->
+    <view class="arrow">
+      <image src="/img/pk_jt.png"></image>
+    </view>
+  </view>
+</view>

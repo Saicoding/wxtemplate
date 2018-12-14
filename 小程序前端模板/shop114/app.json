@@ -1,0 +1,23 @@
+{
+  "extEnable": true,
+  "pages": [
+        "pages/index",
+    "pages/order/create",
+    "pages/ruzhu",
+    "pages/detail",
+    "pages/store/index",
+    "pages/store/yuyue",
+    "pages/store/edit",
+    "pages/store/detail",
+    "pages/member/index",
+    "pages/member/shop",
+    "pages/member/zanshop",
+    "pages/member/telshop"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0a96cb",
+    "navigationBarTitleText": "巅峰互联114",
+    "navigationBarTextStyle": "white"
+  }
+}

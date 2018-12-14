@@ -1,0 +1,166 @@
+.search{
+    width: 80%;
+    height: 80rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30rpx;
+}
+.miao30{
+  height: 200rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.miao30 image{
+  height: 200rpx;
+  width: 100%;
+}
+
+.search button{
+  float: right;
+  width: 30%;
+  border: 0;
+  height: 82rpx;
+  background:#FF6666; 
+  font-size: 26rpx;
+  line-height: 82rpx;
+  color: #fff;
+}
+
+.search input{
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  margin-left: 5%;
+  float: left;
+}
+
+.catelist{
+  height: auto;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx; 
+}
+.catelist .item{
+  width: 25%;
+  float: left;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.catelist .item image{
+  height: 80rpx;
+  width: 80rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.catelist .item text{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.module{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.module .title{
+  width: 96%;
+  color: #515151;
+  margin-left: 2%;
+  border-bottom: 1px #f5f5f5 solid;
+  height: 80rpx;
+  line-height:80rpx;
+}
+.module .list{
+  width: 100%;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  height: auto;
+  overflow: hidden;
+}
+.module .list .item{
+  float: left;
+  width: 30%;
+  margin-left: 2.5%;
+  height: 250rpx;
+  margin-top: 20rpx;
+}
+.module .list .item image{
+  display: block;
+  width: 100%;
+  height: 200rpx;
+}
+.module .list .item text{
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 5rpx;
+  overflow: hidden;
+}
+.module .title .vline{
+  width: 5rpx;
+  height: 35rpx;
+  background: #FF6666;
+  margin-top: 25rpx;
+  float: left;
+}
+
+.module .title .tt{
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-left: 15rpx;
+  color: #000;
+  float: left;
+}
+.module .title .rt{
+  float: right;
+  margin-right: 10rpx;
+  width: 100rpx;
+}
+
+.module .type{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.module .type .item{
+  width: 23%;
+  height: 150rpx;
+  margin: 20rpx 0;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  float: left;
+  
+}
+
+.module .type .item .icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin: 5rpx auto;
+}
+
+.module .type .item .icon image{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx 10rpx;
+}
+
+.module .type .item .tv{
+  font-size: 26rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 13rpx;
+}

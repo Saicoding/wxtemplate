@@ -1,0 +1,83 @@
+<view class="app">
+  <form bindsubmit="formBindsubmit">
+    <view class="form">
+      <view class="input">
+        <text class="lf">民宿名称</text>
+        <view class="rt">
+          <input value="{{detail.minsu_name}}" name="minsu_name" placeholder="民宿名称" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">民宿电话</text>
+        <view class="rt">
+          <input value="{{detail.minsu_tel}}"  name="minsu_tel" placeholder="客户联系电话" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">民宿地址</text>
+        <view class="rt">
+          <input value="{{detail.address}}"  name="address" placeholder="民宿详细地址" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">营业时间</text>
+        <view class="rt">
+          <input value="{{detail.opening_time}}" name="opening_time"  placeholder="营业时间" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">最近装修时间</text>
+        <view class="rt">
+          <input value="{{detail.decoration_time}}"  name="decoration_time" placeholder="最近装修时间" />
+        </view>
+      </view>
+      <view class="textarea">
+        <text class="lf">民宿详情</text>
+        <view class="rt">
+          <textarea value="{{detail.describe}}" name="describe" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+      <view class="textarea">
+        <text class="lf">退订规则</text>
+        <view class="rt">
+          <textarea value="{{detail.unsubscribe}}" name="unsubscribe" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+         <view class="textarea">
+        <text class="lf">入住须知</text>
+        <view class="rt">
+          <textarea value="{{detail.check_otice}}" name="check_otice" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+      <view class="photo">
+        <text class="lf">列表缩略图</text>
+        <view class="rt">
+          <view class="sctp">
+            <image bindtap="uploadphoto" src="/img/minsu/sctp.png"></image>
+            <text>上传的图片会被裁切，建议上传300x300的图片</text>
+          </view>
+          <view class="show">
+            <view class="item">
+              <image wx:if="{{photo_url != ''}}" src="{{photo_url}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="photo">
+        <text class="lf">详情BANNER大图</text>
+        <view class="rt">
+          <view class="sctp">
+            <image  bindtap="uploadbanner"  src="/img/minsu/sctp.png"></image>
+            <text>上传的图片会被裁切，建议上传640x300的图片</text>
+          </view>
+          <view class="show">
+            <view class="item">
+              <image wx:if="{{banner_url != ''}}" src="{{banner_url}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button formType="submit" class="btn">确定保存</button>
+    </view>
+  </form>
+</view>

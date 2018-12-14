@@ -1,0 +1,184 @@
+<!--home.wxml-->
+<view class="app">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <navigator url="{{item.link}}" hover-class="navigator-hover">
+          <image src="{{item.url}}" class="slide-image" width="355" height="150" />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="ad_header">
+    <view class="city">
+      <navigator url="/pages/public/city">
+        <text>{{cityinfo.city_name}}</text>
+        <image src="/images/around/icon_gray_arrow_down.png"></image>
+      </navigator>
+    </view>
+
+    <view class="search">
+      <navigator style="width:100%" url="/pages/tuan/index">
+        <view class="content">
+          <image src="/images/around/icon_around_search.png"></image>
+          <text>搜索</text>
+        </view>
+      </navigator>
+    </view>
+
+    <!-- <view class="kefu">
+      <image src="/images/around/icon_white_kefu.png"></image>
+    </view> -->
+  </view>
+
+  <swiper class="swiper-box" indicator-dots="true">
+    <swiper-item wx:for="{{length}}" index="{{pindex}}" wx:for-index="pindex">
+      <view class="menu">
+        <view class="item" wx:for="{{navs}}" index="index" wx:for-index="index" wx:if="{{index<pindex*8+8 && index>=pindex*8}}">
+          <navigator url='/pages/tuan/index?nav_id={{item.nav_id}}'>
+            <view class="icon">
+              <image src="{{item.nav_ico}}"></image>
+            </view>
+            <text>{{item.nav_name}}</text>
+          </navigator>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+<!-- 
+  <view class="menu">
+    <view wx:for="{{navs}}" class="menu_item" wx:if="{{index < 5 }}" wx:for-index="index">
+      <navigator url="/pages/tuan/index?nav_id={{item.nav_id}}">
+        <image src="{{item.nav_ico}}"></image>
+        <text>{{item.nav_name}}</text>
+      </navigator>
+    </view>
+  </view> -->
+
+  <!-- <view class="menu">
+    <view wx:for="{{navs}}" class="menu_item" wx:if="{{index > 5 && index <10 }}" wx:for-index="index">
+      <navigator url="/pages/tuan/index?nav_id={{item.nav_id}}">
+        <image src="{{item.nav_ico}}"></image>
+        <text>{{item.nav_name}}</text>
+      </navigator>
+    </view>
+  </view>-->
+  <view class="youhuiquanqiang">
+    <navigator url="/pages/index/coupon">
+      <image src="/images/around/youhuiquanqiang.png"></image>
+    </navigator>
+  </view> 
+
+  <view class="recommend">
+    <view class="title">
+      <text>目的地推荐</text>
+      <view style="width:1px; margin-top:20rpx;margin-bottom:20rpx; background:#AAAAAA;"></view>
+      <text style="font-size: 24rpx; color: #AAAAAA; align-items: center; display: flex; margin-left: 20rpx;">精选推荐好玩的景区、城市</text>
+    </view>
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:240rpx" bindchange="bindChange">
+      <swiper-item wx:for="{{destination}}">
+        <view class="page_bd">
+          <view class="girds">
+
+            <block wx:for="{{item}}" wx:for-item="val">
+              <navigator url="/pages/tuan/index?destination_id={{val.destination_id}}">
+                <view class="gird_item" hover-class="gird_item_active" data-index="{{index}}" data-id="{{0}}" bindtap="click">
+                  <image class="gird_item_icon" src="{{val.photo}}" />
+                  <view class="gird_item_label">{{val.title}}</view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+
+    <view class="indicator">
+      <block wx:for="{{swiperList}}">
+        <view class="swiper_item" style="background-color:{{index == currentTab?'#04b00f':'#aaaaaa'}};"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="recommend">
+    <view class="title">
+      <text>精品周边游</text>
+      <view style="width:1px; margin-top:20rpx;margin-bottom:20rpx; background:#AAAAAA;"></view>
+      <text style="font-size: 24rpx; color: #AAAAAA; align-items: center; display: flex; margin-left: 20rpx;">用心推荐，优质体验</text>
+    </view>
+
+    <view class="item_shop" wx:for="{{package}}">
+      <navigator url="/pages/tuan/detail?taocan_id={{item.taocan_id}}">
+        <view class="top pr">
+          <image src="{{item.photo}}"></image>
+          <view class="price_container pa">
+            <text class="whitle discount_price">yen{{item.price}}起</text>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="content">
+            <text>{{item.taocan_name}}</text>
+            <view class="tag container_vertical_center">
+              <view class="button_tag container_center">
+                <image src="/images/around/icon_location_tag.png"></image>
+                <text>{{item.city}}</text>
+              </view>
+              <view class="button_tag">
+                <text>今日可预订</text>
+              </view>
+              <text>已售{{item.order_num}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <view wx:if="{{package!= ''&& more==0}}" class="nomore">
+      没有更多数据了
+    </view>
+    <view bindtap="more" wx:if="{{package!=''&&more==1}}" class="more">
+      查看更多
+    </view>
+    <view wx:if="{{package== '' }}" class="nodata">
+      <image src="/images/around/nodata.png"></image>
+      <text>没有更多订单了</text>
+    </view>
+  </view>
+
+  <view class="jszc">技术支持：【巅峰互联】www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-shouye:before"></view>
+      <text>首页</text>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/destination/index'>
+        <view class="image iconfont icon-mudedi:before"></view>
+        <text>目的地</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/find/index'>
+        <view class="image iconfont icon-faxian:before"></view>
+        <text>发现</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/order/index'>
+        <view class="image iconfont icon-dingdan:before"></view>
+        <text>订单</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

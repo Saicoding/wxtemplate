@@ -1,0 +1,14 @@
+/* pages/authorize/authorize.wxss */
+.text{
+  font-size:30rpx;
+  color:rgb(175, 174, 174);
+  padding:30rpx 40rpx 40rpx 30rpx;
+  text-indent: 60rpx;
+}
+
+.btn{
+  height:80rpx;
+  width:90%;
+  font-size:30rpx;
+  margin:0 auto;
+}

@@ -1,0 +1,191 @@
+/* pages/hd/vote.wxss */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .hdtp {
+  width: 100%;
+  height: 420rpx;
+}
+
+.app .hdtp image {
+  width: 100%;
+  height: 420rpx;
+}
+
+.app .header {
+  width: 100%;
+  height: 90rpx;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.app .hdzt {
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+  color: #fff;
+  padding: 15rpx 0;
+  background: #fff;
+}
+
+.app .hdzt .lt {
+  width: 65.9%;
+  height: 90rpx;
+  float: left;
+  padding: 0 2%;
+  color: #000;
+  text-align: left;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.app .hdzt .vline {
+  width: 0.2%;
+  height: 90rpx;
+  background: #f5f5f5;
+  float: left;
+}
+
+.app .hdzt .rt {
+  width: 29.9%;
+  height: 90rpx;
+  float: right;
+  text-align: center;
+  display: inline-flex;
+  position: relative;
+}
+
+.app .hdzt .rt image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx auto;
+}
+
+.app .hdzt .rt button{
+  width: 80%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 10rpx 10%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0; 
+  
+}
+
+.app .tpxx{
+  width: 100%;
+  height: 80rpx;
+  background: #f8f8f8;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+
+.app .tpxx .titem{
+  width: 33.3%;
+  height: 80rpx;
+  float: left;
+}
+
+.app .tpxx .titem .name{
+  width: auto;
+  height: auto;
+  font-size: 26rpx;
+  color: #515151;
+}
+
+.app .tpxx .titem .count{
+  width: auto;
+  height: auto;
+  font-size: 26rpx;
+  color: #515151;
+  margin-top: 12rpx;
+}
+
+.app .list{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 15rpx;
+  background: #fff;
+}
+
+.app .list .item{
+  width: 45%;
+  float: left;
+  margin-left: 3%;
+  background: #fff;
+  position: relative; 
+  padding-bottom: 10rpx;
+  margin-top: 20rpx;
+  border: 1rpx #f5f5f5 solid;
+  border-radius: 6rpx;
+}
+
+.app .list .item image{
+  width: 100%;
+  height: 360rpx;
+  margin-top: 10rpx;
+  display: block;
+  border-radius: 6rpx;
+  border-bottom: 2rpx #f5f5f5 dotted;
+}
+
+.app .list .item .ibview{
+  width: 94%;
+  height: 80rpx;
+  padding: 0 3%;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.app .list .item .ibview .bh{
+  width: 33.3%;
+  height: auto;
+  float: left;
+}
+
+.app .list .item .ibview .ps{
+  width: 33.3%;
+  height: auto;
+  float: right;
+  text-align: right;
+}
+
+.app .list .item .ibview .tp{
+  width: 33.3%;
+  height: auto;
+  float: left;  
+  text-align: center;
+  color: #EE2C2C;
+}
+
+.app .list .item .ibview .tp text{
+  padding: 5rpx 15rpx;  
+  border: 1rpx #f5f5f5 solid;
+}
+
+
+.app .list .item .name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 12rpx 20rpx;
+  border-radius: 6rpx 0 6rpx 0;
+}
+
+

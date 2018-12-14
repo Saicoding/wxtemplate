@@ -1,0 +1,99 @@
+<!--pages/homepage/tuike/ranking.wxml-->
+<view class="app">
+
+  <view class="ranking_item">
+    <view class="lt">
+      <image src="/image/homepage/login_no.png"></image>
+    </view>
+
+    <view class="rt">
+      <view class="name">
+        请叫我码农哥
+      </view>
+
+      <view class="ranking_info">
+        <text>佣金:200元</text>
+        <text>浏览次数:99+</text>
+      </view>
+      <image class="ricon" src="/image/homepage/icon_ranking_01.png"></image>
+    </view>
+  </view>
+
+  <view class="ranking_item">
+    <view class="lt">
+      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1069639860,1179654067&fm=26&gp=0.jpg"></image>
+    </view>
+
+    <view class="rt">
+      <view class="name">
+        请叫我馨颖啊
+      </view>
+
+      <view class="ranking_info">
+        <text>佣金:200元</text>
+        <text>浏览次数:99+</text>
+      </view>
+      <image class="ricon" src="/image/homepage/icon_ranking_02.png"></image>
+    </view>
+  </view>
+
+  <view class="ranking_item">
+    <view class="lt">
+      <image src="/image/homepage/login_no.png"></image>
+    </view>
+
+    <view class="rt">
+      <view class="name">
+        请叫我小科比
+      </view>
+
+      <view class="ranking_info">
+        <text>佣金:200元</text>
+        <text>浏览次数:99+</text>
+      </view>
+      <image class="ricon" src="/image/homepage/icon_ranking_03.png"></image>
+    </view>
+  </view>
+
+
+  <view class="ritem">
+    <view class="llt">
+      <image src="/image/homepage/login_no.png"></image>
+      <view class="rinfo">
+        <view>请叫我小科比</view>
+        <view>佣金:200元</view>
+        <view>浏览次数:99+</view>
+      </view>
+    </view>
+
+    <view class="rrt">
+      <image src="/image/homepage/login_no.png"></image>
+      <view class="rinfo">
+        <view>请叫我小科比</view>
+        <view>佣金:200元</view>
+        <view>浏览次数:99+</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ritem">
+    <view class="llt">
+      <image src="/image/homepage/login_no.png"></image>
+      <view class="rinfo">
+        <view>请叫我小科比</view>
+        <view>佣金:200元</view>
+        <view>浏览次数:99+</view>
+      </view>
+    </view>
+
+    <view class="rrt">
+      <image src="/image/homepage/login_no.png"></image>
+      <view class="rinfo">
+        <view>请叫我小科比</view>
+        <view>佣金:200元</view>
+        <view>浏览次数:99+</view>
+      </view>
+    </view>
+  </view>
+
+</view>

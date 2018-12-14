@@ -1,0 +1,76 @@
+<scroll-view scroll-x="true" class="menubar">
+  <view class="menu" wx:for="{{categorys}}">
+    <text style="{{cat==item.category_id?'border-bottom:5rpx solid '+color+';color:'+color+';':''}}" bindtap="onclick_menu" data-id="{{item.category_id}}">{{item.category_name}}</text>
+  </view>
+</scroll-view>
+<view style="height:82rpx;"></view>
+<view class="search2">
+  <form bindsubmit='searchTuanList'>
+    <input name="product_name" value='{{keyword}}' type="text" placeholder="输入商品名或编号" />
+    <button form-type='submit' style="background:{{color}}">搜索</button>
+    <text class="delete iconfont icon-cha" bindtap='clearInputContent'></text>
+  </form>
+</view>
+
+<view wx:for="{{datas}}">
+  <navigator url="/pages/tuan/detail?goods_id={{item.goods_id}}">
+    <view class="tuan">
+      <view class="product">
+        <image src="{{item.photo}}"></image>
+        <view class="yiyou">已有{{item.people_num}}人参团</view>
+      </view>
+
+      <view class="tit">{{item.goods_name}}</view>
+
+      <view class="info">
+        <view class="lt">
+
+          <view class="tuaninfo">
+            <text class="tuantype">[{{item.group_num}}人团]</text>
+            <text class="price">yen{{item.group_price}}</text>
+            <text class="yuanjia">yen{{item.price}}</text>
+          </view>
+          <view class="danmai">
+            单买价yen{{item.alone_price}}
+            <text class="by" hidden='{{item.is_mail==1?false:true}}'>包邮</text>
+          </view>
+        </view>
+        <view style="background:{{color}}" class="rt">
+          去开团
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view class="kefutel" bindtap='callPhone'>
+  <text class='iconfont icon-kefu'></text>
+</view>
+
+<view bindtap="loadMore" class="more" wx:if="{{datas!=''&&more==1}}">查看更多</view>
+<view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+<view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"></view>
+
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <navigator open-type="redirect" url="/pages/tuan/index">
+      <view class="image iconfont icon-shouye"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/coupon/index">
+      <view class="image iconfont icon-youhuiquan"></view>
+      <text>优惠券</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-dingdan"></view>
+      <text>订单</text>
+    </navigator>
+  </view>
+</view>

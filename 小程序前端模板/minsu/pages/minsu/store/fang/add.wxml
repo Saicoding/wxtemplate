@@ -1,0 +1,94 @@
+<view class="app">
+
+
+  <form bindsubmit="formBindsubmit">
+    <view class="form">
+      <view class="input">
+        <text class="lf">房间名称</text>
+        <view class="rt">
+          <input name="title"  placeholder="房间名称" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">面积</text>
+        <view class="rt">
+          <input name='area'  placeholder="房间面积㎡" />
+        </view>
+      </view>
+      
+         <view class="pick">
+         <picker mode="selector"   value="{{index}}" range="{{bed_type}}" bindchange="bedType">
+          <text class="lf">床类型</text>
+          <view class="rt">
+              <text>{{bedtypename == '' ? '选择床的类型' : bedtypename }}</text>
+              <image src="/img/minsu/jiantou.png"></image>
+          </view>
+          </picker>
+        </view>
+      <view class="input">
+        <text class="lf">床长</text>
+        <view class="rt">
+          <input name="bed_logn" placeholder="长单位米" />
+        </view>
+      </view>
+          <view class="input">
+        <text class="lf">床宽</text>
+        <view class="rt">
+          <input name="bed_width" placeholder="长单位米" />
+        </view>
+      </view>
+          <view class="input">
+        <text class="lf">床的数量</text>
+        <view class="rt">
+          <input name="bed_num" placeholder="单位张" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">房间平时价</text>
+        <view class="rt">
+          <input name="price" placeholder="单位元" />
+        </view>
+      </view>
+   <view class="input">
+        <text class="lf">宜居人数</text>
+        <view class="rt">
+          <input name="appropriate_num" placeholder="宜居人数" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">最大可预定</text>
+        <view class="rt">
+          <input name="day_num" placeholder="请填写单日最高可预定数量" />
+        </view>
+      </view>
+     <view class="input">
+        <text class="lf">是否有wifi</text>
+        <view class="rt">
+          <switch bindchange="wifi"   type="switch" />
+        </view>
+      </view>
+      <view class="input">
+        <text class="lf">早餐服务</text>
+        <view class="rt">
+          <switch bindchange="zaocan"   type="switch" />
+        </view>
+      </view>
+      <view class="photo">
+        <text class="lf">上传图片</text>
+        <view class="rt">
+            <view class="sctp">
+              <image bindtap="upload" src="/img/minsu/sctp.png"></image>
+            </view>
+            <view wx:if="{{photos != ''}}" class="show">
+                <view class="item">
+                  <image bindtap="delete" src="{{photos}}"></image>
+                </view>
+            </view>
+            <view class="photodelete">*点击图片将删除图片</view>
+        </view>
+      </view>
+    
+      <button formType="submit"  class="btn">确定发布</button>
+    </view>
+  </form>
+</view>

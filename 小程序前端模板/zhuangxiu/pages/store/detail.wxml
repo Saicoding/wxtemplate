@@ -1,0 +1,92 @@
+<view class="header">
+
+  <view class="top">
+    <view class="logo">
+      <image src="{{detail.logo}}"></image>
+    </view>
+    <view class="right">
+      <view class="company">{{detail.company_name}}</view>
+      <view class="info">{{detail.area_name}}-{{detail.sort_name}}</view>
+      <view class="info">
+        <text wx:if="{{detail.vip != 0}}" class="vip">会员{{detail.vip}}年</text>
+        <text wx:if="{{detail.vip == 0}}" class="novip">普通商家</text>
+        <view class="rz">
+          <image src="/image/V.png"></image> <text>{{detail.type == 1 ? '个人认证' : '企业认证'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="col">主营：{{detail.main_business}}</view>
+    <view class="col">成立时间：{{detail.bg_year}}</view>
+    <view class="col">联系人：{{detail.name}}</view>
+    <view class="col">电话：{{detail.tel}}</view>
+    <view class="col">地址：{{detail.addr}}</view>
+  </view>
+
+  <view class="share">
+    <image src="/image/share.png"></image>
+    <text>分享</text>
+  </view>
+
+  <button open-type="share" class="share"></button>
+
+  <view class="qrcode">
+    <image src="/image/qrcode.png" bindtap="show_qrcode"></image>
+  </view>
+</view>
+
+<view class="nums">
+
+  <view class="item bdrt">
+    <image src="/image/ll.png"></image>
+    <text>浏览：{{detail.view_num}}</text>
+  </view>
+  <view class="item bdrt">
+    <image src="/image/dh.png"></image>
+    <text>电话：{{detail.tel_num}}</text>
+  </view>
+  <view class="item bdrt">
+    <image src="/image/yy.png"></image>
+    <text>预约：{{detail.yuyue_num}}</text>
+  </view>
+  <view class="item">
+    <image src="/image/zan.png"></image>
+    <text>点赞：{{detail.zan_num}}</text>
+  </view>
+</view>
+
+<view class="photo">
+  <view class="title"><text>商家相册</text></view>
+  <scroll-view scroll-x="true" class="pics">
+    <image wx:for="{{detail.photos}}" src="{{item}}" bindtap="clickImage"></image>
+  </scroll-view>
+</view>
+
+<view class="detail">
+  <view class="title"><text>商家介绍</text></view>
+  <view class="content">
+    {{detail.detail}}
+  </view>
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"> </view>
+
+<view class="bt_list">
+  <view class="tel">拨打电话</view>
+  <navigator url="/pages/gs/free">
+    <view class="yy">免费设计</view>
+  </navigator>
+</view>
+
+<view class="dwbg" bindtap="app_screen" hidden="{{app_screen?true:false}}">
+</view>
+
+<view class="qrcode_dialog" hidden="{{qrcode_dialog?true:false}}">
+  <view class="qrcode_bg">
+    <image src="{{qrcode_url}}"></image>
+  </view>
+
+  <view bindtap="btn_save" class="btn_save">保存二维码</view>
+</view>

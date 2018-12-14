@@ -1,0 +1,112 @@
+/* 职能意向 */
+.app{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  overflow: hidden;
+}
+
+.app .header{
+  width: 92%;
+  height: 100rpx;
+  padding: 0 4%;
+  position: fixed;
+}
+
+.app .header .lt{
+  width: 70%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+}
+.app .header .rt{
+  width: 30%;
+  height: 100rpx;
+  float: right;
+  text-align: center;
+}
+
+.app .header .rt .btn{
+  width: auto;
+  height: 60rpx;
+  margin: 15rpx 40rpx;
+  padding: 0 15rpx; 
+  background: #0a96cb;
+  border-radius: 10rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_100{
+  margin-top: 100rpx;
+}
+
+.app .pitem{
+  width: 92%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 4%;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .pitem .title{
+  font-size: 28rpx;
+  color: #000;
+  float: left;
+}   
+
+.pitem .arrow{
+  height: 100rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  color: #000;
+  float: right;
+  display: flex;
+  align-items: center;
+}   
+
+.app .pitem .arrow image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.child{
+  width: 100%;
+  height: auto;
+  background: #f00;
+}
+
+.child .citem{
+  width: 88%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 6%;
+  background: #f5f5f5;
+  border-bottom: 1rpx #e6e6e6 solid;
+}
+
+.child .citem .ctitle{
+  font-size: 28rpx;
+  color: #000;
+  float: left;
+}   
+
+.citem .carrow{
+  height: 100rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  color: #000;
+  float: right;
+  display: flex;
+  align-items: center;
+}   
+
+.citem .carrow image{
+  width: 40rpx;
+  height: 40rpx;
+}

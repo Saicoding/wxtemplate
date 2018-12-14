@@ -1,0 +1,152 @@
+.nodata{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 100rpx;
+  text-align: center;
+}
+
+
+.nodata image{
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.nodata view{
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 20rpx;
+}
+
+.nodata button{
+  width: 400rpx;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.data{
+  height: auto;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.data .item{
+  height: auto;
+  overflow: hidden;
+  width: 96%;
+  margin: 0 auto;
+}
+.data .item .lt{
+  float: left;
+  width: 10%;
+  line-height: 100rpx;
+  text-align: center;
+}
+.data .item .lt radio{
+  float: left;
+  margin-top: 30%;
+  margin-left: 20%;
+}
+.data .item .rt{
+  width: 90%;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+.product{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.product .img{
+  float: left;
+  width: 150rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+  height: 150rpx;
+}
+
+.product .img image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.product .content{
+  float: left;
+  width: 450rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+}
+.content .title{
+  height: auto;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+}
+.content .price{
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  height: 40rpx;
+}
+.content .price .xjia{
+  color: red;
+  float: left;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.content .price .yjia{
+    color: #666;
+  text-decoration: line-through;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.content .price .iconfont{
+  float:right;font-size: 40rpx;
+  color: #000;
+}
+
+.item .num{
+    height: 80rpx;
+}
+
+.item .num text{
+  float: right;
+  padding: 10rpx 20rpx;
+  margin-top: 15rpx;
+  border:1rpx solid #e2e2e2;
+}
+
+.bottom{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  line-height: 100rpx;
+  background: #fff;
+}
+
+.bottom .lt{
+  float: left;
+  margin-left: 20rpx;
+}
+.bottom .ct{
+  float: left;
+  margin-left: 20rpx;
+}
+
+.bottom .ct text{
+  color: red;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.bottom .jiesuan{
+  width: 160rpx;
+  float: right;
+  background: #ff5d5b;
+  color: #fff;
+  text-align: center;
+}

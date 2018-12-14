@@ -1,0 +1,47 @@
+<!--pages/hd/detail.wxml-->
+<view class="app">
+  <view class="nickname">{{datas.player_name}}</view>
+
+  <view class="tpxx">
+    <view class="titem">
+      <view class="name">编号</view>
+      <view class="count">{{datas.number}}</view>
+    </view>
+
+    <view class="titem">
+      <view class="name">票数</view>
+      <view class="count">{{datas.vote_num}}</view>
+    </view>
+
+    <view class="titem">
+      <view class="name">人气</view>
+      <view class="count">{{datas.view_num}}</view>
+    </view>
+  </view>
+
+  <view class="hdbj">
+    <image src="{{datas.photo}}"></image>
+  </view>
+
+  <view class="info">
+    <view class="title">选手介绍：</view>
+    <view class="content">{{datas.player_introduce}}</view>
+  </view>
+
+  <view class="info">
+    <view class="title">活动规则：</view>
+    <view class="content">{{datas.rule}}</view>
+  </view>
+
+  <view class="info">
+    <view class="title">奖品设置：</view>
+    <view class="content"><text>{{datas.introduce}}</text></view>
+  </view>
+
+  <view style="height:80rpx;"></view>
+
+  <view class="bview">
+    <button class="lb" open-type="share" style="background:{{color}}">帮TA拉票</button> 
+    <view class="rb" style="color:{{color}}" bindtap='userVote'>我要投TA</view>
+  </view>
+</view>

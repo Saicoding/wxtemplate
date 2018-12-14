@@ -1,0 +1,78 @@
+<!-- 项目经验 -->
+<view class="app">
+  <form bindsubmit="addProjectJY">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">开始时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindBgDatePickerChange">
+            <text>{{bg_date ? bg_date : '请选择'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">结束时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindEndDatePickerChange">
+            <text>{{end_date ? end_date : '请选择'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">项目名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="project_name" placeholder="请输入" value="{{project_name}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">公司名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="company_name" value="{{company_name}}" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <view class="bq">
+      <view class="title">项目描述</view>
+      <view class="coninput">
+        <textarea name="project_describe" value="{{project_describe}}" class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写项目描述，保持在1000字以内" />
+      </view>
+    </view>
+
+    <view class="bq">
+      <view class="title">责任描述</view>
+      <view class="coninput">
+        <textarea name="duty_describe" value="{{duty_describe}}" class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写责任描述，保持在1000字以内" />
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

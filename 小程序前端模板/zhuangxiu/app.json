@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/home/albums",
+    "pages/news/news",
+    "pages/news/imageText/index",
+    "pages/news/video/index",
+    "pages/news/details",
+    "pages/gs/index",
+    "pages/gs/free",
+    "pages/gs/ruzhu",
+    "pages/gs/detail",
+    "pages/gs/sheji",
+    "pages/me/index",
+    "pages/store/index",
+    "pages/store/yuyue",
+    "pages/store/detail",
+    "pages/store/edit",
+    "pages/me/shop",
+    "pages/me/zanshop",
+    "pages/me/telshop"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0a96cb",
+    "navigationBarTitleText": "巅峰应用装修",
+    "navigationBarTextStyle": "white"
+  }
+}

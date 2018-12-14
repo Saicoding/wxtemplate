@@ -1,0 +1,40 @@
+<!--pages/gd/detail.wxml-->
+<view class='baseinfo'>
+  <view class='face'>
+    <image src='{{datas.photo}}'></image>
+  </view>
+  <view class='info'>
+    <view class='title'>{{datas.title}}</view>
+    <view class='cont'>房屋面积：{{data.area}} m²/</view>
+    <view class='cont'>所在小区：{{data.village}}</view>
+    <view class='cont'>施工单位：{{data.company}}</view>
+  </view>
+</view>
+
+<!--团队介绍-->
+<view class='tdjs'>
+  <view class='tdtit'>团队介绍</view>
+  <view class='member'>
+    <view wx:for="{{datas.designer}}" class='item'>
+      <image src='{{item.photo}}'></image>
+      <view class='name'>{{item.name}}</view>
+      <view class='position'>(设计师)</view>
+    </view>
+  </view>
+</view>
+
+<view wx:for="{{datas.detail}}" class='tdjs'>
+  <view class='tdtit'>{{item.title}}</view>
+  <view class='tinfo2'>{{item.introduce}}</view>
+  <view class='tinfo2' style='color:#8a8a8a;'>施工人员：{{item.num}}人</view>
+  <view class='tinfo2' style='color:#8a8a8a;'>监管：{{item.boss}}</view>
+  <view class='tinfo2' style='color:#8a8a8a;'>进度：{{item.progress}}</view>
+  <scroll-view scroll-x="true" class="pics">
+    <image wx:for="{{item.photos}}" wx:for-item="val" src="{{val.photo}}"></image>
+  </scroll-view>
+</view>
+
+<view style='height:100rpx;'></view>
+<navigator url='/pages/gd/join?work_id={{datas.work_id}}'>
+  <view class='join_activity'>立即预约</view>
+</navigator>

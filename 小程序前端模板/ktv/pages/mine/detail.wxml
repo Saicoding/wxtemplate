@@ -1,0 +1,28 @@
+<!--pages/mine/reserve.wxml-->
+<view class='item'>
+  <view class='baseinfo'>
+    <view class='lt'>
+      <image class='thumb' src='{{datas.photo}}'></image>
+    </view>
+    <view class='rt'>
+      <view class="title">{{datas.title}}</view>
+      <view class='uprice' style='color:{{color}}'>¥<text>{{datas.price}}</text>元起</view>
+    </view>
+  </view>
+
+  <view class='orderinfo'>
+    <view class='state'>订单状态：{{datas.status}}</view>
+    <view class='num'>订单编号：{{datas.enroll_id}}</view>
+  </view>
+
+  <view class='detail'>
+    <view class='ditem'>
+      <text class='ititle'>预约日期：</text>
+      <text class='icontent'>{{datas.enroll_date}}</text>
+    </view>
+    <view class='ditem'>
+      <text class='ititle'>预约时长：</text>
+      <text class='icontent'>{{datas.enroll_time <= 5 ? datas.enroll_time +'小时' : '包夜'}}</text>
+    </view>
+  </view>
+</view>

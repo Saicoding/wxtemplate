@@ -1,0 +1,194 @@
+<!-- 工作经历 -->
+<view class="app">
+  <form bindsubmit="addCompanyItem">
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">开始时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindBgDatePickerChange" mode="date">
+            <text>{{bgdate ? bgdate : '请选择开始时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">结束时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindEndDatePickerChange">
+            <text>{{enddate ? enddate : '请选择结束时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">公司名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="company_name" placeholder="请输入" value="{{company_name}}"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">所属行业</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindIndustryPickerChange" value="{{iIndex}}" range="{{iArray}}">
+            <text>{{iArray[iIndex] ? iArray[iIndex] : '请选择所属行业'}} </text>
+          </picker>
+
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">公司性质</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindTypePickerChange" value="{{tIndex}}" range="{{tArray}}">
+            <text>{{tArray[tIndex] ? tArray[tIndex] : '请选择公司性质'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">所在部门</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="company_division" placeholder="请输入" value="{{company_division}}"/>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem" hidden="true">
+      <view class="lt">
+        <text class="title">职能</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">职位</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="company_position" placeholder="请输入" value="{{company_position}}"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">平均月薪</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="company_salary" placeholder="请输入" type="number" value="{{company_salary}}"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="bq">
+      <view class="title">工作描述</view>
+      <view class="coninput">
+        <textarea name="company_detail" value="{{company_detail}}" class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写工作描述，保持在1000字以内" />
+      </view>
+    </view>
+
+    <view class="citem" style="background:#f5f5f5;" hidden="true" bindtap="open_view">
+      <view class="lt">
+        <text class="title">高级人才信息</text>
+      </view>
+      <view class="rt">
+        <view class="info">
+          <image src="{{show==1?'/img/icon_arrow_top.png':'/img/icon_arrow_bottom.png'}}"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="gjrc" hidden="{{show==1? false:true}}">
+      <view class="citem">
+        <view class="lt">
+          <text class="title">下属人数(人)</text>
+        </view>
+
+        <view class="rt">
+          <view class="info">
+            <input placeholder="请输入" />
+          </view>
+        </view>
+      </view>
+
+      <view class="citem">
+        <view class="lt">
+          <text class="title">汇报对象</text>
+        </view>
+
+        <view class="rt">
+          <view class="info">
+            <input placeholder="请输入" />
+          </view>
+        </view>
+      </view>
+
+      <view class="bq">
+        <view class="title">主要业绩</view>
+        <view class="coninput">
+          <textarea class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写主要业绩，保持在1000字以内" />
+        </view>
+      </view>
+
+      <view class="bq">
+        <view class="title">离职原因</view>
+        <view class="coninput">
+          <textarea class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写离职原因，保持在1000字以内" />
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

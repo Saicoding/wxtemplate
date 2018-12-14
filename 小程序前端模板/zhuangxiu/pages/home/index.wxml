@@ -1,0 +1,92 @@
+<!-- 主页 -->
+<view class="app">
+
+  <view class="search">
+    <navigator open-type="reLaunch" url="/pages/gs/index">
+      <input placeholder="输入搜索商家名称" />
+      <button>搜索</button>
+    </navigator>
+  </view>
+
+  <view class="taocan">
+
+    <view class="item">
+      <navigator url="/pages/gs/free?type=2">
+        <view class="title">免费设计</view>
+        <view class="info">多家对比不吃亏</view>
+        <view class="icon">
+          <image src="/image/zhuangxiu/icon_taocan_01.png"></image>
+        </view>
+      </navigator>
+    </view>
+
+
+    <view class="item">
+      <navigator url="/pages/gs/free?type=1">
+        <view class="title">免费报价</view>
+        <view class="info">一分钟出报价</view>
+        <view class="icon">
+          <image src="/image/zhuangxiu/icon_taocan_02.png"></image>
+        </view>
+      </navigator>
+    </view>
+
+    <view class="item">
+      <navigator url="/pages/home/albums">
+        <view class="title">装修效果图</view>
+        <view class="info">海量精美图库</view>
+        <view class="icon">
+          <image src="/image/zhuangxiu/icon_taocan_03.png"></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view wx:for="{{datas}}" class="module">
+    <view class="title">
+      <view class="vline"></view>
+      <text class="tt">{{item.pid_name}}</text>
+      <text class="rt">更多</text>
+    </view>
+
+    <view class="list">
+      <view class="item" wx:for="{{item.list}}" wx:for-item="val">
+        <navigator url="/pages/gs/detail?company_id={{val.company_id}}">
+          <image src="{{val.logo}}"></image>
+          <text>{{val.sort_name}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"> </view>
+
+<view class="footer">
+  <view class="ft_item on">
+    <navigator open-type="redirect" url="/pages/home/index">
+      <image src="/image/home_on.png"></image>
+      <text>首页</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/gs/index">
+      <image src="/image/gs_off.png"></image>
+      <text>找公司</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/news/news">
+      <image src="/image/gl_off.png"></image>
+      <text>攻略</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator url="/pages/me/index">
+      <image src="/image/wode_off.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

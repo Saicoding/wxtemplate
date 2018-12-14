@@ -1,0 +1,61 @@
+.guizhe{
+  height: auto;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 20rpx;
+}
+.step{
+  height: 100rpx;
+  width: 96%;
+  margin: 0 auto;
+}
+.step .step1,.step .step2{
+  width: 30%;float: left;
+}
+.step .step3{
+  width: 40%;
+  float: left;
+}
+
+.step .step1 .lt,.step .step2 .lt{
+  float: left;
+}
+
+.step .step1 .lt text,.step .step2 .lt text{
+  display: block;
+}
+.step1 .iconfont ,.step2 .iconfont{
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 36rpx;
+}
+
+.step3 text{
+  display: block;
+}
+
+.info{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.info .tit{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 96%;
+  margin: 0 auto;
+  font-size: 28rpx;
+}
+
+.info .content{
+  width: 96%;
+  height: auto;
+  overflow: hidden;
+  line-height: 30rpx;
+  margin: 0 auto;
+}

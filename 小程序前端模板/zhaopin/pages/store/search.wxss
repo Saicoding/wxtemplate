@@ -1,0 +1,248 @@
+/* 搜索简历 search.wss */
+
+.header {
+  height: 200rpx;
+  width: 100%;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0a96cb), to(rgba(10, 180, 203, 0.5)));
+  position: relative;
+}
+
+.search {
+  width: 80%;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 10%;
+  top: 40rpx;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.search button {
+  float: right;
+  width: 30%;
+  border: 0;
+  height: 80rpx;
+  border-radius: 20rpx;
+  margin-right: -2rpx;
+  background: #fff;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
+
+.search input {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  margin-left: 5%;
+  float: left;
+}
+
+#clouds2 {
+  position: relative;
+  z-index: 2;
+}
+
+.cloud1, .cloud2, .cloud3 {
+  opacity: 0.5;
+}
+
+.cloud1 {
+  width: 150rpx;
+  height: 40rpx;
+  background: #fff;
+  position: absolute;
+  top: 80rpx;
+  border-radius: 200rpx;
+}
+
+.cloud1:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  top: -20rpx;
+  left: 20rpx;
+  border-radius: 200rpx;
+}
+
+.cloud1:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  top: -40rpx;
+  right: 10rpx;
+  border-radius: 200rpx;
+}
+
+.cloud2 {
+  width: 100rpx;
+  height: 40rpx;
+  background: #fff;
+  position: absolute;
+  top: 140rpx;
+  left: 300rpx;
+  border-radius: 200rpx;
+}
+
+.cloud2:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  top: -10rpx;
+  left: 20rpx;
+  border-radius: 200rpx;
+}
+
+.cloud2:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 50rpx;
+  height: 50rpx;
+  top: -15rpx;
+  right: 10rpx;
+  border-radius: 200rpx;
+}
+
+.cloud3 {
+  width: 150rpx;
+  height: 40rpx;
+  background: #fff;
+  position: absolute;
+  top: 90rpx;
+  right: 10rpx;
+  border-radius: 200rpx;
+}
+
+.cloud3:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  top: -20rpx;
+  left: 20rpx;
+  border-radius: 200rpx;
+}
+
+.cloud3:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  top: -40rpx;
+  right: 10rpx;
+  border-radius: 200rpx;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.main .citem {
+  width: 92%;
+  height: auto;
+  background: #fff;
+  padding: 0 4%;
+  margin-top: 20rpx;
+}
+
+.main .citem .header {
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+  padding-top: 30rpx;
+  padding-bottom: 15rpx;
+  line-height: 60rpx;
+}
+
+.main .citem .header .lt {
+  width: 78%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.main .citem .header .rt {
+  width: 22%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: right;
+  text-align: right;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.main .citem .body {
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.main .citem .body .lb {
+  width: 78%;
+  height: auto;
+  float: left;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+
+.main .citem .body .rb {
+  width: 22%;
+  height: auto;
+  float: right;
+  text-align: right;
+}
+
+.main .citem .body .rb image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.main .citem .bottoms {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.main .citem .bottoms .ld {
+  width: 78%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+}
+
+.main .citem .bottoms .rd {
+  width: 22%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: right;
+  text-align: right;
+  font-size: 24rpx;
+}
+
+.alert {
+  width: auto;
+  height: auto;
+  font-size: 24rpx;
+  color: #8a8a8a;
+  padding: 6rpx 15rpx;
+  border-radius: 20rpx;
+  border: 1rpx #8a8a8a solid;
+}

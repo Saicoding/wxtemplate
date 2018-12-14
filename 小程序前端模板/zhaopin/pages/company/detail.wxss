@@ -1,0 +1,288 @@
+/* pages/index/detail.wxss */
+
+.header {
+  height: 400rpx;
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0a96cb), to(rgba(10, 180, 203, 0.5)));
+  position: relative;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.header .top {
+  height: 150rpx;
+  margin-top: 30rpx;
+  width: 90%;
+  margin-left: 5%;
+  float: left;
+}
+
+.header .top .right {
+  float: left;
+  margin-left: 20rpx;
+  width: 400rpx;
+  height: 150rpx;
+  overflow: hidden;
+}
+
+.header .company {
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 10rpx;
+
+}
+
+.header .info {
+  margin-top: 10rpx;
+}
+
+.header .vip {
+  padding: 5rpx 10rpx;
+  float: left;
+  border: 1rpx solid #fff;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+
+.header .rz {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.header .rz image {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+
+.header .rz text {
+  float: left;
+  margin-top: 12rpx;
+}
+
+.header .novip {
+  padding: 5rpx 10rpx;
+  float: left;
+  margin-left: 10rpx;
+  border: 1rpx solid #ccc;
+  color: #ccc;
+  border-radius: 10rpx;
+}
+
+.header .top .logo {
+  height: 150rpx;
+  width: 150rpx;
+  background: #fff;
+  float: left;
+}
+
+.header .top .logo image {
+  width: 130rpx;
+  height: 130rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.share {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 30rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  background: rgba(0, 0, 0, 0);
+}
+
+.header .content {
+  float: left;
+  width: 90%;
+  margin-top: 30rpx;
+  margin-left: 5%;
+}
+
+.header .content .col {
+  height: 36rpx;
+  line-height: 36rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.share image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.share text {
+  display: block;
+}
+
+.header .qrcode {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 130rpx;
+}
+
+.header .qrcode image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.nums {
+  height: auto;
+  width: 96%;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.nums .item {
+  float: left;
+  width: 24.5%;
+  height: 80rpx;
+  text-align: center;
+}
+
+.nums .item image {
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.nums .item text {
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.photo, .detail, .zhiwei {
+  width: 96%;
+  margin-left: 2%;
+  background: #fff;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+  float: left;
+}
+
+.photo .title, .detail .title, .zhiwei.title {
+  font-size: 26rpx;
+  width: 96%;
+  margin-left: 2%;
+  border-bottom: 1rpx solid #e2e2e2;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #0a96cb;
+}
+
+.detail .content {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 10rpx;
+  line-height: 40rpx;
+}
+
+.photo .pics {
+  margin-top: 10rpx;
+  width: 96%;
+  height: 220rpx;
+  overflow: hidden;
+  margin-left: 2%;
+  white-space: nowrap;
+}
+
+.photo .pics image {
+  width: 280rpx;
+  height: 220rpx;
+  margin-left: 20rpx;
+  border-radius: 12rpx;
+}
+
+.zw_item {
+  width: 92%;
+  margin-left: 1%;
+  padding: 0 3%;
+  background: #fff;
+  margin-top: 10rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.zw_item .info {
+  width: 100%;
+  height: auto;
+  line-height: 60rpx;
+  display: flex;
+}
+
+.zw_item .info .name {
+  width: 80%;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000;
+  float: left;
+  line-height: 60rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.zw_item .info .price {
+  width: 20%;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #ff8c00;
+  float: right;
+  text-align: center;
+}
+
+.zw_item .type {
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #000;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.zw_item  .type .vline {
+  margin: 0 6rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+}
+
+.dwbg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+}

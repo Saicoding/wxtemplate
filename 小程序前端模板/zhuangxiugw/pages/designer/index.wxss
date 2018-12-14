@@ -1,0 +1,129 @@
+/* pages/tuan/index.wxss */
+.search2{
+  width: 92%;
+  height: 60rpx;
+  margin: 0 4%;
+  margin-top: 20rpx;
+  position: relative; 
+}
+.search2 input{
+  height: 60rpx;
+  width: 500rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  float: left;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.search2 button{
+  float: left;width: 120rpx;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+
+.delete{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 40rpx;
+  position: absolute;
+  z-index: 100;
+  left: 460rpx;
+  top: 10rpx;
+  color: #666;
+}
+
+
+.list{
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.list .item{
+  width: 100%;
+  height: 180rpx;
+  border-bottom: 3rpx #f5f5f5 solid;
+}
+
+.list .item image{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx 0;
+  border-radius: 10rpx;
+  float: left;
+}
+
+.list .item .lt{
+  width: 71%;
+  height: 140rpx;
+  margin: 20rpx 0;
+  margin-left: 15rpx;
+  float: left;
+}
+
+.list .item .lt .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  white-space:  nowrap;
+  text-overflow:  ellipsis;
+  overflow: hidden;
+  color: #000;
+  font-size: 28rpx;
+}
+
+.list .item .lt .title .yy{
+  width: auto;
+  height: auto;
+  margin-left: 20rpx;
+  padding: 5rpx 20rpx;
+  font-size: 22rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.list .item .lt .price{
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 26rpx;
+}
+
+.list .item .lt .jy{
+  font-size: 26rpx;
+  color: #f00;
+}
+
+.list .item .lt .info{
+  width: 100%;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 26rpx;
+  float: left;
+}
+
+.list .item .lt .info .ll{
+  width: 82%;
+  height: auto;
+  text-overflow:  ellipsis;
+  overflow: hidden;
+  white-space:  nowrap;
+  float: right;
+}
+
+.list .item .rt{
+  width: 6%;
+  height: 180rpx;
+  text-align: right;
+  float: right;
+}
+
+.list .item .rt image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin: 70rpx 0;
+}

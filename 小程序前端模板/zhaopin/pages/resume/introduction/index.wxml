@@ -1,0 +1,17 @@
+<!-- 自我评价 -->
+<view class="app">
+  <form bindsubmit="setIntroduction">
+    <view class="header">
+      <text class="name">自我评价</text>
+      <text class="state">*</text>
+    </view>
+    <view class="cinput">
+      <textarea name="introduction" value="{{introduction}}" class="input" rows="100" cols="10" maxlength="200" placeholder="请填写责任描述，保持在1000字以内" />
+    </view>
+    <view class="alert_info">
+      请输入您对自己的简短评价，字数在200以内。文字最好言简意赅，概括的说明您最大的优势是什么，避免使用一些套话。
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

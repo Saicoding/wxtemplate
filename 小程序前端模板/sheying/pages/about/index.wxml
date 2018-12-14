@@ -1,0 +1,78 @@
+<!--pages/about/index.wxml-->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+  <swiper-item wx:for="{{datas.banner}}">
+    <image src="{{item.photo}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class='baseinfo'>
+  <view class='address'>
+    <image class='icon' src='/img/icon_dw.png'></image>
+    <text class='info'>{{datas.address}}</text>
+  </view>
+
+  <view class='busihours'>
+    <image class='icon' src='/img/icon_jy.png'></image>
+    <text class='info'>{{datas.trade}}</text>
+  </view>
+
+  <view class='contact'>
+    <image class='icon' src='/img/icon_sj.png'></image>
+    <text class='info'>{{datas.mobile}}</text>
+  </view>
+</view>
+
+<view class='introduce'>
+  <view class='title'>
+    <view class='vline'></view>
+    公司介绍
+    <text class='intrtitle'>About Store</text>
+  </view>
+
+  <view class='content'>
+    {{datas.introduce}}
+  </view>
+</view>
+
+<view class='service'>
+  <view class='title01'>服务中心</view>
+  <view class='title02'>Service Center</view>
+  <view class='serblock' style='background:#CDAD00;' bindtap='toTel'>一键拨号</view>
+  <view class='serblock' style='background:#98F5FF;' bindtap="map">一键导航</view>
+  <navigator open-type="redirect" url="/pages/yuyue/index">
+    <view class='serblock' style='background:#FF69B4;'>在线预约</view>
+  </navigator>
+   <!-- <view class='serblock' style='background:#B4EEB4;'>微信咨询</view>  -->
+  <button class='serblock' open-type='contact'>在线客服</button>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class='kongbai'></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-xiangji1:before"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/album/index">
+      <view class="image iconfont icon-zhaopian-copy:before"></view>
+      <text>客片</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/yuyue/index">
+      <view class="image iconfont icon-yuyue:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-guanyu:before"></view>
+    <text>关于</text>
+  </view>
+</view>

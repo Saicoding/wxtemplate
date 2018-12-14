@@ -1,0 +1,43 @@
+<view class="app">
+  <!--pages/index/homepage.wxml-->
+  <view class='baseinfo' style='background:{{color}}'>
+    <view class='face'>
+      <image src='{{datas.designer_photo}}'></image>
+    </view>
+    <view class='tinfo'>
+      <view class='nickname'>{{datas.designer_name}}</view>
+      <view class='position'>{{datas.designer_zhiwu}}</view>
+      <view class='score'>评论数：{{datas.designer_hp_num}}</view>
+    </view>
+    <view class='yuyue'>
+    <!-- ?designer_id={{item.designer_id}} -->
+      <navigator url='/pages/index/receive?designer_id={{designer_id}}'>
+        <view class='btn'>预约TA</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='comment'>
+    <view class='item' wx:for="{{datas.list}}">
+      <view class='binfo'>
+        <image class="face" src='{{item.face}}'></image>
+        <view class='info'>
+          <view class='name'>{{item.nick_name}}</view>
+          <view class='date'>{{item.add_time}}</view>
+        </view>
+      </view>
+      <view class='content'>{{item.content}}</view>
+      <view class='huifu' hidden='{{item.reply==""? true: false}}'>回复：{{item.reply}}</view>
+    </view>
+  </view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class='reply'>
+    <form bindsubmit='formSendReply'>
+      <input name="content" value='{{content}}' placeholder='优质评论优先显示哦!'></input>
+      <button form-type='submit' class='send'>发送</button>
+    </form>
+  </view>
+</view>

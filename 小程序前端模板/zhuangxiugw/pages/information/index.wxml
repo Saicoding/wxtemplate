@@ -1,0 +1,25 @@
+<!--pages/information/index.wxml-->
+<view class='list'>
+  <navigator url='/pages/information/detail'>
+    <view class='item'>
+      <image src='/img/pics/001.jpg' mode='top'></image>
+      <view class='hot' style='border-color: {{color}}; color:{{color}}'>Hot</view>
+      <view class='bottom'>
+        惊曝科比妻子出轨偷情说唱歌手 四万美元封口费，AP.9从来都只是一个媒体荡妇而已
+      </view>
+    </view>
+  </navigator>
+
+  <view class='item'>
+    <image src='/img/pics/009.jpg' mode='top'></image>
+    <view class='hot' style='border-color: {{color}}; color:{{color}}'>New</view>
+    <view class='bottom'>
+      罕见！这名厅官被双开时公布了情妇人数
+    </view>
+  </view>
+
+  <view style="color:{{color}}" class="more">查看更多</view>
+  <view class="nomore">没有数据了</view>
+
+  <view class="jszc">技术支持:www.erre7.cn</view>
+</view>

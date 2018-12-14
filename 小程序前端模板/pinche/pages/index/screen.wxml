@@ -1,0 +1,80 @@
+<!--pages/index/screen.wxml-->
+<view class='app'>
+  <view class='header'>请选择筛选条件</view>
+  <form bindsubmit='screen'>
+    <view class='contact'>
+      <view class='col'>
+        <view class='lt'>拼车类型</view>
+        <view class='mt'>
+          <picker class="tv" value="{{index}}" range="{{array}}" bindchange="bindTypeChange">
+            <text>{{type? type : '请选择拼车类型'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>出发地</view>
+        <view class='mt'>
+          <input name="chufa" placeholder='请填写出发地'></input>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>目的地</view>
+        <view class='mt'>
+          <input name="mudidi" placeholder='请填写目的地'></input>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>途径地</view>
+        <view class='mt'>
+          <input name="tujing" placeholder='请填写途径地'></input>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>出发日期</view>
+        <view class='mt'>
+          <picker mode="date" bindchange="bindBeginDateChange">
+            <text>{{begin? begin : '请选择出发日期'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>出发时间</view>
+        <view class='mt'>
+          <picker mode="time" bindchange="bindTimeDateChange">
+            <text>{{time? time : '请选择出发时间'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>空位/人数</view>
+        <view class='mt'>
+          <picker value="{{nIndex}}" range="{{nums}}" bindchange="bindNumChange">
+            <text>{{num? num : '请选择空位/人数'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+    </view>
+    <button class='publish' form-type='submit'>确定</button>
+  </form>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+</view>

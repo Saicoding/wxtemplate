@@ -1,0 +1,278 @@
+/* destination.wxss */
+
+page {
+  font-family: '微软雅黑';
+  background-color: #fff;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .menubar {
+  height: 79rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  white-space: nowrap;
+  border-bottom: solid 1rpx #f4f5f6;
+}
+
+.app .menu {
+  width: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: inline-block;
+  background: #fff;
+}
+
+.app .menubar text {
+  display: inline-block;
+  width: auto;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  height: 90%;
+  text-align: center;
+}
+
+.app .menubar text.active {
+  color: #1ba8b9;
+  border-bottom: solid 4rpx #1ba8b9;
+  border-bottom-width: 50rpx;
+}
+
+/* .app .search_view {
+  width: 100%;
+  height: 300rpx;
+}
+
+.app .search_view image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.app .search_view .search {
+  width: 90%;
+  height: 80rpx;
+  margin: 0 5%;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  left: 0;
+  top: 100rpx;
+  z-index: 100;
+}
+
+.app .search_view .search .content {
+  width: 100%;
+  height: 60rpx;
+  margin: 10rpx 10rpx;
+  border-radius: 30rpx;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+.app .search_view .search .content text {
+  width: 90%;
+  font-size: 26rpx;
+  margin-left: 50rpx;
+  margin-right: 20rpx;
+  color: #fff;
+}
+
+.app .search_view .search .content image {
+  width: 28rpx;
+  height: 28rpx;
+  float: right;
+  margin-right: 20rpx;
+} */
+
+.tab_menu {
+  position: relative;
+  bottom: 0;
+}
+
+/* .app .menubar {
+  height: 79rpx;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 220rpx;
+  z-index: 99;
+  white-space: nowrap;
+  border-bottom: solid 1rpx #f4f5f6;
+}
+
+.app .menu {
+  width: 100rpx;
+  height: 80rpx;
+  display: inline-block;
+  line-height: 80rpx;
+}
+
+.app .menubar text {
+  display: inline-block;
+  width: auto;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: white;
+  font-size: 26rpx;
+  height: 90%;
+  text-align: center;
+}
+
+.app .menubar text .active {
+  color: #0f0;
+  border-bottom: solid 4rpx #f00;
+  border-bottom-width: 50rpx;
+} */
+
+.app .content {
+  width: 96%;
+  height: auto;
+  padding: 0 2%;
+  margin-top: 100rpx;
+  margin-bottom: 130rpx;
+  display: inline-block;
+}
+
+/* .app .content view text {
+  display: flex;
+  color: black;
+  font-size: 28rpx;
+  text-align: center;
+} */
+
+/* .grids {
+  width: 100%;
+  height: 180rpx;
+  margin: 10rpx 0;
+  display: inline-flex;
+} */
+
+.app .content .grid_item {
+  width: 45%;
+  height: 180rpx;
+  margin: 15rpx 15rpx;
+  position: relative;
+  float: left;
+}
+
+.app .content .grid_item image {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 6rpx;
+}
+
+.app .content .grid_item view {
+  width: 100%;
+  height: 180rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.app .content .grid_item .title {
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.app .content .grid_item view text {
+  color: white;
+  font-family: '微软雅黑';
+  font-size: 24rpx;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  line-height: 45rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.app .content .tjrq{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 30rpx;
+}
+
+.app .content .tjrq .tuijian {
+  width: 100%;
+  height: auto;
+  margin: 10rpx 30rpx;
+  overflow: hidden;
+}
+
+.app .content .tjrq .tuijian view {
+  float: left;
+  width: 20%;
+  margin-left: 20rpx;
+  border: 1rpx solid #e2e2e2;
+  color: #000;
+  margin-top: 20rpx;
+  padding: 8rpx 0;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.nomore {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx;
+  color: #ccc;
+  background: #fff;
+}
+
+.more {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx;
+  color: #1ba8b9;
+  background: #fff;
+}
+
+.nodata {
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image {
+  height: 200rpx;
+  width: 200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.nodata text {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color: #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}

@@ -1,0 +1,141 @@
+/* pages/index/add.wxss */
+
+.app .pubcontent {
+  width: 100%;
+  height: 260rpx;
+  background: #fff;
+}
+
+.app .pubcontent textarea {
+  width: 92%;
+  height: 220rpx;
+  padding: 20rpx 4%;
+}
+
+.app .imgs {
+  width: 100%;
+  min-height: 180rpx;
+  height: auto;
+  padding: 20rpx 0;
+  margin-top: 20rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.app .imgs .mitem{
+  width: 22%;
+  height: 180rpx;
+  margin: 0 1.1%;
+  float: left;
+  text-align: center;
+  border: 1rpx #f5f5f5 solid;
+}
+
+.app .imgs .mitem .icon_add{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 60rpx auto;
+}
+
+.app .imgs .mitem .img{
+  width: 100%;
+  height: 180rpx;
+}
+
+.app .alert {
+  width: 92%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 4%;
+  font-size: 24rpx;
+  color: #8a8a8a;
+}
+
+.app .action {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.app .action .col {
+  width: 92%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 4%;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.app .action .tubiao {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.app .action .jiantou {
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 25rpx;
+}
+
+.app .action .col text {
+  height: 40rpx;
+  width: 78%;
+  float: left;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.app .action .col input {
+  height: 40rpx;
+  width: 78%;
+  float: left;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.app .btn_pub {
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  margin: 30rpx 10%;
+}
+
+.app .set {
+  width: 92%;
+  height: auto;
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 0 4%;
+}
+
+.app .set .item{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid; 
+}
+
+.app .set .item text {
+  width: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .set .item .rt {
+  float: right;
+  margin: 8rpx 0;
+}

@@ -1,0 +1,59 @@
+.header{
+  height: 260rpx;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.header image{
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 150rpx;
+}
+
+.header .name{
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.yyzt{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+}
+.yyzt text{
+  float: left;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+}
+.yyzt switch{
+  float: right;
+  margin-right: 10rpx;
+}
+.manage{
+  height: auto;
+  overflow: hidden;
+  margin-top: 20rpx;
+  width: 96%;
+  margin-left: 2%;
+}
+.manage .item{
+  width: 45.5%;
+  height: 300rpx;
+  float: left;
+  margin-left: 3%;
+  background: #fff;
+  border-radius: 20rpx; 
+  line-height: 130rpx;
+}
+.manage .item .iconfont{
+  font-size: 100rpx;
+}
+.manage .item text{
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,24 @@
+<view class="app">
+
+
+  <form report-submit="true" bindsubmit="cancel">
+    <view class="form">
+
+
+
+       <view class="textarea">
+        <text class="lf">取消原因</text>
+        <view class="rt">
+              <textarea  bindinput="textarea"  placeholder="请输入取消原因" />
+        </view>
+      </view>
+
+      
+    
+      <button  form-type="submit"  class="btn">确定取消</button>
+    </view>
+  </form>
+
+
+
+</view>

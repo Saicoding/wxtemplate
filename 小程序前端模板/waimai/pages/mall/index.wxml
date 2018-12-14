@@ -1,0 +1,142 @@
+<view  style="background:{{color}}" class="header">
+
+    <view class="lt">
+        <image src='{{setting.logo ? setting.logo  : "/img/logo.png"}}'></image>
+    </view>
+    <view  class="rt">
+        <view class="name">{{setting.app_name ? setting.app_name : '未设置'}}</view>
+        <view class="gonggao"><text class="iconfont icon-tuiguang"></text>{{setting.about ? setting.about:'未设置'}}</view>
+    </view>
+</view>
+<view  wx:if="{{coupon != ''}}" class="youhuiquan">
+
+     <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+
+          <view wx:for="{{coupon}}" class="item">
+              <view class="lt"><text>yen</text><text class="price">{{item.money}}</text></view>
+              <view class="ct">
+                <view class="name">{{item.title}}</view>
+                <view class="man">满{{item.need_money}}元可用</view>
+              </view>
+              <view class="rt">
+                  <text data-id="{{item.activity_id}}" bindtap='receive'>领取</text>
+              </view>
+
+              <view class="topyuan"></view>
+              <view class="btyuan"></view>
+          </view>          
+          
+
+      </scroll-view>
+
+</view>
+
+<view class="menu bdbt">
+    <text style='color:{{color}}'>商品列表</text>
+</view>
+<view class="product">
+    <view class="cat">
+        <view wx:for="{{catlist}}"  class="item bdbt {{cat==item.id?'on':''}}">
+            <text  bindtap="cat" data-cat="{{item.id}}">{{item.name}}</text>
+            <text class="num" hidden='{{item.num>0?false:true}}'>{{item.num}}</text>
+        </view>
+       
+        <view class="bdrtview"></view>
+    </view>
+    <view class="goods">
+          <scroll-view bindscroll="scroll" scroll-into-view="{{toview}}"  scroll-with-animation="true" scroll-y style="height: 1000rpx;">
+
+              <view wx:for="{{catlist}}"  id="cat{{item.id}}" class="goods_item item">
+                  <view class="tit bdbt">{{item.name}}</view>
+                  <view wx:for="{{product}}" wx:for-item="goods" wx:if="{{goods.cat == item.id}}" class="gd bdbt">
+                          <view class="lt">
+                            <image src='{{goods.photo}}'></image>
+                          </view>
+                          <view class="rt">
+                              <view class="name">{{goods.name}}</view>
+                              <view class="mai">月销量{{goods.monthnum}},总销量{{goods.totalnum}}</view>
+                              <view class="buy">
+                                  <text class="price">yen{{goods.price}}</text>
+                                  <text style='color:{{color}}'  bindtap='jia' data-cat="{{goods.cat}}" data-id="{{goods.id}}"  class="fr iconfont icon-jiahao"></text>
+                                  <text hidden='{{goods.buynum>0?false:true}}'  class="fr num">{{goods.buynum}}</text>
+                                  <text style='color:{{color}}'  hidden='{{goods.buynum>0?false:true}}' bindtap='jian' data-cat="{{goods.cat}}" data-id="{{goods.id}}"  class="fr iconfont icon-jianhao"></text>
+                                  
+                              </view> 
+                          </view>
+                  </view>
+                 
+              </view>
+     
+          </scroll-view>
+    </view>
+</view>
+
+<view class="cart">
+    <view hidden='{{showcart}}' class="cartlist">
+        <view class="tit">
+            <text style="border-left: 5rpx solid {{color}}; " class="yigou">已购商品</text>
+            <text bindtap="clear" class="delete">清空</text>
+            <text class="iconfont icon-shanchu"></text>
+        </view>
+        <view class="list">
+          <view  wx:for="{{product}}" wx:for-item="goods" wx:if="{{goods.buynum>0}}" class="item">
+              <view class="name">{{goods.name}}</view>
+              <view class="price">{{goods.totalprice}}</view>
+              <view class="jiajian">
+               <text style='color:{{color}}'  bindtap='jia' data-cat="{{goods.cat}}" data-id="{{goods.id}}"  class="fr iconfont icon-jiahao"></text>
+                <text   class="fr num">{{goods.buynum}}</text>
+                <text style='color:{{color}}'   bindtap='jian' data-cat="{{goods.cat}}" data-id="{{goods.id}}"  class="fr iconfont icon-jianhao"></text>
+              </view>
+          </view> 
+          <view  class="item">
+              <view class="name">打包费用</view>
+              <view class="price">{{dabaototal}}</view>
+
+          </view>
+          <view  class="item">
+              <view class="name">配送费用</view>
+              <view class="price">{{peisong}}</view>
+           
+          </view>
+        </view>
+    </view>
+    <view class="buy">
+      <view bindtap='showcart' class="lt">
+      <text  class="iconfont icon-gouwuche"></text><text class="num">{{totalnum}}</text>
+      <text class="hj">合计:</text>
+      <text class="total">{{totalprice}}</text>
+      </view>
+      <view bindtap="buy" style="background:{{cha>0?'#666':color}}" class="rt">{{cha>0?'还差'+cha+'元起送':'去结算'}}</view>
+    </view>
+</view>
+
+<view class="jszc">技术支持:www.erre7.cn</view>
+<view class="kongbai"></view>
+<view class="kongbai"></view>
+
+
+
+<view class="footer">
+    <view  style="color:{{color}}"  class="ft_item">
+      <view class="image iconfont icon-shouye"></view>
+      <text>首页</text>
+    </view>
+    <view class="ft_item">
+      <navigator  open-type="redirect"  url="/pages/member/index">
+         <view class="image iconfont icon-dingdan"></view>
+        <text>订单</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator  open-type="redirect"  url="/pages/manage/index">
+         <view class="image iconfont icon-iconfontguanlixitong"></view>
+        <text>后台</text>
+      </navigator>
+    </view>
+</view>
+
+<view hidden="{{is_online == 1?true:false}}" class="unline">打烊了</view>
+
+<view bindtap='tel' class="kefutel">
+  <text class='iconfont icon-kefu'></text>
+</view>

@@ -1,0 +1,106 @@
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+  <swiper-item wx:for="{{configs.banner}}">
+    <image src="{{item.photo}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class="search2">
+  <form bindsubmit='searchShopList'>
+    <input name="keyword" value='{{keyword}}' type="text" placeholder="输入商品名或编号" />
+    <button form-type='submit' style="background:{{color}}">搜索</button>
+    <text bindtap='clearSearchContent' class="delete iconfont icon-cha"></text>
+  </form>
+</view>
+
+<view class="menu">
+  <view bindtap="showcatelist" class="cat">
+    <text>{{show_classify}}</text>
+    <text class=" catpic iconfont icon-jiantouxia1"></text>
+  </view>
+  <view hidden='true' bindtap="dingwei" class="dingwei">
+    <view class="addr">{{address}}</view>
+    <text class="dwpic iconfont icon-location"></text>
+  </view>
+  <view bindtap="orderlist" class="order">
+    <text>{{order_msg}}</text>
+    <text class=" orderpic iconfont icon-jiantouxia1"></text>
+  </view>
+
+  <view hidden="{{showcatelist}}" class="catlist">
+    <view class="lt">
+      <view style="color:{{id==index?color:'#000'}}" bindtap='onTabClick' data-id='{{index}}' wx:for="{{configs.category}}">{{item.category_name}}</view>
+
+    </view>
+    <view class="rt">
+      <text style="border:{{cat==index?'1rpx solid '+color:'1rpx solid #f2f2f2'}};color:{{cat==index?color:'#000'}}" bindtap='onTabChildrenClick' data-id='{{index}}' wx:for="{{tempClassify}}">{{item.category_name}}</text>
+    </view>
+  </view>
+
+  <view hidden="{{orderlist}}" class="orderlist">
+    <view bindtap='orderby' data-orderby="0" data-msg="推荐排序">推荐排序</view>
+    <view bindtap='orderby' data-orderby="1" data-msg="销量优先">销量优先</view>
+    <view bindtap='orderby' data-orderby="2" data-msg="价格从高到低">价格从高到低</view>
+    <view bindtap='orderby' data-orderby="3" data-msg="价格从低到高">价格从低到高</view>
+  </view>
+</view>
+
+<view class='list'>
+  <view class='sitem' wx:for="{{datas}}">
+    <navigator url='/pages/mall/detail?goods_id={{item.goods_id}}'>
+      <view class='thumbnail'>
+        <image src='{{item.photo}}' mode='aspectFill'></image>
+      </view>
+      <view class='name'>{{item.goods_name}}</view>
+      <view class='info'>
+        <view class='price'>yen{{item.shop_price}}</view>
+        <view class='pay'>
+          <text style="color:{{color}}" class="gouwu iconfont icon-gouwuche"></text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+<!-- <view class='content'>
+  <view class="list" wx:for="{{datas}}">
+    <navigator url="/pages/mall/detail?goods_id={{item.goods_id}}">
+      <view class="item">
+        <image src="{{item.photo}}"></image>
+        <view class="name">{{item.goods_name}}</view>
+        <view class="info">
+          <text class="price">yen{{item.shop_price}}</text>
+          <text style="color:{{color}}" class="gouwu iconfont icon-gouwuche"></text>
+        </view>
+        <view class="bdrt"></view>
+        <view class="bdbt"></view>
+      </view>
+    </navigator>
+  </view>
+</view> -->
+<view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="background:#f5f5f5; color:{{color}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" style='background:#f5f5f5;' class="nomore">没有数据了</view>
+<view wx:if="{{datas==''&&more==0}}" style='background:#f5f5f5;' class="nomore">暂无数据</view>
+<view class="jszc">技术支持:www.erre7.cn</view>
+<view class="kongbai"></view>
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-shouye"></view>
+    <text>首页</text>
+  </view>
+  <view class="ft_item">
+    <navigator url="/pages/cart/index">
+      <view class="image iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-dingdan"></view>
+      <text>订单</text>
+    </navigator>
+  </view>
+</view>
+<view class="kefutel">
+  <text class='iconfont icon-kefu' bindtap='callPhone'></text>
+</view>

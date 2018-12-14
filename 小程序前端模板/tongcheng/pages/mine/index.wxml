@@ -1,0 +1,61 @@
+<!--我的-->
+<view class='app'>
+
+  <view class="header" style='background:{{color}}'>
+    <image class="image" src="{{userinfo.face=='' ? '/img/login_no.png':userinfo.face}}"></image>
+    <view class="nickname">
+      <text class="name">{{userinfo.nick_name}}</text>
+    </view>
+  </view>
+
+  <view class="action">
+    <navigator url='/pages/mine/pubList'>
+      <view class="col">
+        <image class="tubiao" src="/img/icon_mine_01.png"></image>
+        <text>我的发布</text>
+        <image class="jiantou" src="/img/jiantou.png"></image>
+      </view>
+    </navigator>
+
+    <!-- <navigator url='/pages/mine/commList'>
+      <view class="col">
+        <image class="tubiao" src="/img/icon_mine_03.png"></image>
+        <text>我的评价</text>
+        <image class="jiantou" src="/img/jiantou.png"></image>
+      </view>
+    </navigator> -->
+  </view>
+
+  <view class='jszc'>技术支持：www.erre7.cn</view>
+
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/index/index">
+        <view class="image iconfont icon-dingwei:before"></view>
+        <text>附近</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/gs/index'>
+        <view class="image iconfont icon-shangjia:before"></view>
+        <text>商家列表</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/find/index'>
+        <view class="image iconfont icon-toutiao:before"></view>
+        <text>关注头条</text>
+      </navigator>
+    </view>
+
+    <view style="color:{{color}}" class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+</view>

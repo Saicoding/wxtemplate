@@ -1,0 +1,252 @@
+/* pages/hd/bargain.wxss */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .header {
+  width: 100%;
+  height: 420rpx;
+  background: #ff0;
+  position: relative;
+}
+
+.app .header image {
+  width: 100%;
+  height: 420rpx;
+}
+
+.app .header .bview {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+}
+
+.app .header .bview .lt {
+  width: auto;
+  height: 80rpx;
+  padding: 0 4%;
+  float: left;
+}
+
+.app .header .bview .lt .ctitle {
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.app .header .bview .lt .price {
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.app .header .bview .lt .yprice {
+  color: #fff;
+  font-size: 26rpx;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.app .header .bview .rt {
+  width: auto;
+  height: 80rpx;
+  float: right;
+  text-align: center;
+  margin-right: 20rpx;
+  color: #fff;
+}
+
+.app .content {
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  background: #fff;
+}
+
+.app .content .title {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .content .time {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+
+.app .content .kanjia {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.app .item {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .item text {
+  text-align: left;
+  float: left;
+}
+
+.app .item image {
+  width: 48rpx;
+  height: 48rpx;
+  float: right;
+  padding-top: 26rpx;
+  padding-right: 30rpx;
+}
+
+.app .bmenu {
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.app .bmenu .lt {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  background: #ff4040;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.app .bmenu .rt {
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  background: #e3e3e3;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.app .kjjl{
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  background: #fff;
+  font-size: 24rpx;
+}
+
+.app .kjjl .kitem{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+  padding: 15rpx 0;
+}
+
+.app .kjjl .kitem .lt{
+  width: 10%;
+  height: auto;
+  float: left;
+}
+
+.app .kjjl .kitem .lt image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+}
+
+.app .kjjl .kitem .rt{
+  width: 86%;
+  height: auto;
+  float: right;
+  margin: 0 2%;
+}
+
+.app .kjjl .kitem .rt .title{
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+}
+
+.app .kjjl .kitem .rt .detail{
+  width: 100%;
+  height: auto;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #63B8FF;
+}
+
+.app .bqcj {
+  width: 92%;
+  padding: 0 4%;
+  height: auto;
+  background: #fff;
+}
+
+.app .bqcj .ritem {
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .bqcj .ritem image {
+  width: 48rpx;
+  height: 48rpx;
+  padding: 16rpx 0;
+  float: left;
+}
+
+.app .bqcj .ritem .tv {
+  width: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.app .bqcj .ritem .btn {
+  width: auto;
+  height: 32rpx;
+  font-size: 24rpx;
+  padding: 6rpx 12rpx;
+  margin-top: 18rpx;
+  border: 1rpx #f5f5f5 solid;
+  float: right;
+  border-radius: 6rpx;
+  color: #8a8a8a;
+}
+
+.app .gzsm {
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  background: #fff;
+  font-size: 24rpx;
+}
+
+.app .cpjs {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.app .cpjs image {
+  width: 100%;
+  height: 650rpx;
+}

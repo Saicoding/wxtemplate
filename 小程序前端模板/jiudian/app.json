@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/coupon",
+    "pages/index/yuding",
+    "pages/member/index",
+    "pages/member/userInfo",
+    "pages/member/coupon",
+    "pages/order/index",
+    "pages/order/cancel",
+    "pages/order/comment",
+    "pages/order/detail",
+    "pages/public/date",
+    "pages/public/date2" 
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰应用酒店小程序",
+    "navigationBarTextStyle":"black"
+  }
+}

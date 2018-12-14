@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/type",
+    "pages/index/search",
+    "pages/index/classifyList",
+    "pages/index/detail",
+    "pages/index/huifu",
+    "pages/index/add",
+    "pages/mine/index",
+    "pages/mine/pubList",
+    "pages/mine/commList",
+    "pages/mine/helList",
+    "pages/gs/index",
+    "pages/gs/detail",
+    "pages/gs/free",
+    "pages/gs/ruzhu",
+    "pages/find/index",
+    "pages/find/details/imageText/index",
+    "pages/find/details/video/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联同城信息",
+    "navigationBarTextStyle":"black"
+  }
+}

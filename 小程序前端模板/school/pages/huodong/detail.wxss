@@ -1,0 +1,144 @@
+/* pages/huodong/detail.wxss */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.app .jhxx {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  overflow: hidden;
+}
+
+.app .header {
+  width: 100%;
+  height: 80rpx;
+}
+
+.app .header .vline {
+  width: 8rpx;
+  height: 32rpx;
+  margin: 24rpx 0;
+  float: left;
+}
+
+.app .header .title {
+  width: auto;
+  height: 80rpx;
+  margin: auto 0;
+  display: flex;
+  float: left;
+  align-items: center;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.app .header .pnum {
+  width: auto;
+  height: auto;
+  background: #f5f5f5;
+  padding: 8rpx 15rpx;
+  float: left;
+  margin-top: 18rpx;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+}
+
+.app .jhxx .info {
+  width: 100%;
+  height: auto;
+}
+
+.app .jhxx .info .lt {
+  width: 22%;
+  height: auto;
+  float: left;
+  padding: 15rpx 0;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+
+.app .jhxx .info .rt {
+  width: 78%;
+  height: auto;
+  float: right;
+  padding: 15rpx 0;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+
+.app .cyrs {
+  width: 92%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 4%;
+}
+
+.app .cyrs .item {
+  width: auto;
+  height: auto;
+  float: left;
+  margin: 5rpx 15rpx;
+}
+
+.app .hdjs {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  padding-bottom: 20rpx;
+  margin-bottom: 100rpx;
+}
+
+.app .hdjs .content {
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  line-height: 34rpx;
+}
+
+.app .hdjs .cimg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.app .hdjs .cimg image {
+  width: 100%;
+  height: 360rpx;
+  overflow: hidden;
+}
+
+.app .bview {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  border-top: 1rpx #f5f5f5 solid;
+  background: #fff;
+  bottom: 0rpx;
+}
+
+.app .bview .btn_bm {
+  width: 65%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  float: left;
+}
+
+.app .bview .btn_share {
+  width: 35%;
+  height: 90rpx;
+  float: right;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border: none;
+}

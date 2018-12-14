@@ -1,0 +1,16 @@
+{
+  "pages":[    
+    "pages/index/index",
+    "pages/index/album",
+    "pages/index/yuyue",
+    "pages/yuyue/index",
+    "pages/album/index",
+    "pages/about/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联婚纱摄影",
+    "navigationBarTextStyle":"black"
+  }
+}

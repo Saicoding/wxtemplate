@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class='works'>
+  <view class='item'  wx:for="{{datas}}">
+    <image src='{{item.photo}}'  bindtap='lookPhoto' data-id="{{item.works_id}}"></image>
+    <view class='title'>{{item.title}}</view>
+    <view class='num'>{{item.num}}张</view>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>

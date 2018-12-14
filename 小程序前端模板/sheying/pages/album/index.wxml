@@ -1,0 +1,40 @@
+<!--pages/album/index.wxml-->
+<view class='app'>
+  <view class='citem' wx:for="{{datas}}">
+    <navigator url='/pages/index/album?works_id={{item.works_id}}'>
+      <image src="{{item.photo}}" mode='aspectFill'/>
+      <view class='ctitle'>{{item.title}}</view>
+    </navigator>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class='kongbai'></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-xiangji1:before"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-zhaopian-copy:before"></view>
+    <text>客片</text>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/yuyue/index">
+      <view class="image iconfont icon-yuyue:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/about/index">
+      <view class="image iconfont icon-guanyu:before"></view>
+      <text>关于</text>
+    </navigator>
+  </view>
+</view>

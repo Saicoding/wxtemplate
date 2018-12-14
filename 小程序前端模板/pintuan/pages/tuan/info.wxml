@@ -1,0 +1,44 @@
+<view class="guizhe">
+<view class="step">
+
+      <view  class="step1">
+          <view class="lt">
+             <text>支付</text>
+             <text>开团/参团</text>
+          </view>
+          <text class="iconfont icon-right"></text>
+      </view>
+      <view  class="step2">
+         <view class="lt">
+             <text>邀请</text>
+             <text>好友参团</text>
+          </view>
+          <text class="iconfont icon-right"></text>
+      </view>
+      <view class="step3">
+          <text>拼团成功立即发货</text>
+          <text>逾期未成团即刻退款</text>
+      </view>
+    </view>
+    </view>
+    <view class="info">
+        <view class="tit">1、凑团时间</view>
+        <view class="content">凑团结束时间 为商品结束时间为止</view>
+    </view>
+    <view class="info">
+        <view class="tit">2、凑团限制</view>
+        <view class="content">一个账号只能同时开一个团或者参加一个团</view>
+    </view>
+        <view class="info">
+        <view class="tit">3、凑团失败</view>
+        <view class="content">凑团失败后，商家会为您取消订单且退款</view>
+        <view class="content">如：凑团失败后，商家未能在24小时内退款 您可以拨打客服请求人工服务</view>
+        <view class="content">在凑团时间内，团未达到要求人数，则凑团失败</view>
+        <view class="content">在凑团时间内，商品售空前未达到要求人数则凑团失败</view>
+    </view>
+
+    <view class="info">
+        <view class="tit">4、主动退款</view>
+        <view class="content">如果还为成团，团员主动退款，需要继续邀请到退款人数</view>
+        <view class="content">如果已经成团，团员主动申请退款，商家也会给其他成员发货</view>
+    </view>

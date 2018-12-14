@@ -1,0 +1,89 @@
+.app{
+  background: #fff; font-size: 28rpx;
+  height: auto; overflow: hidden;
+  width: 100%;
+}
+.main {
+  height: auto; overflow: hidden; width: 96%; margin: 0 auto; 
+  padding-top: 30rpx; padding-bottom: 30rpx;
+}
+.icon_list image{
+  width: 30rpx; height: 30rpx;
+  float: left; margin-left: 20rpx;
+}
+
+.icon_list .title{
+  height: 40rpx; line-height: 40rpx;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.list {
+   height: auto; overflow: hidden;
+   font-size: 24rpx;
+}
+.icon text{
+  float: left; margin-left: 20rpx;
+}
+
+.icon{
+  float: left; width: 40%; margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.hotel_dianhua{
+  width: 96%; margin: 0 auto;
+  height: 100rpx;
+  margin-top: 50rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  border-top:1rpx solid #e2e2e2;
+  color: #1ba8b9;
+
+}
+
+.hotel_dianhua image{
+  width: 40rpx;height: 40rpx;
+  float: left; margin-left: 120rpx;
+  margin-top: 30rpx;
+}
+
+.hotel_dianhua text{
+  margin-left: 40rpx;
+  margin-top: 35rpx;
+  float: left;
+}
+
+.content_list{
+  width: 96%; margin: 0 auto;
+  height: auto; overflow: hidden;
+  margin-top: 30rpx;
+}
+
+.content_list .title{
+  font-size: 28rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.content_list .content{
+  font-size: 24rpx;
+}
+
+.zhuangxiu{
+   width: 96%; margin: 0 auto;
+  margin-top: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.zhuangxiu .lt{
+  font-size: 28rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left; margin-left: 10rpx;
+}
+.zhuangxiu .rt{
+  font-size: 24rpx;
+  float: left; margin-left: 30rpx;
+}

@@ -1,0 +1,56 @@
+<!--pages/mine/helList.wxml-->
+<view class='app'>
+  <view class='list'>
+    <view class='item'>
+      <navigator url='/pages/headlines/detail'>
+        <view class='lt'>
+          <image src='/img/kebo.jpg'></image>
+        </view>
+        <view class='rt'>
+          <view class='title'>“红牛”成为下一个“王老吉”</view>
+          <view class='info'>
+            <view class='iteminfo'>
+              <image src='/img/icon_date.png'></image>
+              <text>2017-09-08</text>
+            </view>
+          </view>
+          <view class='info'>
+            <view class='iteminfo'>
+              <image src='/img/icon_look_nor.png'></image>
+              <text>19</text>
+            </view>
+            <view class='iteminfo'>
+              <image src='/img/icon_zan_nor.png'></image>
+              <text>0</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='item'>
+      <view class='lt'>
+        <image src='/img/kebo.jpg'></image>
+      </view>
+      <view class='rt'>
+        <view class='title'>“华佗”商标回家前后</view>
+        <view class='info'>
+          <view class='iteminfo'>
+            <image src='/img/icon_date.png'></image>
+            <text>2017-09-08</text>
+          </view>
+        </view>
+        <view class='info'>
+          <view class='iteminfo'>
+            <image src='/img/icon_look_nor.png'></image>
+            <text>19</text>
+          </view>
+          <view class='iteminfo'>
+            <image src='/img/icon_zan_nor.png'></image>
+            <text>0</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

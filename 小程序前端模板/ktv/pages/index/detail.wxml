@@ -1,0 +1,41 @@
+<!--pages/index/detail.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.photos}}">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+
+  <view class='baseinfo'>
+    <view class='name'>{{datas.title}}</view>
+    <view class='price' style='color:red'>
+      <text style='font-size:26rpx;'> ¥ </text>{{datas.price}}起
+    </view>
+  </view>
+
+  <view class='rule'>
+    <view class='ritem'>
+      <text class='rtitle'>预约时长</text>
+      <text class='rcontent'>{{datas.enroll_length}}</text>
+    </view>
+    <view class='ritem'>
+      <text class='rtitle'>预约时段</text>
+      <text class='rcontent'>{{datas.enroll_time}}</text>
+    </view>
+    <view class='ritem'>
+      <text class='rtitle'>预约日期</text>
+      <text class='rcontent'>{{datas.enroll_date}}</text>
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='title'>
+      <text class='circle' style='background:{{color}}'></text>
+      <text class='htitle'>详情介绍</text>
+    </view>
+    <image wx:for="{{datas.photos}}" src='{{item}}'></image>
+  </view>
+  <view style='height:80rpx;'></view>
+  <navigator url='/pages/yuyue/reserve?room_id={{datas.room_id}}'>
+    <view class='yuyue'>去预约</view>
+  </navigator>
+</view>

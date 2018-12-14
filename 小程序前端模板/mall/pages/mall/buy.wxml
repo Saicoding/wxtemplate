@@ -1,0 +1,78 @@
+<view class="noaddr" hidden="{{address==''? false: true}}">
+  <navigator url="/pages/addr/index">
+    <image src="/img/dw.png"></image>
+    <view>还没收货地址,
+      <text>添加</text>
+    </view>
+  </navigator>
+</view>
+<view hidden="{{address==''? true: false}}" class="addr">
+  <navigator url="/pages/addr/index">
+    <view class="lt">
+      <text class="iconfont icon-location"></text>
+    </view>
+    <view class="ct">
+      <view>收货人：{{address.name}}；电话：{{address.mobile}}</view>
+      <view>{{address.merge_addr}}</view>
+    </view>
+    <view class="rt">
+      <text class="iconfont icon-right"></text>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+
+  <view wx:for="{{goods_list}}">
+    <view class="item">
+      <image src='{{item.photo}}'></image>
+      <view class="rt">
+        <view class="tit">
+          <text class="name">{{item.goods_name}}</text>
+          <text class="price">¥{{item.shop_price}}</text>
+        </view>
+        <view class="info">
+          <text class="num">x{{item.show_num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">运费</text>
+    <text class="rt">{{mail_price==0? "包邮": "¥"+mail_price}}</text>
+  </view>
+  <view bindtap='coupon' class="col bdtp">
+    <text class="lt">优惠券</text>
+    <view class="rt">{{coupon_id!=0?'-'+coupon_money:'不使用优惠券'}}
+      <text class="iconfont icon-right"></text>
+    </view>
+  </view>
+  <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">¥{{total_price}}</text>
+  </view>
+
+</view>
+
+<view class="kefutel">
+  <text class='iconfont icon-kefu'></text>
+</view>
+
+
+<view class="buy">
+
+  <view class="lt">
+    <view>共{{goods_num}}件商品</view>
+    <view>合计
+      <text>¥{{total_price}}</text>
+    </view>
+  </view>
+  <view bindtap='buy' style="background:{{color}}" class="rt">微信支付</view>
+</view>

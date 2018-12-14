@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/skill/yy">
+    <view class="add_school">+添加语言能力</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/skill/yy?language_id={{item.language_id}}">
+        <view class="title">{{item.language}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/skill/yy?language_id={{item.language_id}}">
+          <view class="lt">{{item.level}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="deleteLanguage" data-id="{{item.language_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

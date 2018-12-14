@@ -1,0 +1,45 @@
+/* index.wxss */
+.header{
+  height: 200rpx;
+  background: #fff;
+  padding-top: 20rpx;
+}
+.header image{
+  display: block;
+  margin: 0 auto;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 75rpx;
+}
+.header text{
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.col{
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.col .icon{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.col .jt{
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.col text{
+  float: left;
+  margin-left: 20rpx;
+}

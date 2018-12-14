@@ -1,0 +1,39 @@
+/* pages/index/type.wxss */
+.menu {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 30rpx 0;
+}
+
+.menu .item {
+  width: 25%;
+  height: 150rpx;
+  float: left;
+  text-align: center;
+}
+
+.menu .item image {
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.menu .item .icon {
+  height: 80rpx;
+  width: 80rpx;
+  margin: 0 auto;
+  border-radius: 40rpx;
+}
+
+.menu .item  text {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  display: block;
+  font-size: 26rpx;
+}

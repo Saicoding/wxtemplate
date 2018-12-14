@@ -1,0 +1,56 @@
+<!--pages/index/type.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item>
+      <navigator url="" hover-class="navigator-hover">
+        <image src="/img/banner_01.png" class="slide-image" />
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator url="" hover-class="navigator-hover">
+        <image src="/img/banner_02.png" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <view class='list'>
+    <view class='item' wx:for="{{datas}}">
+      <navigator url='/pages/index/homepage?doctor_id={{item.doctor_id}}'>
+        <view class='tview'>
+        <view class='lf'>
+          <image src='{{item.photo}}'></image>
+        </view>
+        <view class='rf'>
+          <view class='col font_bold'>{{item.doctor_name}}</view>
+          <view class='col gray_51'>推荐指数：
+            <text class='orange'>5.0分</text>
+          </view>
+          <view class='col font_bold'>专业擅长：</view>
+          <view class='zysc'>{{item.major}}</view>
+        </view>
+      </view>
+
+      <view class='bview'>
+        <view class='bitem border_right'>
+          感谢信：
+          <text class='orange'>{{item.thank_num}}</text>
+        </view>
+        <view class='bitem border_right'>
+          咨询量：
+          <text class='orange'>{{item.consult_num}}</text>
+        </view>
+        <view class='bitem'>
+          预约门诊：
+          <text class='orange'>{{item.enroll_num}}</text>
+        </view>
+      </view>
+      </navigator>
+    </view>
+    
+
+    <view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+    <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+    <view wx:if="{{datas==''&&more==0}}" class="nomore">暂无数据</view>
+    <view class="jszc">技术支持：www.erre7.cn</view>
+    <view class='kongbai'></view>
+  </view>
+</view>

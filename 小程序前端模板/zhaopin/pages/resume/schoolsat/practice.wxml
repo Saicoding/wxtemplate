@@ -1,0 +1,58 @@
+<!--/* 社会实践  */-->
+<view class="app">
+  <form bindsubmit="setpractice">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">开始时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindBgDatePickerChange">
+            <text>{{bg_date ? bg_date : '请选择开始时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">结束时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindEndDatePickerChange">
+            <text>{{end_date ? end_date : '请选择结束时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">实践名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="practice_name" value="{{practice_name}}" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <view class="bq">
+      <view class="title">实践描述</view>
+      <view class="coninput">
+        <textarea name="practice_describe" value="{{practice_describe}}" class="input" rows="100" cols="10" maxlength="1000" placeholder="请填写职务实践，保持在1000字以内" />
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

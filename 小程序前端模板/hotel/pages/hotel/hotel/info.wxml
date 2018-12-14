@@ -1,0 +1,228 @@
+<view class="app">
+
+  <view class="main">
+  
+    <view class="icon_list">
+      <view class="title">
+        网络设施
+      </view>
+      <view class="list">
+          <view wx:if="{{detail.is_wifi}}" class="icon">
+              <image src="/img/hotel/wifi_on.png"></image>
+              <text>免费wifi</text>
+          </view>
+      </view>
+    </view>
+
+       <view class="icon_list">
+      <view class="title">
+        房间设施
+      </view>
+      <view class="list">
+          <view wx:if="{{detail.is_water}}" class="icon">
+              <image src="/img/hotel/rs_on.png"></image>
+              <text>全天热水</text>
+          </view>
+
+           <view wx:if="{{detail.is_hairdrier}}" class="icon">
+              <image src="/img/hotel/cfj_on.png"></image>
+              <text>吹风机</text>
+          </view>
+           <view wx:if="{{detail.is_airconditioner}}" class="icon">
+              <image src="/img/hotel/kt_on.png"></image>
+              <text>空调</text>
+          </view>
+    
+      </view>
+    </view>
+
+   <view class="icon_list">
+      <view class="title">
+        通用设施
+      </view>
+      <view class="list">
+          <view wx:if="{{detail.is_elevator}}" class="icon">
+              <image src="/img/hotel/dt_on.png"></image>
+              <text>电梯</text>
+          </view>
+         <view wx:if="{{detail.is_fitnessroom}}" class="icon">
+              <image src="/img/hotel/jsf_on.png"></image>
+              <text>健身房</text>
+          </view>
+           <view wx:if="{{detail.is_swimmingpool}}" class="icon">
+              <image src="/img/hotel/yyc_on.png"></image>
+              <text>游泳池</text>
+          </view>
+           <view wx:if="{{detail.is_sauna}}" class="icon">
+              <image src="/img/hotel/sn_on.png"></image>
+              <text>桑拿</text>
+          </view>
+           <view wx:if="{{detail.is_westernfood}}" class="icon">
+              <image src="/img/hotel/xc_on.png"></image>
+              <text>西餐厅</text>
+          </view>
+           <view wx:if="{{detail.is_chinesefood}}" class="icon">
+              <image src="/img/hotel/zc_on.png"></image>
+              <text>中餐厅</text>
+          </view>
+           <view wx:if="{{detail.is_disability}}" class="icon">
+              <image src="/img/hotel/cjr_on.png"></image>
+              <text>残疾人客房</text>
+          </view>
+           <view wx:if="{{detail.is_smokeless}}" class="icon">
+              <image src="/img/hotel/wyf_on.png"></image>
+              <text>无烟房</text>
+          </view>
+           <view wx:if="{{detail.is_stop}}" class="icon">
+              <image src="/img/hotel/tc_on.png"></image>
+              <text>免费停车</text>
+          </view>
+           <view wx:if="{{detail.is_cereal}}" class="icon">
+              <image src="/img/hotel/zaoc_on.png"></image>
+              <text>早餐</text>
+          </view>
+      </view>
+    </view>
+
+     <view class="icon_list">
+      <view class="title">
+        服务项目
+      </view>
+      <view class="list">
+          <view  wx:if="{{detail.is_airportpickup}}" class="icon">
+              <image src="/img/hotel/jieji_on.png"></image>
+              <text>接机服务</text>
+          </view>
+         <view  wx:if="{{detail.is_station}}" class="icon">
+              <image src="/img/hotel/jiezhan_on.png"></image>
+              <text>接站服务</text>
+          </view>
+           <view wx:if="{{detail.is_cabs}}" class="icon">
+              <image src="/img/hotel/jiaoche_on.png"></image>
+              <text>叫车服务</text>
+          </view>
+           <view wx:if="{{detail.is_luggage}}" class="icon">
+              <image src="/img/hotel/xingli_on.png"></image>
+              <text>专职行李</text>
+          </view>
+           <view wx:if="{{detail.is_carrental}}" class="icon">
+              <image src="/img/hotel/zuche_on.png"></image>
+              <text>租车</text>
+          </view>
+           <view wx:if="{{detail.is_disabled}}" class="icon">
+              <image src="/img/hotel/cjr_on.png"></image>
+              <text>残疾人设施</text>
+          </view>
+           <view wx:if="{{detail.is_conference}}" class="icon">
+              <image src="/img/hotel/huiyishi_on.png"></image>
+              <text>会议室</text>
+          </view>
+           <view wx:if="{{detail.is_express}}" class="icon">
+              <image src="/img/hotel/youzheng_on.png"></image>
+              <text>邮政服务</text>
+          </view>
+           <view wx:if="{{detail.is_washclothes}}" class="icon">
+              <image src="/img/hotel/xiyi_on.png"></image>
+              <text>洗衣服务</text>
+          </view>
+           <view wx:if="{{detail.is_merchant}}" class="icon">
+              <image src="/img/hotel/shangwu_on.png"></image>
+              <text>商务中心</text>
+          </view>
+
+            <view wx:if="{{detail.is_awaken}}" class="icon">
+              <image src="/img/hotel/huanxing_on.png"></image>
+              <text>唤醒服务</text>
+          </view>
+            <view wx:if="{{detail.is_deposit}}" class="icon">
+              <image src="/img/hotel/xljc_on.png"></image>
+              <text>行李寄存</text>
+          </view>
+            <view wx:if="{{detail.is_creditcard}}" class="icon">
+              <image src="/img/hotel/xyk_on.png"></image>
+              <text>信用卡服务</text>
+          </view>
+            <view wx:if="{{detail.is_reception}}" class="icon">
+              <image src="/img/hotel/qtqt_on.png"></image>
+              <text>全天前台</text>
+          </view>
+            <view wx:if="{{detail.is_foreignguests}}" class="icon">
+              <image src="/img/hotel/jdwb_on.png"></image>
+              <text>接待外宾</text>
+          </view>
+
+
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="title">
+        房间设施
+      </view>
+      <view class="list">
+          <view wx:if="{{detail.is_spa}}" class="icon">
+              <image src="/img/hotel/spa_on.png"></image>
+              <text>SPA</text>
+          </view>
+
+           <view wx:if="{{detail.is_chess}}" class="icon">
+              <image src="/img/hotel/qipai_on.png"></image>
+              <text>棋牌室</text>
+          </view>
+           
+      </view>
+    </view>
+
+
+    <view class="hotel_dianhua">
+     <image src="/img/hotel/jddh.png"></image>
+     <text>酒店电话:{{detail.tel}}</text>
+    </view>
+
+ <view class="content_list">
+      <view class="title">
+        酒店介绍
+      </view>
+      <view class="content">
+      {{detail.describe}}
+      
+      </view>
+
+    </view>
+  
+  </view>
+
+
+ <view class="content_list">
+      <view class="title">
+        入住须知
+      </view>
+      <view class="content">
+      {{detail.check_otice}}
+      
+      </view>
+
+    </view>
+  
+
+
+
+ <view class="content_list">
+      <view class="title">
+        退订规则
+      </view>
+      <view class="content">
+      {{detail.unsubscribe}}
+      
+      </view>
+
+    </view>
+  
+
+
+
+  <view class="zhuangxiu">
+    <text class="lt">最近装修</text>
+    <text class="rt">{{detail.decoration_time}}</text>
+  </view>
+
+</view>

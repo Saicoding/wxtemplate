@@ -1,0 +1,54 @@
+<view class="app">
+  <form bindsubmit="formSubmit">
+    <view class="form">
+      <view class="radio">
+        <text class="lf">给出评分</text>
+        <view class="rt">
+          <radio-group name="score">
+            <label>
+              <radio value="1" />
+              <text>1分</text>
+            </label>
+            <label>
+              <radio value="2" />
+              <text>2分</text>
+            </label>
+            <label>
+              <radio value="3" />
+              <text>3分</text>
+            </label>
+            <label>
+              <radio value="4" />
+              <text>4分</text>
+            </label>
+            <label>
+              <radio value="5" />
+              <text>5分</text>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="textarea">
+        <text class="lf">评价内容</text>
+        <view class="rt">
+          <textarea name="content" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+      <view class="photo">
+        <text class="lf">上传图片</text>
+        <view class="rt">
+          <view class="sctp">
+            <image bindtap="upload" src="/img/sctp.png"></image>
+          </view>
+          <view class="show">
+            <view wx:for="{{photos_url}}" wx:for-index="index" class="item">
+              <image bindtap="delele" data-index="{{index}}" src="{{item}}"></image>
+            </view>
+          </view>
+          <view class="photodelete">*点击图片将删除图片</view>
+        </view>
+      </view>
+      <button formType="submit" class="btn" style='background:{{color}}'>确定评论</button>
+    </view>
+  </form>
+</view>

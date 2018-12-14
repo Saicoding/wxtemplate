@@ -1,0 +1,43 @@
+<view class="{{skin}}">
+
+
+  <view class="product">
+ <form bindsubmit="formSubmit" bindreset="formReset">
+    <radio-group name="price_id" >
+      <view wx:for="{{data.price}}" class="item">
+        <text class="name">{{item.day_num}}天</text>
+        <text class="rj">日均{{item.day_price}}元</text>
+        <text class="price on">¥{{item.price}}</text>
+        <label><radio value="{{item.price_id}}" checked="true"  /></label>
+      </view>
+    </radio-group>
+
+    <button formType="submit"  style="background:{{color}}"  class="btn">确认购买</button>
+    </form>
+  </view>
+
+  <view class="duanluo">
+    <view   style=" border-left: 4rpx solid {{color}};"  class="title">解锁系统功能</view>
+    <view class="content">
+      <view>1、可以查看简历详情</view>
+      <view>2、可以查看以及搜索简历的详情</view>
+      <view>3、您的搜索排序会变高</view>
+    </view>
+  </view>
+  <view class="duanluo">
+    <view   style=" border-left: 4rpx solid {{color}};"  class="title">特权说明</view>
+    <view class="content">
+       <text>{{data.privilege}}</text>
+    </view>
+  </view>
+
+
+   <view class="duanluo">
+    <view  style=" border-left: 4rpx solid {{color}};"  class="title">充值说明</view>
+    <view class="content">
+       <text>{{data.explain}}</text>
+    </view>
+  </view>
+
+
+</view>

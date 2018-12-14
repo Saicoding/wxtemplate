@@ -1,0 +1,77 @@
+/**app.wxss**/
+
+page {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx solid #e2e2e2;
+}
+
+.footer .ft_item {
+  width: 33.3%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  color: #666;
+}
+
+.footer .ft_item .image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+  font-size: 45rpx;
+}
+
+.footer .ft_item image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.footer  .ft_item text {
+  text-align: center;
+  font-size: 26rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.footer  .ft_item text.active {
+  text-align: center;
+  font-size: 26rpx;
+  display: block;
+  margin: 0 auto;
+  color: #ff8c00;
+  margin-top: 10rpx;
+}
+
+.more, .nomore {
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.nomore {
+  color: #ccc;
+}

@@ -1,0 +1,82 @@
+<view class="header">
+  <swiper class="sw" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{photos}}" class="sw_item">
+      <image src="{{item.photo}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="sousuo">
+  <view class="title">
+    <navigator url="/pages/public/city">
+      <text>{{cityinfo.city_name}}</text>
+      <image src="/img/minsu/sousuo2.png"></image>
+    </navigator>
+  </view>
+  <view class="riqi">
+    <navigator url="/pages/public/date">
+      <view class="lt">
+        <text>{{date.bg_date1}}</text>
+        <text class="rq">入住</text>
+      </view>
+      <text class="ct">共计{{date.day2}}晚</text>
+      <view class="rt">
+        <text>{{date.end_date1}}</text>
+        <text class="rq">离店</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="pick">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{appropriate}}">
+      <text>{{tip}}</text>
+      <image src="/img/minsu/jiantou.png"></image>
+    </picker>
+  </view>
+  <button bindtap="gominsu">搜索民宿</button>
+</view>
+<view wx:if="{{Special != ''}}" class="zhuti">
+  <view class="title">
+    开启完美旅程
+  </view>
+  <view class="list">
+    <scroll-view class="zhutisw" scroll-x="true">
+
+      <view wx:for="{{Special}}" class="zhutisw_item">
+        <navigator url="/pages/minsu/minsu/zt?id={{item.special_id}}">
+          <image src="{{item.photo}}"></image>
+          <text>{{item.title}}</text>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="youhuiquanqiang">
+  <navigator url="/pages/minsu/coupon">
+    <image src="/img/minsu/youhuiquanqiang.png"></image>
+  </navigator>
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"></view>
+<view class="footer">
+  <view class="ft_item on">
+    <image src="/img/minsu/home_on.png"></image>
+    <text>首页</text>
+  </view>
+  <view class="ft_item">
+    <navigator url="/pages/minsu/sc">
+      <image src="/img/minsu/shouc_off.png"></image>
+      <text>收藏</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator url="/pages/minsu/order/index">
+      <image src="/img/minsu/order_off.png"></image>
+      <text>订单</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator url="/pages/minsu/member/index">
+      <image src="/img/minsu/wode_off.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

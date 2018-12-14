@@ -1,0 +1,96 @@
+/* pages/index/price.wxss */
+
+.pitem {
+  width: 92%;
+  height: auto;
+  margin: 20rpx 4%;
+  background: #fff;
+  box-shadow: 2px 2px 1px #EAEAEA;
+  border-radius: 0 0 12rpx 12rpx;
+}
+
+.pitem .header {
+  width: 92%;
+  height: 120rpx;
+  padding: 0 4%;
+  background: #eb7fbc;
+}
+
+.pitem .header .face{
+  width: 90rpx;
+  height: 90rpx;
+  background: #fff;
+  border-radius: 45rpx;
+  margin: 15rpx 0;
+  float: left;
+}
+
+.pitem .header .hinfo{
+  width: auto;
+  height: 120rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.pitem .header .hinfo .htit{
+  width: 100%;
+  height: auto;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  color: #fff;
+}
+
+.pitem .header .hinfo .hdetail{
+  width: 100%;
+  height: auto;
+  font-size: 22rpx;
+  color: #fff;
+  margin-top: 5rpx;
+}
+
+.pitem .title {
+  width: 92%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 4%;
+}
+
+.pro {
+  width: 33.3%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  font-size: 28rpx;
+}
+
+.pitem .info{
+  width: 92%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 4%;
+}
+
+.name, .price,  .mcard{
+  width: 33.3%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.price {
+  color: #f00;
+}
+
+.mcard {
+  color: #f00;
+}
+
+.picon{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 15rpx 15rpx;
+}

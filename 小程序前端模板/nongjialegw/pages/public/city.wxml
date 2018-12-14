@@ -1,0 +1,60 @@
+<view class="app">
+
+    <view class="sousuo">
+        <view class="lt">
+            <image src="/image/homepage/sousuo.png"></image>
+            <input  placeholder="请输入您要搜索的地区、地标、景点" />
+        </view>
+        <view class="rt">取消</view>
+    </view>
+    <view class="dangqiang">
+        当前城市：合肥
+    </view>
+
+    <view class="block">
+        <view class="title">
+              历史城市
+        </view>
+        <view class="itemlist">
+              <text>合肥</text>
+              <text>北京</text>
+              <text>上海</text>
+              <text>广州</text>
+              <text>天津</text>
+              <text>内蒙古</text>
+        </view>
+    </view>
+
+    <view class="block mt20">
+        <view class="title">
+              热门城市
+        </view>
+        <view class="itemlist">
+              <text>合肥</text>
+              <text>北京</text>
+              <text>上海</text>
+              <text>广州</text>
+              <text>天津</text>
+              <text>内蒙古</text>
+        </view>
+    </view>
+
+
+    <view class="city_more">
+
+      <view class="pinyin mt20">A</view>
+      <view class="city">安庆</view>
+      <view class="city">安庆</view>
+
+      <view class="city">安庆</view>
+      <view class="city">安庆</view>
+      <view class="city">安庆</view>
+      <view class="city">安庆</view>
+      
+      <view class="pinyin mt20">B</view>
+      <view class="city">宝鸡</view>
+
+    </view>
+
+
+</view>

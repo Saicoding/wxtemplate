@@ -1,0 +1,146 @@
+<view class="header">
+  <view class="header_search bte">
+    <navigator url="/pages/public/city">
+      <view class="bre city container_center">
+        <text class="font_14 black">{{cityinfo.city_name}}</text>
+        <image src="/images/around/icon_city_arrow.png"></image>
+      </view>
+    </navigator>
+
+    <view class="search container_vertical_center">
+      <image src="/images/around/icon_around_search.png"></image>
+      <input bindblur="submit" type="text" name="keyword" placeholder="搜索关键字" />
+    </view>
+  </view>
+  <view class="header_screen">
+    <view bindtap="paixu" class="screen_item container_center">
+      <text class="font_14">推荐排序</text>
+      <image src="/images/around/icon_city_arrow.png"></image>
+    </view>
+    <view bindtap="qianggou" class="screen_item container_center">
+      <text class="font_14">抢购分类</text>
+      <image src="/images/around/icon_city_arrow.png"></image>
+    </view>
+    <view bindtap="nav" class="screen_item container_center">
+      <text class="font_14">游玩类型</text>
+      <image src="/images/around/icon_city_arrow.png"></image>
+    </view>
+  </view>
+</view>
+
+
+<view class="paixu_dialog" hidden="{{qianggou?true:false}}">
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==1?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==1?'on':''}}" data-type="1">套餐</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==2?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==2?'on':''}}" data-type="2">酒店</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==3?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==3?'on':''}}" data-type="3">门票</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==4?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==4?'on':''}}" data-type="4">餐饮</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==6?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==6?'on':''}}" data-type="6">线路</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{type==5?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="typeclick" class="{{type==5?'on':''}}" data-type="5">其他</text>
+  </view>
+</view>
+
+
+<view class="paixu_dialog" hidden="{{navon?true:false}}">
+  <view class="orderitem" wx:for="{{navs}}">
+    <view class="lt">
+      <image hidden="{{nav_id==item.nav_id?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="navclick" class="{{nav_id==item.nav_id?'on':''}}" data-nav_id="{{item.nav_id}}">{{item.nav_name}}</text>
+  </view>
+</view>
+
+
+
+<view class="paixu_dialog" hidden="{{paixu?true:false}}">
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{order==1?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="orderclick" class="{{order==1?'on':''}}" data-order="1">推荐排序</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{order==2?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="orderclick" class="{{order==2?'on':''}}" data-order="2">价格最低</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{order==3?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="orderclick" class="{{order==3?'on':''}}" data-order="3">价格高优先</text>
+  </view>
+  <view class="orderitem">
+    <view class="lt">
+      <image hidden="{{order==4?false:true}}" src="/images/around/duihao.png"></image>
+    </view>
+    <text bindtap="orderclick" class="{{order==4?'on':''}}" data-order="4">好评优先</text>
+  </view>
+</view>
+
+
+<view class="liugao"></view>
+<view class="item" wx:for="{{datas}}">
+  <navigator url="/pages/tuan/detail?taocan_id={{item.taocan_id}}">
+    <view class="photo">
+      <image src="{{item.photo}}"></image>
+      <view class="price">
+        <text class="qijia">¥{{item.price}}</text>
+        <text class="qi">起</text>
+      </view>
+    </view>
+    <view class="title">
+      <text class="name">{{item.province}} | {{item.city}}</text>
+      <text class="info">{{item.taocan_name}}</text>
+    </view>
+    <view class="icon">
+      <view wx:if="{{item.is_hot == 1}}" class="tj">推荐</view>
+      <view class="kd">
+        <image src="/images/around/sd.png"></image>
+        <text>可订今日</text>
+      </view>
+      <view class="ty">{{item.type}}</view>
+      <view class="num">已售{{item.order_num}}</view>
+    </view>
+  </navigator>
+</view>
+
+<view wx:if="{{datas!= ''&& more==0}}" class="nomore">
+  没有更多数据了
+</view>
+<view bindtap="more" data-type="{{type}}" wx:if="{{datas!=''&&more==1}}" class="more">
+  查看更多
+</view>
+<view wx:if="{{datas== '' }}" class="nodata">
+  <image src="/images/around/nodata.png"></image>
+  <text>没有更多订单了</text>
+</view>

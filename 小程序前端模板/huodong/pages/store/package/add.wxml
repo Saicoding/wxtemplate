@@ -1,0 +1,87 @@
+<view class="app">
+
+
+   <form bindsubmit="formSubmit">
+    <view class="form">
+      <view class="input">
+        <text class="lf">套餐名称</text>
+        <view class="rt">
+          <input name="title" placeholder="套餐名称" />
+        </view>
+      </view>
+
+      <view class="input">
+        <text class="lf">价格</text>
+        <view class="rt">
+          <input type="number" name="price" placeholder="门票价格" />
+        </view>
+      </view>
+
+      <view class="input">
+        <text class="lf">门票数量</text>
+        <view class="rt">
+          <input type="number"  name="day_num" placeholder="门票数量" />
+        </view>
+      </view>
+
+        <view class="textarea">
+        <text class="lf">套餐详情</text>
+        <view class="rt">
+          <textarea name="details" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+      <view class="textarea">
+        <text class="lf">特别说明</text>
+        <view class="rt">
+          <textarea name="especially" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+       <view class="textarea">
+        <text class="lf">退订规则</text>
+        <view class="rt">
+          <textarea name="cancel" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+       <view class="textarea">
+        <text class="lf">改签政策</text>
+        <view class="rt">
+          <textarea name="changes" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+
+
+      <view class="input">
+        <text class="lf">是否免费取消</text>
+        <view class="rt">
+          <switch name="is_cancel" type="switch" />
+        </view>
+      </view>
+
+
+      <view class="input">
+        <text class="lf">是否可改期</text>
+        <view class="rt">
+          <switch name="is_changes" type="switch" />
+        </view>
+      </view>
+       <view class="photo">
+        <text class="lf">列表缩略图</text>
+        <view class="rt">
+          <view class="sctp">
+            <image bindtap="uploadphoto" src="/images/around/sctp.png"></image>
+            <text>上传的图片会被裁切，建议上传300x300的图片</text>
+          </view>
+          <view class="show">
+            <view class="item">
+              <image wx:if="{{photo_url != ''}}" src="{{photo_url}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <button formType="submit"  class="btn">确定发布</button>
+    </view>
+  </form>
+</view>

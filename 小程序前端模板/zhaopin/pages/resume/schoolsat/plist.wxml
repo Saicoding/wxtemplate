@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/schoolsat/position">
+    <view class="add_school">+添加校内职务</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/schoolsat/position?position_id={{item.position_id}}">
+        <view class="title">{{item.position_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/schoolsat/position?position_id={{item.position_id}}">
+          <view class="lt">{{item.bg_date}}至{{item.end_date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="deltePosition" data-id="{{item.position_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

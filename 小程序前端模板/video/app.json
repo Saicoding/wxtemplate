@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/cate",
+    "pages/list",
+    "pages/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰应用小视频",
+    "navigationBarTextStyle": "black"
+  }
+}

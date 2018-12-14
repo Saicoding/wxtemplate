@@ -1,0 +1,286 @@
+/**index.wxss**/
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .header {
+  width: 100%;
+  height: 380rpx;
+}
+
+.app .header image {
+  width: 100%;
+  height: 380rpx;
+}
+
+.app .title {
+  width: 94%;
+  height: auto;
+  padding: 25rpx 3%;
+  border-bottom: 1rpx #f5f5f5 solid;
+  text-align: center;
+  background: #fff;
+}
+
+.app .title .name {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .title .score {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #ff8c00;
+}
+
+.app .baseinfo {
+  width: 94%;
+  height: 70rpx;
+  padding: 15rpx 3%;
+  border-bottom: 1rpx #f5f5f5 solid;
+  background: #fff;
+}
+
+.app .baseinfo .lt {
+  width: 85%;
+  height: 70rpx;
+  float: left;
+}
+
+.app .baseinfo .lt image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 11rpx 0;
+  float: left;
+}
+
+.app .baseinfo .lt text {
+  width: 88%;
+  line-height: 70rpx;
+  margin: 0 10rpx;
+  font-size: 28rpx;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.app .baseinfo .rt {
+  width: 15%;
+  height: 70rpx;
+  float: right;
+  display: flex;
+}
+
+.app .baseinfo .rt .line {
+  width: 2rpx;
+  height: 40rpx;
+  margin: 15rpx 0;
+  background: #f5f5f5;
+  text-align: left;
+  float: left;
+}
+
+.app .baseinfo .rt image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 11rpx auto;
+}
+
+.app .moreinfo {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.app .moreinfo .mtitle {
+  width: auto;
+  height: 80rpx;
+  color: #000;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .moreinfo .mitem {
+  width: 100%;
+  height: auto;
+  padding: 15rpx 0;
+}
+
+.app .moreinfo .mitem .yysj {
+  width: 100%;
+  height: 80rpx;
+  color: #000;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .moreinfo .mitem .tags {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+}
+
+.app .moreinfo .mitem .tags .tag {
+  width: auto;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  margin-right: 12rpx;
+}
+
+.app .moreinfo .mitem .tags .tag image {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 5rpx 0;
+  float: left;
+}
+
+.app .moreinfo .mitem .tags .tag text {
+  width: auto;
+  height: auto;
+  color: #000;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  margin: 0 6rpx;
+  float: left;
+}
+
+.app .moreinfo .mitem .alert {
+  width: 100%;
+  height: auto;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color: #515151;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view_H .item {
+  display: inline-block;
+  width: 360rpx;
+  height: 120rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  border: 1rpx solid #e2e2e2;
+  border-radius: 10rpx;
+  position: relative;
+  border-left: 5rpx solid red;
+}
+
+.scroll-view_H .item .lt {
+  float: left;
+  width: 100rpx;
+  line-height: 120rpx;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.scroll-view_H .item .ct {
+  width: 140rpx;
+  float: left;
+}
+
+.scroll-view_H .item .ct .name {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.scroll-view_H .item .ct .man {
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.scroll-view_H .item  .rt {
+  float: right;
+  width: 100rpx;
+  border-left: 2rpx #e2e2e2 dotted;
+  height: 100%;
+}
+
+.scroll-view_H .item  .rt text {
+  padding: 5rpx 10rpx;
+  background: red;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-top: 36rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.youhuiquan {
+  height: 140rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.topyuan, .btyuan {
+  position: absolute;
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  right: 90rpx;
+}
+
+.topyuan {
+  top: -10rpx;
+}
+
+.btyuan {
+  bottom: -10rpx;
+}
+
+.photo {
+  width: 100%;
+  background: #fff;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+  float: left;
+}
+
+.photo .ptitle {
+  font-size: 28rpx;
+  width: 96%;
+  margin-left: 2%;
+  border-bottom: 1rpx solid #e2e2e2;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.photo .pics {
+  margin-top: 10rpx;
+  width: 96%;
+  height: 200rpx;
+  overflow: hidden;
+  margin-left: 2%;
+  white-space: nowrap;
+}
+
+.photo .pics image {
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+
+.app .kongbai{
+  width: 100%;
+  height: 460rpx;
+}

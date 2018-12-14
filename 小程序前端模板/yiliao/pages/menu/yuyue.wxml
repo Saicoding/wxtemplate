@@ -1,0 +1,56 @@
+<!--pages/menu/yuyue.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item>
+      <navigator url="" hover-class="navigator-hover">
+        <image src="/img/banner_01.png" class="slide-image" />
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator url="" hover-class="navigator-hover">
+        <image src="/img/banner_02.png" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <view class='title'>快速预约通道</view>
+
+  <view class='content'>
+    <view class='item'>
+      <text class='hint'>您的姓名:</text>
+      <input placeholder='仅用于预约使用'></input>
+    </view>
+
+    <view class='item'>
+      <text class='hint'>您的电话:</text>
+      <input placeholder='仅用于预约使用'></input>
+    </view>
+
+    <view class='item'>
+      <text class='hint'>预约日期:</text>
+      <text class='date'>2017-09-28</text>
+    </view>
+
+    <view class='item'>
+      <text class='hint'>您想预约:</text>
+      <input placeholder='检查/病种/专家'></input>
+    </view>
+
+    <view class='item'>
+      <text class='hint'>您的需求:</text>
+      <input placeholder='简单描述您的具体需求'></input>
+    </view>
+  </view>
+
+  <view class='btn_container'>
+    <button class='btn' style='background:#FFC125'>提交预约</button>
+    <button class='btn' style='background:#7CCD7C'>重新填写</button>
+  </view>
+
+  <view class='telphone' style='color:{{color}}; border-color:{{color}}'>点击拨打电话预约</view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view style="height:100rpx;"></view>
+
+  <view class='zixun'>快速问医生</view>
+</view>

@@ -1,0 +1,176 @@
+page{
+    background: #fff;
+}
+
+.sw {
+  height: 400rpx;
+}
+.sw_item{
+  width: 100%;
+}
+.sw_item image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.sousuo{
+  width: 96%;
+  position: absolute;
+  top: 300rpx;
+  left: 2%;
+  background: #fff;
+  border-radius: 20rpx; 
+  height: 360rpx; 
+  -webkit-box-shadow:0 0 30rpx rgba(0, 0, 0, .3);  
+  -moz-box-shadow:0 0 30rpx  rgba(0, 0, 0,  .3);  
+  box-shadow:0 0 30rpx  rgba(0, 0, 0,  .3);  
+}
+
+.sousuo .title{
+   width: 90%;
+   margin: 0 auto;
+   border-bottom: 1rpx solid #e2e2e2;
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 32rpx; color: #000; 
+}
+
+.sousuo .title image{
+  width: 50rpx;
+  height: 50rpx; float: right; margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+
+.sousuo .riqi{
+  height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.sousuo .pick{
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 32rpx;
+   width: 90%;
+   margin: 0 auto;
+   margin-top: 10rpx;
+
+}
+.pick image{
+  width: 40rpx;height: 40rpx;
+  float: right; margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.sousuo  button{
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background:  #fd8137;
+}
+
+
+.riqi .lt,.ct{
+  float: left;
+}
+.riqi .lt,.rt{
+  line-height: 100rpx;
+  width: 40%;
+}
+.riqi  .rt{
+  float: right;
+  text-align: right;
+}
+.riqi .rq{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.riqi .ct{
+   height: 40rpx;
+   margin-top: 20rpx;
+   font-size: 24rpx;
+   line-height: 40rpx;
+   text-align: center;
+   width: 20%;
+   color: #fd8137;
+   border-bottom: 1rpx solid #fd8137;
+}
+
+.youhuiquanqiang{
+  height: 150rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.youhuiquanqiang image{
+  width: 96%;
+  height: 150rpx;
+}
+
+.zhuti{
+  margin-top: 320rpx;
+}
+
+.zhuti .title{
+  width: 96%;
+  margin: 0 auto;
+  font-size: 38rpx;
+}
+
+.zhuti .list{
+  width: 100%;
+  margin:  0 auto;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+.zhuti .zhutisw{
+  height: 300rpx;
+  white-space: nowrap; 
+}
+
+.zhutisw_item{
+  display: inline-block;
+  width: 200rpx;
+  height: 300rpx;
+  margin-left: 30rpx;
+}
+.zhutisw_item image{
+  width: 200rpx;
+  height: 260rpx;
+  display: block;
+}
+.zhutisw_item text{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  text-align: center;
+  display: block;
+}
+.footer{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  background: #ffffff; 
+  border-top:1rpx solid #e2e2e2;
+}
+.footer .ft_item{
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.footer .on{
+  color: #1ba8b9;
+}
+
+.footer .ft_item image{
+  height: 45rpx; width: 45rpx;margin: 0 auto;display:block; margin-top: 10rpx;
+}
+.footer  .ft_item text{
+  text-align: center;
+  font-size: 26rpx;display:block;margin:0 auto;margin-top: 10rpx;
+}

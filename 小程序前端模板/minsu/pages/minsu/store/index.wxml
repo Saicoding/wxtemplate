@@ -1,0 +1,95 @@
+<view class="app">
+  <view class="header">
+    <view class="hd_main">
+      <view class="icon">
+        <navigator url="/pages/minsu/store/order/index?type=1">
+          <view class="image">
+            <image src="/img/minsu/wait_order.png"></image>
+            <text wx:if="{{stayok != 0}}" class="tips ">{{stayok}}</text>
+          </view>
+          <view class="text_wait">待确定新订单</view>
+        </navigator>
+      </view>
+      <view class="icon">
+        <navigator url="/pages/minsu/store/order/index?type=2">
+          <view class="image">
+            <image src="/img/minsu/sh_order.png"></image>
+               <text wx:if="{{stayin != 0}}" class="tips ">{{stayin}}</text>
+          </view>
+          <view class="text_sh">待入住订单</view>
+        </navigator>
+      </view>
+      <view class="icon">
+        <navigator url="/pages/minsu/store/order/index?type=3">
+          <view class="image">
+            <image src="/img/minsu/qx_order.png"></image>
+              <text wx:if="{{statout != 0}}" class="tips ">{{statout}}</text>
+          </view>
+          <view class="text">取消订单</view>
+        </navigator>
+      </view>
+
+      <view class="icon">
+        <navigator url="/pages/minsu/store/order/money">
+          <view class="image">
+            <image src="/img/minsu/jiesuan.png"></image>
+          </view>
+          <view class="text">结算管理</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="action">
+
+    <view class="col">
+      <navigator url="/pages/minsu/store/order/index">
+        <image class="tubiao" src="/img/minsu/order_on.png"></image>
+        <text>订单管理</text>
+        <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view class="col">
+      <navigator url="/pages/minsu/store/fang/room">
+      <image class="tubiao" src="/img/minsu/fangxing.png"></image>
+      <text>房间管理</text>
+      <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+
+
+    <view class="col">
+      <navigator url="/pages/minsu/store/fang/price">
+      <image class="tubiao" src="/img/minsu/fangjia.png"></image>
+      <text>房价管理</text>
+      <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view class="col">
+        <navigator url="/pages/minsu/store/info/index">
+          <image class="tubiao" src="/img/minsu/jiesao.png"></image>
+          <text>资料管理</text>
+          <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+        </navigator>
+    </view>
+    <view class="col">
+      <navigator url="/pages/minsu/store/comment/index">
+        <image class="tubiao" src="/img/minsu/dianping.png"></image>
+        <text>评价管理</text>
+        <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view bindtap="tel" class="col">
+      <image class="tubiao" src="/img/minsu/kefu.png"></image>
+      <text>联系客服</text>
+      <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+    </view>
+  </view>
+  <view class="kongbai"></view>
+  <view class="qihuan">
+    <navigator open-type="reLaunch" url="/pages/minsu/member/index">
+      <image src="/img/minsu/qh.png"></image>
+      <text>切换到个人中心</text>
+    </navigator>
+  </view>
+</view>

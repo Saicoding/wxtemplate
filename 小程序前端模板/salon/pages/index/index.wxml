@@ -1,0 +1,116 @@
+<!--index.wxml-->
+
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+  <swiper-item wx:for="{{datas.banner}}">
+    <image src="{{item.photo}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class='address'>
+  <view class="lt">
+    <view class='name'>{{datas.hair.title}}
+      <text class='distance'>{{datas.hair.juli}}</text>
+    </view>
+    <view class='info'>
+      <image src='/img/icon_address.png' class='icon'></image>
+      <text class='addr_info'>{{datas.hair.address}}</text>
+    </view>
+  </view>
+  <view class="rt" bindtap='map'>
+    <image src='/img/icon_dh.png'></image>
+    <view class='dh'>导航到店</view>
+  </view>
+</view>
+
+<view class='title' hidden='{{datas.activity==""? true: false}}'>-推荐领优惠券-</view>
+
+<view class='ditem' hidden='{{datas.activity==""? true: false}}' wx:for="{{datas.activity}}">
+  <view class='dtview card_bg_03'>
+    <view class='dface'>
+      <image src='/img/pics/002.jpg'></image>
+    </view>
+    <view class='dcontent'>
+      <view class='dtitle'>{{item.money}}元现金券</view>
+      <view class='dinfo'>{{item.title}}</view>
+    </view>
+    <view class='dreceive'>
+      <navigator open-type="redirect" url="/pages/card/index">
+        <view class='btn cfont_color_03'>领取</view>
+      </navigator>
+    </view>
+  </view>
+  <view class='dbview'>
+    <view class='ldb'>有限期至{{item.end_date}}</view>
+    <view class='rdb'>还剩{{item.num}}份</view>
+  </view>
+</view>
+
+<view class='title'>-推荐造型设计师-</view>
+<view class='item' wx:for="{{datas.list}}">
+  <view class='tview'>
+    <navigator url='/pages/index/homepage?designer_id={{item.designer_id}}'>
+      <view class='face'>
+        <image src='{{item.photo}}'></image>
+      </view>
+    </navigator>
+    <view class='lt'>
+      <view class='name'>{{item.name}}</view>
+      <view class='position'>{{item.zhiwu}}</view>
+    </view>
+    <view class='rt'>
+      <view class='price'>
+        <text style='font-size:26rpx;margin-right:6rpx;'>yen</text>{{item.price}}</view>
+      <view class='alert'>预约特惠价格</view>
+    </view>
+  </view>
+
+  <view class='bview'>
+    <view class='bv01'>
+      <view class='tag' wx:for="{{item.tages}}">{{item}}</view>
+      <navigator url='/pages/index/receive?designer_id={{item.designer_id}}'>
+        <view class='yuyue'>预约TA</view>
+      </navigator>
+    </view>
+    <view class='bv02'>
+      <navigator url='/pages/index/homepage?designer_id={{item.designer_id}}'>
+        <text>好评率：{{item.hp_num}}%</text>
+      </navigator>
+      <navigator url='/pages/index/perworks?id={{item.designer_id}}'>
+        <text>作品数：{{item.works_num}}</text>
+      </navigator>
+      <text>已被约：{{item.enroll_num}}次</text>
+    </view>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class='kongbai'></view>
+
+
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-APPtubiao-:before"></view>
+    <text>预约</text>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/card/index">
+      <view class="image iconfont icon-qiajuan:before"></view>
+      <text>卡劵</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/works/index">
+      <view class="image iconfont icon-zuopin:before"></view>
+      <text>作品</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/mine/index">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view wx:for="{{coupons}}"  wx:for-index="i" wx:for-item="item" class="coupon">
+  <image bindtap="receive"  data-activity_id="{{item.activity_id}}" src="/image/homepage/coupon{{i%4+1}}.png"></image>
+  <view class="content">
+    <view class="lt coupon_color{{i%4+1}}">
+      <text class="title">现金抵扣</text>
+      <view class="price">
+        <text class="num">{{item.money}}</text>
+        <text>元</text>
+      </view>
+    </view>
+    <view class="ct">
+      <view>
+        {{item.title}}
+      </view>
+      <view>
+        最低消费{{item.need_money}}元可用
+      </view>
+      <view>
+       {{item.bg_date}}至{{item.end_date}}
+      </view>
+    </view>
+  </view>
+</view> 
+<view wx:if="{{coupons == ''}}" class="nodata">
+      <image src="/image/homepage/nodata.png"></image>
+      <text>没有任何活动哦</text>
+ </view>

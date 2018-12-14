@@ -1,0 +1,46 @@
+/* pages/member/set.wxss */
+.app{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .citem{
+  width: 92%;
+  height: 100rpx;
+  padding: 0 4%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.app .citem .lt{
+  width: 70%;
+  height: 100rpx;
+  float: left;
+}
+
+.app .citem .lt .title{
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  color: #000;
+  line-height: 40rpx;
+  margin-top: 15rpx;
+}
+
+.app .citem .lt .detail{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  color: #8a8a8a;
+  line-height: 30rpx;
+}
+
+.app .citem .rt{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  float: left;
+}

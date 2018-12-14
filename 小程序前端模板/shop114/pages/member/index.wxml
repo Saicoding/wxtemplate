@@ -1,0 +1,32 @@
+<view class="header">
+
+    <image src="{{userinfo.face=='' ? '/img/hotel/login_no.png':userinfo.face}}"></image>
+    <text>{{userinfo.nick_name}}</text>
+</view>
+<navigator url="/pages/member/shop">
+<view class="col">
+  <image class="icon" src="/img/yy2.png"></image>
+  <text>预约过的商家</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+
+<navigator url="/pages/member/zanshop">
+<view class="col">
+  <image class="icon" src="/img/zan2.png"></image>
+  <text>点过赞的商家</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+<navigator url="/pages/member/telshop">
+<view class="col">
+  <image class="icon" src="/img/dh2.png"></image>
+  <text>打电话的商家</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+
+
+
+<button bindtap="tel" class="table_btn">联系客服</button>
+<view class="jszc">技术支持：www.erre7.cn</view>

@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/receive",
+    "pages/index/perworks",
+    "pages/index/homepage",
+    "pages/index/price",
+    "pages/card/index",
+    "pages/works/index",
+    "pages/mine/index",
+    "pages/mine/card",
+    "pages/mine/yuyue",
+    "pages/pay/index",
+    "pages/coupon/index",
+    "pages/pay/payyes"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联美容美发",
+    "navigationBarTextStyle": "white"
+  }
+}

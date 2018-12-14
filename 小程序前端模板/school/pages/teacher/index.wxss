@@ -1,0 +1,43 @@
+.main{
+  height: 1216rpx;
+  width: 100%;
+}
+.kongbai{
+  height: 100rpx;
+}
+.swiper{
+
+  height: 900rpx;
+}
+.item{
+  height: 800rpx;
+  width: 600rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 20rpx; 
+  padding-top: 20rpx;
+}
+.item image{
+  width: 400rpx;
+  height: 400rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+.item text{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+
+.item view{
+  height: 160rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 10rpx;
+  line-height: 40rpx;
+}

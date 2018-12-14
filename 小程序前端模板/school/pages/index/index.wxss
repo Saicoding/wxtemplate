@@ -1,0 +1,113 @@
+.swiper {
+  height: 360rpx;
+}
+
+.photo {
+  width: 96%;
+  height: auto;
+  margin-left: 2%;
+  margin-top: 10rpx;
+}
+
+.photo .pro {
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+}
+
+.photo .item {
+  width: 280rpx;
+  height: 200rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+
+.photo .item image {
+  width: 280rpx;
+  height: 200rpx;
+  display: block;
+}
+
+.photo .item text {
+  height: 40rpx;
+  text-align: center;
+  width: 100%;
+  display: block;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news .item .riqi {
+  float: right;
+  margin-right: 10rpx;
+  color: #666;
+}
+
+.kecheng .item {
+  height: 200rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  width: 96%;
+  margin-left: 2%;
+}
+
+.kecheng .item .lt {
+  float: left;
+  width: 200rpx;
+}
+
+.kecheng .item .lt image {
+  width: 180rpx;
+  height: 160rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+
+.kecheng .item .rt {
+  float: left;
+  width: 480rpx;
+  height: 180rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.kecheng .baoming {
+  height: 50rpx;
+  width: 140rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+}
+
+.kecheng .item .rt .name {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kecheng .item .rt .xinghao {
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+.kecheng .item .rt .price {
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+.kecheng .price .money {
+  color: red;
+  font-weight: bold;
+  font-size: 26rpx;
+}

@@ -1,0 +1,94 @@
+<!--发现 图文详情页面-->
+<view class="app">
+  <video class="video_container" src="{{detail.video_url}}"></video>
+  <view class="content">
+    <!-- 相关阅读 -->
+    <view class="reader">
+      <view class="model_item">
+        <view class="vline" style='background:{{color}}'></view>
+        <text>相关阅读</text>
+      </view>
+      <view wx:for="{{datas}}" wx:if="{{item.id!=id}}" class="fx_img_text">
+        <view class="lp">
+          <view class="rtitle">
+            <navigator open-type="redirect" url="{{item.type==1?'/pages/around/faxian/details/video/index':'/pages/headlines/details/imageText/index'}}?id={{item.id}}">
+              {{item.title}}
+            </navigator>
+          </view>
+
+          <view class="bottom_info">
+            <text class="author">{{item.author}}</text>
+            <text class="comment">{{item.views}}浏览</text>
+          </view>
+        </view>
+
+        <view wx:if="{{item.photo1!=''}}" class="rp">
+          <navigator open-type="redirect" url="{{item.type==1?'/pages/around/faxian/details/video/index':'/pages/headlines/details/imageText/index'}}?id={{item.id}}">
+            <image src="{{item.photo1}}"></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <!-- 相关评论 -->
+    <view class="comment">
+      <view class="model_item">
+        <view class="vline" style='background:{{color}}'></view>
+        <text>相关评论</text>
+      </view>
+
+      <view wx:for="{{comments}}" class="comment_item">
+        <!--用户头像-->
+        <view class="face_view">
+          <image src="{{item.face}}"></image>
+        </view>
+
+        <!-- Info -->
+        <view class="comment_lp">
+          <view class="header">
+            <view class="user_name">{{item.nick_name}}</view>
+            <view class="zan">
+              <image src="/images/around/zan.png"></image>
+              <text data-id="{{item.id}}" bindtap="zan">{{item.zan_num}}</text>
+            </view>
+          </view>
+
+          <view class="content">
+            {{item.content}}
+          </view>
+
+          <view class="bottom">
+            <view class="date">
+              {{item.add_time}}
+            </view>
+
+            <view class="reply">
+              <image src="/images/around/icon_reply.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">
+      查看更多
+    </view>
+    <view wx:if="{{datas!=''&&more==0}}" class="nomore">
+      没有更多数据了
+    </view>
+  </view>
+
+  <form bindsubmit="comment">
+    <view class="reply_container">
+
+      <view class="reply_input">
+        <input name="content" id="content" placeholder="请输入评论信息" />
+      </view>
+      <view class="reply_send">
+        <button form-type="submit" class="button" style='background:{{color}}'>发送</button>
+      </view>
+
+    </view>
+  </form>
+</view>

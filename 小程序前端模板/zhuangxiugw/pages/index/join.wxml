@@ -1,0 +1,36 @@
+<!--pages/index/join.wxml-->
+<view class='app'>
+<form bindsubmit='sub'>
+  <view class='content'>
+    <view class='title'><text class='alert'>*</text>您的姓名</view>
+    <input name="name" placeholder='请输入您的姓名'></input>
+  </view>
+
+  <view class='content'>
+    <view class='title'><text class='alert'>*</text>您的联系方式</view>
+    <input  name="tel" placeholder='请输入联系方式'></input>
+  </view>
+
+  <view class='content'>
+    <view class='title'>房屋面积（m²）</view>
+    <input name="minaji" placeholder='请输入您的姓名'></input>
+  </view>
+
+  <view class='content'>
+    <view class='title'>您的装修预算</view>
+    <input name="price" placeholder='请输入您的装修预算'></input>
+  </view>
+
+  <view class='content'>
+    <view class='title'>您的房屋地址</view>
+    <input name="addr" placeholder='请输入您的房屋地址'></input>
+  </view>
+
+  <view class='content'>
+    <view class='title'>备注</view>
+    <textarea  name="beizhu"  placeholder='请输入备注信息(选填）'></textarea>
+  </view>
+
+  <button form-type='submit' class='join'>立即申请</button>
+</form>
+</view>

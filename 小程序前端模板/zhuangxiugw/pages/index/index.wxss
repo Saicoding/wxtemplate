@@ -1,0 +1,163 @@
+/**index.wxss**/
+.swiper{
+  height: 360rpx;
+}
+
+.slide-image{
+  width: 100%;
+  height: 360rpx;
+}
+
+.menu{
+  width: 92%;
+  height: auto;
+  padding: 0rpx 4%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.menu .item{
+  width: 25%;
+  height: auto;
+  margin: 15rpx 0;
+  float: left;
+  text-align: center;
+}
+
+.menu .item image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border-radius: 15rpx;
+}
+
+.menu .item .name{
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #000;
+}
+
+.jingdian{
+  width: 92%;
+  height: auto;
+  margin: 20rpx 0;
+  padding: 0 4%;
+  background: #fff;
+  padding-bottom: 20rpx; 
+  overflow: hidden;
+}
+
+.jingdian .title{
+  width: 100%;
+  height: 60rpx;
+  padding-top: 10rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.jingdian .jitem{
+  width: 45%;
+  height: 220rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top:20rpx;
+  position: relative;
+  float: left;
+}
+
+.jingdian .jitem image{
+  width: 100%;
+  height: 220rpx;
+  border-radius: 12rpx;
+}
+
+.jingdian .jitem .jtitle{
+  width: 94%;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-overflow:  ellipsis;
+  white-space:  nowrap;
+  color: white;
+  overflow: hidden;
+  font-size: 24rpx;
+  padding: 0 3%;
+  border-radius: 0 0 12rpx 12rpx;
+}
+
+.alert{
+  width: 90%;
+  height: auto;
+  margin: 0 5%;
+  overflow: hidden;
+  
+}
+
+.alert .aitem{
+  width: 50%;
+  height: 50rpx;
+  display: flex;
+  margin-top: 15rpx;
+  justify-content: center;
+  float: left;
+}
+
+.alert .aitem image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx 0;
+  float: left;
+}
+
+.alert .aitem text{
+  width: auto;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 5rpx 0;
+  color: #8a8a8a;
+  float: left;
+  font-size: 26rpx;
+  margin-left: 15rpx;
+}
+
+.bottom{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  background: #f00;
+  border-top: 1rpx #f8f8f8 solid;
+}
+
+.bottom .kf{
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  background: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.bottom .yy{
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.kongbai{
+  width: 100%;
+  height: 100rpx;
+}

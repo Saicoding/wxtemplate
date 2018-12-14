@@ -1,0 +1,6 @@
+<!--pages/authorize/authorize.wxml-->
+<view class ="text">
+  该小程序需要授权才能使用,您之前错过了授权,需要重新授权才可以继续正常使用。
+</view>
+
+<button class ="btn" type="primary" open-type='getUserInfo'>重新授权</button>

@@ -1,0 +1,142 @@
+page {
+  background: #f2f7fa;
+}
+
+.nodata {
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image {
+  height: 200rpx;
+  width: 200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.nodata text {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color: #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.header {
+  height: 80rpx;
+  background: #fff;
+  border-bottom: 1rpx #e2e2e2 solid;
+  line-height: 80rpx;
+  width: 100%;
+  font-size: 26rpx;
+  position: fixed;top:0;
+  left: 0;
+}
+
+.header .lt {
+  float: left;
+  margin-left: 30rpx;
+  width: 100rpx;
+}
+
+.header .ct{
+  width: 300rpx;
+  float: left; margin-left: 150rpx;
+  color: #1ba8b9; 
+}
+
+.header .ct image{
+  width: 30rpx;height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.header .rt {
+  float: right;
+  margin-right: 30rpx;
+  width: 100rpx;
+}
+
+.fabu {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx #e2e2e2 solid;
+}
+.fabu image{
+  width: 40rpx; height: 40rpx;
+  float: left;
+  margin-left: 250rpx;
+  margin-top: 20rpx;
+}
+.fabu text{
+  font-size: 26rpx;
+  float: left; margin-left: 30rpx;
+  display: block;
+  color: #1ba8b9; 
+}
+
+.room_list{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  border-top:1rpx #e2e2e2 solid;
+  border-bottom: 1rpx #e2e2e2 solid;
+  margin-top: 30rpx;
+}
+.room_list image{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.room_list .lt{
+  float: left;
+  width: 120rpx;
+}
+
+.room_list .ct{
+  float: left;
+  width: 380rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+.room_list .ct .title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.room_list .rt{
+  float: right;
+  margin-right: 10rpx;
+  line-height: 120rpx;
+}
+.room_list .rt input{
+  width: 120rpx;
+  border: 1rpx #e2e2e2 solid;
+  color: red;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+}
+
+.room_list .sy{
+  font-size: 24rpx;
+  font-weight: normal;
+  color: #1ba8b9; 
+}
+
+.fabu button{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background:  #1ba8b9;
+  margin-top: 10rpx;
+  color: #fff; 
+}

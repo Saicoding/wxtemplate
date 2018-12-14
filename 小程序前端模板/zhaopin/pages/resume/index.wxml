@@ -1,0 +1,82 @@
+<!--pages/resume/index.wxml-->
+<view class="app">
+  <navigator url="/pages/resume/baseinfo/index">
+    <view class="info_item">
+      <view class="title">基本信息</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/intention/index">
+    <view class="info_item">
+      <view class="title">求职意向</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/education/slist">
+    <view class="info_item">
+      <view class="title">教育经历</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/company/clist">
+    <view class="info_item">
+      <view class="title">工作经历</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/project/plist">
+    <view class="info_item">
+      <view class="title">项目经验</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/skill/index">
+    <view class="info_item">
+      <view class="title">个人技能</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/schoolsat/index">
+    <view class="info_item">
+      <view class="title">在校情况</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/introduction/index">
+    <view class="info_item">
+      <view class="title">自我评价</view>
+      <view class="state"></view>
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+</view>

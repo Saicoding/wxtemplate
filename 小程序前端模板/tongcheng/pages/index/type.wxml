@@ -1,0 +1,13 @@
+<!--pages/index/type.wxml-->
+<view class='app'>
+  <view class="menu">
+    <view class="item" wx:for="{{categorys}}">
+      <navigator open-type='redirectTo' url='/pages/index/add?category_id={{item.category_id}}'>
+        <view style="background:{{item.color}}" class="icon">
+          <image src="{{item.ico}}"></image>
+        </view>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>

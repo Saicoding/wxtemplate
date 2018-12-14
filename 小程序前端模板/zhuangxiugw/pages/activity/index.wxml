@@ -1,0 +1,22 @@
+<!--pages/index/activity.wxml-->
+<view class='app'>
+  <navigator wx:for="{{datas}}" url='/pages/activity/detail?activity_id={{item.activity_id}}'>
+    <view class='item {{item.is_end == 1 ? "gray" : "" }}'>
+      <view class='title'>
+        <text class='hui' style='color:{{color}}; border-color:{{color}}'>惠</text>
+        <text class='name'>{{item.title}}</text>
+        <text class='state'>{{item.is_end == 1 ? '已结束' : '进行中'}}</text>
+      </view>
+      <view class='date'>活动时间：{{item.bg_date}}</view>
+      <image src='{{item.photo}}'></image>
+      <view class='address'>
+        <image class='location' src='/img/icon_address.png'></image>
+         {{item.address}}
+      </view>
+    </view>
+  </navigator>
+
+<view bindtap="loadMore" class="more" wx:if="{{datas!=''&&more==1}}">查看更多</view>
+<view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+<view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/index/me.wxml-->
+<view class='app'>
+  <view class='item' wx:for="{{datas}}">
+    <view class='title'>
+      <text class='type' style='{{item.type==2? "background:#8A4AFB": ""}}'>{{item.type_mean}}</text>
+      <text class='num'>{{item.vacancy}}{{item.type==2? "位": "人"}}</text>
+    </view>
+    <view class='route'>{{item.begin}} - {{item.end}}</view>
+    <view class='date'>{{item.bg_time}}出发</view>
+    <view class='car' hidden='{{item.type==2? false: true}}'>途经地：{{item.channel}}</view>
+    <view class='car' hidden='{{item.type==2? false: true}}'>车型：{{item.car}}</view>
+    <view class='info'>
+      <view class='name'>
+        <image src='{{item.sex == 1? "/imgs/icon_nan.png": "/imgs/icon_nv.png"}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='phone'>{{item.mobile}}</view>
+    </view>
+    <view class='contact' hidden='{{item.status==1? false: true}}'>已结束</view>
+    <view class='bttview'>
+      <view class='graybtn' bindtap='deletePinche' data-id='{{item.pinche_id}}'>删除</view>
+      <view class='graybtn' bindtap='closePinche' data-id='{{item.pinche_id}}' hidden='{{item.status==1? true: false}}'>关闭</view>
+      <view class='greenbtn' bindtap='editPinche' data-id='{{item.pinche_id}}' data-type='{{item.type}}' hidden='{{item.status==1? true: false}}'>编辑</view>
+    </view>
+  </view>
+
+  <view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+  <view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+</view>

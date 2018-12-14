@@ -1,0 +1,116 @@
+<!--index.wxml-->
+<view class="app">
+  <view class="header">
+    <image src="{{setting.banner ?setting.banner :'' }}"></image>
+  </view>
+
+  <view class="title">
+    <view class="name">{{setting.name}}</view>
+  </view>
+
+  <view class="baseinfo">
+    <view bindtap='map' class="lt">
+      <image src="/img/icon_address.png"></image>
+      <text>{{setting.addr}}</text>
+    </view>
+    <view class="rt">
+      <view class="line"></view>
+      <image bindtap='tel' src="/img/icon_phone.png"></image>
+    </view>
+  </view>
+
+  <view class="moreinfo">
+    <view class="mtitle">更多信息</view>
+    <view class="mitem">
+      <view class="tags">
+
+        <view wx:if="{{setting.is_wifi}}" class="tag">
+          <image src="/img/tag_wifi.png"></image>
+          <text>wifi</text>
+        </view>
+
+        <view wx:if="{{setting.is_p}}" class="tag">
+          <image src="/img/tag_tc.png"></image>
+          <text>停车场</text>
+        </view>
+
+        <view wx:if="{{setting.is_weixin}}" class="tag">
+          <image src="/img/tag_wechat.png"></image>
+          <text>微信支付</text>
+        </view>
+
+        <view wx:if="{{setting.is_alipay}}" class="tag">
+          <image src="/img/tag_alipay.png"></image>
+          <text>支付宝支付</text>
+        </view>
+      </view>
+
+      <view class="yysj">营业时间：{{setting.biz_t}}</view>
+
+      <view class="alert">{{setting.info}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{coupon != ''}}" class="youhuiquan">
+
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+
+      <view wx:for="{{coupon}}" class="item">
+        <view class="lt">
+          <text>¥</text>
+          <text class="price">{{item.money}}</text>
+        </view>
+        <view class="ct">
+          <view class="name">{{item.title}}</view>
+          <view class="man">满{{item.need_money}}元可用</view>
+        </view>
+        <view class="rt">
+          <text data-id="{{item.activity_id}}" bindtap='receive'>领取</text>
+        </view>
+
+        <view class="topyuan"></view>
+        <view class="btyuan"></view>
+      </view>
+
+
+    </scroll-view>
+
+  </view>
+
+  <view class="photo">
+    <view class="ptitle">
+      相册动态
+    </view>
+    <scroll-view scroll-x="true" class="pics">
+      <image bindtap='showpic' wx:for="{{photos}}" src="{{item}}" data-id='{{index}}'></image>
+    </scroll-view>
+  </view>
+
+  <view class='kongbai'></view>
+</view>
+
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <image src="/img/home_sel.png"></image>
+      <text class="active">商户</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/pay/index">
+      <image src="/img/pay_nor.png"></image>
+      <text>支付</text>
+    </navigator>
+  </view>
+
+
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <image src="/img/me_nor.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+
+</view>

@@ -1,0 +1,104 @@
+<!--立即定制-->
+<form bindsubmit="submit">
+<view class="app">
+  <view class="banner">
+    <image src="/image/dingzhi/banner.png"></image>
+  </view>
+
+
+  <view class="menu">
+    <text bindtap="type" data-type="1" class="{{type==1?'active':''}}">家庭定制游</text>
+    <text bindtap="type" data-type="2" class="{{type==2?'active':''}}">公司定制游</text>
+    <input hidden="true" value="{{type}}" name="type" id="type"/>
+  </view>
+
+  <view  class="dingzhi_base_info">
+    <view bindtap="select_city" class="info_item bottom_line">
+      <text class="lt">出发城市</text>
+      <text class="lt_gray_06" >{{city1.city_name?city1.city_name:'请选择出发城市'}}</text>
+      <input hidden="true" value="{{city1.city_id?city1.city_id:0}}" name="bg_city" id="bg_city"/>
+      <image class="rt_arrow" src="/image/dingzhi/icon_arrow.png"></image>
+    </view>
+
+    <view bindtap="select_city2"  class="info_item bottom_line">
+      <text class="lt">目的地</text>
+      <text class="lt_gray_06" >{{city2.city_name?city2.city_name:'请选择目的城市'}}</text>
+      <input hidden="true" value="{{city2.city_id?city2.city_id:0}}" name="mb_city" id="mb_city"/>
+      <image class="rt_arrow" src="/image/dingzhi/icon_arrow.png"></image>
+    </view>
+    <navigator url="/pages/public/date">
+      <view class="info_item bottom_line">
+
+        <text class="lt">出发日期</text>
+        <view class="date">
+        <text>{{bgend.bg_date1}}-{{bgend.end_date1}}</text>
+        <input hidden="true" value="{{bgend.bg_date?bgend.bg_date:''}}" name="bg_date" id="bg_date"/>
+        <input hidden="true" value="{{bgend.end_date?bgend.end_date:''}}" name="end_date" id="end_date"/>
+
+        </view>
+        <text class="rt">共{{bgend.day2}}天</text>
+
+      </view>
+    </navigator>
+    <view class="info_item bottom_line">
+      <text bindtap="num1_jian" class="mark_jian">-</text>
+      <text class="people_num">{{num1}}</text>
+      <text bindtap="num1_jia" class="mark_jia">+</text>
+      <input hidden="true" value="{{num1}}" name="num1" id="num1"/>
+
+      <text class="people_title">成人</text>
+
+      <text bindtap="num2_jian" class="mark_jian">-</text>
+      <text  class="people_num">{{num2}}</text>
+      <text bindtap="num2_jia" class="mark_jia">+</text>
+      <text class="people_title">儿童</text>
+       <input hidden="true" value="{{num2}}" name="num2" id="num2"/>
+
+    </view>
+
+    <view class="info_item">
+      <text class="lt">人均预算</text>
+      <text class="money_mark">¥</text>
+      <input class="input_money" name="price" id="price" placeholder="请输入金额，如500" />
+    </view>
+
+  </view>
+
+  <!--备注信息-->
+  <view class="dingzhi_base_info">
+    <view class="info_item bottom_line">
+      <text class="bz_info">需求备注（选填,500个字以内）</text>
+    </view>
+
+    <view class="info_item">
+      <input name="content" id="content" placeholder="在这里补充您的其他定制要求" />
+    </view>
+  </view>
+
+  <!--联系人信息-->
+  <view class="dingzhi_base_info">
+    <view class="info_item bottom_line">
+      <text class="lx_info">联系人信息</text>
+    </view>
+
+    <view class="info_item bottom_line">
+      <text class="lt">姓名</text>
+      <input name="name" id="name" placeholder="请输入您的姓名" />
+    </view>
+
+    <view class="info_item bottom_line">
+      <text class="lt">电话号码</text>
+      <input name="mobile" id="mobile" placeholder="请输入您的电话号码" />
+    </view>
+
+    <view class="info_item">
+      <text class="lt">邮箱</text>
+      <input name="email" id="email" placeholder="请输入您的电子邮箱" />
+
+    </view>
+  </view>
+
+  <button form-type="submit" class="btn_sure_dingzhi">立即定制</button>
+
+</view>
+</form>

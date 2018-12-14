@@ -1,0 +1,23 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/index/type",
+    "pages/index/homepage",
+    "pages/gk/index",
+    "pages/index/team",
+    "pages/yuyue/index",
+    "pages/about/index",
+    "pages/menu/consult",
+    "pages/menu/yuyue",
+    "pages/menu/about",
+    "pages/mine/order",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "巅峰应用小程序",
+    "navigationBarTextStyle": "white"
+  }
+}

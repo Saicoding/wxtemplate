@@ -1,0 +1,72 @@
+<view wx:if="{{addr == ''}}" class="noaddr">
+  <navigator open-type='redirect' url="/pages/addr/add">
+    <image src="/img/dw.png"></image>
+    <view>还没收货地址,<text>添加</text></view>
+  </navigator>
+</view>
+<view wx:if="{{addr != ''}}" class="addr">
+  <navigator  open-type='redirect' url="/pages/addr/index">
+    <view class="lt"><text class="iconfont icon-location"></text></view>
+    <view class="ct">
+      <view>收货人：{{addr.name}}；电话：{{addr.mobile}}</view>
+      <view>{{addr.address}}</view>
+    </view>
+    <view class="rt">
+      <text class="iconfont icon-right"></text>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+  
+  <view wx:for="{{product}}" class="item">
+       <image src='{{item.photo}}'></image>
+        <view class="rt">
+            <view class="tit">
+                <text class="name">{{item.name}}</text>
+                <text class="price">¥{{item.price}}</text>
+            </view>
+            <view class="info">
+                <text class="num">x{{item.buynum}}</text>
+            </view>
+        </view>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">配送费用</text>
+    <text class="rt">¥{{peisong}}</text>
+  </view>
+    <view class="col bdtp">
+    <text class="lt">打包费用</text>
+    <text class="rt">¥{{dabaototal}}</text>
+  </view>
+  <view bindtap='coupon'  class="col bdtp">
+    <text class="lt">优惠券</text>
+    <view class="rt"> {{coupon_id!=0?'-'+coupon_money:'不使用优惠券'}}<text class="iconfont icon-right"></text></view>
+  </view>
+   <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">¥{{needpay}}</text>
+  </view>
+
+</view>
+
+<view class="kefutel">
+  <text class='iconfont icon-kefu'></text>
+</view>
+
+
+<view class="buy">
+
+    <view class="lt">
+        <view>共{{totalnum}}件商品</view>
+        <view>合计<text>¥{{needpay}}</text></view>
+    </view>
+    <view bindtap='order' style="background:{{color}}" class="rt">微信支付</view>
+</view>

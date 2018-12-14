@@ -1,0 +1,48 @@
+<view hidden="{{cartList==''? false: true}}" class="nodata">
+  <image src='/img/kong.png'></image>
+  <view>宝宝不开心,购物车里面空空的</view>
+  <navigator open-type="reLaunch" url="/pages/mall/index">
+    <button>去逛逛</button>
+  </navigator>
+</view>
+
+<view class="data">
+  <view class="item bdbt" wx:for="{{cartList}}">
+    <view class="lt">
+      <radio color="{{color}}" data-id='{{item.goods_id}}' data-type="{{item.type_id}}" checked='{{item.is_select==1?true: false}}' bindtap='onSelectGoods'></radio>
+    </view>
+    <view class="rt">
+      <view class="product ">
+        <view class="img">
+          <image src='{{item.photo}}'></image>
+        </view>
+        <view class="content">
+          <view class="title">{{item.goods_name}}</view>
+          <view class="price">
+            <text class="xjia">¥{{item.shop_price}}</text>
+            <text class="yjia">¥{{item.price}}</text>
+            <text class="iconfont icon-shanchu" bindtap='deleteShop' data-id='{{item.goods_id}}'></text>
+          </view>
+        </view>
+      </view>
+      <view class="num bdtp">
+        <text class="jia" data-id='{{item.goods_id}}' data-type='{{item.type_id}}' bindtap='plusGoodsNum'>+</text>
+        <text class="buynum">{{item.show_num}}</text>
+        <text class="jian" data-id='{{item.goods_id}}'  data-type='{{item.type_id}}'  bindtap='minusGoodsNum'>-</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <view class="lt">
+      <radio color="{{color}}" checked='{{select_all}}' bindtap='selectAllGoods'></radio>全选
+    </view>
+    <view class="ct">合计
+      <text>¥{{total_price}}</text>
+    </view>
+    
+    <view class="jiesuan" bindtap='goPayGoods'>去结算</view>
+    
+  </view>
+
+</view>

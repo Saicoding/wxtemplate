@@ -1,0 +1,51 @@
+<!--index.wxml-->
+
+<view class='ditem' wx:for="{{datas}}">
+  <view class='dtview card_bg_03'>
+    <view class='dface'>
+      <image src='/img/pics/002.jpg'></image>
+    </view>
+    <view class='dcontent'>
+      <view class='dtitle'>{{item.money}}元</view>
+      <view class='dinfo'>{{item.title}}</view>
+    </view>
+    <view class='dreceive'>
+      <view class='btn cfont_color_03' data-id='{{item.activity_id}}' bindtap='getCoupon'>领取</view>
+    </view>
+  </view>
+  <view class='dbview'>
+    <view class='ldb'>有限期至{{item.end_date}}</view>
+    <view class='rdb'>还剩{{item.num}}份</view>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class='kongbai'></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-APPtubiao-:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-qiajuan:before"></view>
+    <text>卡劵</text>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/works/index">
+      <view class="image iconfont icon-zuopin:before"></view>
+      <text>作品</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/mine/index">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

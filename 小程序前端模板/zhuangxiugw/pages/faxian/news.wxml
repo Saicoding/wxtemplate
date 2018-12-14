@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="headlines_main">
+  <scroll-view scroll-x="true" class="menubar">
+    <view wx:for="{{nav}}" class="menu">
+      <text class="{{dataId==item.id?'active':''}}" bindtap="onclick_menu" data-id="{{item.id}}">{{item.name}}</text>
+    </view>
+  </scroll-view>
+  <!--content-->
+  <view class="content">
+    <view wx:for="{{toutiao}}">
+      <!-- 样式一 -->
+      <view wx:if="{{item.type==2}}" class="fx_content">
+        <navigator url="/pages/faxian/imageText/index?id={{item.id}}">
+          <view class="title">
+            {{item.title}}
+          </view>
+          <view class="bottom_info">
+            <text wx:if="{{item.views>100}}" class="remen">热</text>
+            <text class="author">{{item.author}}</text>
+            <text class="comment">{{item.views}}浏览</text>
+            <text class="date">{{item.add_time}}</text>
+          </view>
+        </navigator>
+      </view>
+      <!-- 样式二 -->
+      <view wx:if="{{item.type==4}}" class="fx_content">
+        <navigator url="/pages/faxian/imageText/index?id={{item.id}}">
+
+          <view class="title">
+            {{item.title}} </view>
+
+          <view class="fx_img_container">
+            <image class="img_item" src="{{item.photo1}}"></image>
+            <image class="img_item" src="{{item.photo2}}"></image>
+            <image class="img_item" src="{{item.photo3}}"></image>
+          </view>
+
+          <view class="bottom_info">
+            <text wx:if="{{item.views>100}}" class="remen">热</text>
+            <text class="author">{{item.author}}</text>
+            <text class="comment">{{item.views}}浏览</text>
+            <text class="date">{{item.add_time}}</text>
+          </view>
+        </navigator>
+      </view>
+      <!-- 样式三 -->
+      <view wx:if="{{item.type==3}}" class="fx_img_text">
+        <navigator url="/pages/faxian/imageText/index?id={{item.id}}">
+          <view class="lp">
+            <view class="title">
+              {{item.title}} </view>
+            <view class="bottom_info">
+              <text wx:if="{{item.views>100}}" class="remen">热</text>
+              <text class="author">{{item.author}}</text>
+              <text class="comment">{{item.views}}浏览</text>
+              <text class="date">{{item.add_time}}</text>
+            </view>
+          </view>
+          <view class="rp">
+            <image src="{{item.photo1}}"></image>
+          </view>
+        </navigator>
+      </view>
+      <!-- 样式四 -->
+      <view wx:if="{{item.type==1}}" class="fx_content">
+        <navigator url="/pages/faxian/video/index?id={{item.id}}">
+          <text class="title">  {{item.title}}</text>
+          <view class="video_container">
+            <image style="width: 100%;" src="{{item.photo1}}"></image>
+          </view>
+          <view class="bottom_info">
+            <text wx:if="{{item.views>100}}" class="remen">热</text>
+            <text class="author">{{item.author}}</text>
+            <text class="comment">{{item.views}}浏览</text>
+            <text class="date">{{item.add_time}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">
+      查看更多
+    </view>
+    <view wx:if="{{datas!=''&&more==0}}" class="nomore">
+      没有更多数据了
+    </view>
+  </view>
+  <view class="jishu">技术支持：www.erre7.cn</view>
+
+</view>

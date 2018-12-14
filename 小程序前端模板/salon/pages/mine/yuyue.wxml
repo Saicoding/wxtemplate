@@ -1,0 +1,25 @@
+<!--pages/mine/yuyue.wxml-->
+<view class='item' wx:for="{{datas}}">
+  <view class='title'>
+    <view class='name'>预约项目：<text class='ncont'>洗吹类</text></view>
+    <view class='state'>{{item.status_mean}}</view>
+  </view>
+  <view class='time'>预约时间：<text class="tcont">{{item.time}}</text></view>
+
+  <view class='content'>
+    <view class='lt'>
+      <view class='ctit'>预约造型设计师</view>
+      <view class='cinfo'>{{item.designer}}</view>
+    </view>
+    <view class='hline'></view>
+    <view class='rt'>
+      <view class='ctit'>预约人数</view>
+      <view class='cinfo'>{{item.num}}人</view>
+    </view>
+  </view>
+  <view class="bottom" hidden='{{item.status >= 2? true: false}}'>
+    <text class='cancel' data-id='{{item.enrol_id}}' bindtap='cancelYuYue'>取消预约</text>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>

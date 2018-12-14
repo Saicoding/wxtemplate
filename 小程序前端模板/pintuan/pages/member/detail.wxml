@@ -1,0 +1,75 @@
+<view class="orderinfo">
+  <view class="status">{{datas.status_mean}}</view>
+  <view class="info">{{datas.status==3||datas.status==8? datas.mail_number: '订单编号:'+datas.order_id}}</view>
+  <view class="info">下单时间:{{datas.add_time}}</view>
+</view>
+
+<view class="shouhuo">
+  <view class="title">
+    <text class="iconfont icon-peisong"></text>
+    <text class="ml20">工作日/双休/节假日均可收货</text>
+  </view>
+</view>
+
+
+<view class="addr">
+  <view class="lt">
+    <text class="iconfont icon-location"></text>
+  </view>
+  <view class="ct">
+    <view>收货人：{{datas.name}}；电话：{{datas.mobile}}</view>
+    <view>{{datas.gps_addr}}{{datas.address}}</view>
+  </view>
+</view>
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+
+  <view class="item">
+    <image src='{{datas.goods_photo}}'></image>
+    <view class="rt">
+      <view class="tit">
+        <text class="name">{{datas.goods_name}}</text>
+        <text class="price">¥{{datas.need_pay}}</text>
+      </view>
+      <view class="info">
+        <text class="num">x1</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">商品总价</text>
+    <text class="rt price">¥{{datas.need_pay}}</text>
+  </view>
+  
+  <view class="col bdtp" hidden='{{datas.pay_coupon==0? true: false}}'>
+    <text class="lt">优惠券</text>
+    <text class="rt">¥{{datas.pay_coupon}}</text>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">运费</text>
+    <text class="rt">{{datas.mail_price>0? '¥'+datas.mail_price: "包邮"}}</text>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">¥{{datas.total_price}}</text>
+  </view>
+
+</view>
+
+<view class="btnstatus" hidden='{{datas.status>2&&(datas.status!=3||datas.status!=8)&&datas.is_comment==1?true: false}}'>
+  <navigator url='/pages/member/cancle?order_id={{datas.order_id}}'>
+    <view class="btn" hidden='{{datas.status>2? true: false}}'>取消订单</view>
+  </navigator>
+  <navigator url='/pages/member/comment?id={{datas.order_id}}'>
+    <view class="btn" hidden='{{datas.is_comment==0&&(datas.status==3||datas.status==8)? false: true}}'>评价订单</view>
+  </navigator>
+  
+    <view class="btn" bindtap='by' hidden='{{(datas.status==0)? false: true}}'>微信支付</view>
+</view>

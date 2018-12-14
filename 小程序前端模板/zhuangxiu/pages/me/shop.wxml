@@ -1,0 +1,20 @@
+<view wx:for="{{datas}}" class="shop">
+  <view class="vip">
+    <navigator url="/pages/detail?company_id={{item.id}}">
+      <image class="touxian" src="{{item.logo}}"></image>
+      <view class="cn">
+        <view class="title">
+          {{item.title}}
+        </view>
+        <view class="info">
+          <text class="lt">{{item.company_name}}</text>
+          <text wx:if="{{item.vip != 0}}" class="vip1">会员{{item.vip}}年</text>
+        </view>
+      </view>
+    </navigator>
+    <image bindtap="delete" data-id="{{item.yuyue_id}}" class="tel" src="/image/delete.png"></image>
+  </view>
+</view>
+
+<view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>

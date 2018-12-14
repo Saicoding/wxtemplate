@@ -1,0 +1,31 @@
+<view class="header">
+
+    <image src="{{detail.logo}}"></image>
+    <text>{{detail.company_name}}</text>
+</view>
+
+<navigator url="/pages/store/detail">
+<view class="col">
+  <image class="icon" src="/img/home_on.png"></image>
+  <text>我的名片</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+<navigator url="/pages/store/edit">
+<view class="col">
+  <image class="icon" src="/img/bj.png"></image>
+  <text>修改资料</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+<navigator url="/pages/store/yuyue">
+<view class="col">
+  <image class="icon" src="/img/yy2.png"></image>
+  <text>预约管理</text>
+  <image class="jt" src="/img/pk_jt.png"></image>
+</view>
+</navigator>
+
+
+<button bindtap="submit" class="table_btn">联系客服</button>
+<view class="jszc">技术支持：www.erre7.cn</view>

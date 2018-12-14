@@ -1,0 +1,53 @@
+{
+  "extEnable": true,
+  "pages": [
+    "pages/index/home",
+    "pages/destination/index",
+    "pages/find/index",
+    "pages/order/index",
+    "pages/mine/index",
+    "pages/tuan/index",
+    "pages/tuan/detail",
+    "pages/tuan/buy",
+    "pages/find/details/imageText/index",
+    "pages/find/details/video/index",
+
+    "pages/order/detail",
+    "pages/order/cancel",
+    "pages/order/comment",
+    "pages/index/comment",
+    "pages/index/coupon",
+    "pages/mine/coupon",
+
+    "pages/public/login",
+    "pages/public/city",
+
+    
+    "pages/store/index",
+    "pages/store/order/index",
+    "pages/store/order/money",
+    "pages/store/order/detail",
+    "pages/store/order/cancel",
+    "pages/store/comment/index",
+    "pages/store/comment/huifu",
+    "pages/store/package/index",
+    "pages/store/package/add",
+    "pages/store/package/edit",
+    "pages/store/package/price",
+    "pages/store/product/index",
+    "pages/store/product/add",
+    "pages/store/news/index",
+    "pages/store/news/add",
+    "pages/store/news/edit",
+
+    "pages/public/date2",
+    "pages/public/storeLogin"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "巅峰应用周边旅游",
+    "navigationBarTextStyle": "white"
+  }
+}

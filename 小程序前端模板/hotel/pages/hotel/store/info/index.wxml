@@ -1,0 +1,26 @@
+<view class="main">
+
+
+    <view class="item">
+        <navigator url="/pages/hotel/store/info/detail">
+        <image src="/img/hotel/info_jiesao.png"></image>
+        <text>酒店介绍</text>
+        </navigator>
+    </view>
+    <view class="item">
+        <navigator url="/pages/hotel/store/info/photo">
+            <image src="/img/hotel/info_tupian.png"></image>
+            <text>酒店照片</text>
+        </navigator>
+    </view>
+
+     <view class="item">
+        <navigator url="/pages/hotel/store/info/sheshi">
+            <image src="/img/hotel/sheshi.png"></image>
+            <text>设施管理</text>
+        </navigator>
+    </view>
+
+
+
+</view>

@@ -1,0 +1,149 @@
+/* pages/gd/detail.wxss */
+
+.baseinfo {
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.baseinfo .face {
+  width: 22%;
+  height: 150rpx;
+  float: left;
+}
+
+.baseinfo .face image {
+  width: 100%;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.baseinfo .info {
+  width: 76%;
+  height: auto;
+  margin-left: 2%;
+  float: right;
+}
+
+.baseinfo .info .title {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  line-height: 39rpx;
+  color: #000;
+}
+
+.baseinfo .info .cont {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  line-height: 39rpx;
+  color: #bdbdbd;
+}
+
+.tdjs {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  margin-top: 20rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tdjs .tdtit {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 28rpx;
+  padding: 15rpx 0;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.tdjs .tinfo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 28rpx;
+  padding: 15rpx 0;
+}
+
+.tdjs .tinfo2 {
+  width: 100%;
+  height: auto;
+  line-height: 40rpx;
+  overflow: hidden;
+  padding: 3rpx 0;
+  font-size: 28rpx;
+}
+
+.tdjs .member {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin: 10rpx 0;
+}
+
+.tdjs .member .item {
+  width: 30%;
+  height: auto;
+  float: left;
+  margin: 0 1.5%;
+}
+
+.tdjs .member .item image {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+
+.tdjs .member .item .name {
+  width: 100%;
+  height: auto;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.tdjs .member .item .position {
+  width: 100%;
+  height: auto;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #bdbdbd;
+}
+
+.tdjs .pics {
+  margin-top: 10rpx;
+  width: 98%;
+  height: 200rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  white-space: nowrap;
+}
+
+.tdjs .pics image {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+  margin-left: 15rpx;
+}
+
+.join_activity {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  background: #ff6d00;
+  position: fixed;
+  bottom: 0;
+}

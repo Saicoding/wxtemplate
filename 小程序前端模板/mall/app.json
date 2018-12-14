@@ -1,0 +1,23 @@
+{
+  "pages": [
+     
+    "pages/mall/index",
+    "pages/mall/coupon",
+    "pages/member/index",
+    "pages/mall/detail",
+    "pages/member/comment",
+    "pages/addr/add",
+    "pages/addr/index",
+    "pages/member/detail",
+    "pages/member/cancle",
+    "pages/cart/index",
+    "pages/coupon/index",
+    "pages/mall/buy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联商城",
+    "navigationBarTextStyle": "black"
+  }
+}

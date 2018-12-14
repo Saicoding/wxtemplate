@@ -1,0 +1,18 @@
+<view class="block">
+  <view class="title">学校介绍</view>
+  <view class="about">{{datas.introduce}}</view>
+</view>
+
+<view class="block">
+  <view class="title">
+    <text>学校相册</text>
+  </view>
+  <view class="product">
+    <scroll-view scroll-x="true" class="pro">
+      <view class="item" wx:for="{{datas.photos}}">
+        <image src="{{item.photo}}" bindtap='lookPhoto'></image>
+        <!-- <text>{{item.title}}</text> -->
+      </view>
+    </scroll-view>
+  </view>
+</view>

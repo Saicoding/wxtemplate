@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/case/index",
+    "pages/product/index",
+    "pages/news/index",
+    "pages/contact/index",
+    "pages/news/detail",
+    "pages/case/detail",
+    "pages/contact/liuyan",
+    "pages/product/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联企业官网",
+    "navigationBarTextStyle": "black"
+  }
+}

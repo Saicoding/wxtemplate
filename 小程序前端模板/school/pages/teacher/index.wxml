@@ -1,0 +1,15 @@
+<view class="main" style=" background:-webkit-gradient(linear, 0 0, 0 bottom, from({{color}}), to(#ffffff));  ">
+
+  <view class="kongbai"></view>
+  <swiper class="swiper" indicator-dots="" autoplay="true" interval="5000" duration="true">
+
+    <swiper-item wx:for="{{datas}}">
+      <view class="item">
+        <image src="{{item.photo}}"></image>
+        <text>教师名称：{{item.name}}</text>
+        <text>教师职务：{{item.zhiwu}}</text>
+        <view style="  border:1rpx dotted {{color}} ;">{{item.introduce}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,15 @@
+{
+  "extEnable": true,
+  "pages": [
+    "pages/headlines/index",
+    "pages/headlines/details/imageText/index",
+    "pages/headlines/details/video/index",
+    "pages/authorize/authorize"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1ba8b9",
+    "navigationBarTitleText": "今日头条",
+    "navigationBarTextStyle": "white"
+  }
+}

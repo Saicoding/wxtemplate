@@ -1,0 +1,73 @@
+<view class="menu">
+  <text data-id='0' bindtap='onclick_menu' style="color: {{type==0?color: ''}}; border-width:{{type==0? 3: 0}}; border-color: {{type==0?color: ''}}; border-bottom-style:solid;">全部</text>
+  <text data-id='1' bindtap='onclick_menu' style="color: {{type==1?color: ''}}; border-width:{{type==1? 3: 0}}; border-color: {{type==1?color: ''}}; border-bottom-style:solid;">待发货</text>
+  <text data-id='2' bindtap='onclick_menu' style="color: {{type==2?color: ''}}; border-width:{{type==2? 3: 0}}; border-color: {{type==2?color: ''}}; border-bottom-style:solid;">待收货</text>
+  <text data-id='3' bindtap='onclick_menu' style="color: {{type==3?color: ''}}; border-width:{{type==3? 3: 0}}; border-color: {{type==3?color: ''}}; border-bottom-style:solid;">退款单</text>
+  <text data-id='4' bindtap='onclick_menu' style="color: {{type==4?color: ''}}; border-width:{{type==4? 3: 0}}; border-color: {{type==4?color: ''}}; border-bottom-style:solid;">已完成</text>
+</view>
+
+<view class="order" wx:for="{{datas}}">
+  <navigator url="/pages/member/detail?order_id={{item.order_id}}">
+    <view class="title bdbt">
+      <text class="lt">订单:{{item.order_id}}</text>
+      <text class="rt">{{item.status_mean}}</text>
+    </view>
+    <view class="product ">
+      <image src='{{item.goods_photo}}'></image>
+      <view class="rt">
+        <view class="tit">
+          <text class="name">{{item.goods_name}}</text>
+          <text class="price">yen{{item.total_price}}</text>
+        </view>
+        <view class="info">
+          <text class="num">x1</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <view class="status bdtp" hidden='{{item.status>2&&(item.status!=3||item.status!=8)&&item.is_comment==1?true: false}}'>
+    <navigator url='/pages/member/cancle?order_id={{item.order_id}}'>
+      <view class="btn" hidden='{{item.status>2? true: false}}'>取消订单</view>
+    </navigator>
+    <navigator url='/pages/member/comment?id={{item.order_id}}'>
+      <view class="btn" hidden='{{item.is_comment==0&&(item.status==3||item.status==8)? false: true}}'>评价订单</view>
+    </navigator>
+  </view>
+</view>
+
+<view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+<view wx:if="{{datas==''&&more==0}}" class="nomore">暂无数据</view>
+
+
+<view class="kefutel" bindtap='callPhone'>
+  <text class='iconfont icon-kefu'></text>
+</view>
+<view class="jszc">技术支持:www.erre7.cn</view>
+
+
+<view class="kongbai"></view>
+
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/tuan/index">
+      <view class="image iconfont icon-shouye"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/coupon/index">
+      <view class="image iconfont icon-youhuiquan"></view>
+      <text>优惠券</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-dingdan"></view>
+      <text>订单</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/schoolsat/honor">
+    <view class="add_school">+添加证书</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/schoolsat/honor?honor_id={{item.honor_id}}">
+        <view class="title">{{item.honor_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/schoolsat/honor?honor_id={{item.honor_id}}">
+          <view class="lt">{{item.date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="delteHonor" data-id="{{item.honor_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

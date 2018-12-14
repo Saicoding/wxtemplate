@@ -1,0 +1,203 @@
+page{
+    background: #f2f7fa;
+}
+.youhuiquanqiang{
+  height: 150rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.youhuiquanqiang image{
+  width: 96%;
+  height: 150rpx;
+}
+
+.hotel_app{
+  height: 100%; width: 100%; overflow: hidden;
+  font-size: 26rpx;
+
+}
+.hotel_app .main{
+  width: 90%; margin-left: 5%; margin-top: 200rpx; height: 500rpx;
+  background: #fff;
+  border: 1rpx #e2e2e2 solid;
+  border-radius:10rpx;
+   -webkit-box-shadow:0 0 10px #0CC;  
+  -moz-box-shadow:0 0 10px #0CC;  
+  box-shadow:0 0 10px #0CC;  
+}
+
+.hotel_app .main .lt{
+  width: 15%;float: left;height: auto;overflow: hidden;
+}
+.hotel_app .main .lt image{
+  width: 50rpx; height: 50rpx; float: right; margin-right: 10rpx; display: block; margin-top: 10rpx;
+}
+
+.hotel_app .mt20{
+  margin-top: 20rpx;
+}
+.hotel_app .ht80{
+  height: 80rpx;
+}
+.hotel_app .main .rt{
+  width: 83%;float: left;overflow: hidden;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.hotel_app .dw_font{
+  height: 40rpx; line-height: 40rpx;display: block;
+  margin-top:20rpx;
+  font-size: 32rpx; 
+  float: left;
+  width: 300rpx; overflow: hidden;
+}
+.hotel_app .jiantou{
+  width: 30rpx;height: 30rpx;float: left; margin-left: 10rpx; margin-top: 20rpx;
+}
+
+.hotel_app .main .dw{
+  height: 100rpx; margin-top: 30rpx; float: left; width: 100%;
+}
+.hotel_app .main .dw .rt2{
+    float: left;
+    margin-left: 50rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+.hotel_app .main .dw .rt2 text{
+  display: block; margin-top: 10rx;
+  text-align: center; width: 140rpx;
+}
+
+.hotel_app .mt10{
+  margin-top: 10rpx;
+}
+.hotel_app .riqi{
+   height: 100rpx; margin-top: 30rpx; float: left; width: 100%;
+}
+.hotel_app .riqi .day{
+  width: 120rpx; float: left;
+}
+.hotel_app .riqi .day text{
+  display: block; 
+}
+.hotel_app .riqi .jiantou{
+  margin-top: 20rpx;
+}
+.hotel_app .riqi .center{
+  float: left;
+  width: 300rpx;
+  color: #666;
+}
+.hotel_app .riqi .center text{
+    display: block;
+}
+
+.hotel_app .dw2{height: 40rpx; width: 40rpx; margin-top: 5rpx; margin-left: 50rpx; display: block;}
+
+.hotel_app .main .sousuo{
+  height: 80rpx; margin-top: 30rpx; float: left; width: 100%;
+}
+.hotel_app .main .sousuo .rt{
+  padding-bottom: 20rpx;
+}
+.hotel_app .main .sousuo .rt input{
+  height: 40rpx; line-height: 40rpx; width: 100%;
+  color: #666;
+}
+
+.hotel_app .btn{
+   width: 500rpx;
+   background: #ff8201; color: #fff;
+   height: 60rpx;
+   line-height: 60rpx;
+   font-size: 28rpx;
+}
+
+.hotel_app .banquan{
+   height: 400rpx;
+   text-align: center;
+   margin-top: 50rpx;
+   width: 90%;margin-left: 5%;
+   font-size: 30rpx; color: #1ba8b9; 
+}
+.hotel_app .banquan .bz{
+  width: 100%;
+  margin: 0 auto;
+  height: 60rpx;
+}
+.hotel_app .banquan image{
+  width: 40rpx; height: 40rpx;
+  float: left;
+  margin-top: 15rpx;
+  margin-left: 150rpx;
+}
+.hotel_app .banquan text{
+  float: left;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+.hotel_footer{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  background: #ffffff; 
+}
+.hotel_footer .ft_item{
+  width: 33%;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.hotel_footer .on{
+  color: #1ba8b9;
+}
+
+.hotel_footer .ft_item image{
+  height: 45rpx; width: 45rpx;margin: 0 auto;display:block; margin-top: 10rpx;
+}
+.hotel_footer  .ft_item text{
+  text-align: center;
+  font-size: 26rpx;display:block;margin:0 auto;margin-top: 10rpx;
+}
+
+
+
+.nomore{
+  height: 80rpx; line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx; color: #ccc;  
+  background: #fff; 
+}
+
+.more{
+  height: 80rpx; line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx; color: #1ba8b9;  
+  background: #fff; 
+}
+.nodata{
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image{
+  height: 200rpx;
+  width:  200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.nodata text{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color:  #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}

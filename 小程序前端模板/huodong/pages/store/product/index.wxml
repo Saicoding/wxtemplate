@@ -1,0 +1,23 @@
+<!--pages/around/store/product/index.wxml-->
+<view class="app">
+  <view class="classify">
+    <view class="item">产品</view>
+    <view class="item">状态</view>
+  </view>
+
+  <view wx:for="{{datas}}" class="room_list">
+    <view class="ct">
+      <view class="title">{{item.taocan_name}}</view>
+    </view>
+    <view class="rt">
+      <switch  bindchange="online" data-taocan_id="{{item.taocan_id}}" data-online="{{item.is_online}}"  checked="{{item.is_online == 1 ? 'checked' : ''}}" type="switch" />
+    </view>
+  </view>
+
+  <view class="fabu">
+    <navigator url="/pages/store/product/add">
+      <image src="/images/around/tianjia.png"></image>
+      <text>添加新产品</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="app">
+
+
+    <view wx:if="{{city.city_id}}" bindtap="changecity" data-name="{{city.city_name}}" data-id="{{city.city_id}}" class="dangqiang">
+        当前城市：{{city.city_name}}
+    </view>
+
+
+
+    <view class="block mt20">
+        <view class="title">
+              热门城市
+        </view>
+        <view class="itemlist">
+              <text   wx:for="{{cityList}}" wx:for-item="ct" wx:if="{{ct.is_hot==1}}" bindtap="changecity" data-name="{{ct.city_name}}" data-id="{{ct.city_id}}">{{ct.city_name}}</text>
+        </view>
+    </view>
+
+
+    <view class="more">
+
+      <view wx:for="{{cityPinyin}}" wx:for-item="pinyin">
+          <view class="pinyin mt20">{{pinyin}}</view>
+          <view wx:for="{{cityList}}" wx:for-item="ct" wx:if="{{ct.initial==pinyin}}" bindtap="changecity" data-name="{{ct.city_name}}" data-id="{{ct.city_id}}"  class="city">{{ct.city_name}}</view>
+      </view>
+
+    </view>
+
+
+</view>

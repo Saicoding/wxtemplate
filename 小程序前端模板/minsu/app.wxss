@@ -1,0 +1,42 @@
+
+.jszc{
+ font-size: 24rpx;margin-top: 50rpx; width: 100%; text-align: center;
+}
+
+.qihuan{
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #fff;
+}
+.qihuan image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 200rpx; 
+  margin-top: 20rpx;
+}
+.qihuan text{
+   font-size: 26rpx;
+   margin-left: 20rpx;
+   color: #1ba8b9; 
+    float: left;
+    margin-top: 20rpx;
+}
+
+.kongbai{
+  height: 100rpx;
+}
+
+.jszc {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  overflow: hidden;
+  color: #ccc;
+}

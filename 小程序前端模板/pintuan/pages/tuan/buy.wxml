@@ -1,0 +1,85 @@
+<view class="noaddr" hidden='{{datas.address!=""? true: false}}'>
+  <navigator url="/pages/addr/index">
+    <image src="/img/dw.png"></image>
+    <view>还没收货地址,
+      <text>添加</text>
+    </view>
+  </navigator>
+</view>
+
+<view hidden='{{datas.address==""? true: false}}' class="addr">
+  <navigator url="/pages/addr/index">
+    <view class="lt">
+      <text class="iconfont icon-location"></text>
+    </view>
+    <view class="ct">
+      <view>收货人：{{datas.address.name}}；电话：{{datas.address.mobile}}</view>
+      <view>{{datas.address.merge_addr}}</view>
+    </view>
+    <view class="rt">
+      <text class="iconfont icon-right"></text>
+    </view>
+  </navigator>
+</view>
+
+<view class="shouhuo" hidden='true'>
+  <view class="title">
+    <text class="iconfont icon-peisong"></text>
+    <text class="ml20">工作日/双休/节假日均可收货</text>
+    <text class="iconfont icon-right"></text>
+  </view>
+</view>
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+
+  <view class="item">
+    <image src='{{datas.photo}}'></image>
+    <view class="rt">
+      <view class="tit">
+        <text class="name">{{datas.goods_name}}</text>
+        <text class="price">yen{{datas.alone_price}}</text>
+      </view>
+      <view class="info">
+        <text>{{datas.brief}}</text>
+        <text class="num">x1</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="col bdtp">
+    <text class="lt">运费</text>
+    <text class="rt">{{datas.is_mail==1? "包邮": "不包邮"}} yen{{datas.mail_price}}</text>
+  </view>
+  <view class="col bdtp">
+    <text class="lt">优惠券</text>
+    <view class="rt">不使用优惠券
+      <text class="iconfont icon-right"></text>
+    </view>
+  </view>
+  <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">yen{{total}}</text>
+  </view>
+
+</view>
+
+<view class="kefutel" bindtap='callPhone'>
+  <text class='iconfont icon-kefu'></text>
+</view>
+
+<view class="jszc">技术支持:www.erre7.cn</view>
+<view class="kongbai"></view>
+<view class="buy">
+
+  <view class="lt">
+    <view>共1件商品</view>
+    <view>合计
+      <text>yen{{total}}</text>
+    </view>
+  </view>
+  <view style="background:{{color}}" class="rt" bindtap='getPayment'>微信支付</view>
+</view>

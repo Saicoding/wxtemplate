@@ -1,0 +1,55 @@
+page {
+    background: #f3f3f3;
+}
+.app{
+  height: auto; overflow: hidden; font-size: 28rpx;
+}
+
+.sousuo{
+  height: auto; overflow: hidden; margin-top: 10rpx; margin-left: 2%; width: 96%; line-height: 80rpx;
+  border: 1px solid #f3f8fc;border-radius: 10rpx; background: #fff;
+}
+.sousuo image{
+  width: 40rpx; height: 40rpx; float: left; margin-top: 10rpx;
+}
+.sousuo input{
+  width:300rpx; height: 60rpx; line-height: 50rpx;  float: left; margin-left: 20rpx;
+}
+.sousuo .lt{ width: 75%; float:left; padding: 10rpx; height: 50rpx;  }
+.sousuo .rt{ float: right; width: 20%; text-align: center; color:#1ba8b9; }
+
+
+.list{
+  height: auto; overflow: hidden; width: 98%; margin: 0 auto; margin-top: 30rpx; background: #fff; 
+  padding-bottom: 30rpx; 
+}
+
+.list .title{
+  height: 60rpx; line-height: 60rpx; 
+
+}
+
+.list image{
+   width: 30rpx; height: 30rpx; 
+}
+
+.list .title .lt {
+  float: left; margin-left: 20rpx;
+}
+
+.list .title .rt{
+  float: right; margin-right: 20rpx;
+} 
+
+.list .title .lt text{
+  color: #000;
+  margin-left: 20rpx;
+}
+
+.list .title .rt text{
+  margin-left: 10rpx;
+}
+
+.list .item text{
+  float: left; border: 1rpx solid #f2f7fa; padding: 10rpx; margin-left: 20rpx; margin-top: 20rpx;
+}

@@ -1,0 +1,284 @@
+/* pages/index/detail.wxss */
+
+.app .header {
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.app .header .face {
+  width: 15%;
+  height: auto;
+  float: left;
+  text-align: center;
+}
+
+.app .header .face image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.app .header .name{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.app .header .date{
+  width: 32%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  text-align: right;
+}
+
+.app .address {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  padding-bottom: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .address image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.app .address text {
+  width: 100%;
+  height: 41rpx;
+  line-height: 41rpx;
+  font-size: 24rpx;
+  margin-left: 5rpx;
+  color: #8a8a8a;
+}
+
+.app .article {
+  width: 92%;
+  height: auto;
+  background: #fff;
+  padding: 20rpx 4%;
+  overflow: hidden;
+}
+
+.app .article .content {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+}
+
+.app .article .content text {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #000;
+}
+
+.app .article image{
+  width: 92%;
+  padding: 15rpx 4%;
+  height: 420rpx;
+  text-align: center;
+}
+
+.rinfo {
+  width: 100%;
+  height: 40rpx;
+  background: #fff;
+  line-height: 40rpx;
+  padding: 10rpx 0;
+  overflow: hidden;
+}
+
+.iteminfo {
+  width: auto;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  float: left;
+  margin-left: 4%;
+}
+
+.iteminfo image {
+  width: 35rpx;
+  height: 35rpx;
+  margin: 5rpx 0;
+  float: left;
+}
+
+.iteminfo text {
+  float: left;
+  margin-left: 5rpx;
+  font-size: 22rpx;
+  color: #8a8a8a;
+}
+
+.reply_container{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.reply_container .ritem{
+  width: 86%;
+  height: auto;
+  margin: 15rpx 4%;
+  padding: 10rpx 3%;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.reply_container .ritem .binfo{
+  width: 100%;
+  height: 100rpx;
+  display: inline-flex;
+}
+
+.reply_container .ritem .binfo .bface{
+  width: 15%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+
+.reply_container .ritem .binfo .bface image{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 5rpx auto;
+  border-radius: 35rpx;
+}
+
+.reply_container .ritem .binfo .uinfo{
+  width: 80%;
+  height: 80rpx;
+  float: left;
+}
+
+.reply_container .ritem .binfo .uinfo .name, .reply_container .ritem .binfo .uinfo .time{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #8a8a8a;
+}
+
+.reply_container .ritem .comment{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.reply_container .ritem .reply{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  color: #f00;
+  border-top: 1rpx #fff solid;
+}
+
+.contact{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  font-size: 28rpx;
+} 
+
+/* .reply_container .ritem .name,.reply_container .ritem .content{
+  width: auto;
+  height: auto;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  float: left;
+  color: #000;
+} */
+
+
+
+/* .app .header {
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  background: #fff;
+  overflow: hidden;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .header .title {
+  width: 100%;
+  height: auto;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.app .header .hinfo {
+  width: 100%;
+  height: auto;
+  margin: 10rpx;
+}
+
+.app .header .hinfo .item {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  margin-right: 25rpx;
+}
+
+.app .header .hinfo .item image {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+}
+
+.app .header .hinfo .item text {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-left: 10rpx;
+  color: #8a8a8a;
+  font-size: 24rpx;
+}
+
+.app .article {
+  width: 92%;
+  height: auto;
+  background: #fff;
+  padding: 20rpx 4%;
+  overflow: hidden;
+}
+
+.app .article .content {
+  width: 100%;
+  height: auto;
+}
+
+.app .article .content text {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #000;
+}
+
+.app .article image{
+  width: 92%;
+  padding: 15rpx 4%;
+  height: 420rpx;
+  text-align: center;
+}*/

@@ -1,0 +1,36 @@
+<!--pages/tuan/index.wxml-->
+<view class="search2">
+  <form bindsubmit='searchList'>
+    <input name="keyword" value='{{keyword}}' type="text" placeholder="请输入设计师姓名" />
+    <button form-type='submit' style="background:{{color}}">搜索</button>
+    <text bindtap='clearSearchContent' class="delete iconfont icon-cha"></text>
+  </form>
+</view>
+
+<view class='list'>
+  <navigator wx:for="{{datas}}" url='/pages/designer/detail?designer_id={{item.designer_id}}'>
+    <view class='item'>
+      <image src='{{item.photo}}'></image>
+      <view class='lt'>
+        <view class='title'>
+          <text>{{item.name}}</text>
+          <text class='yy' style='background:{{color}}'>预约</text>  
+        </view>
+        <view class='price'>头衔：
+          <text class='jy' style='color:{{color}}'>{{item.level}}</text>
+        </view>
+        <view class='info'>经验：
+          <text class='ll'>{{item.experience}}</text>
+        </view>
+      </view>
+      <view class='rt'>
+        <image src='/img/pk_jt.png'></image>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view bindtap="loadMore" class="more" wx:if="{{datas!=''&&more==1}}">查看更多</view>
+<view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+<view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+<view class="jszc">技术支持:www.erre7.cn</view>

@@ -1,0 +1,82 @@
+<!--destination.wxml-->
+<view class="app">
+  <!-- <view class="search_view">
+    <image src="http://cdn2.jinxidao.com/group1/M00/01/FE/ooYBAFdLu7GAXEljAADox9rvIpo237.jpg?imageView2/1/w/266/h/148/q/100"></image>
+    <view class="search">
+      <view class="content">
+        <input bindblur="submit" placeholder="关键字搜索" type="text" name="keyword" style="width:90%;margin-left:3%" />
+        <image style="width:5%" src="/images/around/icon_around_search.png"></image>
+      </view>
+    </view>
+    <scroll-view scroll-x="true" class="menubar">
+      <view wx:for="{{province}}" class="menu">
+        <text bindtap="onclick_menu" data-id="{{item.province_id}}">{{item.province_name}}</text>
+      </view>
+    </scroll-view>
+  </view> -->
+
+  <scroll-view scroll-x="true" class="menubar">
+    <view wx:for="{{citys}}" class="menu">
+      <text style='color:{{city_id==item.city_id? color: "#000"}}; border-bottom-color:{{city_id==item.city_id? color: "#fff"}}; border-bottom-width: 50rpx; border-bottom-style: solid;' bindtap="onclick_menu" data-id="{{item.city_id}}">{{item.city_name}}</text>
+    </view>
+  </scroll-view>
+
+  <!--content-->
+  <view class="content">
+    <view wx:if="{{datas != ''}}">
+      <view style="text-align: center;">---{{this_province_name}}周末去哪儿---</view>
+      <view class="grid_item" wx:for="{{datas}}">
+        <navigator url="/pages/tuan/index?destination_id={{item.destination_id}}">
+          <image src="{{item.photo}}"></image>
+          <view>
+            <text class="title">{{item.title}}</text>
+            <text>{{item.title2}}</text>
+          </view>
+        </navigator>
+
+        <view wx:if="{{datas== '' }}" class="nodata">
+          <image src="/images/around/nodata.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{tjlist != ''}}" class='tjrq'>
+      <view style="text-align: center;">---周边推荐城市---</view>
+      <view class="tuijian">
+        <view bindtap="toIndex" data-city_id="{{item.city_id}}" data-city_name="{{item.city_name}}" wx:for="{{tjlist}}"> {{item.city_name}}</view>
+      </view>
+    </view>
+    <view class="jszc">技术支持：【巅峰互联】www.erre7.cn</view>
+  </view>
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/index/home'>
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-mudedi:before"></view>
+      <text>目的地</text>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/find/index'>
+        <view class="image iconfont icon-faxian:before"></view>
+        <text>发现</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/order/index'>
+        <view class="image iconfont icon-dingdan:before"></view>
+        <text>订单</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+</view>

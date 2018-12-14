@@ -1,0 +1,118 @@
+/**app.wxss**/
+
+page {
+  background: #f5f5f5;
+  font-size: 26rpx;
+}
+
+.bdbt{
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.circle {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 8rpx;
+  float: left;
+  margin: 22rpx 10rpx;
+}
+
+.kongbai {
+  width: 100%;
+  height: 100rpx;
+}
+
+.jszc {
+  height: 80rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  overflow: hidden;
+  color: #ccc;
+}
+
+.more, .nomore {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1rpx #f5f5f5 solid;
+}
+
+.nomore {
+  color: #ccc;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx solid #e2e2e2;
+  z-index: 10000;
+}
+
+.footer .ft_item {
+  width: 33.3%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  color: #666;
+}
+
+.footer .ft_item .image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+  font-size: 45rpx;
+}
+
+.footer .ft_item image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.footer  .ft_item text {
+  text-align: center;
+  font-size: 26rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+@font-face {
+	font-family: 'iconfont';
+	src: url(data:application/font-woff;charset=utf-8;base64,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) format('woff'),
+		url('iconfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-faxian:before { content: "\e609"; }
+
+.icon-wode:before { content: "\e60f"; }
+
+.icon-shouye:before { content: "\e61d"; }

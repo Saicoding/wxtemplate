@@ -1,0 +1,57 @@
+.app{
+  background:#fff; font-size: 28rpx;
+}
+.sousuo{
+  height: auto; overflow: hidden; margin-top: 10rpx; margin-left: 2%; width: 96%; line-height: 80rpx;
+  border: 1px solid #f3f8fc;border-radius: 10rpx;
+}
+.sousuo image{
+  width: 40rpx; height: 40rpx; float: left; margin-top: 10rpx;
+}
+.sousuo input{
+  width:300rpx; height: 60rpx; line-height: 50rpx;  float: left; margin-left: 20rpx;
+}
+.sousuo .lt{ width: 75%; float:left; padding: 10rpx; height: 50rpx;  }
+.sousuo .rt{ float: right; width: 20%; text-align: center;}
+.dangqiang{
+  height: 60rpx; width: 90%;
+  margin-top: 30rpx;
+  float: right;
+}
+.block{
+  height: auto; overflow: hidden;  width: 98%; margin-left: 1%;
+}
+
+.block .title{
+  height: 80rpx; line-height: 80rpx; padding-left: 20rpx; width: 100%;
+   border-bottom: 1px solid #f3f8fc;
+   border-top: 1px solid #f3f8fc;
+   background: #f3f8fc;
+}
+
+.itemlist{
+  padding: 20rpx;
+}
+
+.mt20{
+  margin-top: 20rpx;
+}
+
+.block  text{
+  float: left; margin-left: 20rpx; padding: 10rpx; border: 1px solid #f3f8fc;
+  border-radius: 3rpx;
+}
+
+.more .pinyin{
+  height: 80rpx; line-height: 80rpx; padding-left: 20rpx; width: 100%;
+   border-bottom: 1px solid #f3f8fc;
+   border-top: 1px solid #f3f8fc;
+   background: #f3f8fc;
+   text-align: left;
+}
+
+.more .city{
+  height: 80rpx; line-height: 80rpx; margin-left: 80rpx;
+  text-align: left;
+  border-bottom: 1px solid #f3f8fc;
+}

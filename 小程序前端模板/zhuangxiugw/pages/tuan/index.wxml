@@ -1,0 +1,35 @@
+<!--pages/tuan/index.wxml-->
+<view class="search2">
+  <form bindsubmit='searchList'>
+    <input name="keyword" value='{{keyword}}' type="text" placeholder="请输入您要查询的关键字" />
+    <button form-type='submit' style="background:{{color}}">搜索</button>
+    <text bindtap='clearSearchContent' class="delete iconfont icon-cha"></text>
+  </form>
+</view>
+
+<view class='list'>
+
+  <navigator wx:for="{{datas}}" url='/pages/tuan/detail?group_id={{item.group_id}}'>
+    <view class='item'>
+      <image src='{{item.photo}}'></image>
+      <view class='lt'>
+        <view class='title'>{{item.title}}</view>
+        <view class='price'>立省：
+          <text class='jy'>yen{{item.price}}</text>
+        </view>
+        <view class='info'>
+          <text class='ctnum'>{{item.num}}</text>人已参团
+          <text class='join' style='background:{{item.is_end == 1 ? "#bdbdbd"   :    color }}'>我要参团</text>
+        </view>
+      </view>
+      <view class='rt'>
+        <image src='/img/pk_jt.png'></image>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view bindtap="loadMore" class="more" wx:if="{{datas!=''&&more==1}}">查看更多</view>
+<view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+<view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+
+<view class="jszc">技术支持:www.erre7.cn</view>

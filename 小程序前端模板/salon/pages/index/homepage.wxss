@@ -1,0 +1,181 @@
+/* pages/index/homepage.wxss */
+.app{
+  width: 100%;
+  height: auto;
+}
+
+.baseinfo {
+  width: 92%;
+  height: 220rpx;
+  background: #f00;
+  padding: 0 4%;
+}
+
+.baseinfo .face{
+  width: 30%;
+  height: 220rpx;
+  float: left;
+}
+
+.baseinfo .face image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 65rpx;
+  border: 4rpx #fff solid;
+  margin: 35rpx 35rpx;
+}
+
+.baseinfo .tinfo{
+  width: 45%;
+  height: 220rpx;
+  float: left;
+}
+
+.tinfo .nickname{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  color: #fff;
+}
+
+.tinfo .position{
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #fff;
+}
+
+.tinfo .score{
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  color: #fff;
+  background: #99499C;
+  border-radius: 10rpx;
+}
+
+.baseinfo .yuyue{
+  width: 25%;
+  height: 220rpx;
+  line-height: 220rpx;
+  float: right;
+  text-align: center;
+}
+
+.baseinfo .yuyue .btn{
+  width: auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 70rpx;
+  font-size: 26rpx;
+  border-radius: 35rpx;
+  color: #fff;
+  background:  #99499C;
+}
+
+.comment {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.comment .item {
+  width: 92%;
+  height: auto;
+  padding: 0 4%;
+  padding-bottom: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.comment .item .binfo {
+  width: 100%;
+  height: 100rpx;
+}
+
+.binfo .face {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin: 15rpx 0;
+  float: left;
+}
+
+.binfo .info {
+  width: 70%;
+  height: 100rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+
+.info .name {
+  height: auto;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  margin-top: 15rpx;
+  color: #8a8a8a;
+}
+
+.info .date {
+  height: auto;
+  font-size: 26rpx;
+  line-height: 34rpx;
+  color: #8a8a8a;
+}
+
+.item .content {
+  width: 77%;
+  margin-left: 100rpx;
+  background: #f5f5f5;
+  padding: 20rpx 4%;
+  color: #515151;
+  font-size: 28rpx;
+}
+
+.item .huifu {
+  width: 85%;
+  margin-left: 100rpx;
+  padding: 20rpx 0;
+  color: #f00;
+  font-size: 28rpx;
+}
+
+.reply {
+  width: 94%;
+  height: 100rpx;
+  background: #fff;
+  padding: 0 3%;
+  position: fixed;
+  bottom: 0;
+}
+
+.reply input {
+  width: 70%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 10rpx 0;
+  padding: 0 4%;
+  border-radius: 40rpx;
+  border: 1rpx #f5f5f5 solid;
+  font-size: 28rpx;
+  float: left;
+}
+
+.reply .send {
+  width: 17%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 3%;
+  margin-top: 15rpx;
+  text-align: center;
+  color: #fff;
+  background: #99499c;
+  float: left;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}

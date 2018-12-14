@@ -1,0 +1,93 @@
+<view class="app">
+
+    <view class="sousuo">
+        <view class="lt">
+            <image src="/img/hotel/sousuo.png"></image>
+            <input bindinput="input"  placeholder="您可以输入关键字来查找" />
+        </view>
+        <view bindtap="yesbtn" class="rt">确定</view>
+    </view>
+
+     <view wx:if="{{datas.scenicNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/jd.png"></image><text>热门景点</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.scenic}}" wx:for-item="scenic" bindtap="click" data-type="1" data-id="{{scenic.id}}" data-name="{{scenic.name}}">{{scenic.name}}</text>
+        </view>
+    </view>
+    <view  wx:if="{{datas.areaNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/wz.png"></image><text>热门商圈</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.area}}" wx:for-item="area" bindtap="click" data-type="2" data-id="{{area.id}}" data-name="{{area.name}}">{{area.name}}</text>
+
+        </view>
+    </view>
+
+    <view  wx:if="{{datas.administrationNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/xzqy.png"></image><text>行政区域</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.administration}}" wx:for-item="administration" bindtap="click" data-type="3" data-id="{{administration.id}}" data-name="{{administration.name}}">{{administration.name}}</text>
+        </view>
+    </view>
+
+
+    <view  wx:if="{{datas.stationNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/jccz.png"></image><text>机场车站</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.station}}" wx:for-item="station" bindtap="click" data-type="4" data-id="{{station.id}}" data-name="{{station.name}}">{{station.name}}</text>
+        </view>
+    </view>
+
+
+
+    <view  wx:if="{{datas.collegesNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/gaoxiao.png"></image><text>高校</text> </view>        
+        </view>
+        <view class="item">
+          <text wx:for="{{datas.colleges}}" wx:for-item="colleges" bindtap="click" data-type="5" data-id="{{colleges.id}}" data-name="{{colleges.name}}">{{colleges.name}}</text>
+
+        </view>
+     </view>
+
+     <view  wx:if="{{datas.hospitalNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/yiyuan.png"></image><text>医院</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.hospital}}" wx:for-item="hospital" bindtap="click" data-type="6" data-id="{{hospital.id}}" data-name="{{hospital.name}}">{{hospital.name}}</text>
+        </view>
+     </view>
+
+
+
+    
+
+    <view wx:if="{{datas.brandNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/pp.png"></image><text>品牌酒店</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.brand}}" wx:for-item="brand" bindtap="click" data-type="7" data-id="{{brand.id}}" data-name="{{brand.name}}">{{brand.name}}</text>
+        </view>
+    </view>
+    
+    <view wx:if="{{datas.specialNum>0}}" class="list">
+        <view class="title">
+          <view class="lt"><image  src="/img/hotel/zt.png"></image><text>特色主题</text> </view>        
+        </view>
+        <view class="item">
+            <text wx:for="{{datas.special}}" wx:for-item="special" bindtap="click" data-type="8" data-id="{{special.id}}" data-name="{{special.name}}">{{special.name}}</text>
+        </view>
+    </view>
+
+  </view>
+
+

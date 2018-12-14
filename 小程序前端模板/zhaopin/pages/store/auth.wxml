@@ -1,0 +1,130 @@
+<!-- 企业认证 -->
+<form bindsubmit="setUserAuth">
+  <view class="table_form">
+    <view class="input bdbt">
+      <text>响亮口号</text>
+      <input name="title" type="text" placeholder="输入响亮口号50个字以内" />
+    </view>
+
+    <view class="input bdbt">
+      <text>企业名称</text>
+      <input name="company_name" type="text" placeholder="请输入企业名称" />
+    </view>
+
+     <view class="input bdbt">
+      <text>企业简称</text>
+      <input name="sort_name" type="text" placeholder="请输入简称" />
+    </view>
+
+    <view class="picker bdbt">
+      <text class="lt">成立时间</text>
+      <picker class="ct" mode="date" bindchange="bindDatePickerChange">
+        <text>{{date ? date : '请选择成立时间'}} </text>
+      </picker>
+      <image class="rt" src="/img/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+    <view class="picker bdbt">
+      <text class="lt">性质</text>
+      <picker class="ct" bindchange="bindTypePickerChange" value="{{tIndex}}" range="{{tArray}}">
+        <text>{{tArray[tIndex] ? tArray[tIndex] : '请选择公司性质'}} </text>
+      </picker>
+      <image class="rt" src="/img/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+
+    <view class="picker bdbt">
+      <text class="lt">规模</text>
+      <picker class="ct" bindchange="bindGmPickerChange" value="{{gIndex}}" range="{{gArray}}">
+        <text>{{gArray[gIndex] ? gArray[gIndex] : '请选择公司规模'}} </text>
+      </picker>
+      <image class="rt" src="/img/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+
+    <view class="picker bdbt">
+      <text class="lt">所属行业</text>
+      <picker class="ct" bindchange="bindHyPickerChange" value="{{hIndex}}" range="{{hArray}}">
+        <text>{{hArray[hIndex] ? hArray[hIndex] : '请选择所属行业'}} </text>
+      </picker>
+      <image class="rt" src="/img/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+
+    <view class="picker bdbt">
+      <text class="lt">所在区域</text>
+      <picker class="ct" bindchange="bindAreaPickerChange" value="{{aIndex}}" range="{{aArray}}">
+        <text>{{aArray[aIndex] ? aArray[aIndex] : '请选择所在区域'}} </text>
+      </picker>
+      <image class="rt" src="/img/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+    <view class="input bdbt">
+      <text>主营业务</text>
+      <input name="business" type="text" placeholder="主营业务、最多20个字" />
+    </view>
+    <view bindtap="map" class="map">
+      <text class="lt">企业地址</text>
+      <text class="ct">{{addr == '' ? "选择地图坐标" : addr}}</text>
+      <image src="/img/dw.png"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+  <view class="table_form">
+    <view class="logo">
+      <text class="lt">上传LOGO</text>
+      <image src="/img/addphoto.png" bindtap="uploadlogo"></image>
+      <image wx:if="{{photo_url != ''}}" src="{{photo_url}}"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+  <view class="table_form">
+    <view class="logo">
+      <text class="lt">上传营业执照</text>
+      <image src="/img/addphoto.png" bindtap="uploadces"></image>
+      <image wx:if="{{ces_url != ''}}" src="{{ces_url}}"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+
+  <view class="table_form">
+    <view class="input bdbt">
+      <text>联系人</text>
+      <input name="name" type="text" placeholder="输入联系人" />
+    </view>
+    <view class="input bdbt">
+      <text>联系电话</text>
+      <input name="tel" type="number" placeholder="输入电话号码" />
+    </view>
+    <view class="input">
+      <text>职务</text>
+      <input name="zhiwu" type="text" placeholder="职务" />
+    </view>
+  </view>
+
+  <view class="table_form">
+    <view class="photolist">
+      <view class="title">上传相册</view>
+      <view class="action">
+        <image src="/img/addphoto.png" bindtap="photos"></image>
+      </view>
+      <view class="photos">
+        <view wx:for="{{photos_url}}" wx:for-index="index" class="item">
+          <image data-index="{{index}}" src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="table_form">
+    <view class="textarea">
+      <text>企业介绍</text>
+      <textarea name="detail" placeholder="企业介绍，最多500字" />
+    </view>
+  </view>
+
+  <button form-type="submit" class="table_btn">立刻申请</button>
+</form>
+
+<view class="jszc">技术支持：www.erre7.cn</view>

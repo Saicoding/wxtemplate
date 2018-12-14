@@ -1,0 +1,112 @@
+<view class="header">
+
+  <view class="top">
+    <view class="logo">
+      <image src="{{compInfo.logo}}"></image>
+    </view>
+    <view class="right">
+      <view class="company">{{compInfo.company_name}}</view>
+      <view class="info">{{compInfo.area_name}}-{{compInfo.sort_name}}</view>
+      <view class="info">
+        <text class="vip">会员1年</text>
+        <text hidden="true" class="novip">普通商家</text>
+        <view class="rz">
+          <image src="/img/V.png"></image>
+          <text>个人认证</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="col">主营：{{compInfo.main_business}}</view>
+    <view class="col">成立时间：{{compInfo.bg_year}}</view>
+    <view class="col">联系人：{{compInfo.name}}</view>
+    <view class="col">电话：{{compInfo.tel}}</view>
+    <view class="col">地址：{{compInfo.address}}</view>
+  </view>
+
+  <view class="share">
+    <image src="/img/share.png"></image>
+    <text>分享</text>
+  </view>
+
+  <button open-type="share" class="share"></button>
+
+  <view class="qrcode">
+    <image src="/img/qrcode.png" bindtap="show_qrcode"></image>
+  </view>
+</view>
+
+<view class="nums">
+  <view class="item bdrt">
+    <image src="/img/ll.png"></image>
+    <text>浏览：{{compInfo.view_num}}</text>
+  </view>
+  <view class="item bdrt">
+    <image src="/img/dh.png" bindtap="makePhone"></image>
+    <text>电话：{{compInfo.tel_num}}</text>
+  </view>
+  <view class="item bdrt">
+    <image src="/img/yy.png"></image>
+    <text>分享：{{compInfo.share_num}}</text>
+  </view>
+  <view class="item">
+    <image src="/img/zan.png" data-id="{{compInfo.company_id}}" bindtap="zan"></image>
+    <text>点赞：{{compInfo.zan_num}}</text>
+  </view>
+</view>
+
+
+<view class="detail">
+  <view class="title">
+    <text>商家介绍</text>
+  </view>
+  <view class="content">{{compInfo.detail}}</view>
+</view>
+
+<view class="photo">
+  <view class="title">
+    <text>公司风采</text>
+  </view>
+  <scroll-view scroll-x="true" class="pics">
+    <image bindtap="seePic" wx:for="{{compInfo.photos}}" src="{{item}}"></image>
+  </scroll-view>
+</view>
+
+<view class="detail">
+  <view class="title">
+    <text>招聘职位</text>
+  </view>
+  <view class="zw_item" wx:for="{{postList}}">
+    <navigator url="/pages/index/detail?job_id={{item.job_id}}">
+      <view class="info">
+        <text class="name">{{item.title}}</text>
+        <text class="price">{{item.salary}}</text>
+      </view>
+
+      <view class="type">
+        <text>{{item.experience}}</text>
+        <text class="vline">|</text>
+        <text hidden="{{item.education==''?true:false}}">{{item.education}}</text>
+        <text hidden="{{item.education==''?true:false}}" class="vline">|</text>
+        <text>{{item.people_num}}人</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view bindtap="more" wx:if="{{postList!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{postList!=''&&more==0}}" class="nomore">没有数据了</view>
+
+</view>
+
+<view class="dwbg" bindtap="app_screen" hidden="{{app_screen?true:false}}">
+</view>
+
+<view class="qrcode_dialog" hidden="{{qrcode_dialog?true:false}}">
+  <view class="qrcode_bg">
+    <image src="{{qrcode_url}}"></image>
+  </view>
+
+  <view bindtap="btn_save" class="btn_save">保存二维码</view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/information/detail.wxml-->
+<view class='app'>
+  <view class='baseinfo'>
+    <view class='title'>
+      你的社保卡发生重大变化，不看亏大！
+    </view>
+    <view class='author'>
+      码农哥 2017-09-17
+    </view>
+  </view>
+
+  <view class='content'>
+    <image src='/img/pics/001.jpg'></image>
+    <text  class='section'>1、社保卡新增功能，“一晃”缴费
+
+人力资源社会保障部将试点第三代社会保障卡，继续推进社会保障卡的发行和应用，增加“一晃而过”的非接触式功能，让群众通过手机可以快速完成社保缴费、医保结算等事项。
+
+2、异地就医直接结算！
+
+6月份，人力资源社会保障部专门部署开展跨省异地就医直接结算百日攻坚战，即在7、8、9三个月的时间内基本完成这项任务。要求9月底以前全面启动国家异地就医结算系统并联网运行，确保在线备案人员跨省异地就医住院医疗费用全部实现直接结算。</text>
+  </view>
+
+
+</view>

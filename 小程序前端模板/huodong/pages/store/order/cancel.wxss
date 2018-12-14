@@ -1,0 +1,44 @@
+page {
+    background: #f3f3f3;
+}
+.app{
+  font-size: 28rpx;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.form{
+  width: 100%;
+  height: auto; overflow: hidden;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background:  #fff;
+}
+
+.form .lf{
+  float: left; width: 25%; text-align: left;
+}
+.form .rt{
+  width: 70%; float: left;
+}
+
+
+
+.textarea{
+  height: 200rpx;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e2e2e2;
+  margin-top: 20rpx;
+  width: 96; margin-left: 2%;
+  padding-bottom: 30rpx;
+}
+
+.btn{
+  width: 300rpx;
+  margin: 0 auto;
+  height: 70rpx; background: #1ba8b9;
+  color: #fff;
+  margin-top: 50rpx;
+  font-size: 28rpx;
+  line-height: 70rpx; 
+}

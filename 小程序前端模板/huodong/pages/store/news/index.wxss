@@ -1,0 +1,89 @@
+/* 资讯管理 */
+page{
+  background: #f3f3f3;
+}
+
+.nodata {
+  height: 400rpx;
+  width: 100%;
+}
+
+.fabu {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx #e2e2e2 solid;
+}
+
+.fabu image {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 250rpx;
+  margin-top: 20rpx;
+}
+
+.fabu text {
+  font-size: 26rpx;
+  float: left;
+  margin-left: 30rpx;
+  display: block;
+  color: #1ba8b9;
+}
+
+.room_list {
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  border-top: 1rpx #e2e2e2 solid;
+  border-bottom: 1rpx #e2e2e2 solid;
+  margin-bottom: 30rpx;
+}
+
+.room_list image {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.room_list .lt {
+  float: left;
+  width: 120rpx;
+}
+
+.room_list .ct {
+  float: left;
+  width: 480rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+
+.room_list .ct .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.room_list .rt {
+  float: right;
+  margin-right: 10rpx;
+}
+
+.room_list switch {
+  display: block;
+  margin-right: 10rpx;
+  margin-top: 40rpx;
+  transform: scale(0.8);
+}
+
+.room_list .sy {
+  font-size: 24rpx;
+  font-weight: normal;
+  color: #1ba8b9;
+}

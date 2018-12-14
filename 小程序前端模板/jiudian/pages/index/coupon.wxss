@@ -1,0 +1,89 @@
+.coupon{
+  height: 210rpx;
+  width: 700rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  position: relative; 
+}
+
+.coupon image{
+  height: 210rpx;
+  width: 100%;
+}
+
+.coupon .content{
+  position: absolute;
+  height: 210rpx;
+  width: 600rpx;
+  left: 0;top: 0;
+}
+
+.coupon .content .lt{
+float: left;
+  height: 160rpx;
+  width: 160rpx;
+  border: 3rpx dashed  #e2e2e2;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.coupon .content .ct{
+  float: left;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  margin-top: 40rpx;
+  line-height: 40rpx;
+  width: 300rpx;
+  overflow: hidden;
+}
+.coupon .content .title{
+  display: block;
+  width: 100%;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.coupon .content .price{
+
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.coupon .content .price .num{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.coupon_color1{
+  color: #fd5b5f;
+}
+.coupon_color2{
+  color: #1bbc9c;
+}
+.coupon_color3{
+  color: #439fe0;
+}
+.coupon_color4{
+  color: #7ed24b;
+}
+.nodata{
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image{
+  height: 200rpx;
+  width:  200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.nodata text{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color:  #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}

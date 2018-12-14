@@ -1,0 +1,119 @@
+/* 基本信息  */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .citem {
+  width: 92%;
+  height: 100rpx;
+  padding: 0 4%;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.app .citem .lt {
+  width: 48%;
+  padding-left: 2%;
+  height: 100rpx;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.app .citem .lt .title {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .citem .lt .state {
+  color: #f00;
+  font-size: 28rpx;
+  margin-left: 15rpx;
+}
+
+.app .citem .rt {
+  width: 50%;
+  height: 100rpx;
+  float: right;
+}
+
+.app .citem .rt .info {
+  width: auto;
+  height: 100rpx;
+  float: right;
+  display: flex;
+  min-width: 80rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .citem .rt .info input {
+  width: auto;
+  min-width: 100rpx;
+  margin-right: 20rpx;
+  height: 100rpx;
+  float: right;
+  text-align: right;
+}
+
+.app .citem .rt .info .tv {
+  color: #8a8a8a;
+  font-size: 26rpx;
+  margin-right: 15rpx;
+}
+
+.app .citem .rt .info image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.app .bq{
+  width: 92%;
+  height: 400rpx;
+  padding: 0 4%;
+  background: #fff;
+}
+
+.app .bq .title{
+  width: 96%;
+  height: 100rpx;
+  padding: 0 2%;
+  line-height: 100rpx;
+  color: #000;
+  font-size: 28rpx;
+}
+
+.app .bq .coninput{
+  width: 96%;
+  height: 240rpx;
+  margin: 0 2%;
+}
+
+.app .bq .coninput .input{
+  width: 96%;
+  height: 240rpx;
+  font-size: 28rpx;
+  padding: 20rpx 20rpx;
+  color: #000;
+  border-color: #dedede;
+  border-width: 2rpx;
+  border-style: solid;
+  overflow: auto;
+  word-break: break-all;
+}
+
+.app .btn_save {
+  width: 80%;
+  height: 80rpx;
+  margin: 60rpx 10%;
+  background: #0a96cb;
+  display: flex;
+  background: #0a96cb;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}

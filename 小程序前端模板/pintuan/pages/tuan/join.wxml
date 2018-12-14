@@ -1,0 +1,134 @@
+<view class="top">
+  <view class="product">
+
+    <view class="img">
+      <image src='{{datas.photo}}'></image>
+    </view>
+    <view class="rt">
+      <view class="title">
+        <text>[{{datas.max_num}}人团]</text>{{datas.goods_name}}</view>
+      <view class="price">
+        <text class="lt">¥{{datas.group_price}}</text>
+        <text class="baoyou" hidden='{{datas.is_mail==1? false: true}}'>包邮</text>
+      </view>
+      <view class="danmai">单买¥{{datas.alone_price}}</view>
+    </view>
+
+  </view>
+
+  <view class="join">
+    <view class="bd bdtp">
+      <text class="iconfont icon-jiantouxia1"></text>
+    </view>
+    <view class="users">
+      <view wx:for="{{datas.user}}">
+        <view class="item {{item.is_head==1? 'on':''}}">
+          <image src='{{item.face}}'></image>
+          <text hidden='{{item.is_head==1? false: true}}'>团长</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="info">
+      仅差
+      <text>{{datas.surplus_num}}</text>人即可成团
+    </view>
+    <view class="info2">
+      倒计时结束前人不满将拼团失败
+    </view>
+    <view class="djs">
+      <view class="lt"></view>
+      <view class="ct">剩余
+        <text>{{hour}}</text>:
+        <text>{{minus}}</text>:
+        <text>{{second}}</text>
+      </view>
+      <view class="rt"></view>
+    </view>
+
+    <navigator url='{{datas.is_join==1? "": "/pages/tuan/buy?goods_id="+datas.goods_id+"&&group_id="+group_id}}'>
+      <button open-type='{{datas.is_join==1?"share": ""}}' style='background:{{color}}' class="yijian">{{datas.is_join==1? "邀请好友" :"一键参团"}}</button>
+    </navigator>
+  </view>
+
+  <view hidden='false' class="join">
+    <view class="bd bdtp">
+      <text class="iconfont icon-jiantouxia1"></text>
+    </view>
+    <view class="djs">
+      <view class="lt"></view>
+      <view class="ct">剩余
+        <text>23</text>:
+        <text>59</text>:
+        <text>59</text>
+      </view>
+      <view class="rt"></view>
+    </view>
+    <view class="info">
+      仅差
+      <text>1</text>人即可成团
+    </view>
+    <view class="info2">
+      倒计时结束前人不满将拼团失败
+    </view>
+    <view class="users">
+      <view class="item on">
+        <image src='/img/meinv.jpg'></image>
+        <text>团长</text>
+      </view>
+      <view class="item">
+        <image src='/img/wenhao.png'></image>
+      </view>
+
+      <view class="item">
+        <image src='/img/wenhao.png'></image>
+      </view>
+
+      <view class="item">
+        <image src='/img/wenhao.png'></image>
+      </view>
+    </view>
+    <view style='background:{{color}}' class="yijian">邀请好友</view>
+  </view>
+</view>
+
+<view class="guizhe">
+  <navigator url="/pages/tuan/info">
+    <view class="tit">
+      <text>拼团玩法</text>
+      <text class="rt">查看规则></text>
+    </view>
+  </navigator>
+  <view class="step">
+
+    <view style='color:{{color}}' class="step1">
+      <view class="lt">
+        <text>支付</text>
+        <text>开团/参团</text>
+      </view>
+      <text class="iconfont icon-right"></text>
+    </view>
+    <view style='color:{{color}}' class="step2">
+      <view class="lt">
+        <text>邀请</text>
+        <text>好友参团</text>
+      </view>
+      <text class="iconfont icon-right"></text>
+    </view>
+    <view class="step3" style='color:{{status==8? color: ""}};'>
+      <text>拼团成功立即发货</text>
+      <text>逾期未成团即刻退款</text>
+    </view>
+
+
+  </view>
+
+</view>
+<view class="kongbai"></view>
+
+<view bindtap='goback' class="goback">
+  <view style=' border: 1rpx solid {{color}};color: {{color}};' class="fanhui">
+    <text class="iconfont icon-shouye"></text>
+    <text>返回拼团首页</text>
+  </view>
+</view>

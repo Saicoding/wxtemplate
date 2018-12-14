@@ -1,0 +1,23 @@
+<view class="search">
+  <form bindsubmit='searchCourse'>
+    <input name="keyword" placeholder="输入搜索课程名称" />
+    <button form-type='submit' style="background:{{color}};">搜索</button>
+  </form>
+</view>
+<view class="page">
+  <view class="item bdbt" wx:for="{{datas}}">
+    <navigator url="/pages/kecheng/detail?class_id={{item.class_id}}">
+      <view class="lt">
+        <image src="{{item.photo}}"></image>
+      </view>
+      <view class="rt">
+        <view class="name">{{item.title}}</view>
+        <view class="price">价格：¥
+          <text class="money">{{item.price}}</text>元</view>
+        <view style=" border:1rpx solid {{color}};color:{{color}};" class="baoming">查看课程</view>
+      </view>
+    </navigator>
+  </view>
+  <view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+</view>

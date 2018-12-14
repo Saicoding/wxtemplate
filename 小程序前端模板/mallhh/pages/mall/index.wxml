@@ -1,0 +1,99 @@
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+  <swiper-item wx:for="{{banner}}">
+    <image src="{{item.photo}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<swiper class="swiper-box" indicator-dots="true">
+  <swiper-item wx:for="{{length}}" index="{{pindex}}" wx:for-index="pindex">
+    <view class="menu">
+      <view class="item" wx:for="{{categorys}}" index="index" wx:for-index="index" wx:if="{{index<pindex*8+8 && index>=pindex*8}}">
+        <navigator url='/pages/mall/shop?category_id={{item.category_id}}'>
+          <view style="background:{{item.color}}" class="icon">
+            <image src="{{item.ico}}" mode='aspectFit'></image>
+          </view>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class='tjgds'>
+  <view class='title'>店家推荐</view>
+
+  <view class="product">
+    <scroll-view scroll-x="true" class="pro">
+      <view class='pitem' wx:for="{{hotlist}}">
+        <navigator url='/pages/mall/detail?goods_id={{item.goods_id}}'>
+          <view class='thumb'>
+            <image src='{{item.photo}}' mode='aspectFill'></image>
+          </view>
+          <view class='pname'>{{item.goods_name}}</view>
+          <view class='pinfo'>
+            <view class='sprice'>yen{{item.shop_price}}</view>
+            <view class='spay'>
+              <text style="color:{{color}}" class="gouwu iconfont icon-gouwuche"></text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view class='header'>
+  <view class='line'></view>
+  <view class='hname'>新品上架</view>
+  <view class='line'></view>
+</view>
+
+<view class='list'>
+  <view class='sitem' wx:for="{{datas}}">
+    <navigator url='/pages/mall/detail?goods_id={{item.goods_id}}'>
+      <view class='thumbnail'>
+        <image src='{{item.photo}}' mode='aspectFill'></image>
+      </view>
+      <view class='name'>{{item.goods_name}}</view>
+      <view class='info'>
+        <view class='price'>yen{{item.shop_price}}</view>
+        <view class='pay'>
+          <text style="color:{{color}}" class="gouwu iconfont icon-gouwuche"></text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="background:#f5f5f5; color:{{color}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" style='background:#f5f5f5;' class="nomore">没有数据了</view>
+<view wx:if="{{datas==''&&more==0}}" style='background:#f5f5f5;' class="nomore">暂无数据</view>
+<view class="jszc">技术支持:www.erre7.cn</view>
+<view class="kongbai"></view>
+
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont .icon-shouye"></view>
+    <text>首页</text>
+  </view>
+  <view class='ft_item'>
+    <navigator open-type="redirect" url="/pages/classify/index">
+      <view class='image iconfont .icon-leimupinleifenleileibie:before'></view>
+      <text>分类</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator url="/pages/cart/index">
+      <view class="image iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-dingdan"></view>
+      <text>订单</text>
+    </navigator>
+  </view>
+</view>
+<view class="kefutel">
+  <text class='iconfont icon-kefu' bindtap='callPhone'></text>
+</view>

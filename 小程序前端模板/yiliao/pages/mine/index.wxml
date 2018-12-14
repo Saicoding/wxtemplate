@@ -1,0 +1,48 @@
+<view class='app'>
+
+  <view class="header" style='background:{{color}}'>
+    <image class="image" src="{{userinfo.face==''||userinfo=='' ? '/img/login_no.png':userinfo.face}}"></image>
+    <view class="nickname">
+      <text class="name">{{userinfo.nick_name}}</text>
+    </view>
+  </view>
+
+  <view class="action">
+    <navigator url='/pages/mine/order'>
+      <view class="col">
+        <image class="tubiao" src="/img/icon_me_01.png"></image>
+        <text>我的预约</text>
+        <image class="jiantou" src="/img/jiantou.png"></image>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/index/index'>
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/gk/index'>
+        <view class="image iconfont icon-gaikuang:before"></view>
+        <text>医院概况</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/yuyue/index'>
+        <view class="image iconfont icon-guahaodan:before"></view>
+        <text>自助挂号</text>
+      </navigator>
+    </view>
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </view>
+  </view>
+
+</view>

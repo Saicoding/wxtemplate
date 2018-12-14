@@ -1,0 +1,123 @@
+<!-- 帮忙砍价 -->
+<view class="app">
+
+  <view class="header">
+    <image src="https://img20.360buyimg.com/da/jfs/t8149/92/9975039/156169/c16d0e04/599ec5eaNffd13ecf.jpg"></image>
+
+
+    <view class="bview">
+      <view class="lt">
+        <text class="ctitle">最低砍购价：</text>
+        <text class="ctitle">¥</text>
+        <text class="price">99</text>
+        <text class="yprice">¥499</text>
+      </view>
+      <view class="rt">现有674人在热抢(剩余库存102件)</view>
+      <view class="rt" hidden="true">共54人砍价(已结束)</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">破壁免虑 豆浆机 双倍营养 一键预约 直接喝 WHP13R81</view>
+    <view class="time">活动结束还剩4天07时18分07秒</view>
+    <view class="kanjia">砍价进度:商城价499元，已砍至466.33元</view>
+  </view>
+
+  <view class="item">
+    <text>砍价记录(已有1位好友帮你砍价)</text>
+    <image src="/img/pk_jt.png"></image>
+  </view>
+  <view class="kjjl">
+    <view class="kitem">
+      <view class="lt">
+        <image src="/img/laoshi5.jpg"></image>
+      </view>
+      <view class="rt">
+        <view class="title">美的商城终于抢到了热卖家电，开心砍下52.6元</view>
+        <view class="detail">快去看看</view>
+      </view>
+    </view>
+
+    <view class="kitem">
+      <view class="lt">
+        <image src="/img/laoshi5.jpg"></image>
+      </view>
+      <view class="rt">
+        <view class="title">美的商城终于抢到了热卖家电，开心砍下52.6元</view>
+        <view class="detail">快去看看</view>
+      </view>
+    </view>
+
+    <view class="kitem">
+      <view class="lt">
+        <image src="/img/laoshi5.jpg"></image>
+      </view>
+      <view class="rt">
+        <view class="title">美的商城终于抢到了热卖家电，开心砍下52.6元</view>
+        <view class="detail">快去看看</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="item">
+    <text>本期成就奖</text>
+    <image src="/img/pk_jt.png"></image>
+  </view>
+
+  <view class="bqcj">
+    <view class="ritem">
+      <image src="/img/icon_record.png"></image>
+      <text class="tv">被砍一刀:生活电器10元直减劵</text>
+      <text class="btn">已领取</text>
+    </view>
+
+    <view class="ritem">
+      <image src="/img/icon_record.png"></image>
+      <text class="tv">被砍一刀:生活电器满399减20</text>
+      <text class="btn">未达到</text>
+    </view>
+
+    <view class="ritem">
+      <image src="/img/icon_record.png"></image>
+      <text class="tv">被砍一刀:生活电器满599减30</text>
+      <text class="btn">未达到</text>
+    </view>
+
+    <view class="ritem">
+      <image src="/img/icon_record.png"></image>
+      <text class="tv">被砍一刀:生活电器满799减50</text>
+      <text class="btn">未达到</text>
+    </view>
+
+  </view>
+
+  <view class="item">
+    <text>规则说明</text>
+    <image src="/img/pk_jt.png"></image>
+  </view>
+
+  <view class="gzsm">
+    1、用户注册即可发起砍价，参与活动；
+    2、用户发起砍价后，可以将其砍价页面分享到微信好友，邀请好友帮忙砍价；
+    3、好友收到邀请，点击"帮TA砍一刀"，即可帮忙砍价；每次砍掉价格随机，到达最低价格还是需要一点点运气的哟；
+    4、每一个砍价商品会有1或多个优惠价，需砍过相应的价格，方可以页面展现的优惠价直接下单购买，每个优惠价格的商品数量有限，先到先得
+  </view>
+
+  <view class="item">
+    <text>产品介绍</text>
+    <image src="/img/pk_jt.png"></image>
+  </view>
+
+  <view class="cpjs">
+    <image src="https://img30.360buyimg.com/popWaterMark/jfs/t3124/6/6379288913/278111/10ca689d/58a43976N0ce3c13b.jpg"></image>
+    <image src="https://img30.360buyimg.com/popWaterMark/jfs/t4081/61/2110474319/279458/e2e11de7/58a43975Ndbee1118.jpg"></image>
+    <image src="https://img30.360buyimg.com/popWaterMark/jfs/t3286/65/6581403650/150656/18ada161/58a43976N8d86f14d.jpg"></image>
+  </view>
+
+  <view style="height:120rpx;"></view>
+
+  <view class="bmenu">
+    <view class="lt" style="background:{{color}}">找人帮砍</view>  
+    <view class="rt" style="color:{{color}}">我要预约</view>
+  </view>
+</view>

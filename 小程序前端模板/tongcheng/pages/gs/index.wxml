@@ -1,0 +1,122 @@
+<!-- <view class="header">
+
+  <view class="search">
+
+    <form bindsubmit="formBindsubmit">
+      <input name="keyword" placeholder="输入搜索商家名称" />
+      <button formType="submit">搜索</button>
+    </form>
+  </view>
+  <view id="clouds2">
+    <view animation="{{animationData}}" class="cloud1"></view>
+    <view animation="{{animationData}}" class="cloud2"></view>
+    <view animation="{{animationData}}" class="cloud3"></view>
+  </view>
+</view> -->
+
+<view class='header'>
+    <view class='search'>
+      <image src='/img/icon_search.png'></image>
+      <input placeholder='请输入你要搜索的内容'></input>
+    </view>
+  </view>
+
+<navigator url="/pages/gs/ruzhu">
+  <view class="ruzhu">
+    <image src="/img/ruzhu.png"></image>
+  </view>
+</navigator>
+<view class="main">
+  <view class="select">
+    <view bindtap="catelist" class="item">
+      <text class="cate">{{cat_name == '' ? '商家分类' : cat_name }}</text>
+      <image src="/img/icon_down.png"></image>
+    </view>
+    <view bindtap="arealist" class="item">
+      <text class="cate">{{area_name == '' ?  '区域筛选' :  area_name}}</text>
+      <image src="/img/icon_down.png"></image>
+    </view>
+    <view bindtap="orderlist" class="item">
+      <text class="cate">{{order[orderby] ?  order[orderby] :  '排序方式'}}</text>
+      <image src="/img/icon_down.png"></image>
+    </view>
+
+    <view hidden="{{orderlist}}" class="orderlist">
+      <view bindtap="orderby" data-index="-1">不限</view>
+      <view bindtap="orderby" wx:for="{{order}}" data-index="{{index}}">{{item}}</view>
+    </view>
+
+    <view hidden="{{catelist}}" class="catelist">
+      <view class="lt">
+        <text bindtap="tab" data-pid="{{item.pid}}" wx:for="{{search.cats}}">{{item.pid_name}}</text>
+        <text bindtap="tab2">不限</text>
+      </view>
+      <view  hidden="{{pid1}}" class="rt">
+        <text bindtap="selectcat" data-cat_id="{{item.cat_id}}" data-cat_name="{{item.cat_name}}" wx:for="{{search.cats[1].list}}" >{{item.cat_name}}</text>
+      </view>
+      <view hidden="{{pid2}}" class="rt">
+        <text bindtap="selectcat" data-cat_id="{{item.cat_id}}" data-cat_name="{{item.cat_name}}" wx:for="{{search.cats[2].list}}" >{{item.cat_name}}</text>
+      </view>
+    </view>
+    <view hidden="{{arealist}}" class="arealist">
+      <text bindtap="area" data-area_id="0" data-area_name="">不限</text>
+      <text bindtap="area" data-area_id="{{item.area_id}}" data-area_name="{{item.area_name}}"  wx:for="{{search.areas}}">{{item.area_name}}</text>
+    </view>
+  </view>
+
+  <view wx:for="{{datas}}" class="shop">
+    <navigator url="/pages/gs/detail?company_id={{item.company_id}}">
+      <view class="{{item.vip == 0 ? 'novip' : 'vip'}}">
+        <image wx:if="{{item.vip != 0}}" class="touxian" src="{{item.logo}}"></image>
+        <view class="cn">
+          <view class="title">
+            {{item.title}}
+          </view>
+          <view class="info">
+            <text class="lt">{{item.area_name}}-{{item.sort_name}}</text>
+            <text wx:if="{{item.vip != 0}}" class="vip1">会员{{item.vip}}年</text>
+          </view>
+          <view class="info2">
+            <text>距我{{item.juli}}</text>
+          </view>
+        </view>
+        <image bindtap="toTel" data-tel="{{item.tel}}" data-id="{{item.company_id}}" class="tel" src="/img/tel.png"></image>
+      </view>
+    </navigator>
+  </view>
+  
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+
+</view>
+
+<view class="footer">
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/index/index">
+        <view class="image iconfont icon-dingwei:before"></view>
+        <text>附近</text>
+      </navigator>
+    </view>
+
+    <view  style="color:{{color}}" class="ft_item">
+      <navigator open-type='redirect' url='/pages/gs/index'>
+        <view class="image iconfont icon-shangjia:before"></view>
+        <text>商家列表</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/find/index'>
+        <view class="image iconfont icon-toutiao:before"></view>
+        <text>关注头条</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>

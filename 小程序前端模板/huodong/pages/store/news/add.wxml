@@ -1,0 +1,139 @@
+<view class="publish_app">
+  <view class="publish_titile">
+    <navigator url="/pages/store/news/edit">
+      <text>点击设置标题</text>
+    </navigator>
+
+    <navigator url="">
+      <view class="header">
+        <image class="tubiao" src="/images/around/genghuan.png"></image>
+        <text>更换封面</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="content">
+    <view class="add_type">
+      <view class="add_button">
+        <text class="add_button_text">+</text>
+      </view>
+    </view>
+
+    <view class="type_item">
+      <view class="type_add_item">
+        <view class="item_image">
+          <image class="item_close" src="/images/around/item_close.png"></image>
+          <image class="item_image_image" src="/images/around/toutiao_image_default.png"></image>
+        </view>
+
+        <navigator url="/pages/store/news/edit">
+          <view class="item_text">
+            <text class="item_text_text">点击添加文字</text>
+          </view>
+        </navigator>
+
+        <view class=" item_sort ">
+          <image class="item_sort_up " src="/images/around/icon_sort_up.png "></image>
+          <image class="item_sort_down " src="/images/around/icon_sort_down.png "></image>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="add_type ">
+      <view class="add_button " style="display:none; ">
+        <text class="add_button_text ">+</text>
+      </view>
+
+      <view class="type_container ">
+        <navigator url="/pages/store/news/edit">
+          <image class="type_item_container " src="/images/around/icon_type_text.png "></image>
+        </navigator>
+
+        <navigator url="url">
+          <image class="type_item_container " src="/images/around/icon_type_image.png "></image>
+        </navigator>
+
+      </view>
+    </view>
+
+    <view class="type_item ">
+      <view class="type_add_item ">
+
+        <view class="item_image ">
+          <image class="item_close " src="/images/around/item_close.png "></image>
+          <image class="item_image_image " src="/images/around/toutiao_image_default.png "></image>
+        </view>
+
+        <view class="item_text ">
+          <text class="item_text_text ">点击添加文字</text>
+        </view>
+
+        <view class="item_sort ">
+          <image class="item_sort_up " src="/images/around/icon_sort_up.png "></image>
+          <image class="item_sort_down " src="/images/around/icon_sort_down.png "></image>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="add_type ">
+      <view class="add_button ">
+        <text class="add_button_text ">+</text>
+      </view>
+    </view>
+
+    <view class="type_item ">
+      <view class="type_add_item ">
+        <view class="item_image ">
+          <image class="item_close " src="/images/around/item_close.png "></image>
+          <image class="item_image_image " src="/images/around/toutiao_image_default.png"></image>
+        </view>
+
+        <view class="item_text ">
+          <text class="item_text_text ">点击添加文字</text>
+        </view>
+
+        <view class="item_sort ">
+          <image class="item_sort_up " src="/images/around/icon_sort_up.png "></image>
+          <image class="item_sort_down " src="/images/around/icon_sort_down.png "></image>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="add_type ">
+      <view class="add_button ">
+        <text class="add_button_text ">＋</text>
+      </view>
+    </view>
+
+    <view class="type_item ">
+      <view class="type_add_item ">
+
+
+        <view class="item_image ">
+
+          <image class="item_close " src="/images/around/item_close.png "></image>
+
+          <image class="item_image_image " src="/images/around/toutiao_image_default.png "></image>
+        </view>
+
+        <view class="item_text ">
+          <text class="item_text_text ">点击添加文字</text>
+        </view>
+
+        <view class="item_sort ">
+          <image class="item_sort_up " src="/images/around/icon_sort_up.png "></image>
+          <image class="item_sort_down " src="/images/around/icon_sort_down.png "></image>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="footer ">
+    <text class="footer_text ">我要爆料</text>
+  </view>
+
+</view>

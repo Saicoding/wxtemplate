@@ -1,0 +1,7 @@
+<view class="app">
+  <view class="input_container">
+    <textarea class="input"  rows="100" cols="10" maxlength="5000" placeholder="不超过5000字" />
+  </view>
+
+  <button class="btn">完成</button>
+</view>

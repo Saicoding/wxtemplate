@@ -1,0 +1,131 @@
+.app {
+  font-size: 26rpx;
+  background: #f3f3f3;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+page {
+  background: #f3f3f3;
+}
+
+.header {
+  width: 100%;
+  height: 200rpx;
+  margin: 0 auto;
+  background: #fff;
+  padding-top: 10rpx;
+}
+
+.header .image {
+  width: 140rpx;
+  height: 140rpx;
+  display: block;
+  border-radius: 70rpx;
+  margin: 0 auto;
+}
+
+.header .nickname {
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+  height: auto;
+  overflow: hidden;
+  color: #fff;
+}
+
+.header .nickname image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.header text {
+  width: 150rpx;
+  padding: 10rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.action {
+  width: 100%;
+  margin-top: 50rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.action .col {
+  width: 100%;
+  height: 100rpx;
+  line-height: 60rpx;
+  background: #fff;
+  border-bottom: 1px solid #f3f8fc;
+}
+
+.action .tubiao {
+  float: left;
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 20rpx;
+  margin-top: 26rpx;
+}
+
+.action .jiantou {
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  margin-top: 35rpx;
+}
+
+.action .col text {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.btn {
+  margin: 0 auto;
+  margin-top: 80rpx;
+  width: 400rpx;
+  margin-bottom: 80rpx;
+  background: #ff8201;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+
+.qihuan1 {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.qihuan1 image {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 260rpx;
+  margin-top: 20rpx;
+}
+
+.qihuan1 text {
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  color: #8a8a8a;
+  float: left;
+  margin-top: 20rpx;
+}
+
+.jishu {
+  color: #1ba8b9;
+  width: 100%;
+  text-align: center;
+  margin-top: 100rpx;
+}

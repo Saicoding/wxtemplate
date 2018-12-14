@@ -1,0 +1,39 @@
+<view class="game">
+    <navigator url="/pages/cate"> 
+    <view class="cat">
+    <image class="tubiao" src="{{type.photo}}"></image>
+      <text>{{type.name}}</text>
+      <image class="jiantou" src="/img/jiantou.png"></image>
+    </view>
+    </navigator>
+</view>
+<view wx:for="{{datas}}" >
+<view  class="item">
+  <navigator url="/pages/detail?id={{item.video_id}}">
+    <image  class="banner" src="{{item.photo}}"></image>
+    <view class="title">{{item.title}}</view>
+    <view class="look">
+      <image src="/img/yan.png"></image>
+      <text>{{item.views}}观看</text>
+    </view>
+    </navigator>
+</view>
+
+ <view wx:if="{{index == 1 && tags != ''}}" class="tag">
+  <view class="title">相关标签</view>
+  <view  class="tags">
+      <navigator wx:for="{{tags}}" url="/pages/list?tag_id={{item.tag_id}}&type_id={{type_id}}"><view class="tg">{{item.tag_name}}</view></navigator>
+  </view>
+</view>
+</view>
+
+  <view  wx:if="{{datas!=''&&more==0}}"  class="nomore">
+    已经到底了亲
+  </view>
+  <view bindtap="more"  wx:if="{{datas!=''&&more==1}}" class="more">
+    查看更多
+  </view>
+ <view wx:if="{{datas == ''}}" class="nodata">
+    <image src="/img/nodata.png"></image>
+    <text>小编正在拼命整理内容</text>
+ </view>

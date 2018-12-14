@@ -1,0 +1,89 @@
+<view class="app">
+
+  <view class="header">
+
+    <view class="type">
+
+      <text>{{detail.status_mean}}</text>
+
+    </view>
+        <view wx:if="{{detail.status==0}}" class="type_info">等待支付，用户30分钟内没有付款，酒店可以拒绝订单释放库存！</view>
+        <view wx:if="{{detail.status==1}}"  class="type_info">已经支付，如果没有房源可以拒绝订单，同意订单后将不可以拒绝。</view>
+        <view wx:if="{{detail.status==2}}" class="type_info">等待用户入住，不得提前设定入住，否则会受到平台的惩罚!</view>
+        <view  wx:if="{{detail.status==3}}" class="type_info">订单已取消。{{detail.cancel_type==1?'用户取消':'商家取消'}},{{detail.cancel_info}}</view>
+        <view  wx:if="{{detail.status==8}}" class="type_info">订单已完成。请注意用户的评价</view>
+  </view>
+
+
+  <view class="orderinfo">
+       <view class="title">
+          <text class="type">订单总金额</text>
+          <text class="price">¥{{detail.total_price}}</text>
+
+      </view>
+    <view  wx:if="{{detail.pay_money>0}}" class="pick">
+      <text class="lf">在线支付</text>
+      <view class="rt">
+        <text class="price">¥{{detail.pay_money}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{detail.lijian>0}}" class="pick">
+      <text class="lf">立减优惠</text>
+      <view class="rt">
+         <text class="price">¥{{detail.lijian}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{detail.pay_coupon>0}}" class="pick">
+      <text class="lf">优惠券抵扣</text>
+      <view class="rt">
+        <text class="price">¥{{detail.pay_coupon}}</text>
+      </view>
+    </view>
+
+    <view class="action">
+      <form report-submit="true" bindsubmit="audit">
+           <button form-type="submit"  wx:if="{{detail.status == 1}}" class="pay">确认订单</button> 
+      </form>
+       <form report-submit="true" bindsubmit="orderyes">
+          <button  form-type="submit"    wx:if="{{detail.status == 2}}"  class="pay">办理入住</button> 
+       </form>
+      <navigator open-type="redirect" url="/pages/minsu/store/order/cancel?id={{id}}">
+      <view  wx:if="{{detail.status == 0 || detail.status ==1}}" class="quxiao">拒绝订单</view>
+      </navigator>
+    </view>
+
+  </view>
+
+   <view class="product">
+      <view class="title">
+        {{detail.minsu_name}}
+      </view>
+      <view bindtap="openmap" class="addr">
+        {{detail.address}}
+      </view>
+      <view class="fang">
+      {{detail.room_title}}-预付
+      </view>
+      <view class="col">
+        入住:{{detail.check_in_time}}-离店:{{detail.leave_time}} 共计{{detail.day}}晚*{{detail.room_num}}间
+      </view>
+      <view class="col">
+        {{detail.bed_type}}|{{detail.is_wifi==1?'免费WIFI|免费带宽':''}}|{{detail.is_breakfast==1?'早餐':'无早'}}
+      </view>
+      <view class="col">
+        {{detail.name}}|{{detail.mobile}}|{{detail.idcard}}
+      </view>
+  </view> 
+
+
+  <view class="orderdetail">
+    <view>订单信息</view>
+    <view>下单日期：{{detail.add_time}}</view>
+    <view>订单编号: {{detail.order_id}}</view>
+    <view>商家名称: {{detail.minsu_name}}</view>
+  </view>
+
+
+</view>

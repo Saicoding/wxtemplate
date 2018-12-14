@@ -1,0 +1,36 @@
+<view class="select">
+  <view bindtap="catelist" class="item">
+    <text class="cate">{{space_name == ''?  '空间分类'  : space_name}}</text>
+    <image src="/image/jiantou.png"></image>
+  </view>
+  <view bindtap="arealist" class="item">
+    <text class="cate">{{cat_name == '' ?  '风格分类' :  cat_name }}</text>
+    <image src="/image/jiantou.png"></image>
+  </view>
+  <view bindtap="orderlist" class="item">
+    <text class="cate">{{color_name == '' ?  '颜色筛选' : color_name }}</text>
+    <image src="/image/jiantou.png"></image>
+  </view>
+
+  <view hidden="{{orderlist}}" class="catelist">
+    <text bindtap="orderby" data-id="0" data-color_name="">不限</text>
+    <text bindtap="orderby" wx:for="{{classify.colors}}" data-id="{{item.color_id}}" data-color_name="{{item.color_name}}">{{item.color_name}}</text>
+  </view>
+
+  <view hidden="{{catelist}}" class="catelist">
+    <text bindtap="cat" data-id="0" data-name="">不限</text>
+    <text bindtap="cat" data-id="{{item.space_id}}" data-name="{{item.space_name}}" wx:for="{{classify.spaces}}" >{{item.space_name}}</text>
+
+  </view>
+  <view hidden="{{arealist}}" class="catelist">
+    <text bindtap="area" data-id="0" data-name="" >不限</text>
+    <text bindtap="area" data-id="{{item.cat_id}}" data-name="{{item.cat_name}}" wx:for="{{classify.cats}}" >{{item.cat_name}}</text>
+  </view>
+</view>
+
+<view class="photolist">
+  <view class="item" wx:for="{{lists}}">
+    <image bindtap="showimg" mode="widthFix" src="{{item.photo}}" data-val="{{item.case_id}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>

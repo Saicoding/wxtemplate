@@ -1,0 +1,7 @@
+.title{
+  height: 300rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 300rpx;
+  font-size: 40rpx;
+}

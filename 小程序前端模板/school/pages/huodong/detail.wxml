@@ -1,0 +1,53 @@
+<!--pages/huodong/detail.wxml-->
+<view class="app">
+
+  <view class="jhxx">
+    <view class="header">
+      <view style="background:{{color}}" class="vline"></view>
+      <view class="title" style="color:{{color}}">集合信息</view>
+    </view>
+
+    <view class="info">
+      <view class="lt">活动时间</view>
+      <view class="rt">{{datas.date}}</view>
+    </view>
+
+    <view class="info">
+      <view class="lt">活动地点</view>
+      <view class="rt">{{datas.addr}}</view>
+    </view>
+
+  </view>
+
+  <view class="cyrs">
+    <view class="header">
+      <view style="background:{{color}}" class="vline"></view>
+      <view class="title" style="color:{{color}}">参与人数</view>
+      <view class="pnum">共{{datas.already_num}}/{{datas.num}}人</view>
+    </view>
+
+    <view class="item" wx:for="{{datas.users}}">{{item}}</view>
+    <view hidden='{{datas.users==""? false: true}}'>暂时没有人参与</view>
+  </view>
+
+  <view class="hdjs">
+    <view class="header">
+      <view style="background:{{color}}" class="vline"></view>
+      <view class="title" style="color:{{color}}">活动介绍</view>
+    </view>
+
+    <view wx:for="{{datas.contents}}">
+      <view class="content" hidden='{{item.content==""? true: false}}'>{{item.content}}</view>
+      <view class="cimg">
+        <image hidden='{{item.photo==""? true: false}}' src="{{item.photo}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="bview">
+    <navigator url="{{datas.is_on==0?'/pages/huodong/partake?activity_id='+activity_id:''}}">
+      <view class="btn_bm" style="background: {{datas.is_on==0?  color: '#bdbdbd'}}">{{datas.is_on==0? '报名参加': '已报名'}}</view>
+    </navigator>
+    <button open-type="share" class="btn_share" style="color:{{color}}">立即分享</button>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!-- 企业查看记录 -->
+<view class="app">
+  <view wx:for="{{datas}}">
+    <navigator url="/pages/company/detail?company_id={{item.company_id}}">
+    <view class="citem">
+      <view class="header">
+        <view class="lt">{{item.company_name}}</view>
+        <view class="rt">{{item.add_time}}</view>
+      </view>
+
+      <view class="bottom">
+        <view class="lb">查看{{item.look_num}}次</view>
+        <view class="rb"></view>
+      </view>
+    </view>
+  </navigator>
+  </view>
+
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+</view>

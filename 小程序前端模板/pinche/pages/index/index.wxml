@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{banner}}">
+      <navigator url="" hover-class="navigator-hover">
+        <image src="{{item.photo}}" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <view class='menu'>
+    <text bindtap="tab" data-type="0" style='color:{{type==0? color: "#000"}}; border-bottom-color:{{type==0? color: "#fff"}}; border-bottom-width: 1rpx; border-bottom-style: solid;'>全部</text>
+    <text bindtap="tab" data-type="1" style='color:{{type==1? color: "#000"}}; border-bottom-color:{{type==1? color: "#fff"}}; border-bottom-width: 1rpx; border-bottom-style: solid;'>人找车</text>
+    <text bindtap="tab" data-type="2" style='color:{{type==2? color: "#000"}}; border-bottom-color:{{type==2? color: "#fff"}}; border-bottom-width: 1rpx; border-bottom-style: solid;'>车找人</text>
+    <navigator url='/pages/index/screen'>
+      <view class='screen'>
+        <image src='/imgs/icon_sreen.png'></image>
+        <text>筛选</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class='list'>
+    <view class='item' wx:for="{{datas}}">
+      <view class='title'>
+        <text class='type' style='{{item.type==2? "background:#8A4AFB": ""}}'>{{item.type_mean}}</text>
+        <text class='num'>{{item.vacancy}}{{item.type==2? "位":"人"}}</text>
+      </view>
+      <view class='route'>{{item.begin}} - {{item.end}}</view>
+      <view class='date'>{{item.bg_time}}出发</view>
+      <view class='car' hidden='{{item.type==2? false: true}}'>途经地：{{item.channel}}</view>
+      <view class='car' hidden='{{item.type==2? false: true}}'>车型：{{item.car}}</view>
+      <view class='remarks' hidden='{{item.demand==""? true: false}}'>备注：{{item.demand}}</view>
+      <view class='info'>
+        <view class='name'>
+          <image src='{{item.sex===1? "/imgs/icon_nan.png": "/imgs/icon_nv.png"}}'></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='phone'>{{item.mobile}}</view>
+      </view>
+      <view class='contact' bindtap='callPhone' data-status='{{item.status}}' data-phone='{{item.mobile}}'>{{item.status==1? "已结束": "联系TA"}}</view>
+    </view>
+    <view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+    <view class="nomore" wx:if="{{datas!=''&&more==0}}">没有数据了</view>
+    <view class="nomore" wx:if="{{datas==''&&more==0}}">暂无数据</view>
+  </view>
+
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+
+  <view class='botview'>
+    <navigator url='/pages/index/me'>
+      <view class='mine'>
+        <view class='icon'>
+          <image src='/imgs/icon_me.png'></image>
+        </view>
+        <view class='iname'>我的发布</view>
+      </view>
+    </navigator>
+
+    <view class='line'></view>
+
+    <navigator url='/pages/index/publish01'>
+      <view class='frzc'>发人找车</view>
+    </navigator>
+
+    <navigator url='/pages/index/publish02'>
+      <view class='fczr'>发车找人</view>
+    </navigator>
+
+  </view>
+</view>

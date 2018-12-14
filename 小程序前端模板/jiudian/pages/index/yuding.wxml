@@ -1,0 +1,71 @@
+<!--pages/index/yuding.wxml-->
+<view class="app" hidden="{{apphiden?false:true}}">
+  <form bindsubmit="resvRoom">
+    <view class="type">{{data.room.title}}</view>
+    <view class="detail">
+      <view class="title">{{data.room.title}}</view>
+      <view class="date">{{date.bg_date1}}至{{date.end_date1}}共{{date.day2}}晚</view>
+    </view>
+    <view class="bview">
+      <view class="lt">¥{{showtotal}}</view>
+      <button class="rt" style="background:{{color}}" formType="submit">立即预订</button>
+    </view>
+    <view class="fitem margin_top_15">
+      <view class="title">房间数：</view>
+      <picker class="fnum" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <text>{{array[index] ? array[index] : '1间'}} </text>
+      </picker>
+      <image src="/images/pk_jt.png"></image>
+    </view>
+    <view class="fitem margin_top_15">
+      <view class="title">姓名：</view>
+      <input name="name" class="fnum" placeholder="请输入姓名" />
+    </view>
+    <view class="fitem">
+      <view class="title">联系方式：</view>
+      <input name="mobile" class="fnum" placeholder="请输入联系方式" />
+    </view>
+    <view class="fitem">
+      <view class="title">身份证</view>
+      <input name="id_card"  type='idcard' style='width:64%' class="fnum" placeholder="请输入身份证号码" />
+    </view>
+    <view class="fitem margin_top_15">
+      <view class="title">优惠券抵扣</view>
+      <view bindtap="usercoupon" class="fnum">
+        <text wx:if="{{hongbao!=0}}" class="price">¥{{hongbao}}</text>
+        <text wx:if="{{hongbao==0 && nousehongbao==0}}">选择优惠券</text>
+      </view>
+      <image src="/images/pk_jt.png"></image>
+    </view>
+    <view class="cancel_info">
+      取消规则：订单一经预订，不可取消或变更；如未能如约入住，您的预付房费将不予退还
+    </view>
+  </form>
+</view>
+<view hidden="{{apphiden?true:false}}" class="couponapp">
+  <view class="bushiyong">
+    <text>不使用优惠券</text>
+    <image bindtap="nouse" hidden="{{nousehongbao?false:true}}" src="/images/duihaono.png"></image>
+    <image hidden="{{nousehongbao?true:false}}" src="/images/duihaoyes.png"></image>
+  </view>
+  <view wx:for="{{hongbaolist}}" class="coupon">
+    <image class="bg" src="/images/coupon_on.png"></image>
+    <image class="dian" src="/images/coupon_dian.png"></image>
+    <view class="datas">
+      <view class="lt on">
+        <text>¥</text>{{item.money}}
+      </view>
+      <view class="ct">
+        <view class="type">
+          酒店优惠券
+        </view>
+        <text>满{{item.need_money}}元可用</text>
+        <text>{{item.way_mean}}</text>
+        <text>{{item.can_use_time}}至{{item.expir_time}}</text>
+      </view>
+      <view class="rt">
+        <text bindtap="yesuse" data-id="{{item.coupon_id}}" data-money="{{item.money}}" class=" on">立即使用</text>
+      </view>
+    </view>
+  </view>
+</view>

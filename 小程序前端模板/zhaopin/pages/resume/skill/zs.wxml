@@ -1,0 +1,47 @@
+<view class="app">
+  <form bindsubmit="setCertificate">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">获得时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindDatePickerChange">
+            <text>{{date ? date : '请选择获得时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">证书名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="certificate_name" value="{{certificate_name}}" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">成绩</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="score" value="{{score}}" type="number" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+
+</view>

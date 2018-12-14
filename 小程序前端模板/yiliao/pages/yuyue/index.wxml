@@ -1,0 +1,76 @@
+<!--pages/yuyue/index.wxml-->
+<view class='app'>
+
+  <image class="header" src='/img/icon_yuyue_header.jpg'></image>
+
+  <view class='title'>快速预约通道</view>
+
+  <form bindsubmit='yuyue'>
+    <view class='content'>
+      <view class='item'>
+        <text class='hint'>您的姓名:</text>
+        <input name="name" value='{{name}}' placeholder='仅用于预约使用'></input>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>您的电话:</text>
+        <input name="mobile" value='{{mobile}}' placeholder='仅用于预约使用'></input>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>预约日期:</text>
+        <picker class="date" mode="date" bindchange="bindDateChange">
+            <text>{{date? date : '请选择预约日期'}} </text>
+          </picker>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>您想预约:</text>
+        <input name="intention" value='{{intention}}' placeholder='检查/病种/专家'></input>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>您的需求:</text>
+        <input name="demand" value='{{demand}}' placeholder='简单描述您的具体需求'></input>
+      </view>
+    </view>
+
+    <view class='btn_container'>
+      <button class='btn' form-type='submit' style='background:#FFC125'>提交预约</button>
+      <button class='btn' bindtap='clearInfo' style='background:#7CCD7C'>重新填写</button>
+    </view>
+
+  </form>
+  <view class='telphone' bindtap='callPhone' style='color:{{color}}; border-color:{{color}}'>点击拨打电话预约</view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/index/index'>
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/gk/index'>
+        <view class="image iconfont icon-gaikuang:before"></view>
+        <text>医院概况</text>
+      </navigator>
+    </view>
+
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-guahaodan:before"></view>
+      <text>自助挂号</text>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+</view>

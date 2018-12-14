@@ -1,0 +1,170 @@
+<!--发现 图文详情页面-->
+<view class="app">
+  <view class="content">
+    <!-- 图文信息 -->
+    <view class="fx_info">
+      <view class="title">印度主流杂志把西藏台湾从中国版图上抹掉了</view>
+      <view class="author_info">
+        <image class="face" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1500096230&di=a604c9a6b551775d5b2d7a0f8005c47e&src=http://img5.pcpop.com/ArticleImages/fnw/2017/0618/97fa0d42-446f-4c09-bfa5-14646d23dde8.jpg"></image>
+        <view class="info">
+          <view class="author">
+            <text class="nickname">请叫我码农哥</text>
+            <text class="tag">原创</text>
+          </view>
+          <text class="date">7-17 09:55</text>
+        </view>
+      </view>
+
+      <image bindtap="photoclick" style="width:100%;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1358163718,2576899656&fm=26&gp=0.jpg"></image>
+      <view class="fx_text_content">这里是动态内容这里是动态内容这里是动态内容这里是动态内容这里是动态内容这里是动态内容这里是动态内容</view>
+    </view>
+
+
+    <!-- 相关动态 -->
+    <view class="reader">
+      <view class="model_item">
+        <view class="vline"></view>
+        <text>相关动态</text>
+      </view>
+
+      <navigator url="/pages/homepage/home/dongtai/details">
+        <view class="fx_img_text">
+        <view class="lp">
+          <view class="rtitle">
+            吃的饱饱的，我们来场运动吧，我们给您量身定做野外最流行与有型的丛林CS野战项目…CS野战是一项互动性强、新颖时尚的模仿两军交战的射击游戏。
+          </view>
+
+          <view class="bottom_info">
+            <text class="author">请叫我码农哥</text>
+            <text class="comment">36评论</text>
+          </view>
+        </view>
+
+        <view class="rp">
+          <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1358163718,2576899656&fm=26&gp=0.jpg"></image>
+        </view>
+      </view>
+      </navigator>
+
+      <view class="fx_img_text">
+        <view class="lp">
+          <view class="rtitle">
+            吃的饱饱的，我们来场运动吧，我们给您量身定做野外最流行与有型的丛林CS野战项目…CS野战是一项互动性强、新颖时尚的模仿两军交战的射击游戏。
+          </view>
+
+          <view class="bottom_info">
+            <text class="author">请叫我码农哥</text>
+            <text class="comment">36评论</text>
+          </view>
+        </view>
+
+        <view class="rp">
+          <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1358163718,2576899656&fm=26&gp=0.jpg"></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 相关评论 -->
+    <view class="comment">
+      <view class="model_item">
+        <view class="vline"></view>
+        <text>相关评论</text>
+      </view>
+
+      <view class="comment_item">
+        <!--用户头像-->
+        <view class="face_view"> 
+          <image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1500096230&di=a604c9a6b551775d5b2d7a0f8005c47e&src=http://img5.pcpop.com/ArticleImages/fnw/2017/0618/97fa0d42-446f-4c09-bfa5-14646d23dde8.jpg"></image>
+        </view>
+
+        <!-- Info -->
+        <view class="comment_lp">
+          <view class="header">
+            <view class="user_name">码农哥</view>
+            <view class="zan">
+              <image src="/image/homepage/zan.png"></image>
+              <text>28</text>
+            </view>
+          </view>
+
+          <view class="contents">
+            原配是和他同甘共苦的人，后面的是看他有钱才跟他的，所以人格有价
+          </view>
+
+          <view class="bottom">
+            <view class="date">
+              07-27 11:11
+            </view>
+
+            <view class="reply">
+              <image src="/image/homepage/icon_reply.png"></image>
+            </view>
+          </view>
+        </view>        
+      </view>   
+
+      <view class="comment_item">
+        <!--用户头像-->
+        <view class="face_view"> 
+          <image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1500096230&di=a604c9a6b551775d5b2d7a0f8005c47e&src=http://img5.pcpop.com/ArticleImages/fnw/2017/0618/97fa0d42-446f-4c09-bfa5-14646d23dde8.jpg"></image>
+        </view>
+
+        <!-- Info -->
+        <view class="comment_lp">
+          <view class="header">
+            <view class="user_name">码农哥</view>
+            <view class="zan">
+              <image src="/image/homepage/zan.png"></image>
+              <text>28</text>
+            </view>
+          </view>
+
+          <view class="contents">
+            原配是和他同甘共苦的人，后面的是看他有钱才跟他的，所以人格有价
+          </view>
+
+          <view class="bottom">
+            <view class="date">
+              07-27 11:11
+            </view>
+
+            <view class="reply">
+              <image src="/image/homepage/icon_reply.png"></image>
+            </view>
+          </view>
+        </view>        
+      </view> 
+    </view>
+
+  </view>
+
+
+  <view class="reply_container">
+    <view class="reply_input">
+      <input name="userName" placeholder="请输入评论信息" bindinput="userNameInput" />
+    </view>
+    <view class="reply_send">
+      <button class="button">发送</button>
+    </view>
+  </view>
+</view>
+
+<view class="photoshow" hidden="{{photoshow}}">
+  <swiper class="sw" indicator-dots="" autoplay="true" interval="3000" duration="1000">
+
+    <swiper-item class="sw_item">
+      <image src="/image/pics/4.jpg"></image>
+    </swiper-item>
+    <swiper-item class="sw_item">
+      <image src="/image/pics/222.jpg"></image>
+    </swiper-item>
+    <swiper-item class="sw_item">
+      <image src="/image/pics/4.jpg"></image>
+    </swiper-item>
+
+
+
+  </swiper>
+  <view bindtap="photobgclick" class="bg"></view>
+
+</view>

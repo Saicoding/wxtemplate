@@ -1,0 +1,64 @@
+/* 企业查看记录 */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+
+.app .citem{
+  width: 92%;
+  height: auto;
+  background: #fff;
+  padding: 0 4%;
+  margin-top: 20rpx;
+}
+
+.app .citem .header{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx #f5f5f5 solid; 
+}
+
+.app .citem .header .lt{
+  width: 78%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+}
+.app .citem .header .rt{
+  width: 22%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  text-align: right;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.app .citem .bottom{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1rpx #f5f5f5 solid; 
+}
+
+.app .citem .bottom .lb{
+  width: 78%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  font-size: 26rpx;
+  color: #515151;
+}
+.app .citem .bottom .rb{
+  width: 22%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  text-align: right;
+}

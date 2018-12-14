@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/mall/index",
+    "pages/mall/buy",
+    "pages/member/index",
+    "pages/addr/add",
+    "pages/addr/index",
+    "pages/member/detail",
+    "pages/manage/kucun",
+    "pages/manage/index",
+    "pages/manage/order",
+    "pages/addr/edit",
+    "pages/coupon/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰应用外卖",
+    "navigationBarTextStyle": "black"
+  }
+}

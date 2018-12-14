@@ -1,0 +1,78 @@
+<view class="app">
+  <view class="header" style='background:{{color}}'>
+    <image class="image" src="{{userinfo.face=='' ? '/images/around/login_no.png':userinfo.face}}"></image>
+    <view class="nickname">
+      <text class="name">{{userinfo.nick_name}}</text>
+    </view>
+  </view>
+  <view class="qihuan1">
+    <navigator open-type="redirect" url="/pages/store/index">
+      <image src="/images/around/qh.png"></image>
+      <text>切换到商户版本</text>
+    </navigator>
+  </view>
+  <view class="action">
+    <navigator url="/pages/public/login">
+      <view wx:if="{{userinfo.mobile==0}}" class="col">
+        <image class="tubiao" src="/images/around/icon_mine_phone.png"></image>
+        <text>绑定手机</text>
+        <image class="jiantou" src="/images/around/jiantou.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/order/index" open-type="reLaunch">
+      <view class="col">
+        <image class="tubiao" src="/images/around/icon_mine_order.png"></image>
+        <text>全部订单</text>
+        <image class="jiantou" src="/images/around/jiantou.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/mine/coupon">
+      <view class="col">
+        <image class="tubiao" src="/images/around/icon_mine_coupon.png"></image>
+        <text>优惠券</text>
+        <image class="jiantou" src="/images/around/jiantou.png"></image>
+      </view>
+    </navigator>
+
+    <view bindtap="tel" class="col">
+      <image class="tubiao" src="/images/around/icon_mine_kefu.png"></image>
+      <text>联系客服</text>
+      <image class="jiantou" src="/images/around/jiantou.png"></image>
+    </view>
+  </view>
+  <view class="jszc">技术支持：【巅峰互联】www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/index/home'>
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/destination/index'>
+        <view class="image iconfont icon-mudedi:before"></view>
+        <text>目的地</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/find/index'>
+        <view class="image iconfont icon-faxian:before"></view>
+        <text>发现</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/order/index'>
+        <view class="image iconfont icon-dingdan:before"></view>
+        <text>订单</text>
+      </navigator>
+    </view>
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

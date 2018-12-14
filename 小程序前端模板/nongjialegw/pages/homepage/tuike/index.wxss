@@ -1,0 +1,116 @@
+/* pages/homepage/tuike/index.wxss */
+
+.app .user_qrcode {
+  width: 92%;
+  height: auto;
+  margin: 0 4%;
+  border-radius: 20rpx;
+  background: #1ba8b9;
+  padding-bottom: 60rpx;
+  padding-top: 30rpx;
+  margin-top: 40rpx;
+  -webkit-box-shadow: 0 0 10px #fff;
+  -moz-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+.app .user_qrcode .face {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 85rpx;
+}
+
+.app .user_qrcode .nickname {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 20rpx auto;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.app .user_qrcode .daiyan {
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+
+.app .user_qrcode .wxb_qrcode {
+  width: 320rpx;
+  height: 320rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  margin: 0 auto;
+}
+
+.app .user_qrcode .wxb_qrcode image {
+  width: 94%;
+  height: 94%;
+  margin: 3% 3%;
+}
+
+.look_ranking {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  margin: 50rpx 5%;
+  border-radius: 8rpx;
+  background: #1ba8b9;
+}
+
+/** 推客信息 **/
+.app .tuike_info{
+  width: 100%;
+  height: auto;
+}
+
+.app .tuike_info .user_face{
+  width: 100%;
+  height: 210rpx;
+  margin: 0 auto;
+  background: #fff;
+  padding-top: 40rpx;
+}
+
+.app .tuike_info .user_face image{
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  border-radius: 75rpx;
+  margin: 0 auto;
+}
+
+.app .tuike_info .user_face text{
+  width: auto;
+  padding: 20rpx;
+  margin: 0 auto;
+  display: block; text-align: center;
+}
+
+.col{
+  width: 90%;
+  margin: 0 auto;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-top: 30rpx;  
+}
+
+.col text{
+  float: left;
+  width: 150rpx;
+  margin-top: 20rpx;
+}
+.col input{
+  float: left;
+  width: 250rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+

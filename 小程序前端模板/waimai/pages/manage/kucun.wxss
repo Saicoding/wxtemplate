@@ -1,0 +1,67 @@
+.item{
+  height: 150rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+}
+.item .lt{
+  float: left;
+  width: 10%;
+  line-height: 150rpx;
+  text-align: center;
+}
+
+.item .rt{
+  float: left;
+  width: 85%;
+  margin-left: 5%;
+}
+
+.item .rt image{
+  height: 150rpx;
+  width: 150rpx;
+  float: left;
+}
+.item .rt .name{
+  width: 280rpx;
+  overflow: hidden;
+  height: 40rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+}
+.item .status{
+  width: 100rpx;
+  overflow: hidden;
+  float: right;
+  margin-top: 50rpx;
+  margin-right: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: red;
+}
+
+.bottom{
+  position: fixed;
+  height: 100rpx;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+.bottom .lt{
+  float: left;
+  width: 50%;
+  background: #FF6666; 
+}
+.bottom .rt{
+  float: left;
+  width: 50%;
+  background: #FFCC99;
+}

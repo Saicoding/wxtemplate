@@ -1,0 +1,29 @@
+<!-- 职能意向 -->
+<view class="app">
+  <view class="header">
+    <view class="lt">最多5项，已选{{length}}项</view>
+    <view class="rt">
+      <view bindtap='toback' class="btn">确定</view>
+    </view>
+  </view>
+
+  <view style="height: 100rpx;"></view>
+  <checkbox-group bindchange="checkboxChange">
+    <view wx:for="{{datas}}">
+      <view class="pitem" bindtap="open_view">
+        <view class="title">{{item.industry_name}}</view>
+        <view class="arrow">
+          <image data-id="{{item.industry_id}}" src="{{item.is_show==0? '/img/icon_arrow_bottom.png':'/img/icon_arrow_top.png'}}"></image>
+        </view>
+      </view>
+      <view class="child" hidden="{{item.is_show==1? false:true}}">
+        <view class="citem" wx:for="{{item.children}}">
+          <view class="ctitle">{{item.industry_name}}</view>
+          <view class="carrow">
+            <checkbox value="{{item.industry_id}}" data-ids="1" checked="{{item.check}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </checkbox-group>
+</view>

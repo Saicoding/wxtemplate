@@ -1,0 +1,85 @@
+<view class="app">
+
+  <view class="header">
+
+    <view class="type">
+
+      <text>{{detail.status_mean}}</text>
+      <view wx:if="{{detail.status == 8 && detail.is_comment == 0}}" class="act">
+        <navigator url="/pages/homepage/me/order/comment?id={{detail.order_id}}">评价订单</navigator>
+      </view>
+    </view>
+    <view wx:if="{{detail.status==0}}" class="type_info">等待支付，请在30分钟内完成支付！订单30分钟为支付自动取消！</view>
+    <view wx:if="{{detail.status==1}}" class="type_info">已经支付，需要等待酒店审核，一般审核时间在10-20分钟。</view>
+    <view wx:if="{{detail.status==2}}" class="type_info">酒店审核,预祝您旅途愉快，有任何问题可以联系官方客服！</view>
+    <view wx:if="{{detail.status==3}}" class="type_info">订单已取消。如果需要订酒店请重新搜索酒店。</view>
+    <view wx:if="{{detail.status==8}}" class="type_info">订单已完成。评价订单可以获得红包，更有机会获得返现！</view>
+  </view>
+  <view class="orderinfo">
+    <view class="title">
+      <text class="type">订单总金额</text>
+      <text class="price">¥{{detail.total_price}}</text>
+
+    </view>
+    <view wx:if="{{detail.pay_money>0}}" class="pick">
+      <text class="lf">在线支付</text>
+      <view class="rt">
+        <text class="price">¥{{detail.pay_money}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{detail.lijian>0}}" class="pick">
+      <text class="lf">立减优惠</text>
+      <view class="rt">
+        <text class="price">¥{{detail.lijian}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{detail.pay_coupon>0}}" class="pick">
+      <text class="lf">优惠券抵扣</text>
+      <view class="rt">
+        <text class="price">¥{{detail.pay_coupon}}</text>
+      </view>
+    </view>
+    <view wx:if="{{detail.status==0}}" class="action">
+      <view bindtap="getPayment" class="pay">立刻支付</view>
+      <navigator url="/pages/homepage/home/taocan/cancel?id={{id}}">
+        <view class="quxiao">取消订单</view>
+      </navigator>
+    </view>
+
+  </view>
+
+  <view class="product">
+    <view class="title">
+      <text>{{detail.taocan_name}}</text>
+    </view>
+    <view class="col">
+      {{detail.package_name}}X{{detail.package_num}}
+    </view>
+    <view class="addr">
+      {{detail.address}}
+    </view>
+
+    <view class="col">
+      出行时间:{{detail.play_time}}
+    </view>
+    <view class="col">
+      {{detail.name}}|{{detail.mobile}}|{{detail.idcard}}
+    </view>
+  </view>
+
+  <view class="orderdetail">
+    <view>订单信息</view>
+    <view>下单日期：{{detail.add_time}}</view>
+    <view>订单编号: {{detail.order_id}}</view>
+    <view>套餐名称: {{detail.taocan_name}}</view>
+  </view>
+  <view class="qt">
+
+    <view>其他帮助</view>
+
+    <button bindtap="telkefu">联系客服</button>
+  </view>
+
+</view>

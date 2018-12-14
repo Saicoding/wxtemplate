@@ -1,0 +1,104 @@
+<!--pages/index/publish01.wxml-->
+<view class='app'>
+  <form bindsubmit='publish'>
+    <view class='header'>确认联系人信息</view>
+    <view class='contact'>
+      <view class='col'>
+        <view class='lt'>姓名</view>
+        <view class='mt'>
+          <input name="name" placeholder='请输入姓名' value='{{name}}'></input>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>性别</view>
+        <view class='mt'>
+          <picker value="{{sIndex}}" range="{{sexs}}" bindchange="bindSexChange">
+            <text>{{sex? sex : '请选择性别'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>手机号码</view>
+        <view class='mt'>
+          <input name="phone" placeholder='请输入手机号码' value='{{mobile}}'></input>
+        </view>
+      </view>
+    </view>
+
+    <view class='header'>填写拼车信息</view>
+    <view class='contact'>
+      <view class='col'>
+        <view class='lt'>出发地</view>
+        <view class='mt'>
+          <input name="chufa" placeholder='请填写出发地' value='{{start}}'></input>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>目的地</view>
+        <view class='mt'>
+          <input name="mudidi" placeholder='请填写目的地' value='{{end}}'></input>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>途径地</view>
+        <view class='mt'>
+          <input name="tujing" placeholder='选填途径地' value='{{channel}}'></input>
+        </view>
+      </view>
+
+      <view class='col'>
+        <view class='lt'>出发日期</view>
+        <view class='mt'>
+          <picker mode="date" bindchange="bindBeginDateChange">
+            <text>{{begin? begin : '请选择出发日期'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>出发时间</view>
+        <view class='mt'>
+          <picker mode="time" bindchange="bindTimeDateChange">
+            <text>{{time? time : '请选择出发时间'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>空位</view>
+        <view class='mt'>
+          <picker value="{{nIndex}}" range="{{nums}}" bindchange="bindNumChange">
+            <text>{{num? num : '请选择空位'}} </text>
+          </picker>
+        </view>
+        <view class='rt'>
+          <image src='/imgs/jiantou.png'></image>
+        </view>
+      </view>
+      <view class='col'>
+        <view class='lt'>车型</view>
+        <view class='mt'>
+          <input name="chexing" placeholder='请填写车型' value='{{car}}'></input>
+        </view>
+      </view>
+    </view>
+
+    <view class='header'>备注留言</view>
+    <view class='remarks'>
+      <textarea name="demand" placeholder='以上信息还不够？此处可填写备注哦~' value='{{demand}}'></textarea>
+    </view>
+
+    <button class='publish' form-type='submit'>立即发布</button>
+  </form>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+</view>

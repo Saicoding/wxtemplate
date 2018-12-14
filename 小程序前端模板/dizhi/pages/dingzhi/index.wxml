@@ -1,0 +1,125 @@
+<!-- 私人定制 -->
+<view class="app">
+
+  <view class="banner">
+ <image src="/image/dingzhi/banner.png"></image>
+   </view>
+
+  <view class="dingzhi_top">
+    <text class="green_color margin_left_10">6</text>
+    <text>大特色</text>
+    <text class="green_color margin_left_15">1</text>
+    <text>价全含</text>
+  </view>
+
+  <view class="menu_item">
+    <view class="lt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_01.png"></image>
+      <text class="menu_type_text">甄选品质资源</text>
+    </view>
+
+    <view class="menu_item_line"></view>
+
+    <view class="rt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_02.png"></image>
+      <text class="menu_type_text">私家小团定制</text>
+    </view>
+  </view>
+
+  <view class="menu_item">
+    <view class="lt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_03.png"></image>
+      <text class="menu_type_text">专属旅游顾问</text>
+    </view>
+
+    <view class="menu_item_line"></view>
+
+    <view class="rt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_04.png"></image>
+      <text class="menu_type_text">行程量身可变</text>
+    </view>
+  </view>
+
+  <view class="menu_item">
+    <view class="lt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_05.png"></image>
+      <text class="menu_type_text">尊享深度体验</text>
+    </view>
+
+    <view class="menu_item_line"></view>
+
+    <view class="rt">
+      <image class="menu_type_image" src="/image/dingzhi/menu_type_06.png"></image>
+      <text class="menu_type_text">7*24小时服务</text>
+    </view>
+  </view>
+
+  <view class="procedure_item">
+    <view class="btn_items">
+      <view class="p_item">
+        <view class="p_item_num">1</view>
+        <view class="p_item_title">填写需求</view>
+      </view>
+
+      <image src="/image/dingzhi/icon_arrow.png"></image>
+
+      <view class="p_item">
+        <view class="p_item_num">2</view>
+        <view class="p_item_title">设计行程</view>
+      </view>
+
+      <image src="/image/dingzhi/icon_arrow.png"></image>
+
+      <view class="p_item">
+        <view class="p_item_num">3</view>
+        <view class="p_item_title">签约付款</view>
+      </view>
+
+      <image src="/image/dingzhi/icon_arrow.png"></image>
+
+      <view class="p_item">
+        <view class="p_item_num">4</view>
+        <view class="p_item_title">开心出游</view>
+      </view>
+    </view>
+
+    <button class="btn_dingzhi" bindtap="godingzhi">立即定制</button>
+  </view>
+
+
+
+  <!-- 底部 -->
+  <view class="dingzhi_footer">
+    <view class="ft_item on">
+      <image src="/image/dingzhi/btn_tabs_01_on.png"></image>
+      <text>定制游</text>
+    </view>
+
+    <navigator url="/pages/dingzhi/order">
+      <view class="ft_item off">
+        <image src="/image/dingzhi/btn_tabs_02_off.png"></image>
+        <text class="off">我的订单</text>
+      </view>
+    </navigator>
+
+    <view class="ft_item off" bindtap="call_kefu">
+      <image src="/image/dingzhi/btn_tabs_03_off.png"></image>
+      <text class="off">客服电话</text>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="dwbg" bindtap="app_screen" hidden="{{app_screen?true:false}}">
+</view>
+
+<view class="kefu_dialog" hidden="{{kefu_dialog?true:false}}">
+    <view class="kefu_phone">
+     {{setting.service_tel}}
+    </view>
+    <view class="select_view">
+      <text class="tv_cancel" bindtap="app_screen">取消</text>
+      <text class="tv_calling" bindtap="calling">呼叫</text>
+    </view>
+</view>

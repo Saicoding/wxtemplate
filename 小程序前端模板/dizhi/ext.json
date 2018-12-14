@@ -1,0 +1,22 @@
+{
+  "extEnable": true,
+  "extAppid": "wx7584dfe7b7249133",
+  "ext": {
+     "apiurl": "https://wei.chinaplat.com",
+     "appid" : "10",
+     "appkey": "80158c67f63dd507320ef37e0588ca8c"  
+  },
+  "extPages": {
+   
+  },
+
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "window": {
+        "navigationBarTitleText": "巅峰互联私人订制旅游平台"        
+  }
+  
+}

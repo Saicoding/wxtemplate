@@ -1,0 +1,67 @@
+/* pages/menu/consult.wxss */
+.app .header{
+  width: 100%;
+  height: 240rpx;
+}
+
+.content {
+  width: 94%;
+  height: auto;
+  padding: 0 3%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.content .item {
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx #f5f5f5 solid;
+}
+
+.content .item .hint {
+  width: 18%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  float: left;
+}
+
+.content .item input, .content .item .date {
+  min-width: 80%;
+  height: 80rpx;
+  padding: 0 1%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  float: left;
+}
+
+
+.detail{
+  width: 100%;
+  height: 260rpx;
+  margin-top: 15rpx;
+  background: #fff;
+}
+
+.detail textarea{
+  width: 94%;
+  height: 220rpx;
+  padding: 20rpx 3%;
+}
+
+.btn_container {
+  width: 100%;
+  height: auto;
+  margin: 30rpx auto;
+  overflow: hidden;
+}
+
+.btn {
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  margin: 0 5%;
+  float: left;
+}

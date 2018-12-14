@@ -1,0 +1,105 @@
+<view class="app">
+
+  <view class="header">
+
+    <image bindtap="photoclick" src="{{detail.banner}}"></image>
+
+    <text class="num">
+      {{num}}张
+    </text>
+  </view>
+  <view class="commpany_title">
+      <text> {{detail.name}} </text>
+  </view>
+      <navigator url="/pages/hotel/hotel/comment?hotel_id={{detail.id}}">
+
+  <view class="col">
+      <view class="left big">{{detail.score}}分</view>
+      <view class="center">{{detail.praise_num}}条好评 {{detail.bad_num}}条差评</view>
+      <image src="/img/hotel/jiantou.png"></image>
+  
+  </view>
+    </navigator>
+  <view bindtap="map" class="col pd30">
+      <view class="left">位置</view>
+      <view class="center">{{detail.address}},距您{{detail.juli}}</view>
+      <image src="/img/hotel/jiantou.png"></image>
+  </view>
+      <navigator url="/pages/hotel/hotel/info?id={{id}}">
+
+  <view class="col">
+      <view class="left">详情</view>
+      <view class="center">{{detail.opening_time}}开业 电话{{detail.tel}} </view>
+      <image src="/img/hotel/jiantou.png"></image>
+    
+  </view>
+  </navigator>
+
+
+  <view class="product">
+
+    <view class="riqi">
+      <navigator open-type="redirect" url="/pages/public/date2?id={{id}}">
+        <view class="rz">入住 <text>{{date.bg_date1}}</text></view>
+        <view class="ld">离店 <text>{{date.end_date1}}</text></view>
+        <view class="gj">共计{{date.day2}}晚
+          <image src="/img/hotel/jiantou.png"></image>
+        </view>
+      </navigator>
+    </view>
+
+    <view wx:for="{{rooms}}" class="fangxing">
+
+      <view class="fangjian">
+        <view class="lt">
+          <image src="{{item.photo}}"></image>
+        </view>
+        <view class="ct">
+          <view class="title">{{item.title}}</view>
+          <view class="info">{{item.area}}㎡ {{item.bed_type}}  {{item.is_wifi?'有wifi':'无wifi'}}</view>
+        </view>
+        <view class="price">
+          ¥<text>{{item.price}}起</text>
+        </view>
+        <view class="yuding">
+          <navigator open-type="redirect" url="/pages/hotel/hotel/buy?id={{item.id}}">
+            预定
+          </navigator>
+        </view>
+      </view>
+
+    </view>
+
+
+
+
+
+
+    <view wx:if="{{rooms==''}}" class="nodata">
+      <image src="/img/hotel/nodata.png"></image>
+      <text>宝宝心里苦，没有宝宝的住所</text>
+    </view>
+
+
+  </view>
+
+  <view class="shuoming">
+    注：房型信息已酒店订单填写页实际内容为准。
+  </view>
+
+</view>
+
+<view class="photoshow" hidden="{{photoshow}}">
+  <swiper class="sw" indicator-dots="" autoplay="true" interval="3000" duration="1000">
+
+    <swiper-item wx:for="{{photos}}" class="sw_item">
+      <image src="{{item}}"></image>
+    </swiper-item>
+    
+
+
+
+  </swiper>
+  <view bindtap="photobgclick" class="bg"></view>
+
+</view>

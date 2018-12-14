@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/liuyan",
+    "pages/product/index",
+    "pages/product/detail",
+    "pages/dynamic/index",
+    "pages/consult/index",
+    "pages/case/index",
+    "pages/case/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联公司官网",
+    "navigationBarTextStyle":"black"
+  }
+}

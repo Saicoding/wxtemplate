@@ -1,0 +1,187 @@
+<view class="app">
+
+  <view class="header">
+
+    <image bindtap="photoclick" src="{{detail.detail.banner}}"></image>
+
+    <text class="num">{{detail.num}}张</text>
+  </view>
+
+  <view class="commpany_title">
+    <text>{{detail.detail.taocan_name}}</text>
+  </view>
+
+  <view class="col">
+    <navigator url="/pages/homepage/home/taocan/comment?taocan_id={{detail.detail.taocan_id}}">
+      <view class="left big">评价</view>
+      <view class="center">{{detail.detail.praise_num}}条好评 {{detail.detail.bad_num}}条差评</view>
+      <image src="/image/homepage/icon_arrow.png"></image>
+    </navigator>
+  </view>
+  <view class="col" bindtap="map">
+    <view class="left">位置</view>
+    <view class="center">{{detail.detail.address}}</view>
+    <image src="/image/homepage/icon_arrow.png"></image>
+  </view>
+  <view class="taocan">
+    <scroll-view scroll-x="true" class="riqi_scroll">
+      <view    wx:for="{{dates}}" class="item {{day == item.date ? 'on' : ''}}">
+        <text bindtap="getDateList"   data-day="{{item.date}}"  >{{item.day}}</text>
+        <text bindtap="getDateList"   data-day="{{item.date}}">星期{{item.week}}</text>
+      </view>
+      <view class="item {{day + 7 < item.date ? 'on' : ''}}">
+        <navigator open-type="redirect" url="/pages/public/date2?type=1&id={{detail.detail.taocan_id}}">
+          <text>更多</text>
+          <text>选择日期</text>
+        </navigator>
+      </view>
+    </scroll-view>
+    <view wx:for="{{package}}" class="titem bdbt">
+      <view class="lt">
+        <view class="title">
+          {{item.title}}
+        </view>
+        <view class="quxiao">
+          <text>{{item.is_cancel == 1 ? '可以取消' : '不可以取消'}}</text>
+          <text>/{{item.is_changes == 1 ? '可以取消' : '不可以取消'}}</text>
+        </view>
+        <view class="price">
+          <view class="lt">¥{{item.price}}起</view>
+          <view class="ct"> <text  bindtap="open_view" data-id="{{item.package_id}}">详细说明</text>
+            <image src="/image/homepage/icon_jiantouxia.png"></image>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{item.is_show==1?false:true}}" class="tanchuan">
+      <view class="main">
+        <view class="title">
+          <text>详细信息</text>
+          <view class="rt">
+            <image bindtap="showinfobg" src="/image/homepage/cha.png"></image>
+          </view>
+        </view>
+        <view class="content">
+          <view class="photo">
+            <image src="{{item.photo}}"></image>
+          </view>
+          <view class="tt">
+           {{item.title}}
+          </view>
+          <view class="duan">
+            <view class="tt2">
+              【详情说明】
+            </view>
+            <view class="con">
+              {{item.details}}
+            </view>
+          </view>
+          <view class="duan">
+            <view class="tt2">
+              【特别说明】
+            </view>
+            <view class="con">
+                {{item.especially}}
+            </view>
+          </view>
+          <view class="duan">
+            <view class="tt2">
+              【退订政策】
+            </view>
+            <view class="con">
+               {{item.cancel}}
+            </view>
+          </view>
+          <view class="duan">
+            <view class="tt2">
+              【改签政策】
+            </view>
+            <view class="con">
+                   {{item.changes }}
+            </view>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="lt"><text>¥{{item.price}}</text> 起</view>
+          <view class="rt">预定</view>
+        </view>
+      </view>
+      <view bindtap="open_view" data-id="{{item.package_id}}" class="bg"></view>
+    </view>
+      <view class="rt">
+        <navigator url="/pages/homepage/home/taocan/buy?id={{item.package_id}}&day={{day}}"> <text class="yuding">预定</text></navigator>
+      </view>
+
+    </view>
+
+     <view wx:if="{{package== '' }}" class="nodata">
+    <image src="/image/homepage/nodata.png"></image>
+    <text>宝宝心里苦 没有宝宝的票票</text>
+ </view>
+  </view>
+
+  <view class="xuzhi">
+    <view class="title">
+      预定须知
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【预定限制】
+      </view>
+      <view class="con">
+        {{detail.detail.restrict}}
+      </view>
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【使用方式】
+      </view>
+      <view class="con">
+        {{detail.detail.method}}
+      </view>
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【使用时间】
+      </view>
+      <view class="con">
+        {{detail.detail.usetime}}
+      </view>
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【加购套餐项目】
+      </view>
+      <view class="con">
+        {{detail.detail.add_time}}
+      </view>
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【额外服务提示】
+      </view>
+      <view class="con">
+        {{detail.detail.service}}
+      </view>
+    </view>
+    <view class="duan">
+      <view class="tt2">
+        【其他提示】
+      </view>
+      <view class="con">
+        {{detail.detail.other}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="photoshow" hidden="{{photoshow}}">
+  <swiper class="sw" indicator-dots="" autoplay="true" interval="3000" duration="1000">
+
+    <swiper-item wx:for="{{detail.photos}}" class="sw_item">
+      <image src="{{item}}"></image>
+    </swiper-item>
+
+  </swiper>
+  <view bindtap="photobgclick" class="bg"></view>
+
+</view>

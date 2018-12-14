@@ -1,0 +1,31 @@
+{
+  "pages": [
+
+    
+
+    "pages/home/index",
+    "pages/news/news",
+    "pages/news/imageText/index",
+    "pages/news/video/index",
+    "pages/news/details",
+    "pages/gs/index",
+    "pages/gs/free",
+    "pages/gs/detail",
+    "pages/me/index",
+    "pages/gs/ruzhu",
+    "pages/store/index",
+    "pages/store/detail",
+    "pages/store/yuyue",
+    "pages/store/edit",
+    "pages/me/shop",
+    "pages/me/zanshop",
+    "pages/me/telshop",
+    "pages/gs/create"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTitleText": "巅峰互联本地婚庆平台",
+    "navigationBarTextStyle": "white"
+  }
+}

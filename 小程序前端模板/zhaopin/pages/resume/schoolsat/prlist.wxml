@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/schoolsat/practice">
+    <view class="add_school">+添加社会实践</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/schoolsat/practice?practice_id={{item.practice_id}}">
+        <view class="title">{{item.practice_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/schoolsat/practice?practice_id={{item.practice_id}}">
+          <view class="lt">{{item.bg_date}}至{{item.end_date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="deltePractice" data-id="{{item.practice_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

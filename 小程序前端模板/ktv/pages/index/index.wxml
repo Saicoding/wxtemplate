@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <image src="{{item.photo}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+
+  <view class='baseinfo'>
+    <navigator url='/pages/index/about'>
+      <view class='lt'>
+        <view class='name'>{{datas.ktv_name}}</view>
+        <view class='address'>{{datas.address}}</view>
+      </view>
+      <view class='rt'>
+        <image src='/img/pk_jt.png'></image>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="youhuiquan">
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view class="item" wx:for="{{datas.activity}}">
+        <view class="lt">
+          <text>yen</text>
+          <text class="price">{{item.money}}</text>
+        </view>
+        <view class="ct">
+          <view class="name">{{item.title}}</view>
+          <view class="man">满{{item.need_money}}元可用</view>
+        </view>
+        <view class="rt">
+           <text data-id="{{item.activity_id}}" bindtap='receive'>领取</text>
+        </view>
+        <view class="topyuan"></view>
+        <view class="btyuan"></view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='hot'>
+    <view class='title'>
+      <text class='circle' style='background:{{color}}'></text>
+      <text class='htitle'>热门推荐</text>
+    </view>
+    <navigator url='/pages/index/detail?room_id={{item.room_id}}' wx:for="{{datas.rooms}}">
+      <view class='box'>
+        <image src='{{item.photo}}'></image>
+        <view class='bname'>{{item.title}}</view>
+        <view class='info'>
+          <text class='price'>yen{{item.price}}</text>
+          <text class='xl'>销量：{{item.num}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+</view>
+<view class="footer">
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-shouye:before"></view>
+    <text>首页</text>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/yuyue/index">
+      <view class="image iconfont icon-faxian:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/mine/index">
+      <view class="image iconfont icon-wode:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

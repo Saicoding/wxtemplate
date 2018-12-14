@@ -1,0 +1,99 @@
+<!-- 求职意向 -->
+<view class="app">
+  <form bindsubmit="setIntention">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">求职性质</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindNaturePickerChange" value="{{nIndex}}" range="{{nArray}}">
+            <text>{{nArray[nIndex] ? nArray[nIndex] : '请选择求职性质'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">月薪要求</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindSalaryPickerChange" value="{{sIndex}}" range="{{sArray}}">
+            <text>{{sArray[sIndex] ? sArray[sIndex] : '请选择月薪要求'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <navigator url="/pages/resume/intention/hyselect">
+      <view class="citem">
+        <view class="lt">
+          <text class="title">行业要求</text>
+          <text class="state">*</text>
+        </view>
+
+        <view class="rt">
+          <view class="info">
+            <text class="tv">{{inIds==''? '请选择行业':'已选择'}}</text>
+            <image src="/img/pk_jt.png"></image>
+          </view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/resume/intention/znselect">
+      <view class="citem">
+        <view class="lt">
+          <text class="title">职能意向</text>
+          <text class="state">*</text>
+        </view>
+
+        <view class="rt">
+          <view class="info">
+            <text class="tv">{{skIds==''? '请选择职能意向':'已选择'}}</text>
+            <image src="/img/pk_jt.png"></image>
+          </view>
+        </view>
+      </view>
+    </navigator>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">工作地点</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="address" placeholder="请输入" value="{{work_address}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">求职状态</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindStatePickerChange" value="{{stIndex}}" range="{{stArray}}">
+            <text>{{stArray[stIndex] ? stArray[stIndex] : '请选择求职状态'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

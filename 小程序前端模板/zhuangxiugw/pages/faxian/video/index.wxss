@@ -1,0 +1,262 @@
+/* 发现 视频详情 index.wxss */
+page {
+  background: #fff;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.app .content {
+  margin: 30rpx;
+  margin-bottom: 200rpx;
+}
+
+.app .video_container {
+  width: 100%;
+  height: 500rpx;
+}
+
+.reply_container {
+  width: 96%;
+  padding: 0 2%;
+  height: 96rpx;
+  border-top: 2px #eee solid;
+  position: fixed;
+  float: left;
+  bottom: 0;
+  display: flex;
+  background: #f3f3f3;
+  flex-direction: row;
+}
+
+.reply_input {
+  width: 86%;
+  height: 60rpx;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 8rpx;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+  background: #fff;
+  border: 1rpx solid #fff;
+  overflow: hidden;
+}
+
+.reply_send {
+  width: 140rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+}
+
+.reply_send button {
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  text-align: center;
+  background: #FF6666;
+  color: #fff;
+}
+
+
+/**相关阅读**/
+
+.reader {
+  width: 100%;
+  height: auto;
+  margin: 30rpx 0;
+}
+
+.model_item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.model_item .vline {
+  width: 10rpx;
+  height: 30rpx;
+  background: #f00;
+}
+
+.model_item text {
+  margin-left: 12rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.fx_img_text {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px #eee solid;
+  padding: 15rpx 0;
+  display: flex;
+}
+
+.fx_img_text .lp {
+  width: 70%;
+  height: 140rpx;
+  float: left;
+}
+
+.fx_img_text .lp .rtitle {
+  margin: 10rpx 20rpx;
+  font-size: 28rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 38rpx;
+}
+
+.fx_img_text .rp {
+  width: 30%;
+  height: 160rpx;
+  float: right;
+}
+
+.rp image {
+  width: 96%;
+  margin-right: 2%;
+  height: 160rpx;
+}
+
+.bottom_info {
+  font-size: 22rpx;
+  color: #999;
+  font-family: "微软雅黑";
+  margin: 15rpx 16rpx;
+}
+
+.bottom_info .author {
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+}
+
+.bottom_info .comment {
+  padding-right: 20rpx;
+}
+
+/**相关阅读**/
+
+/**相关评论**/
+
+.comment {
+  width: 100%;
+  height: auto;
+  margin: 30rpx 0;
+}
+
+.comment_item {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  display: flex;
+}
+
+.comment .face_view {
+  margin-top: 20rpx;
+  width: 80rpx;
+}
+
+.comment .face_view image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.comment .comment_lp {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10rpx 20rpx;
+}
+
+.comment .comment_lp .header {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.comment .comment_lp .header .user_name {
+  width: 80%;
+  height: auto;
+  float: left;
+  font-size: 26rpx;
+  color: #4682B4;
+}
+
+.comment .comment_lp .header .zan {
+  width: 20%;
+  height: auto;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.comment .comment_lp .header .zan image {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+}
+
+.comment .comment_lp .header .zan text {
+  width: auto;
+  height: auto;
+  margin-left: 10rpx;
+  float: left;
+  color: #515151;
+}
+
+.comment .comment_lp .content {
+  margin: 12rpx 0;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #000;
+}
+
+.comment .comment_lp .bottom{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.comment .comment_lp .date{
+  width: 85%;
+  height: auto;
+  float: left;
+  font-size: 24rpx;
+}
+
+.comment .comment_lp reply{
+  width: 15%;
+  height: auto;
+  float: left;
+}
+
+.comment .comment_lp image{
+  width: 25rpx;
+  height: 25rpx;
+  float: left;
+}
+.nomore{
+  height: 80rpx; line-height: 80rpx;
+  text-align: center;
+  font-size: 26rpx; color: #ccc;  
+  background: #fff; 
+}
+
+/**相关评论**/

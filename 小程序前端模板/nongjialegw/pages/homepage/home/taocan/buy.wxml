@@ -1,0 +1,115 @@
+<view class="app" hidden="{{apphiden?false:true}}" >
+ <form bindsubmit="submit" report-submit="true">
+
+  <view class="header">
+    <view class="body">
+      <view class="title"><text>游玩日期:{{day}}</text></view>
+      <view class="fangjian">{{room.title}}</view>  
+    </view>
+  </view>
+   
+  <view class="form">
+    <view class="pick">
+      <text class="lf">套餐数量</text>
+      <view class="rt">
+          <picker mode="selector" bindchange="selectnum" value="{{item}}" range="{{numArr}}">
+              <text>{{num}}</text>
+              <image src="/images/around/jiantou.png"></image>
+          </picker>
+      </view>
+    </view>
+    <view class="input">
+      <text class="lf">联系人</text>
+      <view class="rt">
+          <input name="name" bindinput="name"   placeholder="请输入联系人" />
+      </view>
+    </view>
+
+    <view class="input">
+      <text class="lf">手机号</text>
+      <view class="rt">
+          <input name="mobile"  bindinput="mobile" type="number" placeholder="请输入入住人手机号" />
+      </view>
+    </view>
+     <view class="input">
+      <text class="lf">身份证</text>
+      <view class="rt">
+          <input name="idcard"  bindinput="idcard"  placeholder="请输入身份证号码" />
+      </view>
+    </view>
+      <view class="pick">
+      <text class="lf">订单总金额</text>
+      <view class="rt">
+          <text class="price">¥{{showtotal}}</text>
+      </view>
+    </view>
+    <view wx:if="{{lijian > 0}}" class="pick">
+      <text class="lf">在线支付</text>
+      <view class="rt">
+         立减 <text class="price">¥{{lijian}}</text>
+      </view>
+    </view>
+
+     <view wx:if="{{canuseHongbao!=0}}" class="pick">
+      <text class="lf">优惠券抵扣</text>
+      <view bindtap="usercoupon" class="rt">
+          <text wx:if="{{hongbao!=0}}" class="price">¥{{hongbao}}</text>
+          <text wx:if="{{hongbao==0 && nousehongbao==0}}">有可用红包</text>
+          <image src="/images/around/jiantou.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="xuzhi">
+    <text>顾客须知</text>
+      请提至少前1小时预定 以保证您正常游玩
+  </view>
+
+  <view class="kongbai" style="height:100rpx;"></view>
+
+  <view class="footer">
+    <view class="lt">
+       <view>在线支付：¥<text>{{needpay}}</text></view>
+    </view>
+    <view class="cent">已优惠¥{{youhui}}</view>
+    <button  formType="submit" class="rt">
+     预定
+    </button>
+  </view>
+
+
+
+
+  </form>
+
+</view>
+
+
+<view  hidden="{{apphiden?true:false}}" class="couponapp">
+  <view class="bushiyong">
+        <text>不使用优惠券</text>
+        <image bindtap="nouse" hidden="{{nousehongbao?false:true}}" src="/images/around/duihaono.png"></image>
+        <image hidden="{{nousehongbao?true:false}}" src="/images/around/duihaoyes.png"></image>
+    </view>
+
+    <view wx:for="{{hongbaolist}}" class="coupon">
+      <image class="bg" src="/images/around/coupon_on.png"></image>
+      <image  class="dian" src="/images/around/coupon_dian.png"></image>
+      <view class="datas">
+          <view class="lt on">
+              <text>¥</text>{{item.money}}
+          </view>
+          <view class="ct">
+              <view class="type">
+                酒店优惠券
+              </view>
+              <text>满{{item.need_money}}元可用</text>
+              <text>{{item.way_mean}}</text>
+              <text>{{item.can_use_time}}至{{item.expir_time}}</text>
+          </view>
+          <view class="rt">
+              <text  bindtap="yesuse"  data-id="{{item.coupon_id}}" data-money="{{item.money}}"  class=" on">立即使用</text>
+          </view>
+      </view>
+    </view>
+
+</view>

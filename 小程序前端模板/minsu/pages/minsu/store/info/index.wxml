@@ -1,0 +1,26 @@
+<view class="main">
+
+
+    <view class="item">
+        <navigator url="/pages/minsu/store/info/detail">
+        <image src="/img/minsu/info_jiesao.png"></image>
+        <text>民宿介绍</text>
+        </navigator>
+    </view>
+    <view class="item">
+        <navigator url="/pages/minsu/store/info/photo">
+            <image src="/img/minsu/info_tupian.png"></image>
+            <text>民宿照片</text>
+        </navigator>
+    </view>
+
+     <view class="item">
+        <navigator url="/pages/minsu/store/info/sheshi">
+            <image src="/img/minsu/sheshi.png"></image>
+            <text>设施管理</text>
+        </navigator>
+    </view>
+
+
+
+</view>

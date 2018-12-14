@@ -1,0 +1,281 @@
+<view class="app">
+
+  <view class="header">
+    <view class="city">
+      <navigator url="/pages/public/city">
+      <text>{{cityinfo.city_name}}</text>
+      <image src="/img/hotel/jiantouxia.png"></image>
+      </navigator>
+    </view>
+    <view class="rt">
+      <view class="riqi">
+        <view class="rq_lt">
+          <navigator url="/pages/public/date">
+            <text>住{{date.bg_date1}}</text>
+            <text>离{{date.end_date1}}</text>
+          </navigator>
+        </view>
+        <image src="/img/hotel/jiantouxia.png"></image>
+      </view>
+      <image class="sousuo" src="/img/hotel/sousuo.png"></image>
+      <view class="rq_rt">
+        <navigator url="/pages/hotel/hotel/area">
+          <text>{{search!=''?search.name:'搜索酒店名、地区、地标'}}</text>
+        </navigator>
+      </view>
+      <image wx:if="{{search!=''}}" bindtap="clearsearch" class="quxiao" src="/img/hotel/x.png"></image>
+    </view>
+  </view>
+  <view class="top_kong"></view>
+
+
+
+  <view wx:for="{{datas}}" wx:for-item="hotel" class="item">
+    <navigator url="/pages/hotel/hotel/detail?id={{hotel.id}}">
+      <view class="lt">
+        <image src="{{hotel.photo}}"></image>
+      </view>
+      <view class="rt">
+        <view class="name">{{hotel.name}}</view>
+        <view class="col">
+          <text class="score">{{hotel.score}}分</text>/{{hotel.praise_num+hotel.bad_num}}条评论|{{hotel.star}}
+        </view>
+        <view class="col">
+          距您{{hotel.juli}},{{hotel.advantage}}
+        </view>
+        <view class="price">
+          <text>¥{{hotel.price}}起</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">
+    没有更多数据了
+  </view>
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">
+    查看更多
+  </view>
+
+
+   <view wx:if="{{datas==''}}" class="nodata">
+      <image src="/img/hotel/nodata.png"></image>
+      <text>宝宝心里苦，没有宝宝的住所</text>
+    </view>
+
+  <view class="h100"></view>
+
+
+  <view class="dwbg" bindtap="dwbg" hidden="{{dwbg}}"></view>
+  <view class="paixu_dialog" hidden="{{paixu?true:false}}">
+    <view class="orderitem">
+      <view class="lt">
+        <image hidden="{{order==1?false:true}}" src="/img/hotel/duihao.png"></image>
+      </view>
+      <text bindtap="orderclick" class="{{order==1?'on':''}}" data-order="1">推荐排序</text>
+    </view>
+    <view class="orderitem">
+      <view class="lt">
+        <image hidden="{{order==2?false:true}}" src="/img/hotel/duihao.png"></image>
+      </view>
+      <text bindtap="orderclick" class="{{order==2?'on':''}}" data-order="2">距离优先</text>
+    </view>
+    <view class="orderitem">
+      <view class="lt">
+        <image hidden="{{order==3?false:true}}" src="/img/hotel/duihao.png"></image>
+      </view>
+      <text bindtap="orderclick" class="{{order==3?'on':''}}" data-order="3">价格最低</text>
+    </view>
+    <view class="orderitem">
+      <view class="lt">
+        <image hidden="{{order==4?false:true}}" src="/img/hotel/duihao.png"></image>
+      </view>
+      <text bindtap="orderclick" class="{{order==4?'on':''}}" data-order="4">价格高优先</text>
+    </view>
+    <view class="orderitem">
+      <view class="lt">
+        <image hidden="{{order==5?false:true}}" src="/img/hotel/duihao.png"></image>
+      </view>
+      <text bindtap="orderclick" class="{{order==5?'on':''}}" data-order="5">好评优先</text>
+    </view>
+  </view>
+
+
+  <view class="dialog_select" hidden="{{price?true:false}}">
+    <view class="btn">
+      <text bindtap="priceclear" class="lt">清空</text>
+      <text  bindtap="priceyes" class="rt">完成</text>
+    </view>
+    <view class="content">
+      <view class="title">
+        星级选择
+      </view>
+      <view class="select">
+        <text  bindtap="star" data-id="0" class="{{star_id==0?'on':''}}">不限</text>
+        <text wx:for="{{stars}}" bindtap="star" class="{{star_id==item.id ? 'on' : ''}}" data-id="{{item.id}}">{{item.name}}</text>
+  
+      </view>
+      <view class="title">
+        价格选择
+      </view>
+      <view class="select">
+        <text bindtap="setprice" data-id="0" class="{{price_id==0?'on':''}}">不限</text>
+        <text wx:for="{{prices}}"  bindtap="setprice"   class="{{price_id==item.id ? 'on' : ''}}"  data-id="{{item.id}}">{{item.show}}</text>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="dialog_select" hidden="{{weizhi?true:false}}">
+    <view class="btn">
+      <text bindtap="wzclear" class="lt">清空</text>
+      <text bindtap="wzyes" class="rt">完成</text>
+    </view>
+    <view class="content">
+      <view class="lt">
+        <view class="ltcol {{wzselect==1?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text bindtap="wzselect" data-select="1">距离我</text></view>
+        <view class="ltcol  {{wzselect==2?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="2">行政区域</text></view>
+        <view class="ltcol  {{wzselect==3?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="3">商圈筛选</text></view>
+        <view class="ltcol {{wzselect==4?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="4">机场车站</text></view>
+        <view class="ltcol {{wzselect==5?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="5">热门景点</text></view>
+        <view class="ltcol {{wzselect==6?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="6">大学周边</text></view>
+        <view class="ltcol {{wzselect==7?'on':''}}">
+          <image src="/img/hotel/dian.png"></image><text  bindtap="wzselect" data-select="7">医院周边</text></view>
+      </view>
+      <view wx:if="{{wzselect==1}}" class="rt">
+        <view class="rtcol {{juli==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="juliclick" data-num="0">不限</text>
+        </view>
+        <view class="rtcol {{juli==500?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="juliclick" data-num="500">500米</text>
+        </view>
+        <view class="rtcol {{juli==1000?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="juliclick" data-num="1000">1000米</text>
+        </view>
+        <view class="rtcol {{juli==2000?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="juliclick" data-num="2000">2000米</text>
+        </view>
+        <view class="rtcol {{juli==3000?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text  bindtap="juliclick" data-num="3000">3000米</text>
+        </view>
+        <view class="rtcol {{juli==5000?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text  bindtap="juliclick" data-num="5000">5000米</text>
+        </view>
+      </view>
+
+      <view wx:if="{{wzselect==2}}" class="rt">
+        <view class="rtcol {{administration_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="administrationclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.administration}}" class="rtcol {{administration_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="administrationclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+
+      <view wx:if="{{wzselect==3}}" class="rt">
+        <view class="rtcol {{area_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="areaclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.area}}" class="rtcol {{area_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="areaclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+
+      <view wx:if="{{wzselect==4}}" class="rt">
+        <view class="rtcol {{station_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="stationclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.station}}" class="rtcol {{station_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="stationclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+
+      <view wx:if="{{wzselect==5}}" class="rt">
+        <view class="rtcol {{scenic_spot_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="scenicclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.scenic}}" class="rtcol {{scenic_spot_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="scenicclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+
+      <view wx:if="{{wzselect==6}}" class="rt">
+        <view class="rtcol {{colleges_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="collegesclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.colleges}}" class="rtcol {{colleges_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="collegesclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+       <view wx:if="{{wzselect==7}}" class="rt">
+        <view class="rtcol {{hospital_id==0?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="hospitalclick" data-id="0">不限</text>
+        </view>
+        <view wx:for="{{settings.hospital}}" class="rtcol {{hospital_id==item.id?'on':''}}">
+          <image src="/img/hotel/duihao.png"></image> <text bindtap="hospitalclick" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="dialog_select" hidden="{{qita?true:false}}">
+    <view class="btn">
+      <text  bindtap="qitaclear" class="lt">清空</text>
+      <text bindtap="qitayes" class="rt">完成</text>
+    </view>
+    <view class="content">
+      <view class="title">
+        设施服务
+      </view>
+      <view class="select">
+        <text wx:for="{{service}}" bindtap="serviceclick"  data-id="{{item.id}}" class="{{item.select==1?'on':''}}">{{item.name}}</text>
+      </view>
+      <view class="title">
+        出行特色
+      </view>
+      <view class="select">
+        <text class="{{special_id==0?'on':''}}">不限</text>
+        <text wx:for="{{settings.special}}"  bindtap="specialclick"   class="{{special_id==item.id ? 'on' : ''}}"  data-id="{{item.id}}">{{item.name}}</text>
+      </view>
+
+       <view class="title">
+        酒店品牌
+      </view>
+      <view class="select">
+        <text class="{{brand_id==0?'on':''}}">不限</text>
+        <text wx:for="{{settings.brand}}"  bindtap="brandclick"   class="{{brand_id==item.id ? 'on' : ''}}"  data-id="{{item.id}}">{{item.name}}</text>
+
+      </view>
+    </view>
+  </view>
+
+
+  <view class="footer">
+    <view bindtap="paixu" class="menu bd on"><text>排序方式</text>
+      <image hidden="{{paixu?false:true}}" src="/img/hotel/jiantoushang.png"></image>
+      <image hidden="{{paixu?true:false}}" src="/img/hotel/jiantouxia.png"></image>
+    </view>
+    <view bindtap="price" class="menu bd"><text>星级价格</text>
+      <image hidden="{{price?false:true}}" src="/img/hotel/jiantoushang.png"></image>
+      <image hidden="{{price?true:false}}" src="/img/hotel/jiantouxia.png"></image>
+
+    </view>
+    <view bindtap="weizhi" class="menu bd"><text>位置区域</text>
+      <image hidden="{{weizhi?false:true}}" src="/img/hotel/jiantoushang.png"></image>
+      <image hidden="{{weizhi?true:false}}" src="/img/hotel/jiantouxia.png"></image>
+    </view>
+    <view bindtap="qita" class="menu"><text>筛选</text>
+      <image hidden="{{qita?false:true}}" src="/img/hotel/jiantoushang.png"></image>
+      <image hidden="{{qita?true:false}}" src="/img/hotel/jiantouxia.png"></image>
+    </view>
+  </view>
+
+</view>

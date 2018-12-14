@@ -1,0 +1,36 @@
+<!--pages/mine/commList.wxml-->
+<view class='app'>
+  <view class='list'>
+    <view class='item'>
+      <view class='header'>
+        <image src='/img/mr.png'></image>
+        <text class='nickname'>请叫我码农哥</text>
+        <text class='date'>2017-08-11</text>
+      </view>
+      <view class='comment'>
+        <view class='content'>这里是评论的内容这里是评论的内容这里是评论的内容这里是评论的内容</view>
+        <view class='dphf'><text style='color:{{color}}'>店铺回复：</text>感谢你的关注</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='header'>
+        <image src='/img/mr.png'></image>
+        <text class='nickname'>请叫我码农哥</text>
+        <text class='date'>2017-08-11</text>
+      </view>
+      <view class='comment'>
+        <view class='content'>这里是评论的内容这里是评论的内容这里是评论的内容这里是评论的内容</view>
+        <view class='dphf'><text style='color:{{color}}'>店铺回复：</text>感谢你的支持</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='header'>
+        <image src='/img/mr.png'></image>
+        <text class='nickname'>请叫我码农哥</text>
+        <text class='date'>2017-08-11</text>
+      </view>
+    </view>
+  </view>
+</view>

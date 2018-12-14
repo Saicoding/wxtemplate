@@ -1,0 +1,13 @@
+<view class="app">
+  <form bindsubmit="formBindsubmit">
+    <view class="form">
+       <view class="textarea">
+        <text class="lf">评价内容</text>
+        <view class="rt">
+              <textarea  name="comment" auto-height placeholder="请输入内容最多500字" />
+        </view>
+      </view>
+      <button formType="submit"  class="btn">确定评论</button>
+    </view>
+  </form>
+</view>

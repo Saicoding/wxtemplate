@@ -1,0 +1,91 @@
+<view class="header">
+  <view class="post">{{datas.title}}</view>
+  <view class="price">{{datas.salary}}</view>
+  <view class="describe">
+    <view class="item">
+      <image src="/img/icon_describe_01.png"></image>
+      <text>{{datas.area}}</text>
+    </view>
+    <view class="item">
+      <image src="/img/icon_describe_02.png"></image>
+      <text>{{datas.experience}}</text>
+    </view>
+
+    <view class="item">
+      <image src="/img/icon_describe_03.png"></image>
+      <text>{{datas.education}}</text>
+    </view>
+  </view>
+
+  <view class="tags">
+    <text class="item" hidden="{{datas.is_eat==1?false:true}}">包吃</text>
+    <text class="item" hidden="{{datas.is_live==1?false:true}}">包住</text>
+    <text class="item" hidden="{{datas.weekend==1?false:true}}">双休</text>
+    <text class="item" hidden="{{datas.overtime==1?false:true}}">加班补助</text>
+    <text class="item" hidden="{{datas.vehicle==1?false:true}}">班车接送</text>
+    <text class="item" hidden="{{datas.is_bus==1?false:true}}">交通补助</text>
+    <text class="item" hidden="{{datas.is_meal==1?false:true}}">饭补</text>
+    <text class="item" hidden="{{datas.is_phone==1?false:true}}">话补</text>
+    <text class="item" hidden="{{datas.is_room==1?false:true}}">房补</text>
+    <text class="item" hidden="{{datas.is_festival==1?false:true}}">节日福利</text>
+    <text class="item" hidden="{{datas.is_wuxian==1?false:true}}">五险</text>
+    <text class="item" hidden="{{datas.is_mpf==1?false:true}}">公积金</text>
+    <text class="item" hidden="{{datas.is_bonus==1?false:true}}">年终奖</text>
+    <text class="item" hidden="{{datas.is_newyear==1?false:true}}">带薪年假</text>
+    <text class="item" hidden="{{datas.is_healthy==1?false:true}}">健康体检</text>
+    <text class="item" hidden="{{datas.is_tourism==1?false:true}}">旅游奖励</text>
+    <text class="item" hidden="{{datas.is_train==1?false:true}}">培训学习</text>
+    <text class="item" hidden="{{datas.is_shares==1?false:true}}">股票股权</text>
+  </view>
+  <view bindtap='map' class="address">
+    <text class="hint">工作地点:</text>
+    <text class="name">{{datas.address}}</text>
+  </view>
+
+</view>
+
+<navigator open-type="redirect" url="/pages/company/detail?company_id={{datas.company_id}}">
+  <view class="company">
+    <view class="icon">
+      <image src="{{datas.company_logo}}"></image>
+    </view>
+    <view class="info">
+      <view class="name">{{datas.company_name}}</view>
+      <view class="labels">
+        <text>{{datas.company_industry}}</text>
+        <text class="vline">|</text>
+        <!-- <text>已上市</text> -->
+        <text class="vline">|</text>
+        <text>{{datas.company_scale}}</text>
+      </view>
+    </view>
+    <view class="arrow">
+      <image src="/img/pk_jt.png"></image>
+    </view>
+  </view>
+</navigator>
+
+<view class="job_info">
+  <view class="font_01">岗位要求</view>
+  <text class="font_03">{{datas.describe}}</text>
+</view>
+
+<view class="contact_info">
+  <view class="font_01">联系方式</view>
+  <view class="item">
+    <text class="hint">联系人</text>
+    <text class="content">{{datas.name}}</text>
+  </view>
+
+  <view class="item">
+    <text class="hint">联系电话</text>
+    <text class="content">{{datas.tel}}</text>
+  </view>
+</view>
+
+<view class="reminder_info">
+  官方提醒：用人单位以任何名义向应聘者收取费用都属于违法行为，请提高警惕，谨防上当受骗
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class="kongbai"></view>
+<button class="btn_apply" bindtap="applyPost">申请职位</button>

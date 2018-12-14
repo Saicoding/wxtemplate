@@ -1,0 +1,27 @@
+<!--pages/mine/card.wxml-->
+<view class="menu">
+  <text bindtap='onclick_menu' data-id="0" style="{{cat == 0 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">全部</text>
+  <text bindtap='onclick_menu' data-id="1" style="{{cat == 1 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">未使用</text>
+  <text bindtap='onclick_menu' data-id="2" style="{{cat == 2 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">已使用</text>
+  <text bindtap='onclick_menu' data-id="3" style="{{cat == 3 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">已过期</text>
+</view>
+
+<view class='ditem' wx:for="{{datas}}">
+  <view class='dtview card_bg_03'>
+    <view class='dface'>
+      <image src='/img/pics/002.jpg'></image>
+    </view>
+    <view class='dcontent'>
+      <view class='dtitle'>{{item.money}}元</view>
+      <view class='dinfo'>{{item.way_mean}}</view>
+    </view>
+    
+  </view>
+  <view class='dbview'>
+    <view class='ldb'>有限期至{{item.expir_time}}</view>
+  </view>
+</view>
+
+<view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+<view wx:if="{{datas==''&&more==0}}" class="nomore">暂无数据</view>

@@ -1,0 +1,44 @@
+<form bindsubmit="formBindsubmit" >
+  <view class="header">
+     <view class="lt">
+      <picker mode="date" bindchange="selectdate" start="{{bg_date}}" end="">
+      <text class="screen_text">{{date}}</text>
+      <image class="screen_image" src="/images/around/jiantouxia.png"></image>
+      </picker>     
+    </view>
+
+    <view class="rt">
+          <picker bindchange="seletaocan" range="{{taocans_array}}">
+      <text class="screen_text zi">{{taocan_name}}</text>
+      <image class="screen_image" src="/images/around/jiantouxia.png"></image>
+     </picker>  
+    </view>
+  </view>
+
+  <view class="kongbai"></view>
+
+
+
+  <view class="room_list" wx:for="{{datas}}">
+    <view class="lt">
+      <image src="{{item.photo}}"></image>
+    </view>
+    <view class="ct">
+      <view class="title">{{item.title}} </view>
+      <view><text class="sy">剩余{{item.surplus_num}}/{{item._num_init}}</text></view>
+    </view>
+    <view class="rt">
+      <input name="{{item.package_id}}" value="{{item.price}}" />
+    </view>
+  </view>
+
+  <view hidden="true" class="nodata">
+    <image src="/images/around/nodata.png"></image>
+    <text>还没有任何套餐</text>
+  </view>
+
+
+  <view class="fabu">
+    <button formType="submit" > 确定修改</button>
+  </view>
+</form>

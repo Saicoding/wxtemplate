@@ -1,0 +1,109 @@
+/**app.wxss**/
+page {
+  background: #f5f5f5;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  overflow: hidden;
+}
+
+.swiper, .slide-image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.jszc {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  text-align: center;
+  color: #ccc;
+}
+
+.kongbai {
+  height: 100rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.app .nodata {
+  height: 400rpx;
+  width: 100%;
+}
+
+.app .nodata image {
+  height: 200rpx;
+  width: 200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.app .nodata text {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color: #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx solid #e2e2e2;
+}
+
+.footer .ft_item {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  color: #666;
+}
+
+.footer .ft_item .image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+  font-size: 45rpx;
+}
+
+.footer .ft_item image {
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.footer  .ft_item text {
+  text-align: center;
+  font-size: 22rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.more, .nomore {
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  background: #fff;
+  width: 100%;
+  border-top: 1rpx #f5f5f5 solid;
+}
+
+.nomore {
+  color: #ccc;
+}

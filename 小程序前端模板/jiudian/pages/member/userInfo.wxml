@@ -1,0 +1,40 @@
+<!--pages/member/userInfo.wxml-->
+<view class="app">
+  <view class="uinfo" style="background:{{color}}">
+    <view class="content">
+      <view class="face">
+        <image src="{{userinfo.face=='' ? '/img/hotel/login_no.png':userinfo.face}}"></image>
+      </view>
+      <view class="nickname">{{userinfo.nick_name}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="col">
+  <view class="lt">姓名</view>
+  <input class="rt" placeholder="请输入姓名" />
+</view>
+
+<view class="col">
+  <view class="lt">性别</view>
+  <picker class="rt" bindchange="bindPickerChange" value="{{cate}}" range="{{array}}">
+    <text>{{array[cate] ? array[cate] : '请选择性别'}} </text>
+  </picker>
+</view>
+
+<view class="col">
+  <view class="lt">手机号</view>
+  <input class="rt" placeholder="请输入手机号" />
+</view>
+
+<view class="col">
+  <view class="lt">地址</view>
+  <input class="rt" placeholder="请输入地址" />
+</view>
+
+<view class="col">
+  <view class="lt">详细介绍下自己</view>
+  <input class="rt" placeholder="请输入自我介绍" />
+</view>
+
+<button class="btn_save" style="background:{{color}}">提交保存</button>

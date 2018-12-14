@@ -1,0 +1,51 @@
+<view  style="background:{{color}}" class="header">
+    <image src='{{setting.logo ? setting.logo  : "/img/logo.png"}}'></image>
+    <view class="name">{{setting.app_name}}</view>    
+</view>
+
+<view class="yyzt">
+    <text>营业状态</text>
+    <switch value="1"  checked='{{data.is_online==1?true:false}}' bindchange="online"></switch>
+</view>
+
+<view class="manage">
+    <navigator url="/pages/manage/kucun">
+    <view class="item">
+        <text class="iconfont icon-shangpin"></text>
+        <text>库存管理</text>
+    </view>
+    </navigator>
+    <navigator url="/pages/manage/order">
+    <view class="item">
+        <text class="iconfont icon-dingdan"></text>
+        <text>订单管理</text>
+    </view>
+    </navigator>
+</view>
+
+  <view class="jszc">技术支持:www.erre7.cn</view>
+<view class="kongbai"></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/mall/index">
+      <view class="image iconfont icon-shouye"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  
+  <view  class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-dingdan"></view>
+      <text>订单</text>
+    </navigator>
+  </view>
+   <view style="color:{{color}}" class="ft_item">
+      <navigator  open-type="redirect"  url="/pages/manage/index">
+         <view class="image iconfont icon-iconfontguanlixitong"></view>
+        <text>后台</text>
+      </navigator>
+    </view>
+
+</view>

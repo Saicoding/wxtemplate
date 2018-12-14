@@ -1,0 +1,73 @@
+<view class="app">
+  <swiper style='height:360rpx;' indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <image src="{{item.photo}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+
+  <view class='module'>
+    <navigator url='/pages/index/synopsis'>
+      <view class='item'>
+        <view class='image iconfont icon-jianjie:before' style='color:{{color}};'></view>
+        <view class='name'>企业简介</view>
+        <view class='bdrt'></view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/product/index'>
+      <view class='item'>
+        <view class='image iconfont icon-chanpin:before' style='color:{{color}};'></view>
+        <view class='name'>产品展示</view>
+        <view class='bdrt'></view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/case/index'>
+      <view class='item'>
+        <view class='image iconfont icon-fangan-:before' style='color:{{color}};'></view>
+        <view class='name'>解决方案</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/dynamic/index'>
+      <view class='item'>
+        <view class='image iconfont icon-xin-wen:before' style='color:{{color}};'></view>
+        <view class='name'>新闻动态</view>
+        <view class='bdtt'></view>
+        <view class='bdrt'></view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/consult/index'>
+      <view class='item'>
+        <view class='image iconfont icon-guanyu:before' style='color:{{color}};'></view>
+        <view class='name'>关于我们</view>
+        <view class='bdtt'></view>
+        <view class='bdrt'></view>
+      </view>
+    </navigator>
+
+    <view class='item' bindtap='calling'>
+      <view class='image iconfont icon-lianxiwomen2:before' style='color:{{color}};'></view>
+      <view class='name'>联系我们</view>
+      <view class='bdtt'></view>
+    </view>
+  </view>
+
+  <view class="jszc">技术支持：[巅峰互联]www.erre7.cn</view>
+  <view style="height:100rpx;"></view>
+
+  <view class="bottom">
+    <navigator url="/pages/index/liuyan">
+      <view class="lt">
+        <image src="/imgs/yj.png"></image>
+        <text>在线咨询</text>
+      </view>
+    </navigator>
+    <view class="rt" style="background:{{color}}" bindtap="calling">
+      <image src="/imgs/tel.png"></image>
+      <text>拨打电话</text>
+    </view>
+  </view>
+
+</view>

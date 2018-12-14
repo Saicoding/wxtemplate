@@ -1,0 +1,24 @@
+
+
+<view class="item">
+  <navigator open-type="reLaunch" url="/pages/index">
+  <image class="pic1" src="/img/types.png"></image>
+  <text class="cn">全部分类</text>
+  <image class="pic2" src="/img/jiantou2.png"></image>
+  </navigator>
+</view>
+
+<view wx:for="{{datas}}" class="item">
+  <navigator open-type="reLaunch" url="/pages/index?p={{item.photo}}&n={{item.type_name}}&id={{item.type_id}}">
+  <image class="pic1" src="{{item.photo}}"></image>
+  <text class="cn">{{item.type_name}}</text>
+  <image class="pic2" src="/img/jiantou2.png"></image>
+  </navigator>
+</view>
+
+
+
+
+
+
+

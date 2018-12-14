@@ -1,0 +1,226 @@
+/* index.wxss */
+
+.header{
+  height: 400rpx;
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background:-webkit-gradient(linear, 0 0, 0 bottom, from(#FF6666), to(rgba(255, 102, 102, 0.5)));  
+  position: relative;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.header .top{
+  height: 150rpx;
+  margin-top: 30rpx;
+  width: 90%;
+  margin-left: 5%;
+  float: left;
+}
+.header .top .right{
+  float: left;
+  margin-left: 20rpx;
+  width: 400rpx;
+  height: 150rpx;
+  overflow: hidden;
+}
+.header .company{
+   font-size: 28rpx;
+   height: auto;
+   overflow: hidden;
+   float: left;
+   width: 100%;
+   margin-top: 10rpx;
+}
+.header .info{
+  margin-top: 10rpx;
+}
+.header .vip{
+  padding: 5rpx 10rpx;
+  float: left; 
+  border: 1rpx solid #fff;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+.header .rz{
+  float: left; margin-left: 20rpx;
+}
+.header .rz image{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+.header .rz text{
+  float: left;
+  margin-top: 12rpx;
+}
+.header .novip{
+  padding: 5rpx 10rpx;
+  float: left; margin-left: 10rpx;
+  border: 1rpx solid #ccc;
+  color: #ccc;
+  border-radius: 10rpx;
+}
+
+.header .top .logo{
+  height: 150rpx;
+  width: 150rpx;
+  background: #fff;
+  float: left;
+}
+.header .top .logo image{
+  width: 130rpx;
+  height: 130rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.header .share{
+  width: 80rpx;
+  height: 80rpx;
+  position:  absolute;
+  right: 10rpx;
+  top: 30rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  background: rgba(0, 0, 0, 0);
+}
+.header .content{
+  float: left;
+  width: 90%;
+  margin-top: 30rpx;
+  margin-left: 5%;
+}
+.header .content .col{
+  height: 36rpx;
+  line-height: 36rpx;
+  width: 100%;
+  overflow: hidden;
+}
+.share image{
+  height: 40rpx;
+  width: 40rpx;
+}
+.share text{
+  display: block;
+}
+.header .qrcode{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 130rpx;
+}
+.header .qrcode image{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.nums{
+  height: auto;
+  width: 96%;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.nums .item{
+  float: left;
+  width: 24.5%;
+  height: 80rpx;
+  text-align: center;
+}
+
+.nums .item image{
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+.nums .item text{
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.photo,.detail{
+  width: 96%;
+  margin-left: 2%;
+  background: #fff;
+  height: auto;
+   overflow: hidden;
+   padding-bottom: 20rpx;
+   margin-top: 20rpx;
+   float: left;
+}
+
+.photo .title,.detail .title{
+    font-size: 26rpx;
+    width: 96%;
+    margin-left: 2%;
+    border-bottom: 1rpx solid #e2e2e2;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.detail .content{
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 10rpx;
+  line-height: 40rpx;
+}
+
+.photo .pics{
+    margin-top: 10rpx;
+    width: 96%;
+    height: 200rpx;
+    overflow: hidden;
+    margin-left: 2%;
+    white-space: nowrap;
+}
+
+.photo .pics image{
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+}
+
+.photo .pics{
+    margin-top: 10rpx;
+    width: 96%;
+    height: 200rpx;
+    overflow: hidden;
+    margin-left: 2%;
+    white-space: nowrap;
+}
+
+
+.bt_list{
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-top: 1rpx solid #e2e2e2; 
+}
+
+.bt_list view{
+  width: 50%;
+  float: left;
+  border-radius: 0rpx;
+  border:0rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+}
+.bt_list .yy{
+  background: #FF6666;
+  color:#fff;
+}

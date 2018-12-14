@@ -1,0 +1,38 @@
+<!-- 搜索简历 -->
+<view class="header">
+
+  <view class="search">
+    <form bindsubmit="searchJob">
+      <input name="keyword" type="text" placeholder="请输入技能" />
+      <button form-type="submit">搜索</button>
+    </form>
+  </view>
+  <view id="clouds2">
+    <view animation="{{animationData}}" class="cloud1"></view>
+    <view animation="{{animationData}}" class="cloud2"></view>
+    <view animation="{{animationData}}" class="cloud3"></view>
+  </view>
+</view>
+
+<view class="main">
+
+  <view class="citem" wx:for="{{datas}}">
+    <view class="header">
+      <view class="lt">{{item.name}} | {{item.sex}} | {{item.birthday}}岁</view>
+      <view class="rt">8月19日</view>
+    </view>
+    <view class="body">
+      <view class="lb">现居住地:{{item.residence}}  月薪:{{item.salary}}元</view>
+      <view class="rb"></view>
+    </view>
+    <view class="bottoms">
+      <view class="ld">联系电话：{{item.mobile}}</view>
+      <view class="rd">
+        <navigator url="/pages/member/yulan?user_id={{item.user_id}}">
+          <text class="alert">立即查看</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</view>

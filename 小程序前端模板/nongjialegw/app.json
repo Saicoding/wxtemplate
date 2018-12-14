@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/homepage/index",
+    "pages/homepage/home/index",
+    "pages/homepage/home/taocan/detail",
+    "pages/homepage/home/taocan/buy",
+    "pages/homepage/me/index",
+    "pages/homepage/me/order/index",
+    "pages/homepage/me/order/detail1",
+    "pages/homepage/me/order/detail2",
+    "pages/homepage/me/order/comment",
+    "pages/homepage/tuike/index",
+    "pages/homepage/tuike/ranking",
+    "pages/homepage/home/details/imageText/index",
+    "pages/homepage/home/details/video/index",
+    "pages/homepage/home/taocan/buy2",
+    "pages/homepage/home/taocan/comment",
+    "pages/homepage/home/taocan/cancel1",
+    "pages/homepage/home/taocan/cancel",
+    "pages/public/login",
+    "pages/public/city",
+    "pages/public/date",
+    "pages/homepage/coupon",
+    "pages/homepage/me/coupon/coupon",
+    "pages/public/date2"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1ba8b9",
+    "navigationBarTitleText": "巅峰互联农家乐商家主页",
+    "navigationBarTextStyle":"white"
+  },
+
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#1ba8b9",
+    "borderStyle": "white",
+    "backgroundColor": "#F7F7F9",
+    "list": [
+      {
+        "pagePath": "pages/homepage/index",
+        "iconPath": "image/homepage/btn_tabs_01_off.png",
+        "selectedIconPath": "image/homepage/btn_tabs_01_on.png",
+        "text": "首页"
+      },
+          {
+            "pagePath": "pages/homepage/coupon",
+            "iconPath": "image/homepage/btn_juan_no.png",
+            "selectedIconPath": "image/homepage/btn_juan.png",
+            "text": "优惠券"
+          },
+      {
+        "pagePath": "pages/homepage/me/index",
+        "iconPath": "image/homepage/btn_tabs_03_off.png",
+        "selectedIconPath": "image/homepage/btn_tabs_03_on.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

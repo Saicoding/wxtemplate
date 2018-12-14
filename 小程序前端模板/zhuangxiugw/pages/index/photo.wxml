@@ -1,0 +1,30 @@
+<!--pages/album/index.wxml-->
+<view class='content'>
+  <view class="left">
+    <block wx:for="{{datas}}" wx:key="">
+      <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+    </block>
+  </view>
+  <view class="right">
+    <block wx:for="{{datas}}" wx:key="">
+      <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+    </block>
+  </view>
+</view>
+
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+    <image class="item-img" src="{{photo}}" mode="widthFix"></image>
+  </view>
+</template>
+
+<!-- <image mode='widthFix' src='/img/pics/001.jpg'></image>
+  <image mode='widthFix' src='/img/pics/002.jpg'></image>
+  <image mode='widthFix' src='/img/pics/003.jpg'></image>
+  <image mode='widthFix' src='/img/pics/004.jpg'></image>
+  <image mode='widthFix' src='/img/pics/005.jpg'></image>
+  <image mode='widthFix' src='/img/pics/006.jpg'></image>
+  <image mode='widthFix' src='/img/pics/007.jpg'></image>
+  <image mode='widthFix' src='/img/pics/008.jpg'></image>
+  <image mode='widthFix' src='/img/pics/009.jpg'></image> -->

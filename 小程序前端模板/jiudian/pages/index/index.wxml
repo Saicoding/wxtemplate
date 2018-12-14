@@ -1,0 +1,191 @@
+<!--index.wxml-->
+
+<view class="main">
+  <view class="banner">
+    <image src="{{datas.banner}}"></image>
+    <text class="title">{{datas.hotel_name}}</text>
+  </view>
+
+  <view bindtap='map' class="address">地址：{{datas.address}}</view>
+
+  <view class="menu">
+    <text bindtap="tab" data-type="0" class="{{type == 0 ? 'active' : ''}}" style='color:{{type == 0 ? color : ""}}; border-bottom-color:{{type == 0 ? color : ""}}'>预订</text>
+    <text bindtap="tab" data-type="1" class="{{type == 1 ? 'active' : ''}}" style='color:{{type == 1 ? color : ""}}; border-bottom-color:{{type == 1 ? color : ""}}'>住客点评</text>
+    <text bindtap="tab" data-type="2" class="{{type == 2 ? 'active' : ''}}" style='color:{{type == 2 ? color : ""}}; border-bottom-color:{{type == 2 ? color : ""}}'>酒店详情</text>
+  </view>
+  <view class="yuding" hidden="{{type == 0? false: true}}">
+    <view class="date">
+      <navigator url="/pages/public/date">
+        <view class="rudian">
+          <view class="ytitle">入住</view>
+          <view class="ydate" style="color:{{color}}">{{date.bg_date1}}</view>
+        </view>
+      </navigator>
+      <view class="vline"></view>
+      <navigator url="/pages/public/date">
+        <view class="lidian">
+          <view class="ytitle">离店</view>
+          <view class="ydate" style="color:{{color}}">{{date.end_date1}}</view>
+        </view>
+      </navigator>
+      <view class="count">共{{date.day2}}晚</view>
+    </view>
+    <view class="list">
+      <view class="detail" wx:for-index="index" wx:for="{{lists}}" wx:for-item="item">
+        <view class="item">
+          <view class="lt">
+            <image bindtap="open_view" data-id="{{item.id}}" src="{{item.photo}}"></image>
+          </view>
+          <view class="mt" bindtap="open_view" data-id="{{item.id}}">
+            <view class="ntitle">{{item.title}}</view>
+            <view class="ndetail">{{item.area}}平方米</view>
+          </view>
+          <view class="rt">
+            <text bindtap="open_view" data-id="{{item.id}}" class="price">yen{{item.price}} </text>
+            <text bindtap="open_view" data-id="{{item.id}}" class="hint">起</text>
+            <image bindtap="open_view" data-id="{{item.id}}" src="{{item.is_show==1? '/images/icon_arrow_bottom.png':'/images/icon_arrow_top.png'}}"></image>
+          </view>
+        </view>
+
+        <view class="intro" hidden="{{item.is_show==1?false:true}}">
+          <view class="lt">
+            <view class="ititle">{{item.title}}</view>
+            <view class="idetail">
+              <text class="tv01">{{item.is_cancel==0?"不可取消":"可取消"}}</text>
+              <text class="tv02">预付</text>
+            </view>
+          </view>
+          <view class="rt">
+            <text class="iprice">yen{{item.price}} </text>
+            <text class="ihint">起</text>
+            <view class="idetails">
+              <view class="dtv01" data-id="{{index}}" bindtap="show_detail" style="background:{{color}}">订</view>
+              <view class="dtv02" data-id="{{index}}" bindtap="show_detail" style="color:{{color}}">预付</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{lists!=''&&more==0}}" class="nomore">
+      没有更多数据了
+    </view>
+    <view bindtap="more" data-type="{{type}}" wx:if="{{lists!=''&&more==1}}" class="more">
+      查看更多
+    </view>
+    <view wx:if="{{lists==''}}" class="nodata">
+      <image src="/images/nodata.png"></image>
+      <text>宝宝心里苦，没有宝宝的住所</text>
+    </view>
+
+  </view>
+
+
+  <!-- <view class="score">
+      <text class="snum">5</text>
+      <text class="sfen">分</text>
+    </view> -->
+
+  <view class="comment" hidden="{{type == 1? false: true}}">
+    <view class="cnum">全部评论{{show_comment_num}}条</view>
+    <view class="detail bdbt" wx:for="{{comments}}">
+      <view class="tit bdbt">
+        <view class="lt">
+          <image src="{{item.user_face}}"></image>
+          <text>{{item.user_nick_name}}</text>
+        </view>
+        <view class="rt">
+          {{item.content_time}}
+        </view>
+      </view>
+      <view class="content">{{item.content}}</view>
+      <view class="photo">
+        <image wx:for="{{item.photos}}" wx:for-item="photo" src="{{photo}}" data-urls='{{item.photos}}' bindtap='lookphoto' data-url='{{photo}}'></image>
+      </view>
+    </view>
+
+    <view bindtap="loadMore" hidden="{{type==1?false:true}}" wx:if="{{comments!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+    <view wx:if="{{comments!=''&&more==0}}" hidden="{{type==1?false:true}}" class="nomore">没有数据了</view>
+
+  </view>
+
+  <view class="jddetail" hidden="{{type == 2? false: true}}">
+    <view class="dheader">酒店服务</view>
+    <view class="tags">
+      <view class="item margin_right_05" style="color:{{color}}" wx:for="{{datas.tages}}">{{item}}</view>
+    </view>
+
+    <view class="dheader">酒店介绍</view>
+    <view class="dcontent">{{datas.describe}}</view>
+
+  </view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view style="color:{{color}}" class="ft_item">
+      <navigator open-type="redirect" url="/pages/index/index">
+        <view class="image iconfont icon-jiudian"></view>
+        <text>酒店</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/index/coupon">
+        <view class="image iconfont icon-0007:before"></view>
+        <text>优惠券</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/member/index">
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class="dwbg" hidden="{{app_screen?true:false}}"></view>
+
+<view class="item_detail" hidden="{{detail?true:false}}">
+  <view class="tops">
+    <view class="lt">
+      <view class="title">{{currItem.title}}</view>
+      <view class="detail">{{currItem.area}}平方米</view>
+    </view>
+    <view class="rt">
+      <image src="/images/close.png" bindtap="close_screen"></image>
+    </view>
+  </view>
+
+  <view class="tags">
+    <view class="item margin_right_05" style="color:{{color}}">居住{{currItem.people_num}}人</view>
+    <view class="item margin_right_05" style="color:{{color}}">{{currItem.floor}}</view>
+    <view class="item" style="color:{{color}}">{{currItem.area}}平方米</view>
+  </view>
+
+  <view class="tags">
+    <view class="item margin_right_05" style="color:{{color}}" hidden="{{currItem.is_wifi== 1?false:true}}">免费Wifi</view>
+    <view class="item margin_right_05" style="color:{{color}}" hidden="{{currItem.is_breakfast==1?false:true}}">有早餐</view>
+    <view class="item" style="color:{{color}}" hidden="{{currItem.is_window==1?false:true}}">有窗户</view>
+  </view>
+
+  <view class="xuzhi">预订须知</view>
+
+  <view class="item_content">
+    <view class="lt">预付</view>
+    <view class="rt">立即线上支付</view>
+  </view>
+
+  <view class="item_content">
+    <view class="lt">{{currItem.is_cancel==0?"不可取消":"可取消"}}</view>
+    <view class="rt">{{currItem.cancel}}</view>
+  </view>
+
+  <view class="bview">
+    <view class="lb">yen{{currItem.price}}</view>
+    <view class="rb" bindtap="yuyue" style="background:{{color}}">立即预订</view>
+  </view>
+</view>

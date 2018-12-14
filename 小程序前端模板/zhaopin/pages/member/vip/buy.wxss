@@ -1,0 +1,78 @@
+.product{
+  width: 96%;
+  margin-left: 2%;
+  height: 100%;
+  background: #fff;
+  margin-top: 20rpx; 
+}
+
+.product .item{
+  width: 98%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.product .item .name{
+  font-size: 28rpx;
+  font-weight: bold;
+  float: left;
+  width: 120rpx;
+  margin-left: 10rpx;
+}
+
+.product .item .rj{
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+  width: 180rpx;
+}
+.product .item .price{
+  font-size:  32rpx;
+  width: 150rpx;
+  font-weight: bold;
+  float: left;
+  margin-left: 180rpx;
+}
+.product .item .label{
+  float: left;
+  margin-left: 10rpx;
+}
+
+.btn{
+  height: 60rpx;
+  width: 600rpx;
+  color: #fff;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.duanluo{
+  height: auto;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fff; 
+}
+.duanluo .title{
+  width: 96%;
+  margin-left: 2%;
+  padding-left:10rpx; 
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.duanluo .content{
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  border-top: 1rpx solid #f2f2f2;
+}
+.duanluo .content view{
+  line-height: 50rpx;
+  height: auto;
+  overflow: hidden;
+}

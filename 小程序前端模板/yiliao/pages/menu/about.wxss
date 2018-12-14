@@ -1,0 +1,46 @@
+/* pages/menu/about.wxss */
+.app .guanyu {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.app .guanyu .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  border-bottom: 1rpx #e2e2e2 solid;
+  position: relative;
+}
+
+.app .guanyu .col {
+  margin-left: 20rpx;
+  height: auto;
+  line-height: 50rpx;
+  font-size: 26rpx;
+}
+
+.app .guanyu .content {
+  padding: 20rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.ditu{
+  width: 96%;
+  height: 100%;
+  padding: 0 2%;
+  padding-top: 15rpx;
+}
+
+.app .guanyu .title .goto{
+  width: auto;
+  height: auto;
+  margin-left: 30rpx;
+  font-size: 26rpx;
+  position: absolute;
+  right: 25rpx;
+}

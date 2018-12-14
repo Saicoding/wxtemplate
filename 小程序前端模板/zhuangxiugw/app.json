@@ -1,0 +1,35 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/index/join",
+    "pages/activity/index",
+    "pages/activity/join",
+    "pages/activity/detail",
+    "pages/faxian/news",
+    "pages/faxian/details",
+    "pages/faxian/imageText/index",
+    "pages/faxian/video/index",
+    "pages/index/photo",
+    "pages/information/index",
+    "pages/information/detail",
+    "pages/designer/photo",
+    "pages/album/index",
+    "pages/tuan/index",
+    "pages/tuan/detail",
+    "pages/gd/index",
+    "pages/gd/detail",
+    "pages/designer/index",
+    "pages/designer/detail",
+    "pages/gd/join",
+    "pages/designer/join",
+    "pages/tuan/join"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰应用装修官网",
+    "navigationBarTextStyle": "black"
+  }
+}

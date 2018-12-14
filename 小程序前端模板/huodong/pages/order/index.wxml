@@ -1,0 +1,71 @@
+<!--order.wxml-->
+<view class="app">
+  <view class="menu">
+    <text bindtap="tab" data-type="0" style='color:{{type==0? color: "#000"}}; border-bottom-color:{{type==0? color: "#fff"}}; border-bottom-width: 5rpx; border-bottom-style: solid;'>全部</text>
+    <text bindtap="tab" data-type="1" style='color:{{type==1? color: "#000"}}; border-bottom-color:{{type==1? color: "#fff"}}; border-bottom-width: 5rpx; border-bottom-style: solid;'>有效单</text>
+    <text bindtap="tab" data-type="2" style='color:{{type==2? color: "#000"}}; border-bottom-color:{{type==2? color: "#fff"}}; border-bottom-width: 5rpx; border-bottom-style: solid;'>待支付</text>
+    <text bindtap="tab" data-type="3" style='color:{{type==3? color: "#000"}}; border-bottom-color:{{type==3? color: "#fff"}}; border-bottom-width: 5rpx; border-bottom-style: solid;'>退款单</text>
+  </view>
+  <view class="order" wx:for="{{order}}">
+    <navigator url="/pages/order/detail?id={{item.order_id}}">
+      <view class="product_type">
+        <image src="/images/around/qianggouorder.png"></image>
+        <text class="gtype">抢购</text>
+        <text class="type">{{item.status_mean}}</text>
+      </view>
+      <view class="product">
+        <text class="info">{{item.taocan_name}}</text>
+        <view class="info">
+          <text>{{item.package_name}}x{{item.package_num}}</text>
+          <text class="price">yen{{item.total_price}}</text>
+        </view>
+        <view class="info">{{item.name}}/{{item.mobile}}</view>
+        <view class="info">出行时间{{item.play_time}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view wx:if="{{order!= ''&& more==0}}" class="nomore">
+  没有更多数据了
+</view>
+<view bindtap="more" data-type="{{type}}" wx:if="{{order!=''&&more==1}}" class="more">
+  查看更多
+</view>
+<view wx:if="{{order== '' }}" class="nodata">
+  <image src="/images/around/nodata.png"></image>
+  <text>没有更多订单了</text>
+</view>
+
+<view class="jszc">技术支持：【巅峰互联】www.erre7.cn</view>
+<view class='kongbai'></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type='redirect' url='/pages/index/home'>
+      <view class="image iconfont icon-shouye:before"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type='redirect' url='/pages/destination/index'>
+      <view class="image iconfont icon-mudedi:before"></view>
+      <text>目的地</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type='redirect' url='/pages/find/index'>
+      <view class="image iconfont icon-faxian:before"></view>
+      <text>发现</text>
+    </navigator>
+  </view>
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-dingdan:before"></view>
+    <text>订单</text>
+  </view>
+  <view class="ft_item">
+    <navigator open-type='redirect' url='/pages/mine/index'>
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

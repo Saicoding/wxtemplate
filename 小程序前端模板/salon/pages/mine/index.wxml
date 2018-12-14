@@ -1,0 +1,69 @@
+<!--index.wxml-->
+
+<view class='nologin' hidden='true'>
+  <view class='unlogin'>立即登录</view>
+</view>
+
+<view class='login'>
+  <view class='lt'>
+    <view class='wh'>您好</view>
+    <view class='name'>{{userinfo.nick_name}}</view>
+  </view>
+  <view class='rt'>
+    <image src='{{userinfo.face}}'></image>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='ctitle'>预约·卡劵</view>
+  <navigator url='/pages/mine/yuyue'>
+    <view class='citem'>
+      <image src='/img/icon_yuyue.png'></image>
+      <text>我的预约</text>
+    </view>
+  </navigator>
+
+  <navigator url='/pages/mine/card'>
+    <view class='citem'>
+      <image src='/img/icon_card.png'></image>
+      <text>我的卡劵</text>
+    </view>
+  </navigator>
+
+  <navigator url='/pages/pay/index'>
+    <view class='citem'>
+      <image src='/img/icon_pay.png'></image>
+      <text>去付款</text>
+    </view>
+  </navigator>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-APPtubiao-:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/card/index">
+      <view class="image iconfont icon-qiajuan:before"></view>
+      <text>卡劵</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/works/index">
+      <view class="image iconfont icon-zuopin:before"></view>
+      <text>作品</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+    <text>我的</text>
+  </view>
+</view>

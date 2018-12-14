@@ -1,0 +1,79 @@
+/* pages/mine/commList.wxss */
+.app .list{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.app .list .item{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.app .list .item .header{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 4%;
+}
+
+.app .list .item .header image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 15rpx 0;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.app .list .item .header .nickname{
+  width: 62%;
+  height: auto;
+  padding: 0 2%;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .list .item .header .date{
+  width: auto;
+  height: auto;
+  float: right;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.app .list .item .comment{
+  width: 82%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left:  14%;
+  padding-right: 4%;
+  overflow: hidden;
+}
+
+.app .list .item .comment .content{
+  color: #000;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.app .list .item .dphf{
+  width: 96%;
+  height: auto;
+  margin-right: 4%;
+  margin-top: 20rpx;
+  padding: 15rpx 20rpx;
+  background: #f5f5f5;
+  float: left;
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.app .list .item .dphf text{
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+}

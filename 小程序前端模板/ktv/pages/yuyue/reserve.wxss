@@ -1,0 +1,107 @@
+/* pages/yuyue/reserve.wxss */
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.app .baseinfo{
+  width: 92%;
+  height: auto;
+  padding: 20rpx 4%;
+  margin-bottom: 20rpx;
+  background: #fff;
+  overflow: hidden;
+ 
+}
+
+.app .baseinfo .lt{
+  width: 25%;
+  height: 140rpx;
+  float: left;
+}
+
+.app .baseinfo .lt .thumb{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.app .baseinfo .rt{
+  width: 75%;
+  height: 140rpx;
+  float: right;
+}
+
+.app .baseinfo .rt .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  margin-top: 15rpx;
+  color: #000;
+}
+
+.app .baseinfo .rt .uprice{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.app .baseinfo .rt .uprice text{
+  font-size: 32rpx;
+  margin: 0 8rpx;
+}
+
+.app .item {
+  width: 92%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 4%;
+  border-bottom: 1rpx #f5f5f5 solid;
+  background: #fff;
+}
+
+.app .item .name {
+  width: 25%;
+  height: 100rpx;
+  font-size: 28rpx;
+  float: left;
+}
+
+.app .item input {
+  width: auto;
+  min-width: 75%;
+  max-width: 75%;
+  height: 100rpx;
+  float: right;
+  text-align: right;
+  font-size: 28rpx;
+}
+
+.app .item .content {
+  width: auto;
+  height: 100rpx;
+  float: right;
+  text-align: right;
+  font-size: 28rpx;
+}
+
+.app .item .content .price {
+  font-size: 28rpx;
+  margin-right: 5rpx;
+}
+
+.app .sure {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 0;
+  background: #7ccd7c;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}

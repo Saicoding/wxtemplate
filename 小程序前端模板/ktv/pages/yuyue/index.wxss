@@ -1,0 +1,44 @@
+/* pages/yuyue/index.wxss */
+.app{
+  width: 100%;
+  height: auto;
+}
+
+.app .item{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+  padding-top: 20rpx;
+  background: #fff;
+}
+
+.app .item image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.app .item .info{
+  width: 60%;
+  height: 200rpx;
+  position: absolute;
+  top: 100rpx;
+  background: rgba(0, 0, 0, 0.5);
+  left: 20%;
+  border: 8rpx rgba(255, 255, 255, 0.5) solid;
+}
+
+.app .item .info .type{
+  width: 100%;
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  margin-top: 40rpx;
+}
+
+.app .item .info .price{
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}

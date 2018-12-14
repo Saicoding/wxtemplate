@@ -1,0 +1,79 @@
+/* 一级选择器 */
+.app{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  overflow: hidden;
+}
+
+.app .header{
+  width: 92%;
+  height: 100rpx;
+  padding: 0 4%;
+  position: fixed;
+  top: 0;
+  background: #eeeeee;
+  z-index: 999;
+}
+
+.app .header .lt{
+  width: 70%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+}
+.app .header .rt{
+  width: 30%;
+  height: 100rpx;
+  float: right;
+  text-align: center;
+}
+
+.app .header .rt .btn{
+  width: auto;
+  height: 60rpx;
+  margin: 15rpx 40rpx;
+  padding: 0 15rpx; 
+  background: #0a96cb;
+  border-radius: 10rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .citem{
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #F3F3F3;
+  display: inline-block;
+  border-bottom: 1rpx #EAEAEA solid;
+}
+
+.app .citem .title{
+  font-size: 28rpx;
+  color: #000;
+  float: left;
+}   
+
+.app .citem  .arrow{
+  height: 100rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  color: #000;
+  float: right;
+  display: flex;
+  align-items: center;
+}   
+
+.top_line{
+  border-top: 1rpx #EAEAEA solid;
+}
+
+.top_100{
+  margin-top: 100rpx;
+}

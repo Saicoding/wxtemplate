@@ -1,0 +1,58 @@
+{
+  "pages": [
+
+
+    "pages/index/index",
+    "pages/index/detail",
+
+    "pages/company/index",
+    "pages/company/detail",
+
+    "pages/resume/index",
+    "pages/resume/baseinfo/index",
+    "pages/resume/intention/index",
+    "pages/resume/intention/hyselect",
+    "pages/resume/intention/znselect",
+    "pages/resume/education/index",
+    "pages/resume/education/slist",
+    "pages/resume/company/index",
+    "pages/resume/company/clist",
+    "pages/resume/project/index",
+    "pages/resume/project/plist",
+    "pages/resume/skill/index",
+    "pages/resume/skill/px",
+    "pages/resume/skill/plist",
+    "pages/resume/skill/yy",
+    "pages/resume/skill/ylist",
+    "pages/resume/skill/zs",
+    "pages/resume/skill/zlist",
+    "pages/resume/schoolsat/index",
+    "pages/resume/schoolsat/honor",
+    "pages/resume/schoolsat/hlist",
+    "pages/resume/schoolsat/position",
+    "pages/resume/schoolsat/plist",
+    "pages/resume/schoolsat/practice",
+    "pages/resume/schoolsat/prlist",
+    "pages/resume/introduction/index",
+
+    "pages/member/vip/buy",
+    "pages/member/yulan",
+    "pages/member/set",
+    "pages/member/qrecord",
+    "pages/member/zrecord",
+    "pages/member/index",
+    "pages/store/auth",
+    "pages/store/jlrecord",
+    "pages/store/addzw",
+    "pages/store/index",
+    "pages/store/add",
+    "pages/store/search"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "巅峰应用人才网",
+    "navigationBarTextStyle": "white"
+  }
+}

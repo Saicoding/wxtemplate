@@ -1,0 +1,130 @@
+/* pages/homepage/tuike/ranking.wxss */
+.app .ranking_item{
+  width: 94%;
+  height: auto;
+  margin: 15rpx auto;
+  border-radius: 8rpx;
+  background: #fff; 
+  display: flex;
+}
+
+.app .ranking_item .lt{
+  width: 20%;
+  height: 120rpx;
+  padding: 20rpx 20rpx;
+  position: relative;
+}
+
+.app .ranking_item .ranking_icon{
+  width: 3%;
+  height: 120rpx;
+  padding: 20rpx 20rpx;
+  background: #f00;
+  position: relative;
+}
+
+.app .ranking_item .lt image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  float: left;
+}
+
+.app .ranking_item .rt{
+  width: 80%;
+  height: 120rpx;
+  margin: auto 20rpx;
+  float: right;
+  position: relative;
+}
+
+.app .ranking_item .rt .name{
+  font-size: 26rpx;
+  color: #515151;
+  margin-top: 15rpx;
+}
+
+.app .ranking_item .rt .ranking_info{
+  margin-top: 33rpx;
+}
+
+.app .ranking_item .rt .ranking_info text{
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  color: #515151;
+  
+}
+
+.app .ranking_item .rt .ricon{
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  top: 0rpx;
+  right: 0;
+}
+
+.app .ritem{
+  width: 94%;
+  height: auto;
+  margin: 15rpx auto;
+  display: flex;
+}
+
+.app .ritem .llt{
+  width: 49%;
+  height: 130rpx;
+  margin-right: 1%;
+  float: left;
+  border-radius: 8rpx;
+  background: #fff; 
+}
+
+.app .ritem .llt image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin: 25rpx 15rpx;
+  float: left;
+}
+
+.app .ritem .llt .rinfo{
+  width: auto;
+  height: 130rpx;
+  margin: 20rpx 0rpx;
+}
+
+.app .ritem .llt .rinfo view{
+  font-size: 24rpx;
+  margin-bottom: 6rpx;
+  color: #515151;
+}
+
+
+.app .ritem .rrt{
+  width: 49%;
+  height: 130rpx;
+  margin-left: 1%;
+  float: right;
+  border-radius: 8rpx;
+  background: #fff; 
+}
+
+.app .ritem .rrt image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin: 25rpx 15rpx;
+  float: left;
+}
+
+.app .ritem .rrt .rinfo{
+  width: auto;
+  height: 130rpx;
+  margin: 20rpx 0rpx;
+}
+
+.app .ritem .rrt .rinfo view{
+  font-size: 24rpx;
+  margin-bottom: 6rpx;
+  color: #515151;
+}

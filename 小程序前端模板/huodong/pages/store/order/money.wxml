@@ -1,0 +1,66 @@
+<view class="header">
+  <view class="month">
+    <picker mode="date" fields="month" start="2017-01" end="{{end_date}}" bindchange="selectdate">
+      <text>{{date}}月收入明细</text>
+      <image src="/images/around/jiantouxia.png"></image>
+    </picker>
+  </view>
+  <view class="shouru">
+    <text class="title">总收入¥</text>
+    <text class="price">{{sumMoeny}}</text>
+  </view>
+</view>
+<view wx:for="{{datas}}" class="list">
+  <view class="item">
+    <view class="lt">
+      <text>¥{{item.need_price}}</text>
+    </view>
+    <view class="rt">
+      <text class="title">{{item.room_title}}</text>
+      <text>{{item.package_num}}套</text>
+      <text>{{item.add_time}}</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{order!= ''&& more==0}}" class="nomore">
+  没有更多数据了
+</view>
+<view bindtap="more" data-type="{{type}}" wx:if="{{order!=''&&more==1}}" class="more">
+  查看更多
+</view>
+<view wx:if="{{order== '' }}" class="nodata">
+  <image src="/images/around/nodata.png"></image>
+  <text>没有任何记录</text>
+</view>
+
+
+<!-- <view class="header">
+  <view class="month">
+    <text>2017年5月收入明细</text>
+    <image src="/images/around/jiantouxia.png"></image>
+  </view>
+  <view class="shouru">
+    <text class="title">总收入¥</text>
+    <text class="price">5000.00</text>
+  </view>
+</view>
+
+<view class="list">
+  <view class="item">
+
+    <view class="lt">
+      <text>¥500</text>
+    </view>
+    <view class="rt">
+      <text class="title">碧泉空中温泉大酒店</text>
+      <text>1间</text>
+      <text>2017-07-22</text>
+    </view>
+
+  </view>
+
+
+</view>
+<view class="more">
+  查看更多
+</view> -->

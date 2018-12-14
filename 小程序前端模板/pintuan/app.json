@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/tuan/index",
+    "pages/tuan/detail",
+    "pages/tuan/buy",
+    "pages/tuan/join",
+    "pages/tuan/info",
+    "pages/member/index",
+    "pages/member/comment",
+    "pages/member/detail",
+    "pages/member/cancle",
+    "pages/coupon/index",
+    "pages/addr/add",
+    "pages/addr/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰互联拼团",
+    "navigationBarTextStyle": "black"
+  }
+}

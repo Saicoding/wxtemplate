@@ -1,0 +1,106 @@
+<!--在合肥详情页-->
+<view class='app'>
+  <view class='header'>
+    <view class='face'>
+      <image src='{{datas.user_face}}'></image>
+    </view>
+    <view class='name'>{{datas.user_name}}</view>
+    <view class='date'>{{datas.add_time}}</view>
+  </view>
+  <view class='address'>
+    <image src='/img/icon_nearby.png'></image>
+    <text>{{datas.address}}</text>
+  </view>
+
+  <view class='article'>
+    <view class='content'>
+      <text>{{datas.info}}</text>
+    </view>
+    <image src='{{item}}' wx:for="{{datas.photo}}"></image>
+  </view>
+</view>
+
+<view class='rinfo'>
+  <view class='iteminfo'>
+    <image class="icon" src='/img/icon_look.png'></image>
+    <text>{{datas.view_num}}</text>
+  </view>
+
+  <view class='iteminfo'>
+    <navigator url='/pages/index/huifu?info_id={{datas.info_id}}'>
+      <image src='/img/icon_message.png'></image>
+      <text>{{datas.comment_num}}</text>
+    </navigator>
+  </view>
+
+  <view class='iteminfo' bindtap='zan'>
+    <image src='/img/icon_zan.png'></image>
+    <text bindtap="zan">{{datas.zan_num}}</text>
+  </view>
+</view>
+
+<view class='reply_container'>
+  <view class='ritem' wx:for="{{datas.comment}}">
+    <navigator url='{{reply==1? "/pages/index/huifu?comment_id="+item.comment_id:""}}'>
+      <view class='binfo'>
+        <view class='bface'>
+          <image src='{{item.user_face}}'></image>
+        </view>
+        <view class='uinfo'>
+          <view class='name'>{{item.user_name}}</view>
+          <view class='time'>{{item.add_time}}</view>
+        </view>
+      </view>
+      <view class='comment'>{{item.content}}</view>
+
+    </navigator>
+    <view class='reply' hidden='{{item.reply==""? true: false}}'>回复：{{item.reply}}</view>
+  </view>
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class='contact' style='background:{{color}}' bindtap='telPhone'>联系Ta</view>
+</view>
+<!-- <text class='name' style='color:{{color}}'>请叫我码农哥：</text>
+    <text class='content'>这里是评论的内容</text> -->
+
+<!-- <view class='app'>
+  <view class='header'>
+    <view class='title'>{{datas.info}}</view>
+    <view class='hinfo'>
+      <view class='item'>
+        <image src='/img/icon_date.png'></image>
+        <text>2017-09-09</text>
+      </view>
+      <view class='item'>
+        <image src='/img/icon_look_nor.png'></image>
+        <text>{{datas.view_num}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='article' wx:for="{{datas.comment}}">
+    <view class='content' >
+      <text>{{item.content}}</text>
+    </view>
+    <image src='/img/img_hn.jpg'></image>
+  </view>
+
+  <view class='article'>
+    <view class='content'>
+      <text>知识产权是机遇，也是武器。近日，“红牛”商标之战杀得血流成河。原告泰国红牛要求法院判令A股上市公司奥瑞金停止伪造、擅自制造原告“红牛”、“REDBULL”及图形等注册商标标识，并赔偿经济损失3050万元，且在各大媒体公开道歉。</text>
+    </view>
+    <image src='/img/img_hn.jpg'></image>
+  </view>
+
+  <navigator url='/pages/index/add'>
+    <view class='add' style='background:{{color}};'>
+      <text>+</text>
+    </view>
+  </navigator>
+
+  <view class='kongbai'></view>
+
+  <view class='contact' style='background:{{color}}'>联系Ta</view>
+</view> -->

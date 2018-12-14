@@ -1,0 +1,461 @@
+<!--预览简历-->
+<view class="app">
+  <view class="module">
+    <view class="pitem" bindtap="open_view">
+      <view class="lt">基本信息</view>
+      <view class="rt">
+        <image src="{{show==1?'/img/icon_arrow_bottom.png':'/img/icon_arrow_top.png'}}"></image>
+      </view>
+    </view>
+
+    <view class="child" hidden="{{show==1?true:false}}">
+      <view class="citem">
+        <text class="title">姓名</text>
+        <text class="info">{{datas.resume.name}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">性别</text>
+        <text class="info">{{datas.resume.sex}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">出生日期</text>
+        <text class="info">{{datas.resume.birthday}}岁</text>
+      </view>
+      <view class="citem">
+        <text class="title">学历</text>
+        <text class="info">{{datas.resume.residence}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">户口</text>
+        <text class="info">{{datas.resume.census_register}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">现居住地</text>
+        <text class="info">{{datas.resume.residence}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">工作日期</text>
+        <text class="info">{{datas.resume.workingyears}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">手机</text>
+        <text class="info">{{datas.resume.mobile}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">邮箱</text>
+        <text class="info">{{datas.resume.emal}}@qq.com</text>
+      </view>
+      <view class="citem">
+        <text class="title">QQ</text>
+        <text class="info">{{datas.resume.qq}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">婚育情况</text>
+        <text class="info">{{datas.resume.marriage}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">政治面貌</text>
+        <text class="info">{{datas.resume.politicalstatus}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">身高</text>
+        <text class="info">{{datas.resume.height}}CM</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">自我评价</text>
+        <text class="info">{{datas.introduction}}</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.intention==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">求职意向</view>
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child">
+      <view class="citem">
+        <text class="title">求职性质：</text>
+        <text class="info">{{datas.intention.nature_id}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">月薪要求：</text>
+        <text class="info">{{datas.intention.salary}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">行业要求：</text>
+        <text class="info">{{datas.intention.industrys}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">职能意向：</text>
+        <text class="info">{{datas.intention.skills}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">工作地点：</text>
+        <text class="info">{{datas.intention.work_address}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">求职状态：</text>
+        <text class="info">{{datas.intention.status}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.company==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">工作经历</view>
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.company}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bgdate}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.enddate}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">公司名称：</text>
+        <text class="info">{{item.company_name}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">所属行业：</text>
+        <text class="info">{{item.company_industry}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">公司性质：</text>
+        <text class="info">{{item.company_type}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">所属部门：</text>
+        <text class="info">{{item.company_division}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">职位：</text>
+        <text class="info">{{item.company_position}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">平均薪水：</text>
+        <text class="info">{{item.company_salary}}</text>
+      </view>
+      <view class="citem">
+        <text class="title">职位描述：</text>
+        <text class="info">{{item.company_detail}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="module" hidden="{{datas.project==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">项目经验</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.project}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bg_date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.end_date}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">项目名称：</text>
+        <text class="info">{{item.project_name}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">公司名称：</text>
+        <text class="info">{{item.company_name}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">项目描述：</text>
+        <text class="info">{{item.project_describe}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">职责描述：</text>
+        <text class="info">{{item.duty_describe}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="module" hidden="{{datas.school==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">教育经历</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+  
+    <view class="child" wx:for="{{datas.school}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bgdate}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.enddate}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">学校名称：</text>
+        <text class="info">{{item.school_name}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">学历：</text>
+        <text class="info">{{item.education_id}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">专业：</text>
+        <text class="info">{{item.major}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">是否统招</text>
+        <text class="info">{{item.is_tz==1? '是': '否'}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+    
+  </view>
+
+
+  <view class="module" hidden="{{datas.train==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">培训经历</view>
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.train}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bgdate}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.enddate}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">培训单位：</text>
+        <text class="info">{{item.train_name}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">培训课程：</text>
+        <text class="info">{{item.train_calss}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">培训描述：</text>
+        <text class="info">{{item.train_describe}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="module" hidden="{{datas.language==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">语言能力</view>
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.language}}">
+      <view class="citem">
+        <text class="title">语种：</text>
+        <text class="info">{{item.language}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">熟练度：</text>
+        <text class="info">{{item.level}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.certificate==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">证书</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.certificate}}">
+      <view class="citem">
+        <text class="title">获得时间：</text>
+        <text class="info">{{item.date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">证书名称：</text>
+        <text class="info">{{item.certificate_name}}</text>
+      </view>
+
+      <view class="citem">
+        <text class="title">成绩：</text>
+        <text class="info">{{item.score}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.honor==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">荣誉奖励</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.honor}}">
+      <view class="citem">
+        <text class="title">获得时间：</text>
+        <text class="info">{{item.date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">奖项名称：</text>
+        <text class="info">{{item.honor_name}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.position==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">校内职务</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.position}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bg_date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.end_date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">职务名称：</text>
+        <text class="info">{{item.position_name}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">职务描述：</text>
+        <text class="info">{{item.position_describe}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="module" hidden="{{datas.practice==''? true: false}}">
+    <view class="pitem">
+      <view class="lt">社会实践</view>
+
+      <view class="rt">
+        <image src="/img/icon_arrow_bottom.png"></image>
+      </view>
+    </view>
+
+    <view class="child" wx:for="{{datas.practice}}">
+      <view class="citem">
+        <text class="title">开始时间：</text>
+        <text class="info">{{item.bg_date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">结束时间：</text>
+        <text class="info">{{item.end_date}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">实践名称：</text>
+        <text class="info">{{item.practice_name}}</text>
+      </view>
+      
+      <view class="citem">
+        <text class="title">实践描述：</text>
+        <text class="info">{{item.practice_describe}}</text>
+      </view>
+
+      <view class="citem">
+        <view class="bline"></view>
+      </view>
+    </view>
+  </view>
+
+</view>

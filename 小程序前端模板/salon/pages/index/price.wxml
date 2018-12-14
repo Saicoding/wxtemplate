@@ -1,0 +1,26 @@
+<!--pages/index/price.wxml-->
+<view class='pitem' wx:for="{{datas}}">
+  <view class='header'>
+    <view class='face'>
+      <image class='picon' src='{{item.ico}}'></image>
+    </view>
+    <view class='hinfo'>
+      <view class='htit'>{{item.name}}</view>
+      <view class='hdetail'>{{item.describe}}</view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text class='pro'>项目</text>
+    <text class='pro'>价格</text>
+    <text class='pro'>会员卡</text>
+  </view>
+
+  <view class='info' wx:for="{{item.price}}">
+    <text class='name'>{{item.name}}</text>
+    <text class='price'>{{item.price}}元</text>
+    <text class='mcard'>{{item.vip_price}}元</text>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>

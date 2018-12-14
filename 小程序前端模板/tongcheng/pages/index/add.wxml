@@ -1,0 +1,63 @@
+<!--pages/index/add.wxml-->
+<view class='app'>
+  <form bindsubmit='formBindAddInfo'>
+    <view class='pubcontent'>
+      <textarea name="content" class='content' placeholder='请输入要发布的内容'></textarea>
+    </view>
+
+    <view class='imgs'>
+      <!-- <view class='mitem'>
+      <image class="img" src='/img/kebo.jpg'></image>
+    </view> -->
+
+      <view wx:for="{{photos_url}}" wx:for-index="index" class="mitem">
+        <image class="img"  bindtap="delele" data-index="{{index}}" src="{{item}}"></image>
+      </view>
+
+      <view class='mitem'>
+        <image class="icon_add" src='/img/icon_add.png' bindtap="photos"></image>
+      </view>
+
+    </view>
+
+    <view class='alert'>
+      温馨小提示：长按可以删除图片哦~
+    </view>
+
+    <view class="action">
+      <view class="col" bindtap="map">
+        <image class="tubiao" src="/img/icon_nearby.png"></image>
+        <text>地址: {{addr == '' ? "选择地图坐标" : addr}}</text>
+        <image class="jiantou" src="/img/jiantou.png"></image>
+      </view>
+
+      <view class="col">
+        <image class="tubiao" src="/img/icon_user.png"></image>
+        <input name="phone" placeholder='请输入您的电话号码'></input>
+      </view>
+    </view>
+
+    <view class='set'>
+      <view class='item'>
+        <text>我要置顶</text>
+        <switch class="rt" color='{{color}}' bindchange='switchTopChange' checked='{{top}}'></switch>
+      </view>
+
+      <view class='item' hidden='{{top==true? false: true}}'>
+        <text>选择置顶时间</text>
+        <picker class='rt' value="{{index}}" range="{{days}}" bindchange="bindDaysPickerChange">
+          <text>{{days[index]? days[index]+"天" : '1天'}} </text>
+        </picker>
+      </view>
+
+      <view class='item' hidden='{{top==true? false: true}}'>
+        <text>我要置顶</text>
+        <text class='rt' style='color:#f00;'>¥{{price}}</text>
+      </view>
+    </view>
+
+    <button class='btn_pub' form-type='submit' style='background:{{color}}'>立即发布</button>
+
+  </form>
+
+</view>

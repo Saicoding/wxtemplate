@@ -1,0 +1,115 @@
+/* pages/dingzhi/order.wxss */
+.order_item{
+  width: 86%;
+  height: auto;
+  margin: 10rpx 4%;
+  padding: 0 3%;
+  background: #fff;
+  border-radius: 4rpx;
+}
+
+.order_item .top{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx #eee solid;
+}
+
+.order_item .top .lt{
+  font-size: 32rpx;
+  float: left;
+  color: #000;
+}
+
+.order_item .top .rt{
+  font-size: 28rpx;
+  float: right;
+  color: #1ba8b9;
+}
+
+.order_item .col{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.order_item .col .title{
+  width: 120rpx;
+  height: 60rpx;
+  color: #515151;
+  font-size: 26rpx;
+  float: left;
+}
+
+.order_item .col .content{
+  width: auto;
+  height: 60rpx;
+  margin-left: 10rpx;
+  color: #000;
+  font-size: 26rpx;
+  float: left;
+}
+
+.order_item .col .money{
+  width: auto;
+  height: 60rpx;
+  margin-left: 10rpx;
+  color: #1ba8b9;
+  font-size: 26rpx;
+  float: left;
+}
+
+.top_line{
+  border-top: 1rpx #eee solid;
+}
+
+.xuqiu_info_title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #515151;
+}
+
+.xuqiu_info_content{
+  width: 100%;
+  height: auto;
+  min-height: 60rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  color: #515151;
+}
+
+.open_view{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.open_view image{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.bottom_alert_info{
+  width: 90%;
+  height: auto;
+  margin: 10rpx 5%;
+  margin-top: 40rpx;
+}
+
+.bottom_alert_info view{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.bottom_alert_info text{
+  font-size: 26rpx;
+  color: #bcbcbc;
+}
+
+.jishu{color: #ccc; width: 100%;text-align: center;margin-top: 100rpx}

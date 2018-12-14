@@ -1,0 +1,50 @@
+<view class="app">
+
+  <view class="bushiyong">
+    <text>不使用优惠券</text>
+    <image bindtap="nouse" hidden="{{usecoupon?false:true}}" src="/image/homepage/duihaono.png"></image>
+    <image hidden="{{usecoupon?true:false}}" src="/image/homepage/duihaoyes.png"></image>
+  </view>
+
+  <view class="coupon">
+    <image class="bg" src="/image/homepage/coupon_on.png"></image>
+    <image class="dian" src="/image/homepage/coupon_dian.png"></image>
+    <view class="datas">
+      <view class="lt on">
+        <text>¥</text>30
+      </view>
+      <view class="ct">
+        <view class="type">
+          民宿优惠券
+        </view>
+        <text>满30元可用</text>
+        <text>新用户专享</text>
+        <text>2017-07-18至2017-07-29</text>
+      </view>
+      <view class="rt">
+        <text bindtap="yesuse" class=" on">立即使用</text>
+      </view>
+    </view>
+  </view>
+  <view class="coupon">
+    <image class="bg" src="/image/homepage/coupon_off.png"></image>
+    <image class="dian" src="/image/homepage/coupon_dian.png"></image>
+    <view class="datas">
+      <view class="lt off">
+        <text>¥</text>30
+      </view>
+      <view class="ct">
+        <view class="type">
+          民宿优惠券
+        </view>
+        <text>满30元可用</text>
+        <text>新用户专享</text>
+        <text>2017-07-18至2017-07-29</text>
+      </view>
+      <view class="rt">
+        <text class=" off">不能使用</text>
+      </view>
+    </view>
+  </view>
+
+</view>

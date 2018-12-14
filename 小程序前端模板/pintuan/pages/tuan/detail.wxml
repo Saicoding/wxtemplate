@@ -1,0 +1,153 @@
+<view class="photo">
+  <image src="{{datas.goods.photo}}"></image>
+</view>
+
+<view class="product">
+  <view class="price">
+    <text class="xj">yen{{datas.goods.group_price}}</text>
+    <text class="by" hidden='{{datas.goods.is_mail==1?false:true}}'>包邮</text>
+    <text class="cy">已有{{datas.goods.people_num}}人参与</text>
+  </view>
+  <view class="yj">yen{{datas.goods.price}}</view>
+  <view class="time bdbt">
+    <text class="lt">仅剩 {{clock}}</text>
+    <text class="rt" hidden='true'>逾期未成团自动退款</text>
+  </view>
+  <view class="tit bdbt">
+    <view style="color:{{color}}" class="lt">[{{datas.goods.group_num}}人团]</view>
+
+    <view class="rt">{{datas.goods.brief}}</view>
+
+  </view>
+
+  <view class="col bdbt" bindtap='look_service'>
+    <view class="title">服务</view>
+    <view class="item" wx:if="{{index<2}}" wx:for="{{datas.goods.service}}">
+      <text style="color:{{color}}" class="iconfont icon-duihao"></text>{{item.title}}
+    </view>
+    <view class="iconfont icon-right" style='float:right;margin-right:20rpx;'></view>
+  </view>
+
+  <view class="col bdbt">
+    <view class="title">说明</view>
+    <view class="main">
+      <text>支付开团并邀请1人开团，人数不足自动退款。</text>
+    </view>
+  </view>
+</view>
+
+<view class="tuanlist" hidden='{{status==0? false: true}}'>
+  <view class="title">以下小伙伴的已发起了拼团，您可以直接参加</view>
+  <view wx:for="{{datas.group}}">
+    <navigator url="/pages/tuan/join?group_id={{item.group_id}}">
+      <view style="border:1rpx solid {{color}};" class="item">
+        <image class="face" src="{{item.face}}"></image>
+        <view class="ct">
+          <text>{{item.header_name}}</text>
+          <text>仅剩{{clock}}</text>
+        </view>
+        <view class="haicha">还差
+          <text style="color:red;">{{item.surplus_num}}</text>人成团</view>
+        <view style="background:{{color}}" class="cantuan">去参团</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class="detail">
+  <view class="menu bdbt">
+    <view bindtap="tuwen" style="{{tab==1?'color:'+color:''}}" class="item">图文介绍
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="guige" style="{{tab==2?'color:'+color:''}}" class="item">规格参数
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="baozhuang" style="{{tab==3?'color:'+color:''}}" class="item">包装信息
+      <view class="bdrtview"></view>
+    </view>
+    <view bindtap="pingjia" style="{{tab==4?'color:'+color:''}}" class="item">商品评价</view>
+
+  </view>
+
+  <view hidden="{{tab==1?false:true}}" class="tuwen" wx:for="{{datas.goods.contents}}">
+    <image mode="widthFix" src="{{item.photo}}"></image>
+    <text hidden='{{item.content==""? true: false}}'>{{item.content}}</text>
+  </view>
+
+  <view hidden="{{tab==2?false:true}}" class="guige">
+    <text>{{datas.goods.spec}}</text>
+  </view>
+  <view hidden="{{tab==3?false:true}}" class="guige">
+    <text>{{datas.goods.ctn}}</text>
+  </view>
+
+  <view hidden="{{tab==4?false:true}}" class="pingjia">
+    <view class="comment bdbt" wx:for="{{comments}}" wx:for-index="index">
+      <view class="tit">
+        <view class="lt">
+          <image src="{{item.user_face}}"></image>
+          <text>{{item.user_nick_name}}</text>
+        </view>
+        <!-- <view class="rt">
+          {{item.content_time}}
+        </view> -->
+      </view>
+      <view class="content">{{item.content}}</view>
+      <view class="photo" hidden='{{item.photos==""? true: false}}'>
+        <image wx:for="{{item.photos}}" src="{{item}}" wx:for-index="sindex" data-id='{{sindex}}' data-index="{{index}}" bindtap='lookPhoto'></image>
+      </view>
+    </view>
+  </view>
+
+  <view bindtap="loadMore" hidden="{{tab==4?false:true}}"  wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" hidden="{{tab==4?false:true}}"  class="nomore">没有数据了</view>
+</view>
+<view class="jszc">技术支持：www.erre7.cn</view>
+
+<view class="kongbai"></view>
+
+<view class="buttom">
+  <navigator url="{{datas.goods.surplus_num>0? '/pages/tuan/buy?goods_id='+ goods_id: ''}}">
+    <view class="lt" style='background:{{datas.goods.surplus_num>0? "#ff9e40": "#bdbdbd"}}'>
+      <text class="price">yen{{datas.goods.alone_price}}</text>
+      <text>单独购买</text>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/tuan/buy?goods_id={{goods_id}}&type=2">
+    <view class="rt" hidden='{{status==0? false: true}}'>
+      <text class="price">yen{{datas.goods.group_price}}</text>
+      <text>{{datas.goods.is_mail==1? "包邮开团": "开团"}}</text>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/tuan/join?group_id={{datas.group_id}}">
+    <view class="rt" hidden='{{status==1? false: true}}'>
+      <text class="price">还差{{datas.attend_surplus_num}}人成团</text>
+      <text>仅剩{{clock}}</text>
+    </view>
+  </navigator>
+
+  <view class="rt" hidden='{{status==2? false: true}}'>
+    <text class="price">已开团</text>
+    <text>等待发货</text>
+  </view>
+
+  <view class="rt" hidden='{{status==3? false: true}}'>
+    <text class="price">已结束</text>
+  </view>
+
+</view>
+
+<view class="bg" hidden="{{showbg}}"></view>
+<view class="bottom_view" hidden="{{show_service}}">
+  <view class='item'>
+    <text class='title'>说明</text>
+    <text class="close delete iconfont icon-cha" bindtap='close_service'></text>
+  </view>
+
+  <view class='item' style='text-align:left; padding: 25rpx 25rpx;' wx:for="{{datas.goods.service}}">
+    <text style="color:{{color}};" class="iconfont icon-duihao"></text>{{item.title}}
+    <view>{{item.detail}}</view>
+  </view>
+</view>

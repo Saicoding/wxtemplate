@@ -1,0 +1,65 @@
+<view class="orderinfo">
+    <view class="status">{{data.statusmeans}}</view>
+    <view class="info">订单编号:{{data.id}}</view>
+    <view class="info">下单时间:{{data.add_time}}</view>
+</view>
+
+<view  class="addr">
+    <view class="lt"><text class="iconfont icon-location"></text></view>
+    <view class="ct">
+      <view>收货人：{{data.name}}；电话：{{data.mobile}}</view>
+      <view>{{data.gps_addr}} / {{data.address}}</view>
+    </view>
+</view>
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+  
+  <view wx:for="{{data.products}}" class="item">
+       <image src='{{item.photo}}'></image>
+        <view class="rt">
+            <view class="tit">
+                <text class="name">{{item.name}}</text>
+                <text class="price">¥{{item.price}}</text>
+            </view>
+            <view class="info">
+                <text class="num">x{{item.num}}</text>
+            </view>
+        </view>
+  </view>
+
+
+  <view class="col bdtp">
+    <text class="lt">打包费用</text>
+    <text class="rt">¥{{data.dabao}}</text>
+  </view>
+  <view class="col bdtp">
+    <text class="lt">配送费用</text>
+    <text class="rt">¥{{data.peisong}}</text>
+  </view>
+   <view class="col bdtp">
+    <text class="lt">优惠券抵扣</text>
+    <text class="rt">-¥{{data.pay_hongbao}}</text>
+  </view>
+   <view wx:if="{{data.status==0}}" class="col bdtp">
+    <text class="lt">需要支付</text>
+    <text class="rt">¥{{data.total_price - data.pay_hongbao}}</text>
+  </view>
+
+   <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">¥{{data.total_price}}</text>
+  </view>
+
+</view>
+
+<view wx:if="{{data.status==0}}" class="buy">
+
+    <view class="lt">
+        <view>合计<text>¥{{data.total_price - data.pay_hongbao}}</text></view>
+    </view>
+    <view bindtap='payment' style="background:{{color}}" class="rt">微信支付</view>
+</view>

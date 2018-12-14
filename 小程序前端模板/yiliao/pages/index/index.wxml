@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <navigator url="" hover-class="navigator-hover">
+        <image src="{{item.photo}}" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <view class='menu'>
+    <navigator url='/pages/menu/consult'>
+      <view class='menu-item border_right'>
+        <view class='lt'>
+          <view class='mtitle'>快速问诊</view>
+          <view class='mhint'>足不出户 咨询专家</view>
+        </view>
+        <view class='rt'>
+          <image src='/img/icon_menu_01.png'></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator open-type='redirect' url='/pages/yuyue/index'>
+      <view class='menu-item'>
+        <view class='lt'>
+          <view class='mtitle'>预约挂号</view>
+          <view class='mhint'>无需排队 免费挂号</view>
+        </view>
+        <view class='rt'>
+          <image src='/img/icon_menu_02.png'></image>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator open-type='reLaunch' url='/pages/gk/index'>
+      <view class='menu-item border_right border_top'>
+        <view class='lt'>
+          <view class='mtitle'>医院品牌</view>
+          <view class='mhint'>专家团队 全面了解</view>
+        </view>
+        <view class='rt'>
+          <image src='/img/icon_menu_03.png'></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url='/pages/menu/about'>
+      <view class='menu-item border_top'>
+        <view class='lt'>
+          <view class='mtitle'>来院路线</view>
+          <view class='mhint'>轻车熟路 轻松就诊</view>
+        </view>
+        <view class='rt'>
+          <image src='/img/icon_menu_04.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <swiper class="swiper-box" indicator-dots="true">
+    <swiper-item wx:for="{{length}}" index="{{pindex}}" wx:for-index="pindex">
+      <view class="menu">
+        <view class="item" wx:for="{{datas.category}}" index="index" wx:for-index="index" wx:if="{{index<pindex*8+8 && index>=pindex*8}}">
+          <navigator url='/pages/index/type?category_id={{item.category_id}}'>
+            <view class="icon">
+              <image src="{{item.ico}}" style='background:{{item.color}}'></image>
+            </view>
+            <text>{{item.name}}</text>
+          </navigator>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-shouye:before"></view>
+      <text>首页</text>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/gk/index'>
+        <view class="image iconfont icon-gaikuang:before"></view>
+        <text>医院概况</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/yuyue/index'>
+        <view class="image iconfont icon-guahaodan:before"></view>
+        <text>自助挂号</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

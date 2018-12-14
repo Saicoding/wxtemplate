@@ -1,0 +1,9 @@
+<view class="header">
+      <image bindtap="upload"  src="/img/hotel/sctp.png"></image>
+      <text>上传酒店环境图片,总共最多上传20张环境图</text>
+</view>
+<view wx:for="{{photos_url}}" wx:for-index="index" class="imgs">
+    <image  class="tu" src="{{item}}"></image>
+    <text bindtap="delele" data-index="{{index}}" class="delete">删除</text>
+</view>
+ <button bindtap="create"  class="btn">确定发布</button>

@@ -1,0 +1,32 @@
+<view class="summary_calendar">
+  <block wx:for="{{date}}" wx:for-index="month" wx:key="month_{{itm.month}}" wx:for-item="itm">
+    <view class="summary_calendarmain">
+      <view class="summary_center">
+        <view class="summary_centertitle">{{itm.month}}</view>
+      </view>
+    </view>
+    <view class="calendar_number">
+      <view class="calendar_number_title">
+        <view>日</view>
+        <view>一</view>
+        <view>二</view>
+        <view>三</view>
+        <view>四</view>
+        <view>五</view>
+        <view>六</view>
+      </view>
+      <view class="number_title">
+        <block wx:for="{{itm.day}}" wx:key="date_{{item.dayIndex}}">
+          <view data-type="{{item.type}}" data-in="{{item.dayIndex}}" bindtap="dayClick" class="day {{item.type==0?'disabled':''}}  {{item.select==1?'ruzhu':''}}">
+            <view data-type="{{item.type}}" data-in="{{item.dayIndex}}" wx:if="{{item.day2==0}}" class="text"></view>
+
+            <view data-type="{{item.type}}" data-in="{{item.dayIndex}}" wx:if="{{item.day2>0}}" class="text {{item.today==1 ? 'line44':'line88'}}">{{item.day2}}
+              <view data-in="{{item.dayIndex}}" wx:if="{{item.today==1}}" class="p">今天</view>
+            </view>
+            <view data-type="{{item.type}}" data-in="{{item.dayIndex}}" class="yuan"></view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

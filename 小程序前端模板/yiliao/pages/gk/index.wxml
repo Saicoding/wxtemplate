@@ -1,0 +1,54 @@
+<!--pages/gk/index.wxml-->
+<view class='app'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <navigator url="" hover-class="navigator-hover">
+        <image src="{{item.photo}}" class="slide-image" />
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator url="" hover-class="navigator-hover">
+        <image src="/img/banner_02.png" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <view class='content'>
+    <view class='header'>医院概况</view>
+
+    <view class='item' wx:for="{{datas.contents}}">
+      <text hidden='{{item.content==""? true: false}}'>{{item.content}}</text>
+      <image src='{{item.photo}}' hidden='{{item.photo==""? true: false}}'></image>
+    </view>
+  </view>
+
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/index/index'>
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-gaikuang:before"></view>
+      <text>医院概况</text>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/yuyue/index'>
+        <view class="image iconfont icon-guahaodan:before"></view>
+        <text>自助挂号</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator open-type='redirect' url='/pages/mine/index'>
+        <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

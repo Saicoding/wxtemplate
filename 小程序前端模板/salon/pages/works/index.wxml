@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class='works'>
+  <view class='item'  wx:for="{{datas}}">
+    <image src='{{item.photo}}'  bindtap='lookPhoto' data-id="{{item.works_id}}"></image>
+    <view class='title'>{{item.title}}</view>
+    <view class='num'>{{item.num}}张</view>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+<view class='kongbai'></view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-APPtubiao-:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/card/index">
+      <view class="image iconfont icon-qiajuan:before"></view>
+      <text>卡劵</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-zuopin:before"></view>
+    <text>作品</text>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/mine/index">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

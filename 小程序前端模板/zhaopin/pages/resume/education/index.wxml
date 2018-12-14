@@ -1,0 +1,94 @@
+<!-- 教育经历 -->
+<view class="app">
+
+  <form bindsubmit="setSchool">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">开始时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindStartDateChange">
+            <text>{{bgdate? bgdate : '请选择开始时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">结束时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindEndDateChange">
+            <text>{{enddate ? enddate : '请选择结束时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">学校名称</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="school_name" placeholder="请输入" value="{{school_name}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">学历学位</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindEducationPickerChange" value="{{eIndex}}" range="{{eArray}}">
+            <text>{{eArray[eIndex] ? eArray[eIndex] : '请选择学历学位'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">统招</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <switch type="switch" checked="{{is_tz==1? true: false}}" color="{{color}}" bindchange="bindTzChange" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">自填专业</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="major" placeholder="请输入" value="{{major}}" />
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+
+  </form>
+
+</view>

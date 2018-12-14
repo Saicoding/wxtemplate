@@ -1,0 +1,47 @@
+<view class="app">
+  <view class="header">
+    <image class="image" src="{{userinfo.face=='' ? '/img/minsu/login_no.png':userinfo.face}}"></image>
+    <view class="nickname">
+      <text class="name">{{userinfo.nick_name}}</text>
+    </view>
+  </view>
+  <view class="qihuan1">
+    <navigator open-type="redirect" url="/pages/minsu/store/index">
+      <image src="/img/minsu/qh.png"></image>
+      <text>切换到商户版本</text>
+    </navigator>
+  </view>
+  <view class="action">
+
+    <view wx:if="{{userinfo.mobile==0}}" class="col">
+      <navigator url="/pages/public/login">
+        <image class="tubiao" src="/img/minsu/mobile.png"></image>
+        <text>绑定手机</text>
+        <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+    <view class="col">
+      <navigator open-type="redirect" url="/pages/minsu/order/index">
+        <image class="tubiao" src="/img/minsu/order_on.png"></image>
+        <text>全部订单</text>
+        <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+
+    <view class="col">
+      <navigator url="/pages/minsu/member/coupon/coupon">
+        <image class="tubiao" src="/img/minsu/coupon.png"></image>
+        <text>优惠券</text>
+        <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+      </navigator>
+    </view>
+
+    <view bindtap="tel" class="col">
+      <image class="tubiao" src="/img/minsu/kefu.png"></image>
+      <text>联系客服</text>
+      <image class="jiantou" src="/img/minsu/jiantou.png"></image>
+    </view>
+
+  </view>
+  <view class="jishu">技术支持：www.erre7.cn</view>
+</view>

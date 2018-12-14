@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/project/index">
+    <view class="add_school">+添加项目经验</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/project/index?project_id={{item.project_id}}">
+        <view class="title">{{item.project_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/project/index?project_id={{item.project_id}}">
+          <view class="lt">{{item.bg_date}}至{{item.end_date}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="deleteProject" data-id="{{item.project_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

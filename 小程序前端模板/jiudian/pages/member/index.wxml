@@ -1,0 +1,57 @@
+<!--pages/member/index.wxml
+<navigator url="/pages/member/userInfo">
+</navigator>
+-->
+
+<view class="app">
+  <view class="uinfo" style="background:{{color}}">
+    <view class="content">
+      <view class="face">
+        <image src="{{userinfo.face=='' ? '/img/hotel/login_no.png':userinfo.face}}"></image>
+      </view>
+      <view class="nickname">{{userinfo.nick_name==''? '点击登录': userinfo.nick_name}}</view>
+    </view>
+  </view>
+
+  <navigator url="/pages/order/index">
+    <view class="col top_20">
+      <image class="icon" src="/images/order.png"></image>
+      <text>我的订单</text>
+      <image class="jt" src="/images/pk_jt.png"></image>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/member/coupon">
+    <view class="col">
+      <image class="icon" src="/images/coupon.png"></image>
+      <text>我的优惠券</text>
+      <image class="jt" src="/images/pk_jt.png"></image>
+    </view>
+  </navigator>
+
+  <view class="jszc">技术支持:www.erre7.cn</view>
+
+</view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-jiudian:before"></view>
+      <text>酒店</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/coupon">
+      <view class="image iconfont icon-0007:before"></view>
+      <text>优惠券</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <navigator open-type="redirect" url="/pages/member/index">
+      <view class="image iconfont icon-icon-yxj-empty-my:before"></view>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

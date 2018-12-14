@@ -1,0 +1,391 @@
+/* detail.wxss */
+
+.photo {
+  height: 400rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.photo image {
+  height: 400rpx;
+  width: 100%;
+}
+
+.product {
+  background: #fff;
+  width: 100%;
+  margin-top: 15rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.pro {
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+
+.pro .lt {
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+
+.pro .rt {
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  float: right;
+  text-align: center;
+}
+
+.pro .rt text {
+  font-size: 40rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.pro .tit {
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.pro .price {
+  margin-top: 10rpx;
+}
+
+.pro .price .xj {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: red;
+}
+
+.pro .price .yj {
+  margin-left: 20rpx;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.nums {
+  width: 96%;
+  margin: 0 auto;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.nums view {
+  width: 33%;
+  float: left;
+  text-align: center;
+  color: #666;
+}
+
+.col {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.col .item{
+  float: left;
+  width: 28%;
+  text-align: center;
+}
+.col .title{
+  float: left;
+  width: 16%;
+  text-align: center;
+}
+.col .main{
+  width: 84%;
+  float: left;
+}
+.quan{
+  padding: 10rpx;
+  background: #ff784b;
+  color: #fff;margin-left: 10rpx;
+  border-radius: 10rpx;
+}
+.main .jiantou{
+  float: right;
+  margin-right: 20rpx;
+}
+.main .bg{
+  background: #ff6600;
+  color: #fff;
+  padding: 5rpx;
+  border-radius: 10rpx; 
+  margin-left: 10rpx;
+  margin-right: 5rpx;
+}
+
+.detail{
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.detail .menu{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.detail .menu .item{
+  float: left;
+  width: 25%;
+  text-align: center;
+  font-size: 26rpx;
+  position: relative;
+}
+.detail .tuwen{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+.detail  .tuwen image{
+  width: 100%;
+}
+
+.detail .guige{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+.detail .guige text{
+  line-height: 40rpx;
+}
+.detail .tuwen text{
+  line-height: 40rpx;
+}
+
+.detail .pingjia{
+   width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+
+.detail .pingjia .comment{
+
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+
+}
+
+.detail .pingjia .comment .tit{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.detail .pingjia .comment .tit .lt{
+  width: 60%;float: left;
+}
+.detail .pingjia .comment .tit image{
+  height: 80rpx;
+  width: 80rpx;
+  margin: 10rpx 0;
+  float: left;
+  border-radius: 15rpx;
+}
+.detail .pingjia .comment .tit text{
+  margin-left: 15rpx;
+  line-height: 100rpx;
+}
+
+.detail .pingjia .comment .tit .rt{
+  float: right;
+  text-align: right;
+}
+.detail .pingjia .comment .content{
+  width: 96%;
+  margin: 0 auto;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  height: auto;
+  overflow: hidden;
+}
+.detail .pingjia .comment  .photo{
+  width: 96%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+.detail .pingjia .comment  .photo image{
+    float: left;
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+ 
+}
+.buttom{
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+}
+.buttom .lt{
+  width: 20%;
+  height: 80rpx;
+  background: #fff;
+  float: left;
+  color: #666;
+}
+.buttom .lt text{
+  display: block;
+}
+
+.buttom .rt{
+  width: 40%;
+    line-height: 80rpx;
+
+  height: 80rpx;
+  background: #ff5d5b;
+  float: left;
+}
+
+.buttom .ct{
+  width: 40%;
+    line-height: 80rpx;
+
+  height: 80rpx;
+  background: #ff9e40;
+  float: left;
+}
+
+.buttom .iconfont{
+  font-size:40rpx;
+}
+.order{
+  height:auto;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.col2{
+  height: auto;
+  min-height: 80rpx;
+}
+.col2 .title{
+  float: left;
+  width: 16%;
+  line-height: 80rpx;
+  text-align: center;
+}
+.col2 .main{
+  width: 84%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 15rpx;
+}
+.col2 .main .tag{
+  border:1rpx solid #e2e2e2;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  display: block;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  color: #666;
+}
+.col2 .main .on{
+  border:1rpx solid #ff6501;
+  color: #ff6501;
+}
+
+.col2 .main .info{
+    float: left;
+    margin-top: 25rpx;
+    margin-left: 20rpx;
+}
+.jian,.buynum,.jia{
+    float: left;
+    margin-top: 15rpx;
+}
+.jian,.jia{
+    border:1rpx solid #e2e2e2;
+    width: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.buynum{
+  width: auto;
+  min-width: 50rpx;
+  border-top: 1rpx solid #e2e2e2;
+  border-bottom: 1rpx solid #e2e2e2;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;  
+}
+
+.bottom_view{
+  position:  fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+  background: #fff;
+  z-index: 999;
+}
+
+.bottom_view .item{
+  width: 92%;
+  height: auto;
+  padding: 20rpx 0;
+  background: #fff;
+  border-bottom: 1rpx #f5f5f5 solid;
+  text-align: center;
+  font-size: 28rpx;
+  color: #000;
+  position: relative;
+  overflow: hidden;  
+}
+
+.bottom_view .item .title{
+  text-align: center;
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.bottom_view .item .close{
+  width: 40rpx;
+  height: 40rpx;
+  position: fixed;
+  right: 20rpx;
+}

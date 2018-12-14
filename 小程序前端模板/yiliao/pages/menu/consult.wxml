@@ -1,0 +1,41 @@
+<!--pages/menu/consult.wxml-->
+<view class='app'>
+  <image class="header" src='/img/icon_yuyue_header.jpg'></image>
+
+  <form bindsubmit='yuyue'>
+    <view class='content'>
+      <view class='item'>
+        <text class='hint'>问诊人:</text>
+        <input name="name" value='{{name}}' placeholder='请输入您的姓名'></input>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>性别:</text>
+        <picker class='date' value="{{sIndex}}" range="{{sexs}}" bindchange="bindSexChange">
+          <text>{{sex? sex : '请选择性别'}} </text>
+        </picker>
+      </view>
+
+      <view class='item'>
+        <text class='hint'>电话:</text>
+        <input placeholder='请输入您的手机号码' name="mobile" value='{{mobile}}'></input>
+      </view>
+
+
+      <view class='item' hidden='true'>
+        <text class='hint'>年龄:</text>
+        <input placeholder='请输入您的年龄' name="age" value='{{age}}'></input>
+      </view>
+    </view>
+
+    <view class='detail'>
+      <textarea name="demand" value='{{demand}}' placeholder='请详细描述您的问题，比如：您的症状、过往病史及治疗情况等。该信息仅用于医生分析，全方位保证您的隐私' maxlength='5000'></textarea>
+    </view>
+
+    <view class='btn_container'>
+      <button class='btn' form-type='submit' style='background:#FFC125'>提交预约</button>
+      <button class='btn' bindtap='clearInfo' style='background:#7CCD7C'>重新填写</button>
+    </view>
+  </form>
+
+</view>

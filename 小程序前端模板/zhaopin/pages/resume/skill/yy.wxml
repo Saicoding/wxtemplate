@@ -1,0 +1,38 @@
+<view class="app">
+  <form bindsubmit="addYuyanItem">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">语种</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindYZPickerChange" value="{{index}}" range="{{languages}}">
+            <text>{{language ? language : '请选择'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">熟练程度</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindSLPickerChange" value="{{eIndex}}" range="{{eArray}}">
+            <text>{{eArray[eIndex] ? eArray[eIndex] : '请选择'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+
+  </form>
+</view>

@@ -1,0 +1,115 @@
+<view class="header">
+
+  <view class="search">
+
+    <form bindsubmit="formBindsubmit">
+      <input name="keyword" placeholder="输入搜索商家名称" />
+      <button formType="submit">搜索</button>
+    </form>
+  </view>
+  <view id="clouds2">
+    <view animation="{{animationData}}" class="cloud1"></view>
+    <view animation="{{animationData}}" class="cloud2"></view>
+    <view animation="{{animationData}}" class="cloud3"></view>
+  </view>
+</view>
+
+<navigator url="/pages/gs/ruzhu">
+  <view class="ruzhu">
+    <image src="/image/ruzhu.png"></image>
+  </view>
+</navigator>
+<view class="main">
+  <view class="select">
+    <view bindtap="catelist" class="item">
+      <text class="cate">{{cat_name == '' ? '商家分类' : cat_name }}</text>
+      <image src="/image/jiantou.png"></image>
+    </view>
+    <view bindtap="arealist" class="item">
+      <text class="cate">{{area_name == '' ?  '区域筛选' :  area_name}}</text>
+      <image src="/image/jiantou.png"></image>
+    </view>
+    <view bindtap="orderlist" class="item">
+      <text class="cate">{{order[orderby] ?  order[orderby] :  '排序方式'}}</text>
+      <image src="/image/jiantou.png"></image>
+    </view>
+
+    <view hidden="{{orderlist}}" class="orderlist">
+      <view bindtap="orderby" data-index="-1">不限</view>
+      <view bindtap="orderby" wx:for="{{order}}" data-index="{{index}}">{{item}}</view>
+    </view>
+
+    <view hidden="{{catelist}}" class="catelist">
+      <view class="lt">
+        <text bindtap="tab" data-pid="{{item.pid}}" wx:for="{{search.cats}}">{{item.pid_name}}</text>
+        <text bindtap="tab2">不限</text>
+      </view>
+      <view  hidden="{{pid1}}" class="rt">
+        <text bindtap="selectcat" data-cat_id="{{item.cat_id}}" data-cat_name="{{item.cat_name}}" wx:for="{{search.cats[1].list}}" >{{item.cat_name}}</text>
+      </view>
+      <view hidden="{{pid2}}" class="rt">
+        <text bindtap="selectcat" data-cat_id="{{item.cat_id}}" data-cat_name="{{item.cat_name}}" wx:for="{{search.cats[2].list}}" >{{item.cat_name}}</text>
+      </view>
+    </view>
+    <view hidden="{{arealist}}" class="arealist">
+      <text bindtap="area" data-area_id="0" data-area_name="">不限</text>
+      <text bindtap="area" data-area_id="{{item.area_id}}" data-area_name="{{item.area_name}}"  wx:for="{{search.areas}}">{{item.area_name}}</text>
+    </view>
+  </view>
+
+  <view wx:for="{{datas}}" class="shop">
+    <navigator url="/pages/gs/detail?company_id={{item.company_id}}">
+      <view class="{{item.vip == 0 ? 'novip' : 'vip'}}">
+        <image wx:if="{{item.vip != 0}}" class="touxian" src="{{item.logo}}"></image>
+        <view class="cn">
+          <view class="title">
+            {{item.title}}
+          </view>
+          <view class="info">
+            <text class="lt">{{item.area_name}}-{{item.sort_name}}</text>
+            <text wx:if="{{item.vip != 0}}" class="vip1">会员{{item.vip}}年</text>
+          </view>
+          <view class="info2">
+            <text>距我{{item.juli}}</text>
+          </view>
+        </view>
+        <image bindtap="toTel" data-tel="{{item.tel}}" data-id="{{item.company_id}}" class="tel" src="/image/tel.png"></image>
+      </view>
+    </navigator>
+  </view>
+  
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+
+</view>
+
+
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/home/index">
+      <image src="/image/home_off.png"></image>
+      <text>首页</text>
+    </navigator>
+  </view>
+  <view class="ft_item on">
+    <navigator open-type="redirect" url="/pages/gs/index">
+      <image src="/image/gs_on.png"></image>
+      <text>找公司</text>
+    </navigator>
+  </view>
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/news/news">
+      <image src="/image/gl_off.png"></image>
+      <text>攻略</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator url="/pages/me/index">
+      <image src="/image/wode_off.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

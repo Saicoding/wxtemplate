@@ -1,0 +1,55 @@
+<!--pages/mine/index.wxml-->
+
+<view class='header' style='background:{{color}}'>
+  <image class='face' src='{{userinfo.face}}'></image>
+  <view class='nickname'>{{userinfo.nick_name}}</view>
+</view>
+
+<view class='items'>
+  <view class='col'>
+    <navigator url='/pages/mine/reserve'>
+      <image src='/img/icon_reserve.png'></image>
+      <text class='name'>我的预约</text>
+      <image class="arrow" src='/img/pk_jt.png'></image>
+    </navigator>
+  </view>
+
+  <view class='col'>
+    <navigator url='/pages/pay/index'>
+      <image src='/img/icon_pay.png'></image>
+      <text class='name'>付款</text>
+      <image class="arrow" src='/img/pk_jt.png'></image>
+    </navigator>
+  </view>
+
+  <view class='col'>
+    <navigator url='/pages/mine/coupon'>
+      <image src='/img/icon_coupon.png'></image>
+      <text class='name'>优惠券</text>
+      <image class="arrow" src='/img/pk_jt.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="jszc">技术支持：www.erre7.cn</view>
+
+<view class="footer">
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="image iconfont icon-shouye:before"></view>
+      <text>首页</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator open-type="redirect" url="/pages/yuyue/index">
+      <view class="image iconfont icon-faxian:before"></view>
+      <text>预约</text>
+    </navigator>
+  </view>
+
+  <view style="color:{{color}}" class="ft_item">
+    <view class="image iconfont icon-wode:before"></view>
+    <text>我的</text>
+  </view>
+</view>

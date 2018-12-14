@@ -1,0 +1,124 @@
+<!--pages/gs/free.wxml-->
+<view class="app">
+  <view class="menu">
+    <text bindtap="tab" data-type="1" class="{{type == 1 ? 'active' : ''}}">免费报价</text>
+    <text bindtap="tab" data-type="2" class="{{type == 2 ? 'active' : ''}}">免费设计</text>
+  </view>
+
+  <view class="baojia" data-type="1" hidden="{{type == 1 ? false:true}}">
+      <form bindsubmit="formBindsubmit">
+    <view class="item margin_top_20">
+      <view class="lt">
+        <input name="area" placeholder="请输入您的房屋面积" />
+      </view>
+      <view class="rt">
+        <text>m²</text>
+      </view>
+    </view>
+    <view class="type margin_top_20">
+     <picker style="width:48%" name="bedroom"  bindchange="woshi" value="{{index}}" range="{{woshi}}"> 
+        <view class="lt">   
+         <text>{{woshi[woshi_num]}}</text>
+          <image src="/image/zhuangxiu/icon_arrow_down.png"></image>
+      </view>
+    </picker> 
+      <view class="vline">
+      </view>
+       <picker style="width:50%" name="livingroom"  bindchange="ting" value="{{index}}" range="{{ting}}"> 
+      <view class="rt">
+        <text>{{ting[ting_num]}}</text>
+        <image src="/image/zhuangxiu/icon_arrow_down.png"></image>
+      </view>
+      </picker>
+    </view>
+    <view class="type margin_top_20">
+      <picker style="width:60%" name="kitchen"  bindchange="chu" value="{{index}}" range="{{chu}}"> 
+      <view class="vitem">
+        <text>{{chu[chu_num]}}</text>
+        <image src="/image/zhuangxiu/icon_arrow_down.png"></image>
+      </view>
+      </picker>
+      <view class="vline">
+      </view>
+      <picker style="width:62%" name="toilet"  bindchange="wei" value="{{index}}" range="{{wei}}"> 
+      <view class="vitem">
+        <text>{{wei[wei_num]}}</text>
+        <image src="/image/zhuangxiu/icon_arrow_down.png"></image>
+      </view>
+      </picker> 
+      <view class="vline">
+      </view>
+    <picker style="width:60%" name="balcony"  bindchange="yangtai" value="{{index}}" range="{{yangtai}}"> 
+      <view class="vitem">
+        <text>{{yangtai[yangtai_num]}}</text>
+        <image src="/image/zhuangxiu/icon_arrow_down.png"></image>
+      </view>
+      </picker>
+    </view>
+    <view class="type margin_top_20">
+      <input class="phone" name="name" placeholder="您的称呼" />
+    </view>
+    <view class="type margin_top_20">
+      <input type="number" class="phone" name="mobile" placeholder="输入号码，报价结果将发送到您的手机" />
+    </view>
+    <view style="height:280rpx"  class="type margin_top_20">
+      <textarea class="phone" name="content" placeholder="请输入您的额外需求说明比如风格需求等" />
+    </view>
+
+       <button formType="submit" class="jisuan margin_top_20">
+      立即申请
+    </button> 
+
+    <view class="hint margin_top_20">填写信息获取免费量房服务，定制更精准预算规则</view>
+  </form>
+    <view class="bj_info">
+      <view class="zxbj_info">
+        <view class="title">装修报价</view>
+        <view class="money">{{zongjia}}元</view>
+      </view>
+      <view class="bj_item_info">
+        <text class="tv">人工费：</text>
+        <text class="tv">{{rengongfei}}元</text>
+      </view>
+
+      <view class="bj_item_info">
+        <text class="tv">材料费：</text>
+        <text class="tv">{{cailiaofei}}元</text>
+      </view>
+
+      <view class="bj_item_info">
+        <text class="tv">设计费：</text>
+        <text class="tv">{{shejifei}}元</text>
+      </view>
+
+      <view class="bj_item_info">
+        <text class="tv">质检费：</text>
+        <text class="tv">{{zhijian}}元</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="baojia" data-type="2" hidden="{{type == 2 ? false:true}}">
+       <form bindsubmit="formBindsubmit">
+    <view class="type">
+      <input name="name" class="phone" placeholder="请输入您的称呼" />
+    </view>
+
+    <view class="type margin_top_20">
+      <input name="mobile" class="phone" placeholder="请输入您的手机号码" />
+    </view>
+
+    <view  style="height:280rpx" class="type margin_top_20">
+      <textarea name="content"  class="phone" placeholder="请输入您的额外需求说明比如风格需求等" />
+    </view>
+
+    <view class="margin_top_20">
+      <text class="agree_info">提交申请后平台将推荐3家优质设计师帮您设计！</text>
+    </view>
+    <button formType="submit" class="jisuan margin_top_20">
+      立即申请
+    </button> 
+     </form >
+      </view>
+ 
+</view>

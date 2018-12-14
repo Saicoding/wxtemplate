@@ -1,0 +1,37 @@
+<view class="header">
+    <view class="lt">房型</view>
+    <view class="ct">
+     <picker mode="date" bindchange="selectdate" start="{{bg_date}}" end="">
+        <text>{{date}}</text>
+        <image src="/img/minsu/jiantouxia.png"></image>   
+        </picker>      
+    </view>
+    <view class="rt">状态</view>
+</view>
+
+<view class="kongbai"></view>
+
+<!-- <view hidden="true" class="nodata">
+  <image src="/img/minsu/nodata.png"></image>
+  <text>宝宝心里苦，没有宝宝的住所</text>
+</view> -->
+
+<view class="room_list" wx:for="{{datas}}">
+  <view class="lt">
+    <image src="{{item.photo}}"></image>
+  </view>
+  <view class="ct">
+    <view class="title">{{item.title}} <text class="sy">剩余{{item.surplus_num}}/{{item.room_num_init}}</text></view>
+    <view>{{item.area}}㎡ {{item.bed_type_mean}}{{item.bed_width}}*{{item.bed_logn}}m {{item.is_wifi == 1 ? '有WIFI' : ''}}|{{item.is_breakfast == 1 ? '有早餐' : ''}}</view>
+  </view>
+  <view class="rt">
+    <switch bindchange="online" data-room_id="{{item.room_id}}" data-online="{{item.is_online}}"  checked="{{item.is_online == 1 ? 'checked' : ''}}"  type="switch" />  
+  </view>
+</view>
+
+<view class="fabu">
+  <navigator url="/pages/minsu/store/fang/add">
+  <image src="/img/minsu/tianjia.png"></image>
+  <text>发布新房间</text>
+  </navigator>
+</view>

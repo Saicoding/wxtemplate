@@ -1,0 +1,70 @@
+<view class="orderinfo">
+    <view class="status">{{datas.statusmeans}}</view>
+    <view class="info">订单编号:{{datas.order_id}}</view>
+    <view class="info">下单时间:{{datas.add_time}}</view>
+</view>
+
+<view wx:if="{{datas.mail_number != ''}}" class="shouhuo">
+  <view class="title">
+  <text class="iconfont icon-peisong"></text>
+  <text class="ml20">{{datas.mail_number}}</text>
+  </view>
+</view>
+
+<view  class="addr">
+    <view class="lt"><text class="iconfont icon-location"></text></view>
+    <view class="ct">
+      <view>收货人：{{datas.name}}；电话：{{datas.mobile}}</view>
+      <view>{{datas.gps_addr}}{{datas.address}}</view>
+    </view>
+</view>
+
+<view class="product">
+  <view class="title bdbt">
+    <text class="iconfont icon-shangcheng"></text>
+    <text class="ml20">购买清单</text>
+  </view>
+  
+  <view wx:for="{{datas.goods}}" class="item">
+       <image src='{{item.photo}}'></image>
+        <view class="rt">
+            <view class="tit">
+                <text class="name">{{item.goods_name}}</text>
+                <text class="price">¥{{item.price}}</text>
+            </view>
+            <view class="info">
+                <text class="num">x{{item.num}}</text>
+         <navigator wx:if="{{item.is_comment == 0 && (datas.status == 2 || datas.status == 8)}}" url='/pages/member/comment?sku_id={{item.sku_id}}&order_id={{order_id}}'> 评价商品</navigator>
+            </view>
+        </view>
+  </view>
+
+   <view class="col bdtp">
+    <text class="lt">商品总价</text>
+    <text class="rt price">¥{{datas.total_price}}</text>
+  </view>
+  <view class="col bdtp">
+    <text class="lt">运费</text>
+    <text class="rt">{{datas.mail_price == 0 ? '包邮' : datas.mail_price}}</text>
+  </view>
+  <view  class="col bdtp">
+    <text class="lt">优惠券</text>
+    <text class="rt">{{datas.pay_coupon}}</text>
+  </view>
+    <view  class="col bdtp">
+    <text class="lt">积分</text>
+    <text class="rt">{{datas.pay_integral}}</text>
+  </view>
+   <view class="col bdtp">
+    <text class="lt">合计</text>
+    <text class="rt price">¥{{datas.need_pay}}</text>
+  </view>
+</view>
+<view class="btnstatus" wx:if="{{datas.status == 0 || datas.status == 1}}">
+          <navigator url='/pages/member/cancle?order_id={{datas.order_id}}'><view class="btn">取消订单</view></navigator>
+
+</view>
+
+<view class="btnstatus" wx:if="{{datas.status == 0}}">
+          <view bindtap='by' class="btn">支付订单</view>
+</view>

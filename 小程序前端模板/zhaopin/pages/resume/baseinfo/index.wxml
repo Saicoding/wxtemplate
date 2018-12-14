@@ -1,0 +1,211 @@
+<!-- 基本信息 -->
+<view class="app">
+  <form bindsubmit="creatBaseInfo">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">姓名</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="name" placeholder="请输入" value="{{datas.name}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <picker class="tv" bindchange="bindSexChange" value="{{index}}" range="{{sexs}}">
+        <view class="lt">
+          <text class="title">性别</text>
+          <text class="state">*</text>
+        </view>
+
+        <view class="rt">
+          <view class="info">
+            <text>{{sexs[index] ? sexs[index] : '请选择性别'}} </text>
+            <image src="/img/pk_jt.png"></image>
+          </view>
+        </view>
+
+      </picker>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">出生日期</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindDateChange">
+            <text>{{birthday ? birthday : '请选择出生日期'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">户口</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="census_register" placeholder="请输入" value="{{datas.census_register}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">现居住地</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="residence" placeholder="请输入" value="{{datas.residence}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">开始工作年份</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindWDateChange">
+            <text>{{workingyears ? workingyears : '请选择开始工作年份'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">目前月薪(元)</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="salary" placeholder="请输入" value="{{datas.this_salary}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">手机号码</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="mobile" placeholder="请输入" value="{{datas.mobile}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">邮箱</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="emal" placeholder="请输入" value="{{datas.emal}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">QQ</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="qq" placeholder="请输入" value="{{datas.qq}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">亲友电话</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="relative_tel" placeholder="请输入" value="{{datas.relative_tel}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">身份证号</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="id_card" placeholder="请输入" value="{{datas.id_card}}" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">婚姻状况</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindMarrPickerChange" value="{{mIndex}}" range="{{mArray}}">
+            <text>{{mArray[mIndex] ? mArray[mIndex] : '请选择婚姻状况'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">政治面貌</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindPolPickerChange" value="{{pIndex}}" range="{{pArray}}">
+            <text>{{pArray[pIndex] ? pArray[pIndex] : '请选择政治面貌'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">身高</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="height" placeholder="请输入" value="{{datas.height}}" />
+        </view>
+      </view>
+    </view>
+
+
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

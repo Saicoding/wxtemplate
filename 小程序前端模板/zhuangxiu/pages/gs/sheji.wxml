@@ -1,0 +1,28 @@
+<!--pages/gs/free.wxml-->
+<view class="app">
+
+  <form bindsubmit="formBindsubmit">
+    <view class="baojia">
+      <view class="type">
+        <input name="name" class="phone" placeholder="请输入您的称呼" />
+      </view>
+
+      <view class="type margin_top_20">
+        <input name="mobile" class="phone" placeholder="请输入您的手机号码" />
+      </view>
+
+      <view class="smInfo margin_top_20">
+        <textarea name="content" class="tinput" placeholder="请输入您的额外需求说明比如风格需求等" />
+      </view>
+
+      <view class="margin_top_20">
+        <text class="agree_info">提交申请后平台将推荐3家优质设计师帮您设计！</text>
+      </view>
+
+      <button formType="submit" class="jisuan margin_top_20">
+        立即申请
+      </button>
+    </view>
+  </form>
+
+</view>

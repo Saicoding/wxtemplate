@@ -1,0 +1,45 @@
+<!--文章详情-->
+<view class="app">
+
+  <view class="details">
+    <view class="header">
+      <view class="title">什么是保障房 保障房申请条件</view>
+      <view class="date">2017-08-17 13:30</view>
+    </view>
+
+    <view class="content">
+      <view class="t_con">
+        保障房的性质其实与商品房是相对的，是政府为中低收入住房困难家庭所提供的限定标准、限定价格或是租金的住房。那么，具体什么是保障房呢？下面来看看吧。
+      </view>
+      <view class="i_con">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2164425309,2530115287&fm=26&gp=0.jpg"></image>
+      </view>
+
+      <view class="t_con">
+        保障房的性质其实与商品房是相对的，是政府为中低收入住房困难家庭所提供的限定标准、限定价格或是租金的住房。那么，具体什么是保障房呢？下面来看看吧。
+      </view>
+      <view class="i_con">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2164425309,2530115287&fm=26&gp=0.jpg"></image>
+      </view>
+
+      <view class="t_con">
+        保障房的性质其实与商品房是相对的，是政府为中低收入住房困难家庭所提供的限定标准、限定价格或是租金的住房。那么，具体什么是保障房呢？下面来看看吧。
+      </view>
+      <view class="i_con">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2164425309,2530115287&fm=26&gp=0.jpg"></image>
+      </view>
+      <view class="t_con">
+        保障房的性质其实与商品房是相对的，是政府为中低收入住房困难家庭所提供的限定标准、限定价格或是租金的住房。那么，具体什么是保障房呢？下面来看看吧。
+      </view>
+    </view>
+
+
+  </view>
+
+
+
+</view>
+
+<view class="bt_list">
+  <navigator url="/pages/gs/free"><view class="mf">领取结婚红包</view></navigator>
+</view>

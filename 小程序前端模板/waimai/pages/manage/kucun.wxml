@@ -1,0 +1,20 @@
+<checkbox-group bindchange="checkboxChange">
+<view wx:for="{{data}}" class="item">
+    <view class="lt">
+      <checkbox    value="{{item.id}}"></checkbox>
+    </view>
+    <view class="rt">
+        <image src='{{item.photo}}'></image>
+        <text class="name">{{item.name}}</text>
+        <text class="status">{{item.is_online==1?'上架中':'下架中'}}</text>
+    </view>
+
+</view>
+</checkbox-group>
+
+<view class="kongbai"></view>
+
+<view class="bottom">
+    <view bindtap='online' class="lt">批量上架</view>
+    <view bindtap='unline' class="rt">批量下架</view>
+</view>

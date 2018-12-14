@@ -1,0 +1,45 @@
+<view class='app'>
+  <view class="news" wx:for="{{datas}}" style='background:#fff;'>
+    <navigator url="/pages/case/detail?id={{item.id}}">
+      <view class="nitem bdbt">
+        <view class="tit">{{item.title}}</view>
+        <view class="riqi">{{item.add_time}}</view>
+      </view>
+    </navigator>
+  </view>
+
+  <view bindtap="more" data-type="{{type}}" wx:if="{{datas!=''&&more==1}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view wx:if="{{datas==''&&more==0}}" class="nomore">暂无数据</view>
+  <view class="jszc">技术支持：[巅峰互联]www.erre7.cn</view>
+  <view style="height:100rpx;"></view>
+
+
+  <view class="footer">
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/index/index">
+        <view class="image iconfont icon-shouye:before"></view>
+        <text>首页</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/product/index">
+        <view class="image iconfont icon-chanpin:before"></view>
+        <text>产品</text>
+      </navigator>
+    </view>
+
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-dongtai:before"></view>
+      <text>动态</text>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/consult/index">
+        <view class="image iconfont icon-zixun:before"></view>
+        <text>咨询</text>
+      </navigator>
+    </view>
+  </view>
+</view>

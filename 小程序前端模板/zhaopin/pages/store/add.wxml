@@ -1,0 +1,264 @@
+<!-- 添加职位 -->
+<view class="app">
+  <form bindsubmit="addJobTitle">
+    <view class="citem">
+      <view class="lt">职位名称</view>
+      <view class="rt">
+        <view class="info">
+          <input name="title" value="{{datas.title}}" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">待遇(月薪)</view>
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindSalPickerChange" value="{{sIndex}}" range="{{sArray}}">
+            <text>{{sArray[sIndex] ? sArray[sIndex] : '请选择待遇(月薪)'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">经验</view>
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindExpPickerChange" value="{{jIndex}}" range="{{jArray}}">
+            <text>{{jArray[jIndex] ? jArray[jIndex] : '请选择经验'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">学历</view>
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" bindchange="bindEduPickerChange" value="{{xIndex}}" range="{{xArray}}">
+            <text>{{xArray[xIndex] ? xArray[xIndex] : '请选择学历'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">招聘人数</view>
+      <view class="rt">
+        <view class="info">
+          <input name="people_num" value="{{datas.people_num}}" type="number" placeholder="请输入招聘人数" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">联系人</view>
+      <view class="rt">
+        <view class="info">
+          <input name="name" value="{{datas.name}}" placeholder="请输入联系人" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">联系电话</view>
+      <view class="rt">
+        <view class="info">
+          <input name="tel" value="{{datas.tel}}" placeholder="请输入联系电话" />
+        </view>
+      </view>
+    </view>
+
+    <view class="bq">
+      <view class="title">职位描述</view>
+      <view class="coninput">
+        <textarea name="describe" value="{{datas.describe}}" class="input" rows="100" cols="10" maxlength="5000" placeholder="请填写培训描述，保持1000字以内" />
+      </view>
+    </view>
+
+
+    <view class="citem top_20">
+      <view class="lt">是否急招</view>
+      <view class="rt">
+        <view class="info">
+          <switch  checked="{{is_ji==1?true: false}}" bindchange="switchChange_19" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem top_20">
+      <view class="ptitle">公司福利</view>
+    </view>
+    <view class="citem">
+      <view class="lt">是否包吃</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_eat==1?true: false}}" bindchange="switchChange_01" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否包住</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_live==1?true: false}}" bindchange="switchChange_02" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem">
+      <view class="lt">是否双休</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_weekend==1?true: false}}" bindchange="switchChange_03" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem">
+      <view class="lt">是否有加班补助</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_overtime==1?true: false}}"  bindchange="switchChange_04" color="{{color}}" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem">
+      <view class="lt">是否有班车接送</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_vehicle==1?true: false}}"  bindchange="switchChange_05" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem">
+      <view class="lt">是否有交通补助</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_bus==1?true: false}}"  bindchange="switchChange_06" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="citem">
+      <view class="lt">是否有饭补</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_meal==1?true: false}}"  bindchange="switchChange_07" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有话补</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_phone==1?true: false}}"  bindchange="switchChange_08" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有房补</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_room==1?true: false}}"  bindchange="switchChange_09" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有节日福利</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_festival==1?true: false}}"  bindchange="switchChange_10" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有五险</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_wuxian==1?true: false}}"  bindchange="switchChange_11" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有公积金</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_mpf==1?true: false}}"  bindchange="switchChange_12" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有年终奖</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_bonus==1?true: false}}"  bindchange="switchChange_13" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有带薪年假</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_newyear==1?true: false}}"  bindchange="switchChange_14" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有健康体检</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_healthy==1?true: false}}"  bindchange="switchChange_15" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有旅游奖励</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_tourism==1?true: false}}"  bindchange="switchChange_16" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有培训学习</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_train==1?true: false}}"  bindchange="switchChange_17" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">是否有股票股权</view>
+      <view class="rt">
+        <view class="info">
+          <switch checked="{{is_shares==1?true: false}}"  bindchange="switchChange_18" color="{{color}}" type="switch" />
+        </view>
+      </view>
+    </view>
+    <button form-type="submit" class="table_btn">确认添加</button>
+  </form>
+</view>

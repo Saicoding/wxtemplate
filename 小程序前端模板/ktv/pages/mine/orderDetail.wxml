@@ -1,0 +1,62 @@
+<!--pages/mine/reserve.wxml-->
+<view class='item'>
+  <view class='baseinfo'>
+    <view class='lt'>
+      <image class='thumb' src='/img/pics/001.jpg'></image>
+    </view>
+    <view class='rt'>
+      <view class="title">豪华大包间</view>
+      <view class='uprice' style='color:{{color}}'>yen
+        <text>188</text>元起</view>
+    </view>
+  </view>
+
+  <view class='orderinfo'>
+    <view class='state'>订单状态：待付款</view>
+    <view class='num'>订单编号：59c21a8795044277456568</view>
+  </view>
+
+  <view class='detail'>
+    <view class='ditem'>
+      <text class='ititle'>预约时间：</text>
+      <text class='icontent'>2017-09-21 13:00-15:00</text>
+    </view>
+
+    <view class='ditem'>
+      <text class='ititle'>商品总额：</text>
+      <text class='icontent'>yen564元</text>
+    </view>
+
+    <view class='ditem'>
+      <text class='ititle'>店铺优惠：</text>
+      <text class='icontent'>唱响KTV会员卡（打8.8折）</text>
+    </view>
+
+    <view class='ditem'>
+      <text class='ititle'>下单时间：</text>
+      <text class='icontent'>2017-09-20 16:20</text>
+    </view>
+  </view>
+
+  <view class='hongbao'>
+    <text class='name'>使用红包</text>
+    <image src='/img/pk_jt.png'></image>
+    <text class='content'>-100元</text>
+  </view>
+
+  <view class='payinfo'>
+    <view class='pitem'>
+      <text class='ptitle'>应付价格：</text>
+      <text class='pcontent' style='color:{{color}}'>yen469.32</text>
+    </view>
+    <view class='pitem'>
+      <text class='ptitle'>实付价格：</text>
+      <text class='pcontent' style='color:{{color}}'>yen369.32</text>
+    </view>
+  </view>
+  
+  <view class="jszc">技术支持：www.erre7.cn</view>
+
+  <view class='pay'>立即买单</view>
+
+</view>

@@ -1,0 +1,83 @@
+<view class="header">
+
+    <image src="{{detail.banner}}"></image>
+    <view>
+        <text class="title">{{detail.special_title1}}</text>
+        <text>{{detail.special_title2}}</text>
+    </view>   
+</view>
+
+<view class="tab">
+    <view style="width:47%">
+        <navigator url="/pages/public/date">
+        <text>{{date.bg_date1}}-{{date.end_date1}}</text>
+        <image src="/img/minsu/jiantou3.png"></image>  
+        </navigator>
+    </view>
+     <view style="width:20%">
+        <navigator url="/pages/public/city">
+        <text>{{cityinfo.city_name}}</text>
+        <image src="/img/minsu/jiantou3.png"></image>  
+        </navigator>
+    </view>
+    <view bindtap="paixu">
+        <text>排序方式</text>
+        <image src="/img/minsu/jiantou3.png"></image>  
+    </view>
+</view>
+<view wx:for="{{datas}}" class="item">
+      <view class="lt">
+       <navigator url="/pages/minsu/minsu/detail?id={{item.minsu_id}}">
+        <image src="{{item.photo}}"></image>
+        </navigator>
+      </view>
+      <view class="rt">
+       <navigator url="/pages/minsu/minsu/detail?id={{item.minsu_id}}">
+        <view class="name">{{item.minsu_name}}</view>
+        <view class="col">
+          <text class="score">{{item.score}}分</text>/{{item.praise_num}}条好评|{{item.bad_num}}条差评
+        </view>
+        <view class="col">
+          距您{{item.juli}},{{item.advantage}}
+        </view>
+        <view class="col">
+        {{item.room_num}}套房源/可接待1-{{item.appropriate}}人   <text  style="color:red"  class="price">¥{{item.price}}起</text>
+        </view>
+         </navigator>
+      </view>
+  </view>
+
+
+  <view wx:if="{{datas!= ''&& more==0}}" class="nomore">
+    没有更多数据了
+  </view>
+  <view bindtap="more" data-type="{{type}}" wx:if="{{datas!=''&&more==1}}" class="more">
+    查看更多
+  </view>
+ <view wx:if="{{datas== '' }}" class="nodata">
+    <image src="/img/minsu/nodata.png"></image>
+    <text>小编正在整理房间</text>
+ </view>
+
+    <view class="paixu_dialog" hidden="{{paixu?true:false}}" >
+    <view class="orderitem">
+      <view class="lt"><image hidden="{{order==1?false:true}}" src="/img/minsu/duihao.png"></image> </view>
+      <text bindtap="orderclick" class="{{order==1?'on':''}}" data-order="1">推荐排序</text>
+    </view>
+    <view class="orderitem">
+     <view class="lt"> <image hidden="{{order==2?false:true}}" src="/img/minsu/duihao.png"></image> </view>
+      <text bindtap="orderclick" class="{{order==2?'on':''}}" data-order="2">距离优先</text>
+    </view>
+    <view class="orderitem">
+     <view class="lt"> <image hidden="{{order==3?false:true}}" src="/img/minsu/duihao.png"></image> </view>
+      <text bindtap="orderclick" class="{{order==3?'on':''}}" data-order="3">价格最低</text>
+    </view>
+    <view class="orderitem">
+     <view class="lt"> <image hidden="{{order==4?false:true}}" src="/img/minsu/duihao.png"></image> </view>
+      <text bindtap="orderclick" class="{{order==4?'on':''}}" data-order="4">价格高优先</text>
+    </view>
+    <view class="orderitem">
+       <view class="lt"> <image hidden="{{order==5?false:true}}" src="/img/minsu/duihao.png"></image> </view>
+      <text bindtap="orderclick" class="{{order==5?'on':''}}" data-order="5">好评优先</text>
+    </view>
+  </view>

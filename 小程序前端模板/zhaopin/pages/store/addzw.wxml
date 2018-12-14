@@ -1,0 +1,29 @@
+<!--pages/store/addzw.wxml-->
+<view class="app">
+
+  <view class="item" wx:for="{{datas}}">
+
+    <view class="citem">
+      <navigator url="/pages/store/add?job_id={{item.job_id}}">
+        <view class="lt">
+          <view class="title">{{item.title}}</view>
+          <view class="price">{{item.salary_id}}</view>
+          <view class="tags">招聘人数：{{item.people_num}}人 </view>
+        </view>
+      </navigator>
+      <view class="rt">
+        <switch color="{{color}}" bindchange="changeOnLine" checked="{{item.is_online==1? true: false}}" data-id="{{item.job_id}}" type="switch" />
+      </view>
+    </view>
+
+    <view class="bottom">
+      <image src="/img/icon_delete.png" bindtap="deleteJob" data-id="{{item.job_id}}"></image>
+    </view>
+  </view>
+
+  <navigator open-type="redirect" url="/pages/store/add">
+    <view class="qiehuan">
+      <image class="add" src="/img/add.png"></image><text>增加职位</text>
+    </view>
+  </navigator>
+</view>

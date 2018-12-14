@@ -1,0 +1,133 @@
+<view class="app">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <navigator url="" hover-class="navigator-hover">
+        <image src="{{item.photo}}" class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <view class="menu">
+    <navigator url="/pages/contact/about">
+      <view class="item">
+        <view class="icon menu_bg_01">
+          <image src="/img/abc.png"></image>
+        </view>
+        <text>学校介绍</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/kecheng/index">
+      <view class="item">
+        <view class="icon menu_bg_02">
+          <image src="/img/product.png"></image>
+        </view>
+        <text>课程介绍</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/teacher/index">
+      <view class="item">
+        <view class="icon menu_bg_03">
+          <image src="/img/teacher.png"></image>
+        </view>
+        <text>师资力量</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/news/index">
+      <view class="item">
+        <view class="icon menu_bg_04">
+          <image src="/img/news.png"></image>
+        </view>
+        <text>学员风采</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/huodong/index">
+      <view class="item">
+        <view class="icon menu_bg_05">
+          <image src="/img/huodong.png"></image>
+        </view>
+        <text>活动报名</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/hd/index">
+      <view class="item">
+        <view class="icon menu_bg_06">
+          <image src="/img/hd.png"></image>
+        </view>
+        <text>互动营销</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/contact/liuyan">
+      <view class="item">
+        <view class="icon menu_bg_07">
+          <image src="/img/fankui.png"></image>
+        </view>
+        <text>意见反馈</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/contact/index">
+      <view class="item">
+        <view class="icon menu_bg_08">
+          <image src="/img/contact.png"></image>
+        </view>
+        <text>联系我们</text>
+      </view>
+    </navigator>
+  </view>
+
+
+
+  <view class="block">
+    <view class="title">
+      <text>学校相册</text>
+    </view>
+    <view class="photo">
+      <scroll-view scroll-x="true" class="pro">
+        <view class="item" wx:for="{{datas.photos}}">
+          <image src="{{item.photo}}" bindtap='lookPhoto' data-url='{{item.photo}}'></image>
+          <!-- <text>{{item.title}}</text> -->
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="block">
+    <view class="title">课程介绍
+    </view>
+    <view class="kecheng">
+      <view class="item bdbt" wx:for="{{datas.class}}">
+        <navigator url="/pages/kecheng/detail?class_id={{item.class_id}}">
+          <view class="lt">
+            <image src="{{item.photo}}"></image>
+          </view>
+          <view class="rt">
+            <view class="name">{{item.title}}</view>
+            <view class="price">价格：yen
+              <text class="money">{{item.price}}</text>元</view>
+            <view style=" border:1rpx solid {{color}};color:{{color}};" class="baoming">
+              查看课程
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view style="height:100rpx;"></view>
+
+  <view class="footer">
+    <navigator url="/pages/contact/liuyan">
+      <view class="lt">
+        <image src="/img/yj.png"></image>
+        <text>在线咨询</text>
+      </view>
+    </navigator>
+    <view class="rt" style="background:{{color}}" bindtap='callPhone'>
+      <image src="/img/tel.png"></image>
+      <text>拨打电话</text>
+    </view>
+  </view>
+
+
+</view>

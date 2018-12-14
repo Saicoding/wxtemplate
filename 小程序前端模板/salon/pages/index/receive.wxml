@@ -1,0 +1,63 @@
+<!--pages/index/receive.wxml-->
+<view class='header' style='background:{{color}}'>
+  <image src='{{datas.designer_photo}}'></image>
+  <view class='name'>-{{datas.designer_name}}-</view>
+</view>
+
+<form bindsubmit='bindUserYuyue'>
+  <view class='contview'>
+    <view class='top'>
+      <view class='lt'>选择预约项目</view>
+      <navigator url='/pages/index/price'>
+        <view class='rt'>查看价格表</view>
+      </navigator>
+    </view>
+
+    <view class='bottom'>
+      <view wx:for="{{datas.list}}">
+        <view class='{{category_id==item.category_id? "selblock":"block"}}' data-id='{{item.category_id}}' bindtap='onClickProject'>{{item.name}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='contview'>
+    <view class='top'>选择预约人数</view>
+    <view class='bottom'>
+      <view data-id='1' bindtap='onClickMenu' class='{{peoplenum==1? "selblock":"block"}}'>1人</view>
+      <view data-id='2' bindtap='onClickMenu' class='{{peoplenum==2? "selblock":"block"}}'>2人</view>
+      <view data-id='3' bindtap='onClickMenu' class='{{peoplenum==3? "selblock":"block"}}'>3人</view>
+      <view data-id='4' bindtap='onClickMenu' class='{{peoplenum==4? "selblock":"block"}}'>4人</view>
+      <view data-id='5' bindtap='onClickMenu' class='{{peoplenum==5? "selblock":"block"}}'>多人</view>
+    </view>
+  </view>
+
+  <view class='contview'>
+    <view class='top'>选择到店时间</view>
+    <view class='bottom'>
+      <view class='lctb'>
+        <view class='abtitle'>选择预约日期</view>
+        <picker class="atime" mode="date" bindchange="bindStartDateChange">
+          <text>{{bgdate? bgdate : '请选择开始时间'}} </text>
+        </picker>
+      </view>
+      <view class='hline'></view>
+      <view class='rctb'>
+        <view class='abtitle'>选择预约时间</view>
+        <picker class="atime" mode="time" start="09:01" end="21:01" bindchange="bindStartTimeChange">
+          <text>{{bgtime? bgtime : '请选择开始时间'}} </text>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class='contview'>
+    <view class='top'>完善预约信息</view>
+    <view class='bottom'>
+      <input name="name" class='name' placeholder="请输入预约姓名"></input>
+      <input name="mobile" class='phone' placeholder='请输入预约手机号码'></input>
+    </view>
+  </view>
+
+  <button form-type='submit' class='yuyue'>确定预约</button>
+</form>

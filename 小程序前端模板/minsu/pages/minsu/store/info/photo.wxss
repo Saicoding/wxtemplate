@@ -1,0 +1,59 @@
+page {
+    background: #f3f3f3;
+}
+.header{
+  height: 200rpx;
+  background: #fff;
+  padding-top: 30rpx;
+}
+.header image{
+  display: block;
+  width: 160rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.header text{
+  display: block;
+  font-size: 26rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  text-align: center;
+  width: 300rpx;
+}
+
+.imgs{
+  height: 300rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+.imgs image{
+  width: 100%;
+}
+
+.imgs  text{
+  height: 50rpx;
+  width: 100rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 100;
+  font-size: 26rpx;
+  color: #fff;
+  background: red;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  opacity: 0.8;
+}
+.btn{
+  width: 100%;
+  margin: 0 auto;
+  height: 70rpx; background: #1ba8b9;
+  color: #fff;
+  margin-top: 50rpx;
+  font-size: 28rpx;
+  line-height: 70rpx; 
+}

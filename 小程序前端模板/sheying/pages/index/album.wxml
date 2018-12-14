@@ -1,0 +1,22 @@
+<!--pages/index/album.wxml-->
+<view class='app'>
+  <swiper scroll-left="2" class="cscroll" scroll-x="true">
+    <swiper-item wx:for="{{datas}}">
+      <view class='album'>
+        <image class='images' src='{{item.photo}}' mode='aspectFill'></image>
+        <view class='viewer'>
+          <image src='{{item.photo}}' mode='aspectFill'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class='bottom'>
+    <view class='serblock' style='background:#CDAD00;' bindtap='toTel'>一键拨号</view>
+    <view class='serblock' style='background:#5CACEE;' bindtap="map">一键导航</view>
+    <navigator url="/pages/yuyue/index">
+      <view class='serblock' style='background:#FF69B4;'>在线预约</view>
+    </navigator>
+    <button class='serblock' open-type="contact" style='background:#71C671;'>在线客服</button>
+  </view>
+</view>

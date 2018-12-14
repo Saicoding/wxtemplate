@@ -1,0 +1,6 @@
+/* pages/dynamic/index.wxss */
+.app{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}

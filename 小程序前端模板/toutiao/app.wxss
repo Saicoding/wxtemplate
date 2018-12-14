@@ -1,0 +1,49 @@
+/** 查看图片 **/
+.photoshow {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.photoshow .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.8;
+}
+
+.photoshow .sw {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+  left: 0;
+  top: 300rpx;
+  z-index: 1002;
+}
+
+.photoshow .sw_item {
+  display: block;
+  height: 500rpx;
+}
+
+.photoshow .sw_item image {
+  width: 100%;
+  height: 500rpx;
+}
+
+.more {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx;
+  color: #1ba8b9;
+  background: #fff;
+}

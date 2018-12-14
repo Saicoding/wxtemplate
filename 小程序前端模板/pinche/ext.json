@@ -1,0 +1,17 @@
+{
+  "extEnable": true,
+  "extAppid": "wx555e7dd4d294ceeb",
+  "ext": {
+     "apiurl": "https://www.erre7.cn",
+     "appid" : "154",
+     "appkey": "80158c67f63dd507320ef37e0588ca8c",
+     "skin":"skin1"  
+  },
+  "extPages": {
+   
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

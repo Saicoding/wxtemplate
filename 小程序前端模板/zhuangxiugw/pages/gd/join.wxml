@@ -1,0 +1,15 @@
+<!--pages/index/join.wxml-->
+
+<view class='app'>
+<form bindsubmit='sub'>
+  <view class='content'>
+    <view class='title'><text class='alert'>*</text>您的姓名</view>
+    <input name="name" placeholder='请输入您的姓名'></input>
+  </view>
+  <view class='content'>
+    <view class='title'><text class='alert'>*</text>您的联系方式</view>
+    <input name="tel" placeholder='请输入联系方式'></input>
+  </view>
+  <button form-type='submit' class='join'>立刻报名</button>
+  </form>
+</view>

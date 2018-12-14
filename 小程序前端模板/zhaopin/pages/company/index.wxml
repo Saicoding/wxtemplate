@@ -1,0 +1,86 @@
+<!--pages/index/index.wxml-->
+<view class="header">
+
+  <view class="search">
+    <form bindsubmit="formSearchsubmit">
+      <input name="keyword" placeholder="搜索职位/公司" />
+      <button form-type="submit">搜索</button>
+    </form>
+  </view>
+  <view id="clouds2">
+    <view animation="{{animationData}}" class="cloud1"></view>
+    <view animation="{{animationData}}" class="cloud2"></view>
+    <view animation="{{animationData}}" class="cloud3"></view>
+  </view>
+</view>
+
+<view class="main">
+  <view class="select">
+    <view bindtap="catelist" class="item">
+      <text class="cate">招聘分类</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+    <view bindtap="arealist" class="item">
+      <text class="cate">区域筛选</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+    <view bindtap="orderlist" class="item">
+      <text class="cate">排序方式</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+
+    <view hidden="{{orderlist}}" class="orderlist">
+      <view wx:for="{{sort}}" bindtap="click_sort" data-id="{{index}}">{{item}}</view>
+    </view>
+
+    <view hidden="{{catelist}}" class="catelist">
+      <text class="{{industry_id==0?'active':''}}" bindtap="click_industry" data-id="0">不限</text>
+      <view wx:for="{{screen.industry}}">
+        <text class="{{industry_id==item.industry_id?'active':''}}" bindtap="click_industry" data-id="{{item.industry_id}}">{{item.industry_name}}</text>
+      </view>
+    </view>
+    <view hidden="{{arealist}}" class="catelist">
+      <text class="{{area_id==0?'active':''}}" bindtap="click_area" data-id="0">不限</text>
+      <view wx:for="{{screen.area}}">
+        <text class="{{area_id==item.area_id?'active':''}}" bindtap="click_area" data-id="{{item.area_id}}">{{item.area_name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:for="{{datas}}">
+    <navigator url="/pages/company/detail?company_id={{item.company_id}}">
+      <view class="shop">
+        <view class="face">
+          <image src="{{item.logo}}"></image>
+        </view>
+
+        <view class="info">
+          <view class="title">
+            {{item.title}}
+          </view>
+          <view class="auth">
+            <image src="/img/icon_auth.png"></image>
+            <text>已认证</text>
+          </view>
+          <view class="address">
+            {{item.area_name}}
+          </view>
+          <view class="type">
+            <text>{{item.sort_name}}</text>
+            <text class="vline">|</text>
+            <text>{{item.scale}}人</text>
+          </view>
+          <view class="rzhao">
+            <text class="hot">距离：{{item.juli}}  </text>
+            <text>热招：{{item.job_num}}个职位  </text>
+            <image src="/img/pk_jt.png"></image>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+</view>

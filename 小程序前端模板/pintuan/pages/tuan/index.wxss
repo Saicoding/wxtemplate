@@ -1,0 +1,161 @@
+.menubar {
+  height: 79rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  white-space: nowrap;
+  border-bottom: solid 1rpx #f4f5f6;
+}
+
+.menubar .menu {
+  width: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: inline-block;
+  background: #fff;
+}
+
+.menubar text {
+  display: inline-block;
+  width: auto;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  height: 90%;
+  text-align: center;
+}
+.search2{
+  width: 90%;
+  height: 60rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  position: relative; 
+}
+.search2 input{
+  height: 60rpx;
+  width: 500rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.search2 button{
+  float: left;width: 120rpx;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+
+.delete{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 40rpx;
+  position: absolute;
+  z-index: 100;
+  left: 460rpx;
+  top: 10rpx;
+  color: #666;
+}
+
+.tuan{
+  height: auto;
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+
+.tuan .product{
+  width: 100%;
+  height: 400rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.tuan .product image{
+  width: 100%;
+  height: 400rpx;
+}
+
+
+.tuan .yiyou{
+  position: absolute;
+  width: 200rpx;
+  height: 40rpx;
+  border: 1rpx solid #f2f2f2;
+  background: rgba(0,0, 0, .8);
+  z-index: 100;
+  left: -20rpx;
+  border-radius: 10rpx;
+  padding-left: 30px;
+  top: 300rpx;
+  line-height: 40rpx; 
+  color: #fff;
+}
+.tit{
+  width: 96%;
+  margin-left: 2%;
+  height: auto;
+  overflow: hidden;
+  line-height: 50rpx;
+  font-size: 26rpx;
+}
+.info{
+  height: auto;
+  margin-top: 20rpx;
+  width: 100%;
+  overflow: hidden;
+}
+.info .rt{
+  float: right;
+  height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 60rpx;
+
+  border-radius: 20rpx;
+  margin-right: 10rpx; 
+}
+.info .lt{
+  float: left;
+  width: 60%;
+  margin-left: 2%;
+}
+
+.tuaninfo{
+  height: 60rpx;
+}
+.tuantype{
+  color: red;
+}
+.price{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: red;
+  margin-left: 20rpx;
+}
+
+.yuanjia{
+  text-decoration:line-through;
+  margin-left: 20rpx;
+  color: #666;
+}
+.danmai{
+   color: #666;
+}
+
+.by{
+  background: red;
+  color: #fff;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  line-height: 24rpx;
+  margin-top: 16rpx;
+  margin-left: 20rpx;
+}

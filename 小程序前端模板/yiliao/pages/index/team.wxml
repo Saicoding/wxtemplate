@@ -1,0 +1,21 @@
+<!--pages/index/team.wxml-->
+<view class='app'>
+
+  <view class='item'>
+    <view class='lt'>
+      <image class="face" src='/img/kebi.jpg'></image>
+      <view class='type'>普外科</view>
+    </view>
+    <view class='rt'>
+      <view class='info'>董娟<text>院长</text> </view>
+      <view class='introduce'>从事妇产科临床工作近40年，擅长妇科常见疾病和疑难疾病的诊治，妇产科Ⅲ类及部分Ⅳ类手术的操作、孕产期保健、产科合并症及并发症的处理、计划生育手术操作及并发症的处理等，在国家级，省级学术杂志上发表论文20多篇，在 CN 级期刊上发表专业论著两篇，论文多篇，曾获安徽省科技进步成果三等奖一项。</view>
+
+      <view class='bview'>
+        <text class='detail' style='color:{{color}}'>详细介绍</text>
+        <text class='yuyue' style='color:{{color}}'>预约挂号</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

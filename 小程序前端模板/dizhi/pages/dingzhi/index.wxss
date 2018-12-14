@@ -1,0 +1,179 @@
+/* 私人定制 */
+.banner{
+  width: 100%;
+  height: 250rpx;
+}
+
+.banner image{
+  width: 100%;
+  height: 250rpx;
+}
+
+.dingzhi_top{
+  width: 100%;
+  height: 130rpx;
+  margin: 0 auto;
+  line-height: 130rpx;
+  background: #fff;
+  border-bottom: 1rpx #eee solid; 
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.menu_item{
+  width: 100%;
+  height: 130rpx;  
+  background: #fff;
+  border-bottom: 1rpx #eee solid;
+  display: flex;
+}
+
+.menu_item .lt{
+  width: 49.9%;
+  height: 130rpx;
+  float: left;
+  margin-right: 1rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_item_line{
+  width: 0.2%;
+  height: 130rpx;
+  background: #eee;
+  float: left;
+}
+
+.menu_item .rt{
+  width: 49.9%;
+  height: 130rpx;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_type_image{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.menu_type_text{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.procedure_item{
+  width: 90%;
+  height: 300rpx;
+  padding: 20rpx 5%;
+  margin-top: 20rpx;
+  background: #fff;
+  display:  block;
+}
+
+.btn_items{
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+}
+
+.btn_items image{
+  width: 48rpx;
+  height: 48rpx;
+  float: left;
+  margin: 36rpx 5rpx;
+}
+
+.p_item{
+  width: 18%;
+  height: 120rpx;
+  background: #f2f2f2;
+  border-radius: 4rpx;
+  border: 1rpx #dbdbdb solid;
+  text-align: center;
+  float: left;
+}
+
+.p_item_num{
+  font-size: 40rpx;
+  margin-top: 15rpx;
+  color: #1ba8b9;
+}
+
+.p_item_title{
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  color: #666;
+}
+
+
+.btn_dingzhi{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: #1ba8b9;
+}
+
+
+
+.dwbg{
+  height: 100%;width: 100%;
+  background: #000;opacity: 0.5;
+  position: fixed;top: 0;left: 0;
+}
+
+.kefu_dialog{
+  width: 90%;
+  margin: 0 5%;
+  height: 260rpx;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  bottom: 400rpx;
+  top: 400rpx;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  border-top: 1rpx #e2e2e2 solid;
+  border-bottom: 1rpx #e2e2e2 solid;
+  padding-bottom: 20rpx;
+  -webkit-box-shadow:0 0 5rpx rgba(0, 0, 0, .3);  
+  -moz-box-shadow:0 0 5rpx  rgba(0, 0, 0,  .3);  
+  box-shadow:0 0 5rpx  rgba(0, 0, 0,  .3);  
+}
+
+.kefu_dialog .kefu_phone{
+  width: 80%;
+  margin: 60rpx 10%;
+  font-size: 50rpx;
+}
+
+.kefu_dialog .select_view{
+  width: auto;  
+  margin: 20rpx 30rpx;
+  float: right;
+}
+
+.kefu_dialog .select_view .tv_cancel{
+    width: auto;
+    margin-right: 30rpx;
+    font-size: 28rpx;
+    color: #000;
+    text-align: center;
+}   
+
+
+.kefu_dialog .select_view .tv_calling{
+    width: 100rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #1ba8b9;
+}

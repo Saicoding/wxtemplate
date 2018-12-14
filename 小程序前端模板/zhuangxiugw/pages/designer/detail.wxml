@@ -1,0 +1,32 @@
+<!--pages/designer/detail.wxml-->
+<view class='baseinfo'>
+  <view class='face'>
+    <image src='{{datas.photo}}'></image>
+  </view>
+  <view class='info'>
+    <view>{{datas.name}}</view>
+    <view>头衔：{{datas.level}}</view>
+    <view>经验：{{datas.experience}}</view>
+  </view>
+</view>
+
+<view class='motto'>
+  <text class='title'>设计理念/风格：</text>
+  <text class='content'>{{datas.introduce}}</text>
+</view>
+
+<!--经典案例-->
+<view class='jingdian'>
+  <view class='title'>经典案例</view>
+  <navigator wx:for="{{datas.example}}" url='/pages/designer/photo?example_id={{item.example_id}}'>
+    <view class='jitem'>
+      <image src='{{item.photo}}'></image>
+      <view class='jtitle'>{{item.title}}</view>
+    </view>
+  </navigator>
+</view>
+
+<view style='height:100rpx;'></view>
+<navigator url='/pages/designer/join?designer_id={{datas.designer_id}}'>
+  <view class='join_activity'>立即报名</view>
+</navigator>

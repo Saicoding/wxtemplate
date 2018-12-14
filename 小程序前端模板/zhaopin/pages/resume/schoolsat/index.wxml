@@ -1,0 +1,33 @@
+<!-- 在校情况 -->
+<view class="app">
+  <navigator url="/pages/resume/schoolsat/hlist">
+    <view class="info_item">
+      <view class="title">荣誉奖励</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/schoolsat/plist">
+    <view class="info_item">
+      <view class="title">校内职务</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/resume/schoolsat/prlist">
+    <view class="info_item">
+      <view class="title">社会实践</view>
+      <!-- <view class="state">不完整</view> -->
+      <view class="arrow">
+        <image src="/img/pk_jt.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+</view>

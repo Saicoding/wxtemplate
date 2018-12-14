@@ -1,0 +1,21 @@
+<!--pages/member/set.wxml-->
+<view class="app">
+  <view class="citem">
+    <view class="lt">
+      <view class="title">完全公开</view>
+      <view class="detail">所有企业可以直接搜索到您的简历</view>
+    </view>
+    <view class="rt">
+      <switch bindtap='tab'  checked="{{status == 0 ? true:false}}" type="switch" />
+    </view>
+  </view>
+  <view class="citem">
+    <view class="lt">
+      <view class="title">对部分企业开放</view>
+      <view class="detail">只有您投递的简历的公司才能查看</view>
+    </view>
+    <view class="rt">
+      <switch bindtap='tab'  checked="{{status == 1 ? true:false}}" type="switch" />
+    </view>
+  </view>
+</view>

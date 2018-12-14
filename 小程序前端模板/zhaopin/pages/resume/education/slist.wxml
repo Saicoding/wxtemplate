@@ -1,0 +1,23 @@
+<!--pages/resume/education/slist.wxml-->
+<view class="app">
+
+  <navigator open-type="redirect" url="/pages/resume/education/index">
+    <view class="add_school">+添加教育经历</view>
+  </navigator>
+
+  <view wx:for="{{datas}}">
+    <view class="item">
+      <navigator url="/pages/resume/education/index?school_id={{item.school_id}}">
+        <view class="title">{{item.school_name}}</view>
+      </navigator>
+      <view class="detail">
+        <navigator url="/pages/resume/education/index?school_id={{item.school_id}}">
+          <view class="lt">{{item.bgdate}}至{{item.enddate}} {{item.education}}</view>
+        </navigator>
+        <view class="rt">
+          <image src="/img/icon_delete.png" bindtap="deleteSchool" data-id="{{item.school_id}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

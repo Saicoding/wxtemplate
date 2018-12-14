@@ -1,0 +1,217 @@
+page {
+    background: #f3f3f3;
+}
+.app{
+  width: 100%; height: auto; overflow: hidden;
+  font-size: 26rpx; 
+}
+
+.header{
+  height: 120rpx;
+  background: #1ba8b9;
+  width: 100%;
+  padding: 20rpx;
+}
+.header .type{
+  font-size: 40rpx; height: 50rpx;
+  line-height: 50rpx;
+  color: #fff;
+  width: 100%;
+}
+.header .type text{
+  float: left;
+}
+.header .type .act{
+  float: right;
+  width: 120rpx;
+  font-size: 26rpx;
+  margin-right: 50rpx;
+  border: 1rpx solid #fff;
+  text-align: center;
+}
+
+.header .type_info{
+   font-size:24rpx; height: 26rpx;
+  line-height: 26rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.orderinfo{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding-top: 20rpx; 
+}
+.orderinfo .title{
+  height: 40rpx;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.orderinfo .title image{
+  height: 24rpx;
+  width: 24rpx;
+  float: left;
+}
+
+.orderinfo .title .type{
+  float: left; font-size: 30rpx; font-weight: bold;
+}
+
+.orderinfo .title .price{
+  float: left; font-size: 24rpx; color: orange; margin-left: 20rpx; 
+}
+
+.orderinfo .title .rt{
+  float: right; margin-right: 20rpx;
+}
+.orderinfo .title .rt text{
+  float:  left; color: #1ba8b9; 
+}
+
+.action{
+  height: 100rpx;
+  width: 96%; margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.action .pay{
+  float: left;  margin-left: 20rpx;
+  border-radius: 10rpx; height: 60rpx;
+  width: 150rpx; background: #ff8201;
+  color: #fff; line-height: 60rpx; 
+  text-align: center; 
+}
+
+.action .quxiao{
+  float: left;  margin-left: 20rpx;
+  border-radius: 10rpx; height: 60rpx;
+  width: 150rpx; background:  #e2e2e2;
+  color: #fff; line-height: 60rpx; 
+  text-align: center; 
+}
+
+
+.product{
+  height: auto;
+  margin-top: 30rpx;
+  background: #fff;
+
+  padding: 20rpx;
+}
+
+.product .title{
+  margin-top: 10rpx;
+  font-size: 28rpx; color: #666;
+  font-weight: bold;
+}
+.product .addr{
+  margin-top: 10rpx;
+  font-size: 24rpx; color: #666;
+}
+.product .fang{
+  margin-top: 10rpx;
+  font-size: 26rpx; color: #666;
+  font-weight: bold;
+}
+
+.product .col{
+  margin-top: 10rpx;
+  font-size: 24rpx; color: #666;
+}
+
+.product .contact{
+  margin-top: 40rpx;
+  border-top: 1rpx solid #f3f3f3;
+  padding: 30rpx;
+}
+
+.product .contact .lt{
+  width: 50%; border-right: 1rpx solid #f3f3f3;
+  text-align: center;
+  float: left;
+}
+
+.product .contact .rt{
+  width: 49%; 
+  text-align: center;
+  float: right;
+}
+
+.product .contact image{
+  width: 30rpx; height: 30rpx;
+}
+.orderdetail{
+  padding: 20rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx; color:#666;
+  background: #fff;
+}
+
+.orderdetail view{
+  margin-top: 10rpx;
+}
+
+.qt{
+  margin-top: 20rpx;
+   padding: 20rpx;
+    font-size: 26rpx; 
+  background: #fff;
+}
+
+.qt button{
+  width: 300rpx;
+  margin-top: 50rpx;
+  background:  #fff; 
+  color: #1ba8b9;
+  border: 1rpx  solid #1ba8b9;
+  height: 60rpx; line-height: 60rpx;
+  font-size: 26rpx;
+}
+
+.payment{
+  position:fixed;
+  bottom:0;
+    height: 100rpx;
+  width: 100%;
+  background: #ffffff; 
+  line-height: 100rpx;
+  z-index: 100;
+
+}
+
+.payment .type{
+  float: left; font-size: 30rpx; font-weight: bold; margin-left: 20rpx;
+}
+
+.payment .price{
+  float: left; font-size: 24rpx; color: orange; margin-left: 20rpx; 
+}
+
+.payment button{
+  float: right; margin-right: 10rpx;
+  width: 200rpx;
+  height: 60rpx; line-height: 60rpx; background: #ff8201; color: #fff;  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.pick{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  width: 96%; margin-left: 2%;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.pick .lf{
+  float: left; width: 25%; text-align: left;
+}
+.pick .rt{
+  width: 70%; float: left;
+}
+.pick .price{
+  color: #ff8201; 
+}

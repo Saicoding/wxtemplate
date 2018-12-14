@@ -1,0 +1,17 @@
+<view class="search">
+  <form bindsubmit="formBindsubmit">
+    <input name="keywords" placeholder="输入搜索商家名称" />
+    <button formType="submit">搜索</button>
+  </form>
+</view>
+
+
+<view wx:for="{{detail.list}}" class="item">
+  <view class="title bdbt">
+    <text class="name">{{item.name}}（{{item.mobile}}）</text>
+    <text class="time">{{item.add_time}}</text>
+  </view>
+  <view class="content"> 用户留言：{{item.content}} </view>
+</view>
+<view bindtap="more" wx:if="{{datas!=''&&more==1}}" class="more">查看更多</view>
+<view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>

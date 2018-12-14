@@ -1,0 +1,54 @@
+<!--pages/index/homepage.wxml-->
+<view class='app'>
+  <view class='header' style='background:{{color}}'>
+    <view class='face'>
+      <image src='{{datas.photo}}'></image>
+    </view>
+    <view class='name'>{{datas.doctor_name}}</view>
+    <view class='hinfo'>
+      <view class='lt'>临床经验：{{datas.experience}}年</view>
+      <view class='lt'>推荐指数：5.0</view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='col'>
+      <view class='title'>
+        专家简介
+      </view>
+
+      <view class='info'>
+        <text>{{datas.introduce}}</text>
+      </view>
+    </view>
+
+    <view class='col'>
+      <view class='title'>
+        专业擅长
+      </view>
+      <view class='info'>
+        <text>{{datas.major}}</text>
+      </view>
+    </view>
+
+    <view class='col'>
+      <view class='title'>
+        学术荣誉
+      </view>
+      <view class='info'>
+        <text>{{datas.learning}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='btn_container'>
+    <navigator url='/pages/menu/consult'>
+      <button class='btn' style='background:#FFC125'>快速问医生</button>
+    </navigator>
+
+    <navigator open-type='reLaunch' url='/pages/yuyue/index'>
+      <button class='btn' style='background:#7CCD7C'>预约挂号</button>
+    </navigator>
+  </view>
+
+</view>

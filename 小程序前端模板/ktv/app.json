@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail",
+    "pages/index/about",
+    "pages/yuyue/index",
+    "pages/yuyue/reserve",
+    "pages/mine/index",
+    "pages/mine/reserve",
+    "pages/mine/detail",
+    "pages/mine/coupon",
+    "pages/mine/order",
+    "pages/mine/orderDetail",
+    "pages/pay/index",
+    "pages/pay/payyes",
+    "pages/coupon/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "巅峰应用KTV门店预定",
+    "navigationBarTextStyle": "white"
+  }
+}

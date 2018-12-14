@@ -1,0 +1,62 @@
+<!--发现 视频详情页面-->
+<view class="app">
+  <video class="video_container" src="{{detail.link}}"></video>
+  <view class="content">
+    <!-- 相关阅读 -->
+     <view wx:if="{{datas != ''}}" class="reader">
+      <view class="model_item">
+        <view class="vline"></view>
+        <text>相关视频</text>
+      </view>
+      <view class="fx_img_text">
+          <view wx:for="{{datas}}" class="item">
+              <navigator open-type="redirect" url="/pages/detail?id={{item.video_id}}">
+              <image src="{{item.photo}}"></image>
+              <view class="title">{{item.title}}</view>
+              </navigator>
+          </view>
+      </view>
+    </view> 
+    <!-- 相关评论 -->
+   <view class="comment">
+      <view class="model_item">
+        <view class="vline"></view>
+        <text>相关评论</text>
+      </view>
+      <view wx:for="{{comments}}" class="comment_item">
+        <!--用户头像-->
+        <view class="face_view"> 
+          <image src="{{item.face}}"></image>
+        </view>
+        <!-- Info -->
+        <view class="comment_lp">
+          <view class="header">
+            <view class="user_name">{{item.nick_name}}</view>
+            <view class="zan">
+              <image data-id="{{item.id}}" bindtap="zan" src="/img/zan.png"></image>
+              <text data-id="{{item.id}}" bindtap="zan">{{item.zan_num}}</text>
+            </view>
+          </view>
+          <view class="content">
+            {{item.content}}
+          </view>
+          <view class="bottom">
+            <view class="date">
+              {{item.add_time}}
+            </view>
+          </view>
+        </view>        
+      </view>   
+    </view>
+   </view> 
+  <form bindsubmit="comment">
+  <view class="reply_container">
+    <view class="reply_input">
+      <input name="content" id="content" placeholder="请输入评论信息"/>
+    </view>
+    <view class="reply_send">
+      <button form-type="submit" class="button">发送</button>
+    </view>
+  </view>
+ </form>
+</view>

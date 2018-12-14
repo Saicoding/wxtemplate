@@ -1,0 +1,100 @@
+<!-- 商户版本 -->
+<view class="app">
+  <view class="header">
+    <view class="hd_main">
+      <view class="icon">
+        <navigator url="/pages/store/order/index?type=1">
+          <view class="image">
+            <image src="/images/around/wait_order.png"></image>
+            <text wx:if="{{stayok != 0}}" class="tips">{{stayok}}</text>
+          </view>
+          <view class="text_wait">待确定新订单</view>
+        </navigator>
+      </view>
+      <view class="icon">
+        <navigator url="/pages/store/order/index?type=2">
+          <view class="image">
+            <image src="/images/around/sh_order.png"></image>
+            <text wx:if="{{stayin != 0}}" class="tips">{{stayin}}</text>
+          </view>
+          <view class="text_sh">待入住订单</view>
+        </navigator>
+      </view>
+      <view class="icon">
+        <navigator url="/pages/store/order/index?type=3">
+          <view class="image">
+            <image src="/images/around/qx_order.png"></image>
+            <text wx:if="{{statout != 0}}" class="tips">{{statout}}</text>
+          </view>
+          <view class="text">取消订单</view>
+        </navigator>
+      </view>
+
+      <view class="icon">
+        <navigator url="/pages/store/order/money">
+          <view class="image">
+            <image src="/images/around/jiesuan.png"></image>
+          </view>
+          <view class="text">结算管理</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="action">
+    <view class="col">
+      <navigator url="/pages/store/order/index">
+        <image class="tubiao" src="/images/around/btn_tabs_04_on.png"></image>
+        <text>订单管理</text>
+        <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+      </navigator>
+    </view>
+
+    <navigator url="/pages/store/product/index">
+      <view class="col">
+        <image class="tubiao" src="/images/around/icon_chanpin.png"></image>
+        <text>产品管理</text>
+        <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/store/package/index">
+      <view class="col">
+        <image class="tubiao" src="/images/around/taocan.png"></image>
+        <text>套餐管理</text>
+        <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/store/package/price">
+      <view class="col">
+        <image class="tubiao" src="/images/around/icon_price.png"></image>
+        <text>价格管理</text>
+        <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+      </view>
+    </navigator>
+
+    <view class="col">
+      <navigator url="/pages/store/comment/index">
+        <image class="tubiao" src="/images/around/dianping.png"></image>
+        <text>评价管理</text>
+        <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+      </navigator>
+    </view>
+
+    <view class="col">
+      <image class="tubiao" src="/images/around/kefu.png"></image>
+      <text>联系客服</text>
+      <image class="jiantou" src="/images/around/icon_arrow.png"></image>
+    </view>
+  </view>
+
+  <view class="kongbai"></view>
+
+  <view class="qihuan">
+    <navigator open-type="reLaunch" url="/pages/mine/index">
+      <image src="/images/around/qh.png"></image>
+      <text>切换到个人中心</text>
+    </navigator>
+  </view>
+</view>

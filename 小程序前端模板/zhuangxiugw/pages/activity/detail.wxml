@@ -1,0 +1,40 @@
+<!--pages/activity/detail.wxml-->
+<view class='app'>
+  <view class='baseinfo'>
+    <image src='{{datas.photo}}'></image>
+    <view class='info'>
+      <view class='title'>
+        <text class='activity_tit'>活动主题：</text>{{datas.title}}
+      </view>
+      <view class='date'>
+        <text class='activity_tit'>截止时间：</text>{{datas.bg_date}}至{{datas.end_date}}
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='atitle'>活动介绍</view>
+    <view class='ainfo'>
+      {{datas.introduce}}
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='atitle'>活动规则</view>
+    <view class='ainfo'>
+      <text>{{datas.rule}} </text>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='atitle'>注意事项</view>
+    <view class='ainfo'>
+      <text> {{datas.warning}} </text>
+    </view>
+  </view>
+
+  <view style='height:100rpx;'></view>
+  <navigator  url="{{datas.is_end == 1 ? '' : '/pages/activity/join?activity_id=' + datas.activity_id }}" >
+    <view style='background:{{datas.is_end == 1 ? "#bdbdbd"   :    color }}' class='join_activity' >立即预约  </view>
+  </navigator>
+</view>

@@ -1,0 +1,46 @@
+<view class="header">
+  <image src="{{userinfo.face=='' ? '/img/hotel/login_no.png':userinfo.face}}"></image>
+  <text>{{userinfo.nick_name}}</text>
+</view>
+
+<navigator url="/pages/store/auth">
+  <view class="col top_20">
+    <image class="icon" src="/img/yy2.png"></image>
+    <text>实名认证</text>
+    <image class="jt" src="/img/pk_jt.png"></image>
+  </view>
+</navigator>
+
+<navigator url="/pages/store/addzw">
+  <view class="col">
+    <image class="icon" src="/img/zan2.png"></image>
+    <text>发布职位</text>
+    <image class="jt" src="/img/pk_jt.png"></image>
+  </view>
+</navigator>
+
+<navigator url="/pages/store/jlrecord">
+  <view class="col">
+    <image class="icon" src="/img/dh2.png"></image>
+    <text>收到的简历</text>
+    <image class="jt" src="/img/pk_jt.png"></image>
+  </view>
+</navigator>
+
+<navigator url="/pages/store/search">
+  <view class="col">
+    <image class="icon" src="/img/dh2.png"></image>
+    <text>搜索简历</text>
+    <image class="jt" src="/img/pk_jt.png"></image>
+  </view>
+</navigator>
+
+<button bindtap="submit" class="table_btn">联系客服</button>
+<view class="jszc">技术支持：www.erre7.cn</view>
+
+
+<navigator open-type="redirect" url="/pages/index/index">
+  <view class="qiehuan">
+    <image src="/img/qiehuan.png"></image><text>切换到用户端</text>
+  </view>
+</navigator>

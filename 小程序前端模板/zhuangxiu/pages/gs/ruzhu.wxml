@@ -1,0 +1,120 @@
+<form bindsubmit="fromSubmit">
+  <view class="table_form">
+    <view class="input bdbt">
+      <text>响亮口号</text>
+      <input name="title" type="text" placeholder="输入响亮口号50个字以内" />
+    </view>
+    <view class="input bdbt">
+      <text>商家名称</text>
+      <input name="company_name" type="text" placeholder="请输入名称" />
+    </view>
+    <view class="input bdbt">
+      <text>商家简称</text>
+      <input name="sort_name" type="text" placeholder="请输入简称" />
+    </view>
+
+    <view class="input bdbt">
+      <text>成立时间</text>
+      <input name="bg_year" type="text" placeholder="请输入成立时间(如2017)" />
+    </view>
+
+    <view class="picker bdbt">
+      <text class="lt">分类</text>
+      <picker class="ct" bindchange="selectcat" value="{{cate}}" range="{{cats_array}}">
+        <text>{{cats_array[cat_index] ? cats_array[cat_index] : '请选择分类'}} </text>
+      </picker>
+      <image class="rt" src="/image/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+    <view class="picker bdbt">
+      <text class="lt">区域</text>
+      <picker class="ct" bindchange="selecareas" value="{{a}}" range="{{areas_array}}">
+        <text>{{areas_array[area_index] ? areas_array[area_index] : '请选择区域'}} </text>
+      </picker>
+      <image class="rt" src="/image/pk_jt.png"></image>
+      <input hidden="true" value="{{cate}}" />
+    </view>
+    <view class="input bdbt">
+      <text>主营业务</text>
+      <input name="business" type="text" placeholder="主营业务、最多20个字" />
+    </view>
+    <view bindtap="map" class="map">
+      <text class="lt">商家地址</text>
+      <text class="ct">{{addr == '' ? "选择地图坐标" : addr}}</text>
+      <image src="/image/dw.png"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+  <view class="table_form">
+    <view class="logo">
+      <text class="lt">上传LOGO</text>
+      <image src="/image/addphoto.png" bindtap="uploadlogo"></image>
+      <image wx:if="{{photo_url != ''}}" src="{{photo_url}}"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+
+
+  <view class="table_form">
+    <view class="input bdbt">
+      <text>联系人</text>
+      <input name="contacts" type="text" placeholder="输入联系人" />
+    </view>
+    <view class="input bdbt">
+      <text>联系电话</text>
+      <input name="phone" type="number" placeholder="输入电话号码" />
+    </view>
+    <view class="input">
+      <text>职务</text>
+      <input name="zhiwu" type="text" placeholder="职务" />
+    </view>
+  </view>
+
+  <view class="table_form">
+    <view class="input bdbt">
+      <text>商家类型</text>
+      <radio-group bindchange="radioChange">
+        <label>
+              <radio value="2" />企业
+            </label>
+        <label>
+              <radio value="1" />个人
+            </label>
+      </radio-group>
+    </view>
+    <view class="logo">
+      <text class="lt">上传身份证</text>
+      <image src="/image/addphoto.png" bindtap="uploadces"></image>
+      <image wx:if="{{ces_url != ''}}" src="{{ces_url}}"></image>
+      <input hidden="true" />
+    </view>
+  </view>
+
+  <view class="table_form">
+    <view class="photolist">
+      <view class="title">上传相册</view>
+      <view class="action">
+        <image src="/image/addphoto.png" bindtap="photos"></image>
+      </view>
+      <view class="photos">
+        <view wx:for="{{photos_url}}" wx:for-index="index" class="item">
+          <image data-index="{{index}}" src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="table_form">
+    <view class="textarea">
+      <text>商家介绍</text>
+      <textarea name="introduce" placeholder="商家介绍，最多500字" />
+    </view>
+  </view>
+
+
+
+  <button form-type="submit" class="table_btn">立刻申请</button>
+</form>
+
+<view class="jszc">技术支持：www.erre7.cn</view>

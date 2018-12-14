@@ -1,0 +1,38 @@
+<view class="app">
+<view class="menu">
+      <text bindtap="tab" data-type="0" class="{{type == 0 ? 'active' : ''}}" >全部</text>
+      <text  bindtap="tab" data-type="1" class="{{type == 1 ? 'active' : ''}}">未使用</text>
+      <text  bindtap="tab" data-type="3" class="{{type == 3 ? 'active' : ''}}">过期</text>
+      <text  bindtap="tab" data-type="2" class="{{type == 2 ? 'active' : ''}}">已使用</text>
+    </view>
+  <view wx:for="{{datas}}" wx:for-item="item"  class="coupon">
+    <image class="bg" src="/img/hotel/coupon_{{item.status == 1 ? 'on' : 'off'}}.png"></image>
+    <image  class="dian" src="/img/hotel/coupon_dian.png"></image>
+    <view class="datas">
+        <view class="lt {{item.status == 1 ? 'on' : 'off'}}">
+            <text>¥</text>{{item.money}}
+        </view>
+        <view class="ct">
+            <view class="type">
+              酒店优惠券
+            </view>
+            <text>满{{item.need_money}}元可用</text>
+            <text>{{item.way_mean}}</text>
+            <text>{{item.can_use_time}}至{{item.expir_time}}</text>
+        </view>
+        <view class="rt">
+            <text class=" {{item.status == 1 ? 'on' : 'off'}}">{{item.status_mean}}</text>
+        </view>
+    </view>
+  </view>
+</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">
+    没有更多数据了
+  </view>
+  <view bindtap="more" data-type="{{type}}" wx:if="{{datas!=''&&more==1}}" class="more">
+    查看更多
+  </view>
+  <view wx:if="{{datas==''}}" class="nodata">
+      <image src="/img/hotel/nodata.png"></image>
+      <text>宝宝心里苦，没有宝宝的住所</text>
+  </view>

@@ -1,0 +1,23 @@
+<!--pages/mine/order.wxml-->
+<view class='app'>
+
+  <view class='item' wx:for="{{datas}}">
+    <view class='header'>
+      <view>{{item.name}}</view>
+      <view>{{item.mobile}}</view>
+      <view class='tag' style='background:{{item.type==1? "#FF8C00": "#EE30A7"}}'>{{item.type==1? "门诊": "预约"}}</view>
+    </view>
+    <view class='info'>
+      <view hidden='{{item.type==1? true: false}}'>意向：{{item.intention==""? "暂无填写":item.intention}}</view>
+      <view>备注：{{item.demand==""? "暂无填写":item.demand}}</view>
+      <view class='date' hidden='{{item.type==1? true: false}}'>{{item.date}}</view>
+    </view>
+  </view>
+
+
+  <view bindtap="loadMore" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <view style="height:100rpx;"></view>
+
+</view>

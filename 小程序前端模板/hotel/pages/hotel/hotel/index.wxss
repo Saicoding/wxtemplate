@@ -1,0 +1,336 @@
+page {
+    background: #f3f3f3;
+}
+.app {
+  font-size: 26rpx;
+  width: 100%;
+}
+
+.header{
+  height: 80rpx;
+  position: fixed;
+  top: 0;left: 0;
+  width: 100%;
+  background: #f3f3f3;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1rpx #f3f3f3 solid;
+}
+
+.header .city{
+  float: left; width: 17%;
+  color: #000;
+  margin-left: 2%;
+  font-size: 30rpx; 
+  margin-top: 20rpx;
+}
+.header .city image{
+  width: 30rpx; height: 30rpx;
+}
+.header .rt{
+  float: left; height: 60rpx;
+  border: 1rpx solid #ccc;
+  margin-top: 10rpx;
+  width:79%;
+  border-radius: 5rpx;
+}
+
+
+.header .rt .riqi .rq_lt{
+  float: left;
+  width: 150rpx;
+  margin-left: 20rpx;
+}
+.header .rt .riqi .rq_lt text{
+  font-size: 24rpx;
+  display: block;
+  margin-top: 3rpx;
+  height: 24rpx;
+}
+.header .rt .riqi image{
+  float: left; width: 30rpx; height: 30rpx;
+  margin-top: 20rpx;
+}
+.header .sousuo{
+   float: left; width: 40rpx; height: 40rpx;
+     margin-top: 10rpx;
+     margin-left: 10rpx;
+}
+.header .rq_rt{
+    float: left; margin-top: 10rpx; color: #ccc;
+}
+.header .rq_rt text{
+    float: left; height: 40rpx; line-height: 40rpx; 
+}
+.header .quxiao{
+  height: 30rpx;width: 30rpx; opacity: 0.8;
+  float: right; margin-right: 20rpx; margin-top: 15rpx;
+}
+
+.top_kong{
+  height: 80rpx; width: 100%;
+}
+
+.item{
+  height: 200rpx; margin-top: 20rpx; background: #fff;
+  width: 100%;
+}
+
+.item .lt{
+  height:200rpx;
+  width: 200rpx;
+  float: left;
+}
+.item .lt image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.item .rt{
+  width: 500rpx;
+  float: left;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+.item .name{
+  font-size: 28rpx; font-weight: bold;
+}
+.item .score{
+  color: #1ba8b9; font-size: 26rpx; 
+}
+.item .col{
+  color: #666; margin-top: 10rpx;
+  font-size:  24rpx;
+}
+
+.item .price{
+  height: 28rpx;
+}
+.item .price text{
+  float: right; margin-right: 20rpx; color: red; font-size: 28rpx; 
+}
+
+.nomore{
+  height: 80rpx; line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx; color: #ccc;  
+  background: #fff; 
+}
+
+.more{
+  height: 80rpx; line-height: 80rpx;
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 26rpx; color: #1ba8b9;  
+  background: #fff; 
+}
+.h100{
+  height: 100rpx;
+}
+
+.footer{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top:1rpx #f3f3f3 solid;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dwbg{
+  height: 100%;width: 100%;
+  background: #000;opacity: 0.5;
+  position: fixed;top: 0;left: 0;
+  z-index: 998;
+}
+.paixu_dialog{
+  height: auto;width: 100%;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  bottom: 80rpx;
+  left: 0;
+}
+.dialog_select{
+  height: auto;width: 100%;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  bottom: 80rpx;
+  left: 0;
+}
+
+.dialog_select .btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+.dialog_select .btn .lt{
+  float: left;
+  color:  #000;
+  margin-left: 20rpx;
+}
+.dialog_select .btn .rt{
+  float: right;
+  color: #1ba8b9;
+  margin-right: 20rpx;
+}
+.dialog_select .content{
+  height: 500rpx;
+  width: 100%;
+  overflow-y: scroll;
+  padding-bottom: 20rpx;
+}
+.dialog_select .content .title{
+  color: #ccc; 
+  margin-top: 20rpx;
+  width: 80%;  
+  margin-left: 30rpx;
+}
+.dialog_select .content .select{
+  color: #ccc; 
+  margin-top: 20rpx; 
+  height: auto; overflow: hidden;
+}
+.dialog_select .content .select text{
+  float: left; margin-left: 20rpx;
+  padding: 10rpx;
+  border:1rpx solid #ccc;
+  color: #000;
+  margin-top: 20rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+
+}
+.dialog_select .content .select .on{
+  border:1rpx solid  #1ba8b9;
+  color: #1ba8b9;
+}
+
+.dialog_select .content .lt{
+  float: left; width:25%;border-right: 1rpx solid #e2e2e2;
+  height:100%; overflow-y: scroll;
+}
+
+.dialog_select .content .lt .ltcol{
+  background: #f7f7f7; 
+  height:69rpx;
+  line-height: 69rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.dialog_select .content .lt image{
+  width: 20rpx; height: 20rpx; float: left;
+  margin-top: 30rpx; margin-left: 20rpx;
+  display: none;
+}
+.dialog_select .content .lt .on image{
+  display: block;
+}
+
+.dialog_select .content .lt text{
+  float: right;
+  text-align: center;
+  width: 70%;
+}
+.dialog_select .content .lt .on{
+  background: #fff; 
+}
+.dialog_select .content .lt .on text{
+  color: #1ba8b9; 
+}
+.dialog_select  .content .rt{
+  width: 74%;float: left;
+  height:100%; overflow-y: scroll;
+}
+.dialog_select .content .rt image{
+  width: 20rpx; height: 20rpx; float: left;
+  margin-top: 30rpx; margin-left: 50rpx;
+  display: none;
+}
+.dialog_select .content .rt .rtcol{
+  height: 60rpx; line-height: 60rpx;
+  width: 100%;
+}
+
+.dialog_select .content .rt text{
+  width: 80%;float: right;text-align: left;
+   border-bottom: 1rpx solid #e2e2e2;
+}
+
+.dialog_select .content .rt .on image{
+  display: block;
+}
+.dialog_select .content .rt .on text{
+  color: #1ba8b9;
+}
+.paixu_dialog .orderitem{
+  height: 60rpx; line-height: 60rpx;
+  color: #000;
+}
+.paixu_dialog .on{
+  color: #1ba8b9;
+}
+
+.paixu_dialog image{
+  width: 30rpx; height: 30rpx;
+  margin-top: 20rpx;
+ 
+}
+.paixu_dialog .lt{
+  float: left; width: 10%;
+  display: block;
+  
+  text-align: center;
+}
+.paixu_dialog text{
+  float: right;
+  width: 90%;
+  text-align: left;
+  display: block;
+  height: 60rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+
+.footer .menu{
+  float: left;width: 24.5%;
+  text-align: center;
+}
+
+.footer .menu image{
+  width: 30rpx; height: 30rpx;  
+}
+
+
+.footer .bd{
+  border-right: 1px solid #f3f3f3;
+}
+
+
+.nodata{
+  height: 400rpx;
+  width: 100%;
+}
+
+.nodata image{
+  height: 200rpx;
+  width:  200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.nodata text{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color:  #1ba8b9;
+  font-size: 28rpx;
+  text-align: center;
+}

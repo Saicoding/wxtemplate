@@ -1,0 +1,181 @@
+.noaddr{
+  height: 180rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.noaddr image{
+  height: 80rpx;
+  width: 80rpx;
+  margin-top: 20rpx;
+}
+
+.noaddr view{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.noaddr view text{
+  color: red;
+}
+
+.addr{
+  height: 180rpx;
+  background: #fff;
+}
+
+.addr .lt{
+  float: left;
+  width: 10%;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 150rpx;
+}
+.addr .ct{
+  float: left;
+  width: 80%;
+  margin-top: 50rpx;
+  overflow: hidden;
+}
+.addr .ct view{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+.addr .rt{
+  float: right;
+  width: 10%;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+.shouhuo{
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.shouhuo .title{
+  width: 96%;
+  margin: 0 auto;
+}
+
+.shouhuo .icon-right{
+  float: right;
+}
+.shouhuo .icon-peisong{
+  font-size: 36rpx;
+}
+
+.product{
+  height: auto;
+  background: #fff;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.product .title{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 96%;
+  margin: 0 auto;
+}
+.ml20{
+  margin-left: 20rpx;
+}
+
+.product .item{
+  height: auto;
+  overflow: hidden;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.product .item image{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+}
+.product  .item .rt{
+  float: right;
+  width: 600rpx;
+}
+.product  .item .price{
+  float: right;
+  color: red;
+}
+.product  .item .tit{
+  line-height: 36rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.product  .item .info{
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.product  .item .info .detail{
+  width: 80%;
+  background: #f00;
+}
+
+.product  .item .num{
+  float: right;
+}
+
+.col{
+  width: 96%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+}
+
+.col .lt{
+  float: left;
+  font-size: 26rpx;
+}
+.col .rt{
+  float: right;
+}
+.price{
+  font-size: 26rpx;
+  font-weight: bold;
+  color: red;
+}
+
+.buy{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+
+.buy .lt{
+  float: left;
+  width: 50%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  line-height: 30rpx;
+}
+.buy .rt{
+  float: left;
+  width: 200rpx;
+  height: 60rpx;
+  color: #fff;
+  margin-top: 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  margin-left: 100rpx;
+}
+.buy .lt text{
+  color: red;
+  font-size: 26rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,152 @@
+<!--pages/index/index.wxml-->
+<view class="header">
+  <view class="search">
+    <form bindsubmit="formSearchsubmit">
+      <input name="keyword" placeholder="请输入职位名称" />
+      <button formType="submit">搜索</button>
+    </form>
+
+  </view>
+  <view id="clouds2">
+    <view animation="{{animationData}}" class="cloud1"></view>
+    <view animation="{{animationData}}" class="cloud2"></view>
+    <view animation="{{animationData}}" class="cloud3"></view>
+  </view>
+</view>
+
+<view class="main">
+  <view class="select">
+    <view bindtap="catelist" class="item">
+      <text class="cate">区域范围</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+    <view bindtap="arealist" class="item">
+      <text class="cate">薪资范围</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+    <view bindtap="orderlist" class="item">
+      <text class="cate">其他筛选</text>
+      <image src="/img/jiantou.png"></image>
+    </view>
+
+    <view hidden="{{orderlist}}" class="orderlist">
+      <view class="item">
+        <view class="title">工作经验</view>
+        <view wx:for="{{screen.experience}}">
+          <text class="{{experience_id==item.experience_id?'active':''}}" bindtap="click_experience" data-id="{{item.experience_id}}">{{item.experience_name}}</text>
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="title">学历要求</view>
+        <view wx:for="{{screen.education}}">
+          <text class="{{education_id==item.education_id?'active':''}}" bindtap="click_education" data-id="{{item.education_id}}">{{item.education_name}}</text>
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="title">公司性质</view>
+        <text class="{{type_id==0?'active':''}}" bindtap="click_type" data-id="0">不限</text>
+        <view wx:for="{{screen.type}}">
+          <text class="{{type_id==item.type_id?'active':''}}" bindtap="click_type" data-id="{{item.type_id}}">{{item.type_name}}</text>
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="title">公司规模</view>
+        <text class="{{scale_id==0?'active':''}}" bindtap="click_scale" data-id="0">不限</text>
+        <view wx:for="{{screen.scale}}">
+          <text class="{{scale_id==item.scale_id?'active':''}}" bindtap="click_scale" data-id="{{item.scale_id}}">{{item.scale_name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view hidden="{{catelist}}" class="catelist">
+      <text class="{{area_id==0?'active':''}}" bindtap="click_area" data-id="0">不限</text>
+      <view wx:for="{{screen.area}}">
+        <text class="{{area_id==item.area_id?'active':''}}" bindtap="click_area" data-id="{{item.area_id}}">{{item.area_name}}</text>
+      </view>
+    </view>
+    <view hidden="{{arealist}}" class="xzlist">
+      <text class="{{salary_id==0?'active':''}}" bindtap="click_salary" data-id="0">不限</text>
+      <view wx:for="{{screen.salary}}">
+        <text class="{{salary_id==item.salary_id?'active':''}}" bindtap="click_salary" data-id="{{item.salary_id}}">{{item.salary_name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="zpin" wx:for="{{datas}}">
+
+    <navigator url="/pages/index/detail?job_id={{item.job_id}}">
+      <view class="title">
+        <text class="name">{{item.title}}</text>
+        <text class="price">{{item.salary}}</text>
+      </view>
+      <view class="address">
+        <text class="name">{{item.company_name}}</text>
+      </view>
+
+      <view class="describe">
+        <view class="item">
+          <image src="/img/icon_auth.png"></image>
+          <text>已认证</text>
+        </view>
+        <view class="item">
+          <image src="/img/icon_describe_01.png"></image>
+          <text>{{item.region}}</text>
+        </view>
+        <view class="item">
+          <image src="/img/icon_describe_02.png"></image>
+          <text>{{item.experience}}</text>
+        </view>
+
+        <view class="item">
+          <image src="/img/icon_describe_03.png"></image>
+          <text>{{item.education}}</text>
+        </view>
+      </view>
+
+      <view class="hline"></view>
+
+      <view class="info">
+        <text style="color:{{color}};" class="nick margin_left_20">{{item.name}}</text>
+        <text class="vline">|</text>
+        <text style="color:{{color}};" class="post">{{item.tel}}</text>
+        <image wx:if="{{item.is_ji == 1 }}" class="jp_tag" src="/img/icon_jp.png"></image>
+      </view>
+
+    </navigator>
+  </view>
+
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+</view>
+
+<view class="footer">
+  <view class="ft_item on">
+    <image src="/img/home_on.png"></image>
+    <text>首页</text>
+  </view>
+
+  <view class="ft_item">
+    <navigator url="/pages/company/index">
+      <image src="/img/gs_off.png"></image>
+      <text>公司</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator url="/pages/resume/index">
+      <image src="/img/sq_off.png"></image>
+      <text>创建简历</text>
+    </navigator>
+  </view>
+
+  <view class="ft_item">
+    <navigator url="/pages/member/index">
+      <image src="/img/wode_off.png"></image>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

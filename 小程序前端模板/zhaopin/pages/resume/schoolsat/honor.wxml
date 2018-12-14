@@ -1,0 +1,36 @@
+<!--/* 荣誉奖励  */-->
+<view class="app">
+
+  <form bindsubmit="setHonor">
+    <view class="citem">
+      <view class="lt">
+        <text class="title">获奖时间</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <picker class="tv" mode="date" bindchange="bindDatePickerChange">
+            <text>{{date ? date : '请选择获奖时间'}} </text>
+          </picker>
+          <image src="/img/pk_jt.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="citem">
+      <view class="lt">
+        <text class="title">奖励</text>
+        <text class="state">*</text>
+      </view>
+
+      <view class="rt">
+        <view class="info">
+          <input name="honor_name" value="{{honor_name}}" placeholder="请输入" />
+        </view>
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_save">保存</button>
+  </form>
+</view>

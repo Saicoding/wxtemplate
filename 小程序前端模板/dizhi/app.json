@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/dingzhi/index",
+    "pages/dingzhi/customized",
+    "pages/dingzhi/order",
+    "pages/public/city",
+    "pages/public/date",
+    "pages/public/city2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1ba8b9",
+    "navigationBarTitleText": "巅峰应用私人定制",
+    "navigationBarTextStyle": "#fff"
+  }
+}

@@ -1,0 +1,29 @@
+/* cate.wxss */
+.item{
+  height: 120rpx; 
+  width: 100%;
+  margin-top: 10rpx;
+  border-top: 1rpx solid #f3f3f3;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.item .pic1{
+  width: 100rpx; height: 100rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.item .cn{
+  font-size: 26rpx;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}
+
+.item .pic2{
+   width: 30rpx;
+   height: 30rpx;
+   float: right;
+   margin-right: 10rpx;
+   margin-top: 50rpx;
+}

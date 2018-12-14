@@ -1,0 +1,146 @@
+<view class="app">
+  <swiper style='height:360rpx;' indicator-dots="true" autoplay="true" interval="5000" duration="true">
+    <swiper-item wx:for="{{datas.banner}}">
+      <image src="{{item.photo}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+
+  <view class='classify'>
+    <navigator open-type='reLaunch' url='/pages/product/index'>
+      <view class='citem' hidden='{{datas.product==""? true: false}}'>
+        <view class='image iconfont icon-fangan:before' style='background:#FE7C7E;color:#fff;'></view>
+        <text class='name'>产品展示</text>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/case/index'>
+      <view class='citem' hidden='{{datas.plan==""? true: false}}'>
+        <view class='image iconfont icon-guanyu:before' style='background:#959EE8;color:#fff;'></view>
+        <text class='name'>解决方案</text>
+      </view>
+    </navigator>
+
+    <navigator open-type='reLaunch' url='/pages/dynamic/index'>
+      <view class='citem' hidden='{{datas.news==""? true: false}}'>
+        <view class='image iconfont icon-xinwen:before' style='background:#6E90EE;color:#fff;'></view>
+        <text class='name'>新闻中心</text>
+      </view>
+    </navigator>
+
+    <navigator open-type='reLaunch' url='/pages/consult/index'>
+      <view class='citem'>
+        <view class='image iconfont icon-lianxi:before' style='background:#33D1BE;color:#fff;'></view>
+        <text class='name'>联系我们</text>
+      </view>
+    </navigator>
+  </view>
+
+  <!--产品展示-->
+  <view class='module' hidden='{{datas.product==""? true: false}}'>
+    <navigator open-type='reLaunch' url='/pages/product/index'>
+      <view class='header'>
+        <view class='name'>
+          <view class='vline' style='background:{{color}}'></view>
+          <view>产品展示</view>
+        </view>
+        <view class='icon'>
+          <image class='iconfont icon-youfangxiang:before'></image>
+        </view>
+      </view>
+    </navigator>
+    <view class='content'>
+      <view class='item' wx:for="{{datas.product}}">
+        <navigator url="/pages/product/detail?id={{item.id}}">
+          <image src="{{item.photo}}" mode='aspectFit'></image>
+          <view class='name'>{{item.product_name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class='module' hidden='{{datas.plan==""? true: false}}'>
+    <navigator url='/pages/case/index'>
+      <view class='header'>
+        <view class='name'>
+          <view class='vline' style='background:{{color}}'></view>
+          <view>解决方案</view>
+        </view>
+        <view class='icon'>
+          <image class='iconfont icon-youfangxiang:before'></image>
+        </view>
+      </view>
+    </navigator>
+
+    <view class="case" wx:for="{{datas.plan}}">
+      <navigator url="/pages/case/detail?id={{item.id}}">
+        <view class="sitem bdbt">
+          <view class="lt">
+            <image src="{{item.photo}}" mode='aspectFit'></image>
+          </view>
+          <view class="rt">
+            <view class="tit">
+              {{item.title}}
+            </view>
+            <view class="info">
+              {{item.content}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='module' hidden='{{datas.news==""? true: false}}'>
+    <navigator open-type='reLaunch' url='/pages/dynamic/index'>
+      <view class='header'>
+        <view class='name'>
+          <view class='vline' style='background:{{color}}'></view>
+          <view>新闻动态</view>
+        </view>
+        <view class='icon'>
+          <image class='iconfont icon-youfangxiang:before'></image>
+        </view>
+      </view>
+    </navigator>
+    <view class="news" wx:for="{{datas.news}}">
+      <navigator url="/pages/case/detail?id={{item.id}}">
+        <view class="nitem bdbt">
+          <view class="tit">{{item.title}}</view>
+          <view class="riqi">{{item.add_time}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="jszc">技术支持：[巅峰互联]www.erre7.cn</view>
+  <view class='kongbai'></view>
+
+  <view class="footer">
+    <view style="color:{{color}}" class="ft_item">
+      <view class="image iconfont icon-shouye:before"></view>
+      <text>首页</text>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/product/index">
+        <view class="image iconfont icon-chanpin:before"></view>
+        <text>产品</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/dynamic/index">
+        <view class="image iconfont icon-dongtai:before"></view>
+        <text>动态</text>
+      </navigator>
+    </view>
+
+    <view class="ft_item">
+      <navigator open-type="redirect" url="/pages/consult/index">
+        <view class="image iconfont icon-zixun:before"></view>
+        <text>咨询</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

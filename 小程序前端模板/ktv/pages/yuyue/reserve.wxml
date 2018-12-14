@@ -1,0 +1,50 @@
+<!--pages/yuyue/reserve.wxml-->
+<view class='app'>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='baseinfo'>
+    <view class='lt'>
+      <image class='thumb' src='{{datas.photo}}'></image>
+    </view>
+    <view class='rt'>
+      <view class="title">{{datas.title}}</view>
+      <view class='uprice' style='color:{{color}}'>yen
+        <text>{{datas.price}}</text>元起</view>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='name'>姓名</text>
+    <input name="name" placeholder='请输入姓名'></input>
+  </view>
+
+  <view class='item'>
+    <text class='name'>手机号</text>
+    <input name="mobile" placeholder='请输入手机号'></input>
+  </view>
+
+  <view class='item'>
+    <text class='name'>预约日期</text>
+    <picker mode="date" style=' text-align: right' value="" start="{{datas.date}}" bindchange="selDate">
+    {{date}}
+    </picker>
+  </view>
+
+  <view class='item'>
+    <text class='name'>预约时长</text>
+ <picker  style=' text-align: right' bindchange="selsc" value="{{index}}" range="{{sc}}">
+    <view class="picker">
+      {{sc[index]}}
+    </view>
+  </picker>
+  </view>
+<!-- 
+  <view class='item'>
+    <text class='name'>服务价格</text>
+    <view class='content'>
+      <text class='price' style='color:{{color}}'>{{datas.price}}</text>元</view>
+  </view> -->
+
+  <view class="jszc">技术支持：www.erre7.cn</view>
+  <button formType="submit" class='sure'>确定</button>
+</form>
+</view>

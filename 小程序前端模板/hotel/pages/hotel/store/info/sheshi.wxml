@@ -1,0 +1,176 @@
+<view class="app">
+  <view class="main">
+    <form  bindsubmit="formBindsubmit">
+    <view class="icon_list">
+      <view class="title">
+        网络设施
+      </view>
+      <view class="list">
+        <view class="icon">
+          <text>免费wifi</text>
+          <switch value="1" checked="{{detail.is_wifi == 1 ? 'checked' : ''}}"  name="is_wifi"  />
+        </view>
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="title">
+        房间设施
+      </view>
+      <view class="list">
+        <view class="icon">
+          <text>全天热水</text>
+          <switch checked="{{detail.is_water == 1 ? 'checked' : ''}}"  name="is_water"  />
+        </view>
+        <view class="icon">
+          <text>吹风机</text>
+          <switch checked="{{detail.is_hairdrier == 1 ? 'checked' : ''}}" name="is_hairdrier"  />
+        </view>
+        <view class="icon">
+          <text>空调</text>
+           <switch checked="{{detail.is_airconditioner == 1 ? 'checked' : ''}}" name="is_airconditioner"  />
+        </view>
+
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="title">
+        通用设施
+      </view>
+      <view class="list">
+        <view class="icon">
+          <text>电梯</text>
+          <switch checked="{{detail.is_elevator == 1 ? 'checked' : ''}}" name="is_elevator"  />
+
+        </view>
+        <view class="icon">
+          <text>健身房</text>
+          <switch checked="{{detail.is_fitnessroom == 1 ? 'checked' : ''}}" name="is_fitnessroom"  />
+        </view>
+        <view class="icon">
+          <text>游泳池</text>
+          <switch checked="{{detail.is_swimmingpool == 1 ? 'checked' : ''}}" name="is_swimmingpool"  />
+        </view>
+        <view class="icon">
+          <text>桑拿</text>
+           <switch checked="{{detail.is_sauna == 1 ? 'checked' : ''}}" name="is_sauna"  />
+        </view>
+        <view class="icon">
+          <text>西餐厅</text>
+           <switch checked="{{detail.is_westernfood == 1 ? 'checked' : ''}}" name="is_westernfood"  />
+        </view>
+        <view class="icon">
+          <text>中餐厅</text>
+           <switch checked="{{detail.is_chinesefood == 1 ? 'checked' : ''}}" name="is_chinesefood"  />
+        </view>
+       <view class="icon">
+          <text>残疾人客房</text>
+           <switch checked="{{detail.is_disability == 1 ? 'checked' : ''}}" name="is_disability"  />
+        </view>
+        <view class="icon">
+          <text>无烟房</text>
+           <switch checked="{{detail.is_smokeless == 1 ? 'checked' : ''}}" name="is_smokeless"  />
+        </view>
+        <view class="icon">
+          <text>免费停车</text>
+           <switch checked="{{detail.is_stop == 1 ? 'checked' : ''}}" name="is_stop"  />
+        </view>
+          <view class="icon">
+          <text>早餐</text>
+           <switch checked="{{detail.is_cereal == 1 ? 'checked' : ''}}" name="is_cereal"  />
+        </view>
+      
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="title">
+        服务项目
+      </view>
+      <view class="list">
+        <view class="icon">
+          <text>接机服务</text>
+           <switch checked="{{detail.is_airportpickup == 1 ? 'checked' : ''}}" name="is_airportpickup"  />
+        </view>
+        <view class="icon">
+          <text>接站服务</text>
+           <switch checked="{{detail.is_station == 1 ? 'checked' : ''}}" name="is_station"  />
+        </view>
+        <view class="icon">
+          <text>叫车服务</text>
+           <switch checked="{{detail.is_cabs == 1 ? 'checked' : ''}}" name="is_cabs"  />
+        </view>
+        <view class="icon">
+          <text>专职行李</text>
+           <switch checked="{{detail.is_luggage == 1 ? 'checked' : ''}}" name="is_luggage"  />
+        </view>
+           <view class="icon">
+          <text>租车</text>
+           <switch checked="{{detail.is_carrental == 1 ? 'checked' : ''}}" name="is_carrental"  />
+        </view>
+        <view class="icon">
+          <text>残疾人设施</text>
+           <switch checked="{{detail.is_disabled == 1 ? 'checked' : ''}}" name="is_disabled"  />
+        </view>
+        <view class="icon">
+          <text>会议室</text>
+           <switch checked="{{detail.is_conference == 1 ? 'checked' : ''}}" name="is_conference"  />
+        </view>
+        <view class="icon">
+          <text>邮政服务</text>
+           <switch checked="{{detail.is_express == 1 ? 'checked' : ''}}" name="is_express"  />
+        </view>
+        <view class="icon">
+          <text>洗衣服务</text>
+           <switch checked="{{detail.is_washclothes == 1 ? 'checked' : ''}}" name="is_washclothes"  />
+        </view>
+        <view class="icon">
+          <text>商务中心</text>
+           <switch checked="{{detail.is_merchant == 1 ? 'checked' : ''}}" name="is_merchant"  />
+        </view>
+
+        <view class="icon">
+          <text>唤醒服务</text>
+           <switch checked="{{detail.is_awaken == 1 ? 'checked' : ''}}" name="is_awaken"  />
+        </view>
+        <view class="icon">
+          <text>行李寄存</text>
+           <switch checked="{{detail.is_deposit == 1 ? 'checked' : ''}}" name="is_deposit"  />
+        </view>
+        <view class="icon">
+          <text>信用卡服务</text>
+           <switch checked="{{detail.is_creditcard == 1 ? 'checked' : ''}}" name="is_creditcard"  />
+        </view>
+        <view class="icon">
+          <text>全天前台</text>
+           <switch checked="{{detail.is_reception == 1 ? 'checked' : ''}}" name="is_reception"  />
+        </view>
+        <view class="icon">
+          <text>接待外宾</text>
+           <switch checked="{{detail.is_foreignguests == 1 ? 'checked' : ''}}" name="is_foreignguests"  />
+        </view>
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="title">
+        房间设施
+      </view>
+      <view class="list">
+        <view class="icon">
+          <text>SPA</text>
+           <switch checked="{{detail.is_spa == 1 ? 'checked' : ''}}" name="is_spa"  />
+        </view>
+
+        <view class="icon">
+          <text>棋牌室</text>
+           <switch checked="{{detail.is_chess == 1 ? 'checked' : ''}}" name="is_chess"  />
+        </view>
+
+      </view>
+    </view>
+    <view class="kongbai"></view>
+    <view class="btn">
+        <button formType="submit" >确定保存</button>
+    </view>
+</form>
+
+  </view>
+</view>

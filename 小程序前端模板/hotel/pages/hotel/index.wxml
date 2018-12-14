@@ -1,0 +1,84 @@
+<view class="hotel_app">
+    <view class="youhuiquanqiang">
+      <navigator url="/pages/hotel/coupon">
+      <image src="/img/hotel/youhuiquanqiang.png"></image>
+      </navigator>
+    </view>
+    <view class="main">
+        <view class="dw">
+          <view class="lt">
+            <image src="/img/hotel/dw.png"></image>
+          </view>  
+          <view class="rt">
+                <navigator url="/pages/public/city"> 
+                     <text class="dw_font" >{{cityinfo.city_name}}</text>
+                </navigator> 
+
+                <image class="jiantou" src="/img/hotel/jiantou.png"></image>
+                <view class="rt2">
+                      <image class="dw2" src="/img/hotel/dw2.png"></image>
+                      <text>我的位置</text>
+                </view>
+          </view>
+        </view>
+        <view class="riqi">
+          <view class="lt">
+            <image src="/img/hotel/riqi.png"></image>
+          </view>  
+          <view class="rt">
+               <navigator url="/pages/public/date">  
+               <view class="day">
+                  <text>{{date.bg_date1}}</text>
+                  <text class="mt10">{{date.end_date1}}</text>
+               </view>
+                <view class="center">
+                  <text>入住</text>
+                  <text class="mt10">离店 共计{{date.day2}}晚</text>
+               </view>
+              </navigator> 
+
+              <image class="jiantou" src="/img/hotel/jiantou.png"></image>
+          </view>
+        </view>
+        <view class="sousuo">
+          <view class="lt">
+            <image src="/img/hotel/sousuo.png"></image>
+          </view>  
+          <view class="rt">
+             <navigator url="/pages/hotel/hotel/area">  
+               <text>{{search=='' ? '搜索酒店、地标、热门区域等': search.name}}</text> 
+             </navigator> 
+          </view>
+        </view>
+        <view class="sousuo"> 
+              <button bindtap="gohotel" class="btn">搜索酒店</button>
+        </view>
+    </view>
+    <view class="banquan">
+      <view class="bz">
+       <image src="/img/hotel/bao.png"></image> <text>全程保障，住酒店我放心</text>
+      </view>
+    </view>
+
+   
+</view>
+
+<view class="hotel_footer">
+    <view class="ft_item on">
+      <image src="/img/hotel/hotel_on.png"></image>
+      <text>酒店</text>
+    </view>
+    <view class="ft_item">
+      <navigator url="/pages/hotel/order/index">
+          <image src="/img/hotel/order_off.png"></image>
+          <text>订单</text>
+      </navigator>
+    </view>
+    <view class="ft_item">
+      <navigator url="/pages/hotel/member/index">
+      <image src="/img/hotel/wode_off.png"></image>
+      <text>我的</text>
+      </navigator>
+    </view>
+
+</view>

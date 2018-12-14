@@ -1,0 +1,45 @@
+<!--pages/store/jlrecord.wxml-->
+<view class="app">
+  <view class="menu">
+    <text bindtap='tab' data-type="0" class="{{type == 0 ? 'active' : ''}}">待查看</text>
+    <text bindtap='tab' data-type="1" class="{{type == 1 ? 'active' : ''}}">已查看</text>
+    <text bindtap='tab' data-type="2" class="{{type == 2 ? 'active' : ''}}">相中的</text>
+    <text bindtap='tab' data-type="3" class="{{type == 3 ? 'active' : ''}}">暂不合适</text>
+  </view>
+
+  <view class="citem" wx:for="{{datas}}">
+    <navigator url="/pages/member/yulan?apply_id={{item.apply_id}}">
+      <view class="header">
+        <view class="lt">{{item.name}} | {{item.sex}} | {{item.birthday}}岁</view>
+        <view class="rt">{{item.add_time}}</view>
+      </view>
+      <view class="body">
+        <view class="lb">应聘职位:{{item.job_title}}</view>
+        <view class="rb">
+          <image src="/img/icon_delete.png" bindtap="deleteApply" data-applyid="{{item.apply_id}}"></image>
+        </view>
+      </view>
+
+    </navigator>
+    <view class="bottoms">
+      <view class="ld">联系电话：{{item.mobile}}</view>
+      <view class="rd">
+        <text class="alert" bindtap="handleJob" data-phone="{{item.mobile}}" data-applyid="{{item.apply_id}}">立即处理</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bg" hidden="{{showbg}}"></view>
+
+  <view class="bottom_view" hidden="{{show_select}}">
+    <view bindtap="select_tab" data-id="0" class="item">对他(她)有意</view>
+    <view bindtap="select_tab" data-id="1" class="item">暂不合适</view>
+    <view bindtap="select_tab" data-id="2" class="item">立即沟通</view>
+    <view style="height:20rpx;"></view>
+    <view bindtap="select_tab" data-id="3" class="item" style="color:{{color}}">取消</view>
+  </view>
+
+  <view bindtap="more" wx:if="{{datas!=''&&more==1}}" style="color:{{color}}" class="more">查看更多</view>
+  <view wx:if="{{datas!=''&&more==0}}" class="nomore">没有数据了</view>
+  <view class="kongbai"></view>
+</view>

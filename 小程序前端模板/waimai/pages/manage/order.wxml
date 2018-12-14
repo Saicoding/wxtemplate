@@ -1,0 +1,49 @@
+<view class="menu">
+  <text bindtap='onclick_menu' data-id="0" style="{{cat == 0 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">全部</text>
+  <text bindtap='onclick_menu' data-id="1" style="{{cat == 1 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">等待确认</text>
+  <text bindtap='onclick_menu' data-id="2" style="{{cat == 2 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">等待送达</text>
+  <text bindtap='onclick_menu' data-id="3" style="{{cat == 3 ? 'color:'+color+';border-bottom:  5rpx solid '+color+';' : ''}}">已完成</text>
+</view>
+<view class="search">
+    <form bindsubmit='search'>
+    <input type='number' name="mobile"></input>
+    <button form-type='submit' style="background:{{color}}">搜索订单</button>
+  </form>
+</view>
+<view class="info">关于取消订单说明:目前系统未支持直接退款给客户，如果取消订单，请手动微信转账或者支付宝转账给客户！取消的订单也可以设置为已完成，可能有部分订单需要线下电话沟通！</view>
+
+<view wx:for="{{data}}" class="order">
+  <view class="title bdbt">
+    <text class="lt">订单:{{item.id}}</text>
+    <text class="rt">{{item.statusmeans}}</text>
+  </view>
+  <view wx:for="{{item.products}}" wx:for-item="goods" class="product bdbt">
+    <image src='{{goods.photo}}'></image>
+    <view class="rt">
+      <view class="tit">
+        <text class="name">{{goods.name}}</text>
+        <text class="price">¥{{goods.price}}</text>
+      </view>
+      <view class="info">
+        <text class="num">x{{goods.num}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="addr ">
+    <view class="lt">
+      <text class="iconfont icon-location"></text>
+    </view>
+    <view class="ct">
+      <view>收货人：{{item.name}}；电话：{{item.mobile}}</view>
+      <view>{{item.gps_addr}}/{{item.address}}</view>
+    </view>
+  </view>
+  <view class="status bdtp">
+    <view bindtap='status'  data-id="{{item.id}}" data-status="4"  wx:if="{{item.status!=8 && item.status!=4}}" class="btn">取消订单</view>
+    <view  bindtap='status'  data-id="{{item.id}}" data-status="2"    wx:if="{{item.status==1}}" class="btn">确认订单</view>
+    <view  bindtap='status' data-id="{{item.id}}" data-status="8"    wx:if="{{item.status!=8}}" class="btn">设置已完成</view>
+  </view>
+
+</view>
+<view bindtap='more' wx:if="{{data!='' && more==1}}" class="more">查看更多</view>
+<view wx:if="{{data=='' || more==0}}" class="nomore">没有数据了</view>

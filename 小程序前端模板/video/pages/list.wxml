@@ -1,0 +1,26 @@
+  <scroll-view scroll-x="true" class="menubar">
+    <view wx:for="{{tags}}" class="menu">
+      <text  class=" {{tag_id == item.tag_id ? 'active' : ''}}" bindtap="onclick_menu" data-id="{{item.tag_id}}">{{item.tag_name}}</text>
+    </view>
+  </scroll-view>
+<view  wx:for="{{datas}}" class="item">
+  <navigator url="/pages/detail?id={{item.video_id}}">
+    <image  class="banner" src="{{item.photo}}"></image>
+    <view class="title">{{item.title}}</view>
+    <view class="look">
+      <image src="/img/yan.png"></image>
+      <text>{{item.views}}观看</text>
+    </view>
+    </navigator>
+</view>
+
+  <view  wx:if="{{datas!=''&&more==0}}"  class="nomore">
+    已经到底了亲
+  </view>
+  <view bindtap="more"  wx:if="{{datas!=''&&more==1}}" class="more">
+    查看更多
+  </view>
+ <view wx:if="{{datas == ''}}" class="nodata">
+    <image src="/img/nodata.png"></image>
+    <text>小编正在拼命整理内容</text>
+ </view>

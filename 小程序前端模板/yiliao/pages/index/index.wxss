@@ -1,0 +1,102 @@
+/**index.wxss**/
+
+.app .menu {
+  widows: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.app .menu-item {
+  width: 47.2%;
+  height: 140rpx;
+  float: left;
+  padding: 10rpx;
+}
+
+.menu-item .lt {
+  width: 65%;
+  margin-left: 3%;
+  height: 100%;
+  float: left;
+}
+
+.menu-item .rt {
+  width: 32%;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+
+.rt image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 35rpx;
+}
+
+.mtitle {
+  width: auto;
+  height: 70rpx;
+  margin-top: 8rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.mhint {
+  width: auto;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #8a8a8a;
+}
+
+.swiper-box {
+  width: 100%;
+  height: 400rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  padding-bottom: 10rpx;
+}
+
+.menu {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding-top: 20rpx;
+}
+
+.menu .item {
+  width: 25%;
+  height: 160rpx;
+  float: left;
+  text-align: center;
+}
+
+.menu .item image {
+  height: 90rpx;
+  width: 90rpx;
+  display: block;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.menu .item .icon {
+  height: 90rpx;
+  width: 90rpx;
+  margin: 0 auto;
+  border-radius: 40rpx;
+}
+
+.menu .item  text {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  display: block;
+  font-size: 26rpx;
+}

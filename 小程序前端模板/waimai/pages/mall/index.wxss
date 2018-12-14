@@ -1,0 +1,381 @@
+.header{
+  height: 200rpx;
+  width: 100%;
+  color: #fff;
+}
+
+.header .lt{
+  float: left;
+  height: 150rpx;
+  width: 150rpx;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  background: #fff;
+}
+
+.header .lt image{
+  height: 140rpx;
+  width: 140rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+  border-radius: 10rpx;
+}
+
+.header .rt{
+  float: left;
+  width: 500rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.header .rt .name{
+  font-size: 36rpx;
+  font-weight: bold;
+  height: 40rpx;
+  width: 100%;
+}
+.header .rt .name text{
+  float: right;
+}
+.header .rt .gonggao{
+  margin-top: 20rpx;
+  line-height:40rpx;
+  color: aliceblue; 
+}
+.header .rt .gonggao text{
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.scroll-view_H{
+    white-space: nowrap;
+}
+
+.scroll-view_H .item{
+    display: inline-block;
+    width: 360rpx;
+    height: 120rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    border:1rpx solid #e2e2e2;
+    border-radius: 10rpx;
+    position: relative;
+    border-left: 5rpx solid red;
+}
+.scroll-view_H .item .lt{
+  float: left;
+  width:100rpx;
+  line-height: 120rpx;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.scroll-view_H .item .ct{
+  width: 140rpx;
+  float: left;
+}
+
+.scroll-view_H .item .ct .name{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.scroll-view_H .item .ct .man{
+  color: #666;
+  margin-top: 10rpx;
+}
+.scroll-view_H .item  .rt{
+  float: right;
+  width: 100rpx;
+  border-left: 2rpx #e2e2e2 dotted;
+  height: 100%;
+}
+
+.scroll-view_H .item  .rt text{
+  padding: 5rpx 10rpx;
+  background: red;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-top: 36rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.youhuiquan{
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.topyuan,.btyuan{
+  position: absolute;
+  
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  right: 90rpx;
+}
+.topyuan{
+  top:-10rpx;
+}
+.btyuan{
+  bottom: -10rpx;
+}
+
+.menu{
+  height: 80rpx;
+  background: #fff;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+}
+
+.menu text{
+  font-size: 28rpx; 
+  margin-left: 20rpx;
+  height: 80rpx;
+}
+
+.product{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.product .cat{
+  width: 20%;
+  float: left;
+  max-height: 1000rpx;
+  overflow-y:scroll;
+  background: #f3f3f3; 
+}
+.product .cat .on{
+  background: #fff;
+}
+.product .cat .item{
+  width: 90%;
+  margin: 0 auto;
+  line-height: 40rpx;
+  height: 80rpx;
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+.product .cat .num{
+  position: absolute;
+  right:10rpx;
+  top: 0;
+  height: 30rpx;
+  width: 30rpx;
+  background: red;
+  color: #fff;
+  overflow: hidden;
+  border-radius:15rpx;
+  text-align: center;
+  line-height: 30rpx; 
+}
+
+.product .goods{
+  width: 80%;
+  float: left;
+  height: auto;
+  overflow: hidden;  
+  background: #fff;
+}
+.product .goods .item{
+  height: auto;
+  overflow: hidden;
+  width: 96%;
+  margin: 0 auto;
+}
+.goods .item .tit{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.goods .item .tit text{
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 10rpx;
+}
+
+.goods .item .gd{
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+}
+
+.goods .item .gd .lt{
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 25rpx;
+}
+.goods .item .gd .lt image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.goods .item .gd .rt{
+  float: right;
+  width: 400rpx;margin-top: 10rpx;
+}
+
+.goods .item .gd .name{
+  font-size: 26rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.goods .item .gd .mai{
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #666;
+}
+.goods .item .gd .buy{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.goods .item .gd .buy .price{
+  color: red;float: left;
+}
+.goods .item .gd .buy .fr{
+  float: right;
+  margin-right: 20rpx;
+ 
+}
+.goods .item .gd .buy .iconfont{
+  font-size: 40rpx;
+}
+
+.cart{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 101rpx;
+  background: #fff;
+  z-index: 10000;
+}
+
+.cart .buy{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.cart .buy .lt{
+  float: left;
+  background: #e2e2e2;
+  color: #000;
+  width: 70%;
+  position: relative;
+}
+.cart .buy .lt .hj{
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.cart .buy .lt .total{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: red;
+}
+.cart .buy .lt .num{
+  position: absolute;
+  left: 90rpx;
+  top: 0rpx;
+  background: red;
+  height: 30rpx;
+  width: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 15rpx;
+}
+.cart .buy .lt .iconfont{
+  float: left;
+  margin-left: 30rpx;font-size: 40rpx;
+  height: 80rpx;
+  width: 80rpx;
+  background: #fff;
+  text-align: center;
+  border-radius: 40rpx;
+}
+
+.cart .buy .rt{
+  float: right;
+  width: 30%;
+  color: #fff;
+  text-align: center;
+}
+.cart .cartlist{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.cart .cartlist .tit{
+  height: 60rpx;
+  width: 100%;
+  background: #e2e2e2;
+}
+.cart .cartlist .tit .yigou{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  padding-left: 10rpx;
+}
+.cart .cartlist .tit .delete,.cart .cartlist .tit .iconfont{
+  float: right;margin-right: 10rpx;
+  line-height: 60rpx;
+}
+
+.cartlist .list{
+  height: auto;
+  max-height: 400rpx;
+  overflow-y: scroll;
+  width: 96%;
+  margin: 0 auto;
+}
+.cartlist .list .item{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.cartlist .list .item .name{
+  float: left;
+  width: 40%;
+  overflow: hidden;
+}
+.cartlist .list .item .price{
+  float: left;
+  width: 20%;
+  overflow: hidden;
+  color: red;
+  font-size: 30rpx;
+}
+.cartlist .list .item .jiajian{
+  float: right;
+}
+.cartlist .list .item .jiajian .fr{
+  float: right;
+  margin-right: 20rpx;
+}
+
+.unline{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  background: rgba(0,0,0,.6);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+align-items: center;
+justify-content: center;
+  display: flex;
+  color: #ccc;
+  font-size: 80rpx;
+  font-weight: bold;
+}

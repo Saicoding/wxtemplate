@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="true">
+  <swiper-item wx:for="{{datas.banner}}">
+    <image src="{{item.photo}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+<view class='menu'>
+  <navigator url='/pages/tuan/index'>
+    <view class='item'>
+      <image src='/img/icon1.png'></image>
+      <view class='name'>小区团装</view>
+    </view>
+  </navigator>
+  <navigator url='/pages/album/index'>
+    <view class='item'>
+      <image src='/img/icon2.png'></image>
+      <view class='name'>图库</view>
+    </view>
+  </navigator>
+  <navigator url='/pages/faxian/news'>
+    <view class='item'>
+      <image src='/img/icon3.png'></image>
+      <view class='name'>热点资讯</view>
+    </view>
+  </navigator>
+  <navigator url='/pages/index/join'>
+    <view class='item'>
+      <image src='/img/icon4.png'></image>
+      <view class='name'>我要装修</view>
+    </view>
+  </navigator>
+
+  <navigator url='/pages/gd/index'>
+    <view class='item'>
+      <image src='/img/icon5.png'></image>
+      <view class='name'>看工地</view>
+    </view>
+  </navigator>
+
+ 
+    <view bindtap='toTel' class='item'>
+      <image  src='/img/icon6.png'></image>
+      <view  class='name'>装修咨询</view>
+    </view>
+
+
+  <navigator url='/pages/designer/index'>
+    <view class='item'>
+      <image src='/img/icon7.png'></image>
+      <view class='name'>设计师</view>
+    </view>
+  </navigator>
+
+  <navigator url='/pages/activity/index'>
+    <view class='item'>
+      <image src='/img/icon8.png'></image>
+      <view class='name'>优惠活动</view>
+    </view>
+  </navigator>
+
+</view>
+
+<!--经典案例-->
+<view class='jingdian'>
+  <view class='title'>经典案例</view>
+
+  <navigator wx:for="{{datas.example}}" url='/pages/index/photo?example_id={{item.example_id}}'>
+    <view class='jitem'>
+      <image src='{{item.photo}}'></image>
+      <view class='jtitle'>{{item.title}}</view>
+    </view>
+  </navigator>
+</view>
+
+<view class='alert'>
+  <view class='aitem'>
+    <image src='/img/icon_alert_01.png'></image>
+    <text>费用节省三成</text>
+  </view>
+
+  <view class='aitem'>
+    <image src='/img/icon_alert_02.png'></image>
+    <text>绝对健康环保</text>
+  </view>
+
+  <view class='aitem'>
+    <image src='/img/icon_alert_03.png'></image>
+    <text>工期缩短一半</text>
+  </view>
+
+  <view class='aitem'>
+    <image src='/img/icon_alert_04.png'></image>
+    <text>十年品质保障</text>
+  </view>
+
+</view>
+
+<view class='kongbai'></view>
+
+<view class='bottom'>
+  <view bindtap='toTel' class='kf' style='color:{{color}}'>联系客服</view>
+  <navigator url='/pages/index/join'>
+    <view class='yy' style='background:{{color}}'>预约</view>
+  </navigator>
+</view>

@@ -1,0 +1,27 @@
+<radio-group>
+  <view wx:for="{{data}}" class="addr">
+    <view class="lt">
+      <radio bindtap='select' data-id='{{item.address_id}}'></radio>
+    </view>
+    <view class="lt"><text class="iconfont icon-location"></text></view>
+    <view class="ct">
+      <view>收货人：{{item.name}}；电话：{{item.mobile}}</view>
+      <view>{{item.address}}</view>
+    </view>
+    <view class="rt">
+      <navigator open-type='redirect' url="/pages/addr/edit?id={{item.address_id}}">
+      <text class="iconfont icon-bianji"></text>
+      </navigator>
+    </view>
+  </view>
+
+ 
+</radio-group>
+<view class="kongbai"></view>
+
+
+<view class="addbtn">
+
+    <button bindtap='add' style="background:{{color}}">新增地址</button>
+
+</view>

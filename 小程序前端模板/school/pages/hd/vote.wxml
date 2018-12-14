@@ -1,0 +1,52 @@
+<!--pages/hd/vote.wxml-->
+<view class="app">
+  <view class="hdtp">
+    <image src="{{datas.photo}}"></image>
+  </view>
+
+  <view class="header">
+    {{datas.is_end==1?"活动已结束": "活动正在进行中"}}
+  </view>
+
+  <view class="hdzt">
+    <view class="lt">{{datas.title}}</view>
+    <view class="vline"></view>
+    <view class="rt">
+      <image src="/img/icon_share.png" hidden='true'></image>
+      <button open-type='share' style='background:{{color}}; color:#fff'>邀请</button>
+    </view>
+  </view>
+
+  <view class="tpxx">
+    <view class="titem">
+      <view class="name">已报名</view>
+      <view class="count">{{datas.vote_num}}</view>
+    </view>
+
+    <view class="titem">
+      <view class="name">累计报名</view>
+      <view class="count">{{datas.entry_num}}</view>
+    </view>
+
+    <view class="titem">
+      <view class="name">人气</view>
+      <view class="count">{{datas.view_num}}</view>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="item" wx:for="{{datas.list}}">
+      <navigator url="/pages/hd/detail?player_id={{item.player_id}}">
+        <image src="{{item.photo}}"></image>
+        <view class="ibview">
+          <view class="bh">{{item.view_num}}号</view>
+          <view class="tp">
+            <text>投票</text>
+          </view>
+          <view class="ps">{{item.vote_num}}票</view>
+        </view>
+        <view class="name">{{item.player_name}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>

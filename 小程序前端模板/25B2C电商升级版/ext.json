@@ -1,0 +1,16 @@
+{
+  "extEnable": true,
+  "extAppid": "wxc8acc0e8cbe000c1",
+  "ext": {
+     "apiurl": "https://wei.chinaplat.com",
+     "appid" : "164",
+     "appkey": "95858ad9c8384e18e006f777db3db165",
+     "skin":"skin1"  
+  },
+  "extPages": {
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
